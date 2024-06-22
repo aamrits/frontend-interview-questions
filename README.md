@@ -3,7 +3,7 @@
 </h1>
 
 <div align="center">
-    <img src="assets/banner.jpg" alt="banner" />
+    <img src="assets/banner.png" alt="banner" />
 </div>
 
 <div align="center">
