@@ -31,7 +31,7 @@
 ## Answers
 
 #### Q1 
-### ➡️ What is HTML and why is it used
+### ✨ What is HTML and why is it used
 
 
 <div align="right">
@@ -39,7 +39,7 @@
 </div>
 
 #### Q2
-### ➡️ What are the new features introduced in HTML5
+### ✨ What are the new features introduced in HTML5
 
 
 <div align="right">
@@ -47,7 +47,7 @@
 </div>
 
 #### Q3
-### ➡️ New APIs introduced in HTML5
+### ✨ New APIs introduced in HTML5
 
 
 <div align="right">
@@ -55,7 +55,7 @@
 </div>
 
 #### Q4
-### ➡️ How do you create a hyperlink in HTML
+### ✨ How do you create a hyperlink in HTML
 
 
 <div align="right">
@@ -63,7 +63,7 @@
 </div>
 
 #### Q5
-### ➡️ Explain the difference between block and inline elements
+### ✨ Explain the difference between block and inline elements
 
 
 <div align="right">
@@ -71,7 +71,7 @@
 </div>
 
 #### Q6
-### ➡️ Purpose of `<head>` tag
+### ✨ Purpose of `<head>` tag
 
 
 <div align="right">
@@ -79,7 +79,7 @@
 </div>
 
 #### Q7
-### ➡️ How to embed an image in HTML page. (Hint: `<img />`)
+### ✨ How to embed an image in HTML page. (Hint: `<img />`)
 
 
 <div align="right">
@@ -87,7 +87,7 @@
 </div>
 
 #### Q8
-### ➡️ Explain semantic HTML and why is it important
+### ✨ Explain semantic HTML and why is it important
 
 
 <div align="right">
@@ -95,7 +95,7 @@
 </div>
 
 #### Q9
-### ➡️ How to create a table
+### ✨ How to create a table
 
 
 <div align="right">
@@ -103,7 +103,7 @@
 </div>
 
 #### Q10
-### ➡️ Difference between HTML and XHTML
+### ✨ Difference between HTML and XHTML
 
 
 <div align="right">
@@ -111,7 +111,7 @@
 </div>
 
 #### Q11
-### ➡️ How to include a video in HTML
+### ✨ How to include a video in HTML
 
 
 <div align="right">
@@ -119,7 +119,7 @@
 </div>
 
 #### Q12
-### ➡️ What is `doctype` used for. If you don't specify, what will happen
+### ✨ What is `doctype` used for. If you don't specify, what will happen
 
 
 <div align="right">
@@ -127,7 +127,7 @@
 </div>
 
 #### Q13
-### ➡️ DOM and DOM manipulation
+### ✨ DOM and DOM manipulation
 
 
 <div align="right">
@@ -135,7 +135,7 @@
 </div>
 
 #### Q14
-### ➡️ Different types of storage (local storage, session storage, cookies)
+### ✨ Different types of storage (local storage, session storage, cookies)
 
 
 <div align="right">
@@ -143,7 +143,7 @@
 </div>
 
 #### Q15
-### ➡️ Drag and drop in HTML5
+### ✨ Drag and drop in HTML5
 
 
 <div align="right">
@@ -151,7 +151,7 @@
 </div>
 
 #### Q16
-### ➡️ Form input types in HTML5
+### ✨ Form input types in HTML5
 
 
 <div align="right">
@@ -159,7 +159,7 @@
 </div>
 
 #### Q17
-### ➡️ `Datalist` tag in HTML5
+### ✨ `Datalist` tag in HTML5
 
 
 <div align="right">
@@ -167,7 +167,7 @@
 </div>
 
 #### Q18
-### ➡️ How browser renders HTML and CSS
+### ✨ How browser renders HTML and CSS
 
 
 <div align="right">
@@ -175,7 +175,7 @@
 </div>
 
 #### Q19
-### ➡️ What are web workers
+### ✨ What are web workers
 
 
 <div align="right">
@@ -183,7 +183,7 @@
 </div>
 
 #### Q20
-### ➡️ Different types of script tags (`async`, `defer`)
+### ✨ Different types of script tags (`async`, `defer`)
 
 
 <div align="right">
