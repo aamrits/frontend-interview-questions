@@ -53,7 +53,7 @@
 ## Answers
 
 #### Q1 
-### ✍ Why is CSS important.
+### 🍄 Why is CSS important.
 
 
 <div align="right">
@@ -61,7 +61,7 @@
 </div>
 
 #### Q2
-### ✍What do you mean by `metatag`? And why is meant by `initial value = 1.0`
+### 🍄 What do you mean by `metatag`? And why is meant by `initial value = 1.0`
 
 
 <div align="right">
@@ -69,7 +69,7 @@
 </div>
 
 #### Q3
-### ✍In how many ways can CSS be integrated.
+### 🍄 In how many ways can CSS be integrated.
 
 
 <div align="right">
@@ -77,7 +77,7 @@
 </div>
 
 #### Q4
-### ✍Explain the box model.
+### 🍄 Explain the box model.
 
 
 <div align="right">
@@ -85,7 +85,7 @@
 </div>
 
 #### Q5
-### ✍Difference between id and class selectors.
+### 🍄 Difference between id and class selectors.
 
 
 <div align="right">
@@ -93,7 +93,7 @@
 </div>
 
 #### Q6
-### ✍What are data attributes?
+### 🍄 What are data attributes?
 
 
 <div align="right">
@@ -101,7 +101,7 @@
 </div>
 
 #### Q7
-### ✍Position in CSS: Difference between `static`, `absolute`, `relative`, and `fixed`.
+### 🍄 Position in CSS: Difference between `static`, `absolute`, `relative`, and `fixed`.
 
 
 <div align="right">
@@ -109,7 +109,7 @@
 </div>
 
 #### Q8
-### ✍Are CSS properties case-sensitive?
+### 🍄 Are CSS properties case-sensitive?
 
 
 <div align="right">
@@ -117,7 +117,7 @@
 </div>
 
 #### Q9
-### ✍Describe floats and how they work. How to clear floating sides
+### 🍄 Describe floats and how they work. How to clear floating sides
 
 
 <div align="right">
@@ -125,7 +125,7 @@
 </div>
 
 #### Q10
-### ✍Describe `z-index` and how stacking context is formed.
+### 🍄 Describe `z-index` and how stacking context is formed.
 
 
 <div align="right">
@@ -133,7 +133,7 @@
 </div>
 
 #### Q11
-### ✍Do `margin` and `padding` have an effect on inline elements.
+### 🍄 Do `margin` and `padding` have an effect on inline elements.
 
 
 <div align="right">
@@ -141,7 +141,7 @@
 </div>
 
 #### Q12
-### ✍How will you decide when to use a `button` or `tag`?
+### 🍄 How will you decide when to use a `button` or `tag`?
 
 
 <div align="right">
@@ -149,7 +149,7 @@
 </div>
 
 #### Q13
-### ✍If you have a `<p>` element with `font-size: 10rem`, will the text be responsive when the user resizes or drags the browser window?
+### 🍄 If you have a `<p>` element with `font-size: 10rem`, will the text be responsive when the user resizes or drags the browser window?
 
 
 <div align="right">
@@ -157,7 +157,7 @@
 </div>
 
 #### Q14
-### ✍What are the differences between `visibility: hidden` and `display: none`?
+### 🍄 What are the differences between `visibility: hidden` and `display: none`?
 
 
 <div align="right">
@@ -165,7 +165,7 @@
 </div>
 
 #### Q15
-### ✍What are the differences between `inline`, `block`, and `inline-block` display types?
+### 🍄 What are the differences between `inline`, `block`, and `inline-block` display types?
 
 
 <div align="right">
@@ -173,7 +173,7 @@
 </div>
 
 #### Q16
-### ✍Does `overflow: hidden` create a new block formatting context?
+### 🍄 Does `overflow: hidden` create a new block formatting context?
 
 
 <div align="right">
@@ -181,7 +181,7 @@
 </div>
 
 #### Q17
-### ✍The pseudo-class will select inputs with type `radio` or `checkbox`, but not elements. True or False?
+### 🍄 The pseudo-class will select inputs with type `radio` or `checkbox`, but not elements. True or False?
 
 
 <div align="right">
@@ -189,7 +189,7 @@
 </div>
 
 #### Q18
-### ✍In an HTML document, the pseudo-class always refers to the element. True or False?
+### 🍄 In an HTML document, the pseudo-class always refers to the element. True or False?
 
 
 <div align="right">
@@ -197,7 +197,7 @@
 </div>
 
 #### Q19
-### ✍Which unit of measurement would you prefer among `px`, `rem`, `em`, `%`, or `pt`, and why?
+### 🍄 Which unit of measurement would you prefer among `px`, `rem`, `em`, `%`, or `pt`, and why?
 
 
 <div align="right">
@@ -205,7 +205,7 @@
 </div>
 
 #### Q20
-### ✍Difference between `div p`, `div > p`, `div + p`, and `div ~ p`.
+### 🍄 Difference between `div p`, `div > p`, `div + p`, and `div ~ p`.
 
 
 <div align="right">
@@ -213,7 +213,7 @@
 </div>
 
 #### Q21
-### ✍What is specificity in CSS.
+### 🍄 What is specificity in CSS.
 
 
 <div align="right">
@@ -221,7 +221,7 @@
 </div>
 
 #### Q22
-### ✍Explain CSS pseudo-selectors, pseudo-classes, and pseudo-elements. Name few
+### 🍄 Explain CSS pseudo-selectors, pseudo-classes, and pseudo-elements. Name few
 
 
 <div align="right">
@@ -229,7 +229,7 @@
 </div>
 
 #### Q23
-### ✍Difference between `transition` and `transform` property in CSS.
+### 🍄 Difference between `transition` and `transform` property in CSS.
 
 
 <div align="right">
@@ -237,7 +237,7 @@
 </div>
 
 #### Q24
-### ✍Can the `translate()` function move the position of an element on the z-axis?
+### 🍄 Can the `translate()` function move the position of an element on the z-axis?
 
 
 <div align="right">
@@ -245,7 +245,7 @@
 </div>
 
 #### Q25
-### ✍How is `font-face` used?
+### 🍄 How is `font-face` used?
 
 
 <div align="right">
@@ -253,7 +253,7 @@
 </div>
 
 #### Q26
-### ✍What are media queries and explain them in detail.
+### 🍄 What are media queries and explain them in detail.
 
 
 <div align="right">
@@ -261,7 +261,7 @@
 </div>
 
 #### Q27
-### ✍What is Mobile-First Approach and Desktop First approach and which one you follow and why?
+### 🍄 What is Mobile-First Approach and Desktop First approach and which one you follow and why?
 
 
 <div align="right">
@@ -269,7 +269,7 @@
 </div>
 
 #### Q28
-### ✍Does the screen keyword in media queries apply to the device's physical screen or the browser's viewport?
+### 🍄 Does the screen keyword in media queries apply to the device's physical screen or the browser's viewport?
 
 
 <div align="right">
@@ -277,7 +277,7 @@
 </div>
 
 #### Q29
-### ✍Explain CSS Flexbox and how CSS Grid layout is different.
+### 🍄 Explain CSS Flexbox and how CSS Grid layout is different.
 
 
 <div align="right">
@@ -285,7 +285,7 @@
 </div>
 
 #### Q30
-### ✍What is the difference between layout and positioning in CSS?
+### 🍄 What is the difference between layout and positioning in CSS?
 
 
 <div align="right">
@@ -293,7 +293,7 @@
 </div>
 
 #### Q31
-### ✍How can we achieve smooth scrolling?
+### 🍄 How can we achieve smooth scrolling?
 
 
 <div align="right">
@@ -301,7 +301,7 @@
 </div>
 
 #### Q32
-### ✍What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+### 🍄 What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
 
 
 <div align="right">
@@ -309,7 +309,7 @@
 </div>
 
 #### Q33
-### ✍How do you vertically and horizontally align a `<p>` element to the centre inside a `<div>`?
+### 🍄 How do you vertically and horizontally align a `<p>` element to the centre inside a `<div>`?
 
 
 <div align="right">
@@ -317,7 +317,7 @@
 </div>
 
 #### Q34
-### ✍How can you optimize CSS selectors for better performance? (Hint: sprites)
+### 🍄 How can you optimize CSS selectors for better performance? (Hint: sprites)
 
 
 <div align="right">
@@ -325,7 +325,7 @@
 </div>
 
 #### Q35
-### ✍How can you load CSS resources conditionally in a web page?
+### 🍄 How can you load CSS resources conditionally in a web page?
 
 
 <div align="right">
@@ -333,7 +333,7 @@
 </div>
 
 #### Q36
-### ✍What is the shadow DOM in web development?
+### 🍄 What is the shadow DOM in web development?
 
 
 <div align="right">
@@ -341,7 +341,7 @@
 </div>
 
 #### Q37
-### ✍Name some different CSS filters you can use to modify elements.
+### 🍄 Name some different CSS filters you can use to modify elements.
 
 
 <div align="right">
@@ -349,7 +349,7 @@
 </div>
 
 #### Q38
-### ✍What are the reasons to use a CSS preprocessor in web development?
+### 🍄 What are the reasons to use a CSS preprocessor in web development?
 
 
 <div align="right">
@@ -357,7 +357,7 @@
 </div>
 
 #### Q39
-### ✍What are some of the things you would test while doing accessibility testing?
+### 🍄 What are some of the things you would test while doing accessibility testing?
 
 
 <div align="right">
@@ -365,7 +365,7 @@
 </div>
 
 #### Q40
-### ✍Write a piece of code to centre a div.
+### 🍄 Write a piece of code to centre a div.
 
 
 <div align="right">
@@ -373,7 +373,7 @@
 </div>
 
 #### Q41
-### ✍How to make a triangle in CSS?
+### 🍄 How to make a triangle in CSS?
 
 
 <div align="right">
@@ -381,7 +381,7 @@
 </div>
 
 #### Q42
-### ✍Make a bouncing ball entirely with the help of CSS.
+### 🍄 Make a bouncing ball entirely with the help of CSS.
 
 
 <div align="right">
