@@ -44,7 +44,7 @@
 ## Answers
 
 #### Q1 
-### ✍Why choose React? What sets it apart from other libraries and frameworks?
+### 💥 Why choose React? What sets it apart from other libraries and frameworks?
 
 
 <div align="right">
@@ -52,7 +52,7 @@
 </div>
 
 #### Q2
-### ✍Understanding the Virtual DOM and its benefits in React
+### 💥 Understanding the Virtual DOM and its benefits in React
 
 
 <div align="right">
@@ -60,7 +60,7 @@
 </div>
 
 #### Q3
-### ✍Exploring JSX and its advantages in React development
+### 💥 Exploring JSX and its advantages in React development
 
 
 <div align="right">
@@ -68,7 +68,7 @@
 </div>
 
 #### Q4
-### ✍The concept of Reconciliation and its significance in React rendering
+### 💥 The concept of Reconciliation and its significance in React rendering
 
 
 <div align="right">
@@ -76,7 +76,7 @@
 </div>
 
 #### Q5
-### ✍Understanding the differences between State and Props in React
+### 💥 Understanding the differences between State and Props in React
 
 
 <div align="right">
@@ -84,7 +84,7 @@
 </div>
 
 #### Q6
-### ✍Dive into Hooks-related questions, such as `useState` and `useEffect`
+### 💥 Dive into Hooks-related questions, such as `useState` and `useEffect`
 
 
 <div align="right">
@@ -92,7 +92,7 @@
 </div>
 
 #### Q7
-### ✍The various use cases of `useEffect` in different scenarios
+### 💥 The various use cases of `useEffect` in different scenarios
 
 
 <div align="right">
@@ -100,7 +100,7 @@
 </div>
 
 #### Q8
-### ✍Exploring the differences between `useMemo` and `useCallback` in React
+### 💥 Exploring the differences between `useMemo` and `useCallback` in React
 
 
 <div align="right">
@@ -108,7 +108,7 @@
 </div>
 
 #### Q9
-### ✍Understanding Code Splitting and its role in optimizing React applications
+### 💥 Understanding Code Splitting and its role in optimizing React applications
 
 
 <div align="right">
@@ -116,7 +116,7 @@
 </div>
 
 #### Q10
-### ✍The importance of Accessibility considerations in React development
+### 💥 The importance of Accessibility considerations in React development
 
 
 <div align="right">
@@ -124,7 +124,7 @@
 </div>
 
 #### Q11
-### ✍Unidirectional behaviour in React and its impact on application architecture
+### 💥 Unidirectional behaviour in React and its impact on application architecture
 
 
 <div align="right">
@@ -132,7 +132,7 @@
 </div>
 
 #### Q12
-### ✍Comparing Pure Components and Higher Order Components (HOC) in React
+### 💥 Comparing Pure Components and Higher Order Components (HOC) in React
 
 
 <div align="right">
@@ -140,7 +140,7 @@
 </div>
 
 #### Q13
-### ✍Addressing security concerns such as CSRF and XSRF in React applications
+### 💥 Addressing security concerns such as CSRF and XSRF in React applications
 
 
 <div align="right">
@@ -148,7 +148,7 @@
 </div>
 
 #### Q14
-### ✍Deepening your understanding of React optimization techniques
+### 💥 Deepening your understanding of React optimization techniques
 
 
 <div align="right">
@@ -156,7 +156,7 @@
 </div>
 
 #### Q15
-### ✍Exploring Lazy Loading and its benefits in React applications
+### 💥 Exploring Lazy Loading and its benefits in React applications
 
 
 <div align="right">
@@ -164,7 +164,7 @@
 </div>
 
 #### Q16
-### ✍Comparing Class-based and Functional-based components in React
+### 💥 Comparing Class-based and Functional-based components in React
 
 
 <div align="right">
@@ -172,7 +172,7 @@
 </div>
 
 #### Q17
-### ✍Understanding SEO considerations and best practices in React applications
+### 💥 Understanding SEO considerations and best practices in React applications
 
 
 <div align="right">
@@ -180,7 +180,7 @@
 </div>
 
 #### Q18
-### ✍React Router and its role in handling client-side routing in React applications
+### 💥 React Router and its role in handling client-side routing in React applications
 
 
 <div align="right">
@@ -188,7 +188,7 @@
 </div>
 
 #### Q19
-### ✍Context API and how it facilitates state management in React without using Redux
+### 💥 Context API and how it facilitates state management in React without using Redux
 
 
 <div align="right">
@@ -196,7 +196,7 @@
 </div>
 
 #### Q20
-### ✍Server-Side Rendering (SSR) and its benefits for performance and SEO in React applications
+### 💥 Server-Side Rendering (SSR) and its benefits for performance and SEO in React applications
 
 
 <div align="right">
@@ -204,7 +204,7 @@
 </div>
 
 #### Q21
-### ✍Error Handling and Error Boundaries in React to gracefully handle runtime errors
+### 💥 Error Handling and Error Boundaries in React to gracefully handle runtime errors
 
 
 <div align="right">
@@ -212,7 +212,7 @@
 </div>
 
 #### Q22
-### ✍Testing React components using tools like Jest and React Testing Library
+### 💥 Testing React components using tools like Jest and React Testing Library
 
 
 <div align="right">
@@ -220,7 +220,7 @@
 </div>
 
 #### Q23
-### ✍Form handling and validation techniques in React applications
+### 💥 Form handling and validation techniques in React applications
 
 
 <div align="right">
@@ -228,7 +228,7 @@
 </div>
 
 #### Q24
-### ✍Performance optimizations using memoization and shouldComponentUpdate
+### 💥 Performance optimizations using memoization and shouldComponentUpdate
 
 
 <div align="right">
@@ -236,7 +236,7 @@
 </div>
 
 #### Q25
-### ✍Handling asynchronous operations with async/await and Promises in React
+### 💥 Handling asynchronous operations with async/await and Promises in React
 
 
 <div align="right">
@@ -244,7 +244,7 @@
 </div>
 
 #### Q26
-### ✍React patterns and best practices for maintainable and scalable code
+### 💥 React patterns and best practices for maintainable and scalable code
 
 
 <div align="right">
@@ -252,7 +252,7 @@
 </div>
 
 #### Q27
-### ✍What is concurrent rendering in React 18, and how does it improve the performance of applications?
+### 💥 What is concurrent rendering in React 18, and how does it improve the performance of applications?
 
 
 <div align="right">
@@ -260,7 +260,7 @@
 </div>
 
 #### Q28
-### ✍Explain the concept of automatic batching in React 18.
+### 💥 Explain the concept of automatic batching in React 18.
 
 
 <div align="right">
@@ -268,7 +268,7 @@
 </div>
 
 #### Q29
-### ✍What is the Transition API in React 18, and how is it used?
+### 💥 What is the Transition API in React 18, and how is it used?
 
 
 <div align="right">
@@ -276,7 +276,7 @@
 </div>
 
 #### Q30
-### ✍How has Suspense been improved in React 18?
+### 💥 How has Suspense been improved in React 18?
 
 
 <div align="right">
@@ -284,7 +284,7 @@
 </div>
 
 #### Q31
-### ✍What are the major new features introduced in React 19?
+### 💥 What are the major new features introduced in React 19?
 
 
 <div align="right">
@@ -292,7 +292,7 @@
 </div>
 
 #### Q32
-### ✍Explain `useReducer` hook
+### 💥 Explain `useReducer` hook
 
 
 <div align="right">
@@ -300,7 +300,7 @@
 </div>
 
 #### Q33
-### ✍Difference between `state` and `ref`
+### 💥 Difference between `state` and `ref`
 
 
 <div align="right">
