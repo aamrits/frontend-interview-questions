@@ -76,7 +76,7 @@
 ## Answers
 
 #### QA1 
-### ✍The significance of the Event Loop and Concurrency Model in JavaScript
+### ☘️ The significance of the Event Loop and Concurrency Model in JavaScript
 
 
 <div align="right">
@@ -84,7 +84,7 @@
 </div>
 
 #### QA2
-### ✍Fundamentals: variables, data types, and operators
+### ☘️ Fundamentals: variables, data types, and operators
 
 
 <div align="right">
@@ -92,7 +92,7 @@
 </div>
 
 #### QA3
-### ✍Understanding Hoisting and its impact on variable and function declarations
+### ☘️ Understanding Hoisting and its impact on variable and function declarations
 
 
 <div align="right">
@@ -100,7 +100,7 @@
 </div>
 
 #### QA4
-### ✍The differences between `let`, `const`, and `var` in variable declaration and scope
+### ☘️ The differences between `let`, `const`, and `var` in variable declaration and scope
 
 
 <div align="right">
@@ -108,7 +108,7 @@
 </div>
 
 #### QA5
-### ✍Functions: Dive deep into functions, function declarations, function expressions IIFE, arrow functions
+### ☘️ Functions: Dive deep into functions, function declarations, function expressions IIFE, arrow functions
 
 
 <div align="right">
@@ -116,7 +116,7 @@
 </div>
 
 #### QA6
-### ✍The difference between `==` and `===` in JavaScript for value comparison
+### ☘️ The difference between `==` and `===` in JavaScript for value comparison
 
 
 <div align="right">
@@ -124,7 +124,7 @@
 </div>
 
 #### QA7
-### ✍`null` vs. `undefined`: Differences and usage
+### ☘️ `null` vs. `undefined`: Differences and usage
 
 
 <div align="right">
@@ -132,7 +132,7 @@
 </div>
 
 #### QA8
-### ✍Scope chain and Lexical Scoping: How JavaScript handles variable access
+### ☘️ Scope chain and Lexical Scoping: How JavaScript handles variable access
 
 
 <div align="right">
@@ -140,7 +140,7 @@
 </div>
 
 #### QA9
-### ✍Keyword `this` in JavaScript and what is it scoped
+### ☘️ Keyword `this` in JavaScript and what is it scoped
 
 
 <div align="right">
@@ -148,7 +148,7 @@
 </div>
 
 #### QA10
-### ✍Exploring Closures and their practical applications in JavaScript
+### ☘️ Exploring Closures and their practical applications in JavaScript
 
 
 <div align="right">
@@ -156,7 +156,7 @@
 </div>
 
 #### QA11
-### ✍Common string manipulation techniques in JavaScript
+### ☘️ Common string manipulation techniques in JavaScript
 
 
 <div align="right">
@@ -164,7 +164,7 @@
 </div>
 
 #### QA12
-### ✍DOM Manipulation: Know how to interact with the Document Object Model (DOM) effectively
+### ☘️ DOM Manipulation: Know how to interact with the Document Object Model (DOM) effectively
 
 
 <div align="right">
@@ -172,7 +172,7 @@
 </div>
 
 #### QA13
-### ✍Event Handling: Learn about event listeners, event delegation, and the event object
+### ☘️ Event Handling: Learn about event listeners, event delegation, and the event object
 
 
 <div align="right">
@@ -180,7 +180,7 @@
 </div>
 
 #### QA14
-### ✍Understanding the concept of Prototypes and how they relate to Objects
+### ☘️ Understanding the concept of Prototypes and how they relate to Objects
 
 
 <div align="right">
@@ -188,7 +188,7 @@
 </div>
 
 #### QA15
-### ✍Prototypal Inheritance vs. Classical Inheritance: A comparison of object-oriented paradigms
+### ☘️ Prototypal Inheritance vs. Classical Inheritance: A comparison of object-oriented paradigms
 
 
 <div align="right">
@@ -196,7 +196,7 @@
 </div>
 
 #### QA16
-### ✍Object-Oriented Programming (OOP): Abstraction, Encapsulation, Polymorphism, inheritance in JavaScript
+### ☘️ Object-Oriented Programming (OOP): Abstraction, Encapsulation, Polymorphism, inheritance in JavaScript
 
 
 <div align="right">
@@ -204,7 +204,7 @@
 </div>
 
 #### QA17
-### ✍The concept of currying and partial application in functional programming
+### ☘️ The concept of currying and partial application in functional programming
 
 
 <div align="right">
@@ -212,7 +212,7 @@
 </div>
 
 #### QA18
-### ✍Diving into ES6 features like Arrow functions, Template literals, spread/rest and Destructuring
+### ☘️ Diving into ES6 features like Arrow functions, Template literals, spread/rest and Destructuring
 
 
 <div align="right">
@@ -220,7 +220,7 @@
 </div>
 
 #### QA19
-### ✍Deep dive into Array methods like `map`, `filter`, `reduce`, and `forEach` (ES6)
+### ☘️ Deep dive into Array methods like `map`, `filter`, `reduce`, and `forEach` (ES6)
 
 
 <div align="right">
@@ -228,7 +228,7 @@
 </div>
 
 #### QA20
-### ✍Callbacks, Promises, and Async/Await: Managing asynchronous operations in JavaScript
+### ☘️ Callbacks, Promises, and Async/Await: Managing asynchronous operations in JavaScript
 
 
 <div align="right">
@@ -236,7 +236,7 @@
 </div>
 
 #### QA21
-### ✍Exploring Higher-order Functions and their role in functional programming
+### ☘️ Exploring Higher-order Functions and their role in functional programming
 
 
 <div align="right">
@@ -244,7 +244,7 @@
 </div>
 
 #### QA22
-### ✍Polyfills: Write polyfills for array methods like `map`, `forEach`, `filter`, `reduce`.
+### ☘️ Polyfills: Write polyfills for array methods like `map`, `forEach`, `filter`, `reduce`.
 
 
 <div align="right">
@@ -252,7 +252,7 @@
 </div>
 
 #### QA23
-### ✍JavaScript's new features in ES7, ES8, and beyond
+### ☘️ JavaScript's new features in ES7, ES8, and beyond
 
 
 <div align="right">
@@ -260,7 +260,7 @@
 </div>
 
 #### QA24
-### ✍JavaScript Design Patterns for writing efficient and maintainable code
+### ☘️ JavaScript Design Patterns for writing efficient and maintainable code
 
 
 <div align="right">
@@ -268,7 +268,7 @@
 </div>
 
 #### QA25
-### ✍Handling errors and exceptions using `try...catch` blocks in JavaScript
+### ☘️ Handling errors and exceptions using `try...catch` blocks in JavaScript
 
 
 <div align="right">
@@ -276,7 +276,7 @@
 </div>
 
 #### QA26
-### ✍Throttling and Debouncing: Controlling the rate of function execution
+### ☘️ Throttling and Debouncing: Controlling the rate of function execution
 
 
 <div align="right">
@@ -284,7 +284,7 @@
 </div>
 
 #### QA27
-### ✍Local Storage vs. Session Storage vs. IndexedDB: Client-side storage options
+### ☘️ Local Storage vs. Session Storage vs. IndexedDB: Client-side storage options
 
 
 <div align="right">
@@ -292,7 +292,7 @@
 </div>
 
 #### QA28
-### ✍JSON: Understand JSON parsing and stringify
+### ☘️ JSON: Understand JSON parsing and stringify
     
 
 <div align="right">
@@ -302,7 +302,7 @@
 ---
 
 #### QB1
-### Caching and Memoization techniques for optimizing performance
+### ☘️ Caching and Memoization techniques for optimizing performance
 
 
 <div align="right">
@@ -310,7 +310,7 @@
 </div>
 
 #### QB2
-### Understanding CORS (Cross-Origin Resource Sharing) and how to handle it
+### ☘️ Understanding CORS (Cross-Origin Resource Sharing) and how to handle it
 
 
 <div align="right">
@@ -318,7 +318,7 @@
 </div>
 
 #### QB3
-### Implementing data structures like linked lists, stacks, and queues in JavaScript
+### ☘️ Implementing data structures like linked lists, stacks, and queues in JavaScript
 
 
 <div align="right">
@@ -326,7 +326,7 @@
 </div>
 
 #### QB4
-### The importance of Web APIs and how to work with them in JavaScript
+### ☘️ The importance of Web APIs and how to work with them in JavaScript
 
 
 <div align="right">
@@ -334,7 +334,7 @@
 </div>
 
 #### QB5
-### Security best practices for JavaScript applications
+### ☘️ Security best practices for JavaScript applications
 
 
 <div align="right">
@@ -342,7 +342,7 @@
 </div>
 
 #### QB6
-### Module Systems: Explore CommonJS, AMD, and ES6 modules
+### ☘️ Module Systems: Explore CommonJS, AMD, and ES6 modules
 
 
 <div align="right">
@@ -350,7 +350,7 @@
 </div>
 
 #### QB7
-### HTTP Headers: Understanding and using HTTP headers
+### ☘️ HTTP Headers: Understanding and using HTTP headers
 
 
 <div align="right">
@@ -358,7 +358,7 @@
 </div>
 
 #### QB8
-### RESTful API: Principles of RESTful API design
+### ☘️ RESTful API: Principles of RESTful API design
 
 
 <div align="right">
@@ -366,7 +366,7 @@
 </div>
 
 #### QB9
-### AJAX and Fetch API: Learn how to make asynchronous HTTP requests with XMLHTTPRequest (XHR)
+### ☘️ AJAX and Fetch API: Learn how to make asynchronous HTTP requests with XMLHTTPRequest (XHR)
 
 
 <div align="right">
@@ -374,7 +374,7 @@
 </div>
 
 #### QB10
-### Progressive Web Apps (PWAs): Understand PWA concepts and service workers
+### ☘️ Progressive Web Apps (PWAs): Understand PWA concepts and service workers
 
 
 <div align="right">
@@ -382,7 +382,7 @@
 </div>
 
 #### QB11
-### Web Performance: Optimize your code for speed and efficiency
+### ☘️ Web Performance: Optimize your code for speed and efficiency
 
 
 <div align="right">
@@ -390,7 +390,7 @@
 </div>
 
 #### QB12
-### Accessibility (a11y): Ensure your applications are accessible to all users
+### ☘️ Accessibility (a11y): Ensure your applications are accessible to all users
 
 
 <div align="right">
@@ -398,7 +398,7 @@
 </div>
 
 #### QB13
-### Content Security Policy (CSP): Protecting your site from XSS attacks, CSRF, XHR. 
+### ☘️ Content Security Policy (CSP): Protecting your site from XSS attacks, CSRF, XHR. 
 
 
 <div align="right">
@@ -406,7 +406,7 @@
 </div>
 
 #### QB14
-### Internationalization (i18n): Making your applications multilingual
+### ☘️ Internationalization (i18n): Making your applications multilingual
 
 
 <div align="right">
@@ -414,7 +414,7 @@
 </div>
 
 #### QB15
-### Micro-Frontends: Building frontends in a microservices architecture
+### ☘️ Micro-Frontends: Building frontends in a microservices architecture
 
 
 <div align="right">
@@ -422,7 +422,7 @@
 </div>
 
 #### QB16
-### MVC: Model-View-Controller design pattern
+### ☘️ MVC: Model-View-Controller design pattern
 
 
 <div align="right">
@@ -430,7 +430,7 @@
 </div>
 
 #### QB17
-### Prefetch: Optimizing resource loading
+### ☘️ Prefetch: Optimizing resource loading
 
 
 <div align="right">
@@ -438,7 +438,7 @@
 </div>
 
 #### QB18
-### SOLID Principles: Writing maintainable and scalable code
+### ☘️ SOLID Principles: Writing maintainable and scalable code
 
 
 <div align="right">
@@ -446,7 +446,7 @@
 </div>
 
 #### QB19
-### Server-Side Rendering (SSR): Benefits and implementation
+### ☘️ Server-Side Rendering (SSR): Benefits and implementation
 
 
 <div align="right">
@@ -454,7 +454,7 @@
 </div>
 
 #### QB20
-### Static Site Generation (SSG): Generating static sites
+### ☘️ Static Site Generation (SSG): Generating static sites
 
 
 <div align="right">
@@ -462,7 +462,7 @@
 </div>
 
 #### QB21
-### Single Page Application (SPA): Building SPAs with JavaScript
+### ☘️ Single Page Application (SPA): Building SPAs with JavaScript
 
 
 <div align="right">
@@ -470,7 +470,7 @@
 </div>
 
 #### QB22
-### SEO: Optimizing JavaScript applications for search engines
+### ☘️ SEO: Optimizing JavaScript applications for search engines
 
 
 <div align="right">
@@ -478,7 +478,7 @@
 </div>
 
 #### QB23
-### Web Workers: Background processing with web workers
+### ☘️ Web Workers: Background processing with web workers
 
 
 <div align="right">
@@ -486,7 +486,7 @@
 </div>
 
 #### QB24
-### WebSocket: Real-time communication with Web Sockets
+### ☘️ WebSocket: Real-time communication with Web Sockets
 
 
 <div align="right">
@@ -494,7 +494,7 @@
 </div>
 
 #### QB25
-### JavaScript bundlers and their role in optimizing code for production
+### ☘️ JavaScript bundlers and their role in optimizing code for production
 
 
 <div align="right">
@@ -502,7 +502,7 @@
 </div>
 
 #### QB26
-### Build Tools: Grasp Webpack and Babel for bundling and transpiling
+### ☘️ Build Tools: Grasp Webpack and Babel for bundling and transpiling
 
 
 <div align="right">
@@ -510,7 +510,7 @@
 </div>
 
 #### QB27
-### Git Commands: Essential git commands for version control
+### ☘️ Git Commands: Essential git commands for version control
 
 
 <div align="right">
@@ -518,7 +518,7 @@
 </div>
 
 #### QB28
-### Test-Driven Development (TDD): Writing tests before code
+### ☘️ Test-Driven Development (TDD): Writing tests before code
 
 
 <div align="right">
@@ -526,12 +526,11 @@
 </div>
 
 #### QB29
-### `yarn` vs. `npm` vs. `pnpm` vs. `vite`: Comparing JavaScript package managers
+### ☘️ `yarn` vs. `npm` vs. `pnpm` vs. `vite`: Comparing JavaScript package managers
 
 
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
-
 
