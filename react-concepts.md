@@ -37,6 +37,8 @@
 | 29.|[What is the Transition API in React 18, and how is it used?](#Q29)|
 | 30.|[How has Suspense been improved in React 18?](#Q30)|
 | 31.|[What are the major new features introduced in React 19?](#Q31)|
+| 32.|[Explain `useReducer` hook](#Q32)|
+| 33.|[Difference between `state` and `ref`](#Q33)|
 
 
 ## Answers
@@ -283,6 +285,22 @@
 
 #### Q31
 ### ✍What are the major new features introduced in React 19?
+
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+#### Q32
+### ✍Explain `useReducer` hook
+
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+#### Q33
+### ✍Difference between `state` and `ref`
 
 
 <div align="right">
