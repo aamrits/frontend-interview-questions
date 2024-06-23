@@ -41,7 +41,7 @@
 
 ## Answers
 
-#### QA1 
+#### Q1 
 ### ✍Why choose React? What sets it apart from other libraries and frameworks?
 
 
@@ -49,7 +49,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA2
+#### Q2
 ### ✍Understanding the Virtual DOM and its benefits in React
 
 
@@ -57,7 +57,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA3
+#### Q3
 ### ✍Exploring JSX and its advantages in React development
 
 
@@ -65,7 +65,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA4
+#### Q4
 ### ✍The concept of Reconciliation and its significance in React rendering
 
 
@@ -73,7 +73,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA5
+#### Q5
 ### ✍Understanding the differences between State and Props in React
 
 
@@ -81,7 +81,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA6
+#### Q6
 ### ✍Dive into Hooks-related questions, such as `useState` and `useEffect`
 
 
@@ -89,7 +89,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA7
+#### Q7
 ### ✍The various use cases of `useEffect` in different scenarios
 
 
@@ -97,7 +97,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA8
+#### Q8
 ### ✍Exploring the differences between `useMemo` and `useCallback` in React
 
 
@@ -105,7 +105,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA9
+#### Q9
 ### ✍Understanding Code Splitting and its role in optimizing React applications
 
 
@@ -113,7 +113,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA10
+#### Q10
 ### ✍The importance of Accessibility considerations in React development
 
 
@@ -121,7 +121,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA11
+#### Q11
 ### ✍Unidirectional behaviour in React and its impact on application architecture
 
 
@@ -129,7 +129,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA12
+#### Q12
 ### ✍Comparing Pure Components and Higher Order Components (HOC) in React
 
 
@@ -137,7 +137,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA13
+#### Q13
 ### ✍Addressing security concerns such as CSRF and XSRF in React applications
 
 
@@ -145,7 +145,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA14
+#### Q14
 ### ✍Deepening your understanding of React optimization techniques
 
 
@@ -153,7 +153,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA15
+#### Q15
 ### ✍Exploring Lazy Loading and its benefits in React applications
 
 
@@ -161,7 +161,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA16
+#### Q16
 ### ✍Comparing Class-based and Functional-based components in React
 
 
@@ -169,7 +169,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA17
+#### Q17
 ### ✍Understanding SEO considerations and best practices in React applications
 
 
@@ -177,7 +177,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA18
+#### Q18
 ### ✍React Router and its role in handling client-side routing in React applications
 
 
@@ -185,7 +185,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA19
+#### Q19
 ### ✍Context API and how it facilitates state management in React without using Redux
 
 
@@ -193,7 +193,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA20
+#### Q20
 ### ✍Server-Side Rendering (SSR) and its benefits for performance and SEO in React applications
 
 
@@ -201,7 +201,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA21
+#### Q21
 ### ✍Error Handling and Error Boundaries in React to gracefully handle runtime errors
 
 
@@ -209,7 +209,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA22
+#### Q22
 ### ✍Testing React components using tools like Jest and React Testing Library
 
 
@@ -217,7 +217,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA23
+#### Q23
 ### ✍Form handling and validation techniques in React applications
 
 
@@ -225,7 +225,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA24
+#### Q24
 ### ✍Performance optimizations using memoization and shouldComponentUpdate
 
 
@@ -233,7 +233,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA25
+#### Q25
 ### ✍Handling asynchronous operations with async/await and Promises in React
 
 
@@ -241,7 +241,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA26
+#### Q26
 ### ✍React patterns and best practices for maintainable and scalable code
 
 
@@ -249,7 +249,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA27
+#### Q27
 ### ✍What is concurrent rendering in React 18, and how does it improve the performance of applications?
 
 
@@ -257,7 +257,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA28
+#### Q28
 ### ✍Explain the concept of automatic batching in React 18.
 
 
@@ -265,7 +265,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA29
+#### Q29
 ### ✍What is the Transition API in React 18, and how is it used?
 
 
@@ -273,7 +273,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA30
+#### Q30
 ### ✍How has Suspense been improved in React 18?
 
 
@@ -281,7 +281,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA31
+#### Q31
 ### ✍What are the major new features introduced in React 19?
 
 
