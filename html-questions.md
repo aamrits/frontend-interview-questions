@@ -12,7 +12,7 @@
 | 04.|[How do you create a hyperlink in HTML](#Q4)|
 | 05.|[Explain the difference between block and inline elements](#Q5)|
 | 06.|[Purpose of `<head>` tag](#Q6)|
-| 07.|[How to embed an image in HTML page. (Hint: `<img />`)](#Q7)|
+| 07.|[How to embed an image in HTML page.](#Q7)|
 | 08.|[Explain semantic HTML and why is it important](#Q8)|
 | 09.|[How to create a table](#Q9)|
 | 10.|[Difference between HTML and XHTML](#Q10)|
