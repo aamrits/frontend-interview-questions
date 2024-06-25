@@ -11,7 +11,7 @@
 | 03.|[Exploring JSX and its advantages in React development](#Q3)|
 | 04.|[The concept of Reconciliation and its significance in React rendering](#Q4)|
 | 05.|[Understanding the differences between State and Props in React](#Q5)|
-| 06.|[Dive into Hooks-related questions, such as `useState` and `useEffect`](#Q6)|
+| 06.|[Briefly explain `useState` and `useEffect`](#Q6)|
 | 07.|[The various use cases of `useEffect` in different scenarios](#Q7)|
 | 08.|[Exploring the differences between `useMemo` and `useCallback` in React](#Q8)|
 | 09.|[Understanding Code Splitting and its role in optimizing React applications](#Q9)|
@@ -45,6 +45,19 @@
 
 #### Q1 
 ### 💥 Why choose React? What sets it apart from other libraries and frameworks?
+
+React provides several benefits that set it apart from other libraries and frameworks.
+- React follows a *Component-Based Architecture*. Components are reusable, maintainable, and easier to debug.
+
+- React uses a *virtual DOM* to efficiently update and render components, leading to better performance and a smoother user experience.
+
+- React has a *vast ecosystem*, including tools for routing and state management, and a large collection of third-party libraries.
+
+- *JSX*, which is a syntax extension for JavaScript, allows you to write HTML-like code within JavaScript, making it easier to visualize the UI structure and logic together.
+
+- React is maintained by Facebook and thus has a *large active community*, ensuring extensive support.
+
+- With React Native, you can do *Cross-Platform Development* and build mobile applications.
 
 
 <div align="right">
