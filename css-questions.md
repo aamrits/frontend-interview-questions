@@ -194,6 +194,8 @@ div {
 #### Q8
 ### 🍄 Are CSS properties case-sensitive?
 
+No, CSS properties are not case-sensitive. 
+For example, `background-color` is the same as `BACKGROUND-COLOR` or `Background-Color`.
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -202,6 +204,20 @@ div {
 #### Q9
 ### 🍄 Describe floats and how they work. How to clear floating sides
 
+The `float` property is used to float elements to the left or right, allowing text and inline elements to wrap around it.
+```js
+<div class="float-left">This is floated to the left.</div>
+<p>This text wraps around the floated element.</p>
+<div class="clear-both">This is cleared and moves below the floated elements.</div>
+
+.float-left {
+  float: left;
+}
+
+.clear-both {
+  clear: both;
+}
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -210,6 +226,17 @@ div {
 #### Q10
 ### 🍄 Describe `z-index` and how stacking context is formed.
 
+The `z-index` property specifies the stack order of an element. Higher values are closer to the viewer. Stacking context is formed by elements with a position value other than `static` and specific properties like `opacity`, `transform`, `filter`, etc.
+```css
+.element1 {
+  position: relative;
+  z-index: 1;
+}
+.element2 {
+  position: relative;
+  z-index: 2;
+}
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -218,6 +245,11 @@ div {
 #### Q11
 ### 🍄 Do `margin` and `padding` have an effect on inline elements.
 
+Horizontal padding, margins, and borders will apply and will cause other inline boxes to move away from the box.
+But
+- The box will not break onto a new line.
+- The `width` and `height` properties will not apply.
+- Vertical padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -226,6 +258,8 @@ div {
 #### Q12
 ### 🍄 How will you decide when to use a `button` or `tag`?
 
+- We use `<button>` for actions within a web application (e.g., forms, modals, interactive features).
+- We use `<a>` for navigation, linking to different pages or sections.
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -242,6 +276,7 @@ div {
 #### Q14
 ### 🍄 What are the differences between `visibility: hidden` and `display: none`?
 
+With `visibility: hidden` the element is hidden, but it still occupies space in the layout. But with `display: none` the element is completely removed and it does not occupy any space.
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -250,6 +285,9 @@ div {
 #### Q15
 ### 🍄 What are the differences between `inline`, `block`, and `inline-block` display types?
 
+1. With `display: inline`, elements do not start on a new line and only take up as much width as necessary. `margin` and `padding` affect only the horizontal space.
+2. With `display: block`, elements start on a new line and take up the full width available. `margin` and `padding` affect all sides.
+3. With `display: inline-block`, elements don't start on a new line, but `margin` and `padding` affect all sides.
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -258,6 +296,7 @@ div {
 #### Q16
 ### 🍄 Does `overflow: hidden` create a new block formatting context?
 
+Yes, `overflow: hidden` can create a new block formatting context. This can be useful for containing floats or preventing margin collapse.
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -282,6 +321,13 @@ div {
 #### Q19
 ### 🍄 Which unit of measurement would you prefer among `px`, `rem`, `em`, `%`, or `pt`, and why?
 
+1. `px`: Absolute unit, useful for precise control.
+2. `rem`: Relative to the root element's font size, useful for consistent scaling across components.
+3. `em`: Relative to the font size of the parent element, useful for scaling within a component.
+4. `%`: Relative to the parent element's dimensions, useful for responsive design.
+5. `pt`: Typically used in print media, less common in web design.
+
+`rem` for consistent scaling across components, ensuring responsive and accessible design.
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -289,7 +335,19 @@ div {
 
 #### Q20
 ### 🍄 Difference between `div p`, `div > p`, `div + p`, and `div ~ p`.
-
+1. `div p`: Selects all `<p>` elements inside a `<div>`, regardless of depth.
+2. `div > p`: Selects all `<p>` elements that are direct children of a `<div>`.
+3. `div + p`: Selects the `<p>` element immediately following a `<div>`.
+4. `div ~ p`: Selects all `<p>` elements preceded by a `<div>`, not necessarily immediately.
+```html
+<div>
+  <p>Paragraph 1</p> <!-- Matches div p, div > p -->
+  <p>Paragraph 2</p> <!-- Matches div p, div > p -->
+</div>
+<p>Paragraph 3</p> <!-- Matches div + p if placed immediately after div -->
+<div></div>
+<p>Paragraph 4</p> <!-- Matches div ~ p -->
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
