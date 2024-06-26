@@ -55,14 +55,21 @@
 #### Q1 
 ### 🍄 Why is CSS important.
 
+CSS (Cascading Style Sheets) is important because it:
+- Separates content from design, allowing for easier maintenance and updating.
+- Enhances the appearance and layout of web pages.
+- Improves user experience by enabling responsive design.
+- Provides consistent styling across the application.
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q2
-### 🍄 What do you mean by `metatag`? And why is meant by `initial value = 1.0`
+### 🍄 What do you mean by `meta` tag in HTML? And why is meant by `initial value = 1.0`
 
+- A `meta` tag in HTML provides metadata about the HTML document. It is placed inside the <head> section and is used for various purposes, such as setting the character set, viewport settings, and SEO information.
+- `initial value = 1.0` could refer to the default value of a property or parameter. In the context of CSS, 1.0 typically represents 100%.
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -71,6 +78,25 @@
 #### Q3
 ### 🍄 In how many ways can CSS be integrated.
 
+CSS can be integrated into HTML in three main ways:
+1. Inline CSS: Using the `style` attribute within HTML tags.
+```html
+<p style="color: blue">This is a paragraph.</p>
+```
+2. Internal CSS: Using a `<style>` tag within the `<head>` section of an HTML document.
+```html
+<head>
+  <style>
+    p { color: blue; }
+  </style>
+</head>
+```
+3. External CSS: Linking to an external CSS file using the `<link>` tag.
+```html
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -78,6 +104,8 @@
 
 #### Q4
 ### 🍄 Explain the box model.
+
+The CSS box model describes the rectangular boxes that are generated for elements in the document tree. Box model wraps every HTML elements. A Box model consists of margin, border, padding and the actual content.
 
 
 <div align="right">
@@ -87,6 +115,18 @@
 #### Q5
 ### 🍄 Difference between id and class selectors.
 
+- `id` are unique and can be applied to only one element in a web page. If a web page has both `id` and `class` same name, then `id` takes precedence.
+- `class` can be applied to multiple elements as they can share the same class name.
+```js
+#uniqueElement {
+  border: 2px solid black;
+}
+.commonClass {
+    color: green;
+}
+
+<div id="uniqueElement" class="commonClass">This element has both an ID and a class.</div>
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -95,6 +135,19 @@
 #### Q6
 ### 🍄 What are data attributes?
 
+Data attributes are custom attributes that can be added to HTML elements to store extra information. They are prefixed with `data-` and can be accessed using JavaScript or CSS.
+```js
+<div data-user-id="12345" data-role="admin">User Info</div>
+
+// by JS: use dataset
+const userInfo = document.querySelector('[data-user-id]');
+console.log(userInfo.dataset.userId); // Output: 12345
+
+// by CSS
+div[data-user-id="12345"] {
+  color: green;
+}
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -103,6 +156,36 @@
 #### Q7
 ### 🍄 Position in CSS: Difference between `static`, `absolute`, `relative`, and `fixed`.
 
+1. `static`: The default position, where elements are positioned according to the normal flow of the document.
+```css
+div {
+  position: static;
+}
+```
+2. `relative`: The element is positioned relative to its normal position. `top`, `right`, `bottom`, `left` values will adjust it from this position.
+```css
+div {
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+```
+3. `absolute`: The element is positioned relative to its nearest positioned parent element.
+```css
+div {
+  position: absolute;
+  top: 50px;
+  left: 60px;
+}
+```
+4. `fixed`: The element is positioned relative to the browser window. It will not move even if the window is scrolled.
+```css
+div {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
