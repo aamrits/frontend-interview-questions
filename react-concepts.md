@@ -37,8 +37,10 @@
 | 29.|[What is the Transition API in React 18, and how is it used?](#Q29)|
 | 30.|[How has Suspense been improved in React 18?](#Q30)|
 | 31.|[What are the major new features introduced in React 19?](#Q31)|
-| 32.|[Explain `useReducer` hook](#Q32)|
+| 32.|[Explain `useReducer` hook. Give some examples and use case scenarios](#Q32)|
 | 33.|[Difference between `state` and `ref`](#Q33)|
+| 34.|[Explain Redux with an example](#Q34)|
+| 35.|[Enlist some clean code practices in React.](#Q35)|
 
 
 ## Answers
@@ -305,7 +307,7 @@ React provides several benefits that set it apart from other libraries and frame
 </div>
 
 #### Q32
-### 💥 Explain `useReducer` hook
+### 💥 Explain `useReducer` hook. Give some examples and use case scenarios
 
 
 <div align="right">
@@ -314,6 +316,22 @@ React provides several benefits that set it apart from other libraries and frame
 
 #### Q33
 ### 💥 Difference between `state` and `ref`
+
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+#### Q34
+### 💥 Explain Redux with an example
+
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+#### Q35
+### 💥 Enlist some clean code practices in React.
 
 
 <div align="right">
