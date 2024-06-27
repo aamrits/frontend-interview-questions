@@ -646,6 +646,12 @@ Some important Flexbox Properties:
 #### Q31
 ### 🍄 How can we achieve smooth scrolling?
 
+To achieve smooth scrolling, you can use the CSS scroll-behavior property:
+```css
+html {
+  scroll-behavior: smooth;
+}
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
