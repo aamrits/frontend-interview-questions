@@ -50,16 +50,16 @@
 | 06.|[Module Systems: Explore CommonJS, AMD, and ES6 modules](#QB6)|
 | 07.|[HTTP Headers: Understanding and using HTTP headers](#QB7)|
 | 08.|[RESTful API: Principles of RESTful API design](#QB8)|
-| 09.|[AJAX and Fetch API: Learn how to make asynchronous HTTP requests with XMLHTTPRequest (XHR)](#QB9)|
+| 09.|[Briefly elaborate on AJAX. Using AJAX, give a basic example of how to make asynchronous HTTP requests using XMLHttpRequest (XHR)](#QB9)|
 | 10.|[Progressive Web Apps (PWAs): Understand PWA concepts and service workers](#QB10)|
-| 11.|[Web Performance: Optimize your code for speed and efficiency](#QB11)|
-| 12.|[Accessibility (a11y): Ensure your applications are accessible to all users](#QB12)|
-| 13.|[Content Security Policy (CSP): Protecting your site from XSS attacks, CSRF, XHR](#QB13)|
-| 14.|[Internationalization (i18n): Making your applications multilingual](#QB14)|
-| 15.|[Micro-Frontends: Building frontends in a microservices architecture](#QB15)|
-| 16.|[MVC: Model-View-Controller design pattern](#QB16)|
-| 17.|[Prefetch: Optimizing resource loading](#QB17)|
-| 18.|[SOLID Principles: Writing maintainable and scalable code](#QB18)|
+| 11.|[Elaborate Web Performance. Mention few ways to Optimize your code for speed and efficiency in JavaScript](#QB11)|
+| 12.|[Explain Accessibility (a11y). Ensure your applications are accessible to all users](#QB12)|
+| 13.|[What is Content Security Policy (CSP). Mention ways to Protect your site from XSS attacks, CSRF, XHR.](#QB13)|
+| 14.|[Internationalization (i18n) and Making your applications multilingual](#QB14)|
+| 15.|[What are Micro-Frontends. How do we build frontends in a microservices architecture](#QB15)|
+| 16.|[Elaborate MVC model (Model-View-Controller design pattern).](#QB16)|
+| 17.|[Explain the role of Prefetch in Optimizing resource loading. Are there any other optimization techniques.](#QB17)|
+| 18.|[Elaborate SOLID Principles.](#QB18)|
 | 19.|[Server-Side Rendering (SSR): Benefits and implementation](#QB19)|
 | 20.|[Static Site Generation (SSG): Generating static sites](#QB20)|
 | 21.|[Single Page Application (SPA): Building SPAs with JavaScript](#QB21)|
@@ -68,9 +68,8 @@
 | 24.|[WebSocket: Real-time communication with Web Sockets](#QB24)|
 | 25.|[JavaScript bundlers and their role in optimizing code for production](#QB25)|
 | 26.|[Build Tools: Grasp Webpack and Babel for bundling and transpiling](#QB26)|
-| 27.|[Git Commands: Essential git commands for version control](#QB27)|
-| 28.|[Test-Driven Development (TDD): Writing tests before code](#QB28)|
-| 29.|[`yarn` vs. `npm` vs. `pnpm`: Comparing JavaScript package managers](#QB29)|
+| 27.|[Test-Driven Development (TDD): Writing tests before code](#QB27)|
+| 28.|[`yarn` vs. `npm` vs. `pnpm`: Comparing JavaScript package managers](#QB28)|
 
 
 ## Answers
@@ -366,7 +365,7 @@
 </div>
 
 #### QB9
-### ☘️ AJAX and Fetch API: Learn how to make asynchronous HTTP requests with XMLHTTPRequest (XHR)
+### ☘️ Briefly elaborate on AJAX. Using AJAX, give a basic example of how to make asynchronous HTTP requests using XMLHttpRequest (XHR)
 
 
 <div align="right">
@@ -382,7 +381,7 @@
 </div>
 
 #### QB11
-### ☘️ Web Performance: Optimize your code for speed and efficiency
+### ☘️ Elaborate Web Performance. Mention few ways to Optimize your code for speed and efficiency in JavaScript
 
 
 <div align="right">
@@ -390,7 +389,7 @@
 </div>
 
 #### QB12
-### ☘️ Accessibility (a11y): Ensure your applications are accessible to all users
+### ☘️ Explain Accessibility (a11y). Ensure your applications are accessible to all users
 
 
 <div align="right">
@@ -398,7 +397,7 @@
 </div>
 
 #### QB13
-### ☘️ Content Security Policy (CSP): Protecting your site from XSS attacks, CSRF, XHR. 
+### ☘️ What is Content Security Policy (CSP). Mention ways to Protect your site from XSS attacks, CSRF, XHR. 
 
 
 <div align="right">
@@ -406,7 +405,7 @@
 </div>
 
 #### QB14
-### ☘️ Internationalization (i18n): Making your applications multilingual
+### ☘️ Internationalization (i18n) and Making your applications multilingual
 
 
 <div align="right">
@@ -414,7 +413,7 @@
 </div>
 
 #### QB15
-### ☘️ Micro-Frontends: Building frontends in a microservices architecture
+### ☘️ What are Micro-Frontends. How do we build frontends in a microservices architecture
 
 
 <div align="right">
@@ -422,7 +421,7 @@
 </div>
 
 #### QB16
-### ☘️ MVC: Model-View-Controller design pattern
+### ☘️ Elaborate MVC model (Model-View-Controller design pattern).
 
 
 <div align="right">
@@ -430,7 +429,7 @@
 </div>
 
 #### QB17
-### ☘️ Prefetch: Optimizing resource loading
+### ☘️ Explain the role of Prefetch in Optimizing resource loading. Are there any other optimization techniques.
 
 
 <div align="right">
@@ -438,7 +437,7 @@
 </div>
 
 #### QB18
-### ☘️ SOLID Principles: Writing maintainable and scalable code
+### ☘️ Elaborate SOLID Principles.
 
 
 <div align="right">
@@ -510,14 +509,6 @@
 </div>
 
 #### QB27
-### ☘️ Git Commands: Essential git commands for version control
-
-
-<div align="right">
-    <b><a href="#">↥ back to top</a></b>
-</div>
-
-#### QB28
 ### ☘️ Test-Driven Development (TDD): Writing tests before code
 
 
@@ -525,7 +516,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB29
+#### QB28
 ### ☘️ `yarn` vs. `npm` vs. `pnpm` vs. `vite`: Comparing JavaScript package managers
 
 
