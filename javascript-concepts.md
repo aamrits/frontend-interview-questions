@@ -7,33 +7,33 @@
 |Sl.No| Questions                                                                         |
 |-----|-----------------------------------------------------------------------------------|
 | 01.|[The significance of the Event Loop and Concurrency Model in JavaScript](#QA1)|
-| 02.|[Fundamentals: variables, data types, and operators](#QA2)|
+| 02.|[Explain briefly about the following: variables, data types, and operators](#QA2)|
 | 03.|[Understanding Hoisting and its impact on variable and function declarations](#QA3)|
 | 04.|[The differences between `let`, `const`, and `var` in variable declaration and scope](#QA4)|
-| 05.|[Functions: Dive deep into functions, function declarations, function expressions IIFE, arrow functions](#QA5)|
+| 05.|[Dive deep into functions, function declarations, function expressions IIFE, arrow functions](#QA5)|
 | 06.|[The difference between `==` and `===` in JavaScript for value comparison](#QA6)|
 | 07.|[`null` vs. `Undefined`: Differences and usage](#QA7)|
 | 08.|[Scope chain and Lexical Scoping: How JavaScript handles variable access](#QA8)|
-| 09.|[Keyword `this` in JavaScript and what is its scope](#QA9)|
-| 10.|[Exploring Closures and their practical applications in JavaScript](#QA10)|
+| 09.|[Help me understand keyword `this` in JavaScript and how is it scoped. Give some examples](#QA9)|
+| 10.|[Define Closures and their practical applications in JavaScript](#QA10)|
 | 11.|[Common string manipulation techniques in JavaScript](#QA11)|
-| 12.|[DOM Manipulation Know how to interact with the Document Object Model (DOM) effectively](#QA12)|
-| 13.|[Event Handling: Learn about event listeners, event delegation, and the event object](#QA13)|
+| 12.|[What is DOM Manipulation. Understand how to interact with the Document Object Model (DOM) effectively](#QA12)|
+| 13.|[What is Event Handling. Briefly explain about event listeners, event delegation, and the event object](#QA13)|
 | 14.|[Understanding the concept of Prototypes and how they relate to Objects](#QA14)|
 | 15.|[Prototypal Inheritance vs. Classical Inheritance: A comparison of object-oriented paradigms](#QA15)|
 | 16.|[Object-Oriented Programming (OOP): Abstraction, Encapsulation, Polymorphism, inheritance in JavaScript](#QA16)|
 | 17.|[The concept of currying and partial application in functional programming](#QA17)|
-| 18.|[Diving into ES6 features like Arrow functions, Template literals, spread/rest and Destructuring](#QA18)|
-| 19.|[Deep dive into Array methods like `map`, `filter`, `reduce`, and `forEach` (ES6)](#QA19)|
-| 20.|[Callbacks, Promises, and Async/Await: Managing asynchronous operations in JavaScript](#QA20)|
-| 21.|[Exploring Higher-order Functions and their role in functional programming](#QA21)|
-| 22.|[Polyfills: Write polyfills for array methods like `map`, `forEach`, `filter`, `reduce`.](#QA22)|
+| 18.|[Describe the ES6 features like Arrow functions, Template literals, spread/rest and Destructuring](#QA18)|
+| 19.|[Explain deeply about Array methods like `map`, `filter`, `reduce`, and `forEach` (ES6)](#QA19)|
+| 20.|[Elaborate Callbacks, Promises, and Async/Await: Managing asynchronous operations in JavaScript](#QA20)|
+| 21.|[Explain Higher-order Functions and their role in functional programming](#QA21)|
+| 22.|[What are Polyfills. Write polyfills for array methods like `map`, `forEach`, `filter`, `reduce`.](#QA22)|
 | 23.|[JavaScript's new features in ES7, ES8, and beyond](#QA23)|
-| 24.|[JavaScript Design Patterns for writing efficient and maintainable code](#QA24)|
+| 24.|[Elaborate JavaScript Design Patterns for writing efficient and maintainable code](#QA24)|
 | 25.|[Handling errors and exceptions using `try...catch` blocks in JavaScript](#QA25)|
-| 26.|[Throttling and Debouncing: Controlling the rate of function execution](#QA26)|
-| 27.|[Local Storage vs. Session Storage vs. IndexedDB: Client-side storage options](#QA27)|
-| 28.|[JSON: Understand JSON parsing and stringify](#QA28)|
+| 26.|[How Throttling and Debouncing control the rate of function execution. Give examples](#QA26)|
+| 27.|[Local Storage vs. Session Storage vs. IndexedDB: Client-side storage options. Enlist difference in tabular form.](#QA27)|
+| 28.|[JSON: Understand JSON parsing, stringify, etc](#QA28)|
 
 
 ## Some more(deep) JavaScript questions and misc.
@@ -83,7 +83,7 @@
 </div>
 
 #### QA2
-### ☘️ Fundamentals: variables, data types, and operators
+### ☘️ Explain briefly about the following: variables, data types, and operators
 
 
 <div align="right">
@@ -107,7 +107,7 @@
 </div>
 
 #### QA5
-### ☘️ Functions: Dive deep into functions, function declarations, function expressions IIFE, arrow functions
+### ☘️ Dive deep into functions, function declarations, function expressions IIFE, arrow functions
 
 
 <div align="right">
@@ -139,7 +139,7 @@
 </div>
 
 #### QA9
-### ☘️ Keyword `this` in JavaScript and what is it scoped
+### ☘️ Help me understand keyword `this` in JavaScript and how is it scoped. Give some examples
 
 
 <div align="right">
@@ -147,7 +147,7 @@
 </div>
 
 #### QA10
-### ☘️ Exploring Closures and their practical applications in JavaScript
+### ☘️ Define Closures and their practical applications in JavaScript
 
 
 <div align="right">
@@ -163,7 +163,7 @@
 </div>
 
 #### QA12
-### ☘️ DOM Manipulation: Know how to interact with the Document Object Model (DOM) effectively
+### ☘️ What is DOM Manipulation. Understand how to interact with the Document Object Model (DOM) effectively
 
 
 <div align="right">
@@ -171,7 +171,7 @@
 </div>
 
 #### QA13
-### ☘️ Event Handling: Learn about event listeners, event delegation, and the event object
+### ☘️ What is Event Handling. Briefly explain about event listeners, event delegation, and the event object
 
 
 <div align="right">
@@ -211,7 +211,7 @@
 </div>
 
 #### QA18
-### ☘️ Diving into ES6 features like Arrow functions, Template literals, spread/rest and Destructuring
+### ☘️ Describe the ES6 features like Arrow functions, Template literals, spread/rest and Destructuring
 
 
 <div align="right">
@@ -219,7 +219,7 @@
 </div>
 
 #### QA19
-### ☘️ Deep dive into Array methods like `map`, `filter`, `reduce`, and `forEach` (ES6)
+### ☘️ Explain deeply about Array methods like `map`, `filter`, `reduce`, and `forEach` (ES6)
 
 
 <div align="right">
@@ -227,7 +227,7 @@
 </div>
 
 #### QA20
-### ☘️ Callbacks, Promises, and Async/Await: Managing asynchronous operations in JavaScript
+### ☘️ Elaborate Callbacks, Promises, and Async/Await: Managing asynchronous operations in JavaScript
 
 
 <div align="right">
@@ -235,7 +235,7 @@
 </div>
 
 #### QA21
-### ☘️ Exploring Higher-order Functions and their role in functional programming
+### ☘️ Explain Higher-order Functions and their role in functional programming
 
 
 <div align="right">
@@ -243,7 +243,7 @@
 </div>
 
 #### QA22
-### ☘️ Polyfills: Write polyfills for array methods like `map`, `forEach`, `filter`, `reduce`.
+### ☘️ What are Polyfills. Write polyfills for array methods like `map`, `forEach`, `filter`, `reduce`.
 
 
 <div align="right">
@@ -259,7 +259,7 @@
 </div>
 
 #### QA24
-### ☘️ JavaScript Design Patterns for writing efficient and maintainable code
+### ☘️ Elaborate JavaScript Design Patterns for writing efficient and maintainable code
 
 
 <div align="right">
@@ -275,7 +275,7 @@
 </div>
 
 #### QA26
-### ☘️ Throttling and Debouncing: Controlling the rate of function execution
+### ☘️ How Throttling and Debouncing control the rate of function execution. Give examples
 
 
 <div align="right">
@@ -283,7 +283,7 @@
 </div>
 
 #### QA27
-### ☘️ Local Storage vs. Session Storage vs. IndexedDB: Client-side storage options
+### ☘️ Local Storage vs. Session Storage vs. IndexedDB: Client-side storage options. Enlist difference in tabular form.
 
 
 <div align="right">
@@ -291,7 +291,7 @@
 </div>
 
 #### QA28
-### ☘️ JSON: Understand JSON parsing and stringify
+### ☘️ JSON: Understand JSON parsing, stringify, etc
     
 
 <div align="right">
