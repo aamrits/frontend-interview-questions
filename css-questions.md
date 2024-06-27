@@ -356,6 +356,30 @@ Yes, `overflow: hidden` can create a new block formatting context. This can be u
 #### Q21
 ### 🍄 What is specificity in CSS.
 
+Specificity is a measure of how specific a CSS selector is. Specificity is calculated based on the types of selectors used:
+    1. Inline styles have the highest specificity.
+    2. IDs have higher specificity than classes.
+    3. Classes, attributes, and pseudo-classes have higher specificity than elements and pseudo-elements.
+```css
+/* Specificity: 0,0,0,1 */
+div {
+  color: blue;
+}
+
+/* Specificity: 0,0,1,0 */
+.class {
+  color: green;
+}
+
+/* Specificity: 0,1,0,0 */
+#id {
+  color: red;
+}
+
+/* Specificity: 1,0,0,0 */
+style="color: purple"
+```
+An element with inline styles will have a color of purple, overriding other selectors.
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -364,6 +388,29 @@ Yes, `overflow: hidden` can create a new block formatting context. This can be u
 #### Q22
 ### 🍄 Explain CSS pseudo-selectors, pseudo-classes, and pseudo-elements. Name few
 
+**Pseudo-selectors**: A general term encompassing pseudo-classes and pseudo-elements.
+**Pseudo-classes**: Used to define the special state of an element.
+```css
+a:hover {
+  color: red;
+}
+p:first-child {
+  font-weight: bold;
+}
+:focus {
+  outline: none;
+}
+```
+**Pseudo-elements**: Used to style specified parts of an element.
+```css
+p::first-line {
+  text-transform: uppercase;
+}
+p::before {
+  content: "Note: ";
+  color: gray;
+}
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -372,6 +419,21 @@ Yes, `overflow: hidden` can create a new block formatting context. This can be u
 #### Q23
 ### 🍄 Difference between `transition` and `transform` property in CSS.
 
+**transition**: Used to create smooth transitions between property values.
+**transform**: Used to apply transformations like rotation, scaling, translation, and skewing to an element.
+```js
+<div class="box">Hover over me!</div>
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  transition: transform 0.5s ease;
+}
+.box:hover {
+  transform: scale(1.2);
+}
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -380,6 +442,7 @@ Yes, `overflow: hidden` can create a new block formatting context. This can be u
 #### Q24
 ### 🍄 Can the `translate()` function move the position of an element on the z-axis?
 
+No, the `translate()` function can only move elements along the x and y axes. To move an element on the z-axis, you would use the `translateZ()` or `translate3d()` function.
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -388,6 +451,20 @@ Yes, `overflow: hidden` can create a new block formatting context. This can be u
 #### Q25
 ### 🍄 How is `font-face` used?
 
+The `@font-face` rule allows you to define custom fonts for your web pages. You specify the font name and the URL of the font file.
+```css
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('mycustomfont.woff2') format('woff2'),
+       url('mycustomfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'MyCustomFont', Arial, sans-serif;
+}
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -396,6 +473,43 @@ Yes, `overflow: hidden` can create a new block formatting context. This can be u
 #### Q26
 ### 🍄 What are media queries and explain them in detail.
 
+Media queries are a feature of CSS used to apply styles based on the characteristics of the device or viewport displaying the content. They enable responsive design.
+
+Media query can be applied on:
+    1. `width`, `min-width`, `max-width`
+    2. `height`, `min-height`, `max-height`
+    3. `orientation` (portrait or landscape)
+    4. `resolution`
+
+```css
+/* Applies styles if the viewport width is 600px or less */
+@media (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+/* Applies styles if the viewport width is more than 600px */
+@media (min-width: 601px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+/* Applies styles for portrait orientation */
+@media (orientation: portrait) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Applies styles for landscape orientation */
+@media (orientation: landscape) {
+  body {
+    font-size: 14px;
+  }
+}
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -404,6 +518,48 @@ Yes, `overflow: hidden` can create a new block formatting context. This can be u
 #### Q27
 ### 🍄 What is Mobile-First Approach and Desktop First approach and which one you follow and why?
 
+**Mobile-First Approach**: Designing the web application starting with the smallest screen size and then adding styles for larger screens. This approach ensures that the base styles are optimized for mobile devices. *This approach is mostly preferred.*
+```css
+/* Mobile styles */
+body {
+  font-size: 16px;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+}
+```
+**Desktop-First Approach**: Designing the web application starting with the largest screen size and then adjusting styles for smaller screens.
+```css
+/* Desktop styles */
+body {
+  font-size: 20px;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -412,6 +568,7 @@ Yes, `overflow: hidden` can create a new block formatting context. This can be u
 #### Q28
 ### 🍄 Does the screen keyword in media queries apply to the device's physical screen or the browser's viewport?
 
+The `screen` keyword in media queries applies to the browser’s viewport, not the device’s physical screen. Media queries respond to the size of the viewport, which is the visible part of the web page in the browser window.
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -420,6 +577,57 @@ Yes, `overflow: hidden` can create a new block formatting context. This can be u
 #### Q29
 ### 🍄 Explain CSS Flexbox and how CSS Grid layout is different.
 
+**CSS Flexbox**: Designed for one-dimensional layouts (either a row or a column). It helps distribute space along the main axis and align items along the cross axis.
+```js
+<div class="container">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</div>
+
+<style>
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+</style>
+```
+**CSS Grid Layout**: Designed for two-dimensional layouts (both rows and columns). It allows for more complex layouts by defining both rows and columns.
+```js
+<div class="container">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+  <div>Item 4</div>
+</div>
+
+<style>
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+}
+</style>
+```
+More about Flexbox:
+Flexbox, is a CSS layout module designed to make the layout of items in a container flexible and efficient.
+Some important Flexbox Properties:
+    1. Container Properties
+        - display: flex | inline-flex
+        - flex-direction: row | row-reverse | column | column-reverse
+        - flex-wrap: nowrap | wrap | wrap-reverse
+        - justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly
+        - align-items: stretch | flex-start | flex-end | center | baseline
+        - align-content: stretch | flex-start | flex-end | center | space-between | space-around | space-evenly
+    2. Item Properties
+        - order: 0 (default value)
+        - flex-grow: 0 (default value)
+        - flex-shrink: 1 (default value)
+        - flex-basis: auto (default value)
+        - flex: 1 1 auto (flex-grow flex-shrink flex-basis)
+        - align-self: auto | flex-start | flex-end | center | baseline | stretch
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -428,6 +636,8 @@ Yes, `overflow: hidden` can create a new block formatting context. This can be u
 #### Q30
 ### 🍄 What is the difference between layout and positioning in CSS?
 
+**Layout**: Refers to the process of arranging elements within a container to create a structured and organized design. Common layout techniques include Flexbox, Grid, and floats.
+**Positioning**: Refers to how elements are placed relative to their normal flow, parent container, or viewport. Common positioning techniques include static, relative, absolute, fixed, and sticky.
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
