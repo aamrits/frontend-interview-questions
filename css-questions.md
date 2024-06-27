@@ -660,6 +660,27 @@ html {
 #### Q32
 ### 🍄 What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
 
+**Resetting CSS**: Strips all default browser styling. This removes all built-in styles and forces you to style everything from scratch.
+```css
+/* Example of Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+```
+**Normalizing CSS**: Aims to make built-in browser styles consistent across different browsers by providing sensible defaults, rather than removing all styling. 
+*Normalizing CSS should be preferred because it provides a more consistent starting point across different browsers without removing all useful default styles.*
+```css
+/* Example of Normalize.css (simplified) */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
