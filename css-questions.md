@@ -48,6 +48,7 @@
 | 40.|[Write a piece of code to centre a div.](#Q40)|
 | 41.|[How to make a triangle in CSS?](#Q41)|
 | 42.|[Make a bouncing ball entirely with the help of CSS.](#Q42)|
+| 43.|[What is tailwind css. Enlist few important properties in tailwind css](#Q43)|
 
 
 ## Answers
@@ -760,6 +761,14 @@ body {
 
 #### Q42
 ### 🍄 Make a bouncing ball entirely with the help of CSS.
+
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+#### Q43
+### 🍄 What is tailwind css. Enlist few important properties in tailwind css.
 
 
 <div align="right">
