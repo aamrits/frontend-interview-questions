@@ -306,6 +306,8 @@ Yes, `overflow: hidden` can create a new block formatting context. This can be u
 #### Q17
 ### 🍄 The pseudo-class will select inputs with type `radio` or `checkbox`, but not elements. True or False?
 
+False.
+The `:checked` pseudo-class will select checked `<input>` elements of type `radio` or `checkbox`, as well as `<option>` elements that are selected in a `<select>` dropdown.
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -314,6 +316,9 @@ Yes, `overflow: hidden` can create a new block formatting context. This can be u
 #### Q18
 ### 🍄 In an HTML document, the pseudo-class always refers to the element. True or False?
 
+False.
+
+The `:hover` pseudo-class can be applied to any element, not just the `<a>` element. It applies styles to an element when the user designates it (generally by holding the mouse pointer over it).
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -616,19 +621,19 @@ More about Flexbox:
 Flexbox, is a CSS layout module designed to make the layout of items in a container flexible and efficient.
 Some important Flexbox Properties:
     1. Container Properties
-        - display: flex | inline-flex
-        - flex-direction: row | row-reverse | column | column-reverse
-        - flex-wrap: nowrap | wrap | wrap-reverse
-        - justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly
-        - align-items: stretch | flex-start | flex-end | center | baseline
-        - align-content: stretch | flex-start | flex-end | center | space-between | space-around | space-evenly
+        - `display`: flex | inline-flex
+        - `flex-direction`: row | row-reverse | column | column-reverse
+        - `flex-wrap`: nowrap | wrap | wrap-reverse
+        - `justify-content`: flex-start | flex-end | center | space-between | space-around | space-evenly
+        - `align-items`: stretch | flex-start | flex-end | center | baseline
+        - `align-content`: stretch | flex-start | flex-end | center | space-between | space-around | space-evenly
     2. Item Properties
-        - order: 0 (default value)
-        - flex-grow: 0 (default value)
-        - flex-shrink: 1 (default value)
-        - flex-basis: auto (default value)
-        - flex: 1 1 auto (flex-grow flex-shrink flex-basis)
-        - align-self: auto | flex-start | flex-end | center | baseline | stretch
+        - `order`: 0 (default value)
+        - `flex-grow`: 0 (default value)
+        - `flex-shrink`: 1 (default value)
+        - `flex-basis`: auto (default value)
+        - `flex`: 1 1 auto (flex-grow flex-shrink flex-basis)
+        - `align-self`: auto | flex-start | flex-end | center | baseline | stretch
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -698,6 +703,28 @@ body {
 #### Q34
 ### 🍄 How can you optimize CSS selectors for better performance? (Hint: sprites)
 
+- Use IDs and classes instead of tag selectors: IDs and classes are faster to process.
+- Avoid descendant selectors: These can be slow as they need to check each level of the DOM tree.
+```css
+/* Slower */
+div p {
+  color: red;
+}
+
+/* Faster */
+.paragraph {
+  color: red;
+}
+```
+- Use CSS Sprites: Combine multiple images into a single sprite to reduce HTTP requests.
+```css
+icon {
+  background-image: url('sprite.png');
+  background-position: -10px -20px;
+  width: 20px;
+  height: 20px;
+}
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -706,6 +733,17 @@ body {
 #### Q35
 ### 🍄 How can you load CSS resources conditionally in a web page?
 
+You can use JavaScript to load CSS conditionally based on certain conditions:
+```js
+<script>
+  if (window.innerWidth < 600) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'mobile.css';
+    document.head.appendChild(link);
+  }
+</script>
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -714,6 +752,18 @@ body {
 #### Q36
 ### 🍄 What is the shadow DOM in web development?
 
+Shadow DOM is a web standard that allows you to encapsulate a part of the DOM and style it independently from the rest of the document. It is primarily used in Web Components to prevent styles and scripts from affecting the component’s internals.
+```html
+<custom-element>
+  #shadow-root (open)
+    <style>
+      p {
+        color: red;
+      }
+    </style>
+    <p>Shadow DOM content</p>
+</custom-element>
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -722,6 +772,67 @@ body {
 #### Q37
 ### 🍄 Name some different CSS filters you can use to modify elements.
 
+CSS filters can be used to apply graphical effects to elements. Some common CSS filters include:
+1. blur(): Applies a blur effect to the element.
+```css
+img {
+  filter: blur(5px);
+}
+```
+2. brightness(): Adjusts the brightness of the element.
+```css
+img {
+  filter: brightness(150%);
+}
+```
+3. contrast(): Adjusts the contrast of the element.
+```css
+img {
+  filter: contrast(200%);
+}
+```
+4. grayscale(): Converts the element to grayscale.
+```css
+img {
+  filter: grayscale(100%);
+}
+```
+5. hue-rotate(): Rotates the hue of the element. 
+```css
+img {
+  filter: hue-rotate(90deg);
+}
+```
+6. invert(): Inverts the colors of the element.
+```css
+img {
+  filter: invert(100%);
+}
+```
+7. opacity(): Adjusts the opacity of the element
+```css
+img {
+  filter: opacity(50%);
+}
+```
+8. saturate(): Adjusts the saturation of the element.
+```css
+img {
+  filter: saturate(300%);
+}
+```
+9. sepia(): Applies a sepia filter to the element.
+```css
+img {
+  filter: sepia(100%);
+}
+```
+10. drop-shadow(): Adds a shadow effect to the element.
+```css
+img {
+  filter: drop-shadow(10px 10px 5px #000);
+}
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -730,6 +841,50 @@ body {
 #### Q38
 ### 🍄 What are the reasons to use a CSS preprocessor in web development?
 
+1. Variables: Store values that you use repeatedly (e.g., colors, fonts).
+```css
+$primary-color: #333;
+body {
+  color: $primary-color;
+}
+```
+2. Nesting: Write nested CSS rules that reflect the structure of your HTML.
+```css
+nav {
+  ul {
+    margin: 0;
+    li {
+      list-style: none;
+    }
+  }
+}
+```
+3. Mixins: Create reusable chunks of CSS.
+```css
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+.box { @include border-radius(10px); 
+}
+```
+4. Inheritance: Share a set of CSS properties from one selector to another.
+```css
+.parent {
+  font-family: Arial;
+}
+.child {
+  @extend .parent;
+}
+```
+5. Functions: Use built-in functions for calculations and operations.
+```css
+.box {
+  width: percentage(0.5); // Result: width: 50%;
+}
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -738,6 +893,14 @@ body {
 #### Q39
 ### 🍄 What are some of the things you would test while doing accessibility testing?
 
+1. Keyboard Navigation: Ensure all interactive elements are accessible via keyboard.
+2. Screen Reader Compatibility: Check how content is read by screen readers.
+3. Contrast Ratio: Verify text/background contrast ratios are high enough for readability.
+4. Alt Text for Images: Ensure all images have appropriate alt text.
+5. Form Labels: Verify that all form inputs have associated labels.
+6. ARIA Roles and Attributes: Use ARIA roles to provide additional context to assistive technologies.
+7. Responsive Design: Ensure the site is accessible on all devices and screen sizes.
+8. Focus Management: Ensure the focus is correctly managed and visible.
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
