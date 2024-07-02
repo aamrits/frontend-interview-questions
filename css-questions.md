@@ -62,7 +62,7 @@ CSS (Cascading Style Sheets) is important because it:
 - Improves user experience by enabling responsive design.
 - Provides consistent styling across the application.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -72,7 +72,7 @@ CSS (Cascading Style Sheets) is important because it:
 - A `meta` tag in HTML provides metadata about the HTML document. It is placed inside the <head> section and is used for various purposes, such as setting the character set, viewport settings, and SEO information.
 - `initial value = 1.0` could refer to the default value of a property or parameter. In the context of CSS, 1.0 typically represents 100%.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -99,7 +99,7 @@ CSS can be integrated into HTML in three main ways:
 </head>
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -109,7 +109,7 @@ CSS can be integrated into HTML in three main ways:
 The CSS box model describes the rectangular boxes that are generated for elements in the document tree. Box model wraps every HTML elements. A Box model consists of margin, border, padding and the actual content.
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -129,7 +129,7 @@ The CSS box model describes the rectangular boxes that are generated for element
 <div id="uniqueElement" class="commonClass">This element has both an ID and a class.</div>
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -150,7 +150,7 @@ div[data-user-id="12345"] {
 }
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -188,7 +188,7 @@ div {
 }
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -198,7 +198,7 @@ div {
 No, CSS properties are not case-sensitive. 
 For example, `background-color` is the same as `BACKGROUND-COLOR` or `Background-Color`.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -220,7 +220,7 @@ The `float` property is used to float elements to the left or right, allowing te
 }
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -239,7 +239,7 @@ The `z-index` property specifies the stack order of an element. Higher values ar
 }
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -252,7 +252,7 @@ But
 - The `width` and `height` properties will not apply.
 - Vertical padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -262,7 +262,7 @@ But
 - We use `<button>` for actions within a web application (e.g., forms, modals, interactive features).
 - We use `<a>` for navigation, linking to different pages or sections.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -270,7 +270,7 @@ But
 ### 🍄 If you have a `<p>` element with `font-size: 10rem`, will the text be responsive when the user resizes or drags the browser window?
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -279,7 +279,7 @@ But
 
 With `visibility: hidden` the element is hidden, but it still occupies space in the layout. But with `display: none` the element is completely removed and it does not occupy any space.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -290,7 +290,7 @@ With `visibility: hidden` the element is hidden, but it still occupies space in 
 2. With `display: block`, elements start on a new line and take up the full width available. `margin` and `padding` affect all sides.
 3. With `display: inline-block`, elements don't start on a new line, but `margin` and `padding` affect all sides.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -299,7 +299,7 @@ With `visibility: hidden` the element is hidden, but it still occupies space in 
 
 Yes, `overflow: hidden` can create a new block formatting context. This can be useful for containing floats or preventing margin collapse.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -309,7 +309,7 @@ Yes, `overflow: hidden` can create a new block formatting context. This can be u
 False.
 The `:checked` pseudo-class will select checked `<input>` elements of type `radio` or `checkbox`, as well as `<option>` elements that are selected in a `<select>` dropdown.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -320,7 +320,7 @@ False.
 
 The `:hover` pseudo-class can be applied to any element, not just the `<a>` element. It applies styles to an element when the user designates it (generally by holding the mouse pointer over it).
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -335,7 +335,7 @@ The `:hover` pseudo-class can be applied to any element, not just the `<a>` elem
 
 `rem` for consistent scaling across components, ensuring responsive and accessible design.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -355,7 +355,7 @@ The `:hover` pseudo-class can be applied to any element, not just the `<a>` elem
 <p>Paragraph 4</p> <!-- Matches div ~ p -->
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -387,7 +387,7 @@ style="color: purple"
 ```
 An element with inline styles will have a color of purple, overriding other selectors.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -418,7 +418,7 @@ p::before {
 }
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -441,7 +441,7 @@ p::before {
 }
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -450,7 +450,7 @@ p::before {
 
 No, the `translate()` function can only move elements along the x and y axes. To move an element on the z-axis, you would use the `translateZ()` or `translate3d()` function.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -472,7 +472,7 @@ body {
 }
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -517,7 +517,7 @@ Media query can be applied on:
 }
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -567,7 +567,7 @@ body {
 }
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -576,7 +576,7 @@ body {
 
 The `screen` keyword in media queries applies to the browser’s viewport, not the device’s physical screen. Media queries respond to the size of the viewport, which is the visible part of the web page in the browser window.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -635,7 +635,7 @@ Some important Flexbox Properties:
         - `flex`: 1 1 auto (flex-grow flex-shrink flex-basis)
         - `align-self`: auto | flex-start | flex-end | center | baseline | stretch
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -645,7 +645,7 @@ Some important Flexbox Properties:
 **Layout**: Refers to the process of arranging elements within a container to create a structured and organized design. Common layout techniques include Flexbox, Grid, and floats.
 **Positioning**: Refers to how elements are placed relative to their normal flow, parent container, or viewport. Common positioning techniques include static, relative, absolute, fixed, and sticky.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -659,7 +659,7 @@ html {
 }
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -688,7 +688,7 @@ body {
 }
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -696,7 +696,7 @@ body {
 ### 🍄 How do you vertically and horizontally align a `<p>` element to the centre inside a `<div>`?
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -726,7 +726,7 @@ icon {
 }
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -745,7 +745,7 @@ You can use JavaScript to load CSS conditionally based on certain conditions:
 </script>
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -765,7 +765,7 @@ Shadow DOM is a web standard that allows you to encapsulate a part of the DOM an
 </custom-element>
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -834,7 +834,7 @@ img {
 }
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -886,7 +886,7 @@ nav {
 }
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -902,7 +902,7 @@ nav {
 7. Responsive Design: Ensure the site is accessible on all devices and screen sizes.
 8. Focus Management: Ensure the focus is correctly managed and visible.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -910,7 +910,7 @@ nav {
 ### 🍄 Write a piece of code to centre a div.
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -918,7 +918,7 @@ nav {
 ### 🍄 How to make a triangle in CSS?
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -926,7 +926,7 @@ nav {
 ### 🍄 Make a bouncing ball entirely with the help of CSS.
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -934,6 +934,6 @@ nav {
 ### 🍄 What is tailwind css. Enlist few important properties in tailwind css.
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
