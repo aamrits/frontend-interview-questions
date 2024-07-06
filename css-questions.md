@@ -269,6 +269,7 @@ But
 #### Q13
 ### 🍄 If you have a `<p>` element with `font-size: 10rem`, will the text be responsive when the user resizes or drags the browser window?
 
+Yes, it will be not responsive. The rem unit is relative to the root element’s font size (typically the `<html>` element), not the viewport size.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -363,10 +364,10 @@ The `:hover` pseudo-class can be applied to any element, not just the `<a>` elem
 ### 🍄 What is specificity in CSS.
 
 Specificity is a measure of how specific a CSS selector is. Specificity is calculated based on the types of selectors used:
-    1. Inline styles have the highest specificity.
-    2. IDs have higher specificity than classes.
-    3. Classes, attributes, and pseudo-classes have higher specificity than elements and pseudo-elements.
-```css
+1. Inline styles have the highest specificity.
+2. IDs have higher specificity than classes.
+3. Classes, attributes, and pseudo-classes have higher specificity than elements and pseudo-elements.
+```js
 /* Specificity: 0,0,0,1 */
 div {
   color: blue;
@@ -482,10 +483,10 @@ body {
 Media queries are a feature of CSS used to apply styles based on the characteristics of the device or viewport displaying the content. They enable responsive design.
 
 Media query can be applied on:
-    1. `width`, `min-width`, `max-width`
-    2. `height`, `min-height`, `max-height`
-    3. `orientation` (portrait or landscape)
-    4. `resolution`
+1. `width`, `min-width`, `max-width`
+2. `height`, `min-height`, `max-height`
+3. `orientation` (portrait or landscape)
+4. `resolution`
 
 ```css
 /* Applies styles if the viewport width is 600px or less */
@@ -620,20 +621,20 @@ The `screen` keyword in media queries applies to the browser’s viewport, not t
 More about Flexbox:
 Flexbox, is a CSS layout module designed to make the layout of items in a container flexible and efficient.
 Some important Flexbox Properties:
-    1. Container Properties
-        - `display`: flex | inline-flex
-        - `flex-direction`: row | row-reverse | column | column-reverse
-        - `flex-wrap`: nowrap | wrap | wrap-reverse
-        - `justify-content`: flex-start | flex-end | center | space-between | space-around | space-evenly
-        - `align-items`: stretch | flex-start | flex-end | center | baseline
-        - `align-content`: stretch | flex-start | flex-end | center | space-between | space-around | space-evenly
-    2. Item Properties
-        - `order`: 0 (default value)
-        - `flex-grow`: 0 (default value)
-        - `flex-shrink`: 1 (default value)
-        - `flex-basis`: auto (default value)
-        - `flex`: 1 1 auto (flex-grow flex-shrink flex-basis)
-        - `align-self`: auto | flex-start | flex-end | center | baseline | stretch
+1. Container Properties
+  - `display`: flex | inline-flex
+  - `flex-direction`: row | row-reverse | column | column-reverse
+  - `flex-wrap`: nowrap | wrap | wrap-reverse
+  - `justify-content`: flex-start | flex-end | center | space-between | space-around | space-evenly
+  - `align-items`: stretch | flex-start | flex-end | center | baseline
+  - `align-content`: stretch | flex-start | flex-end | center | space-between | space-around | space-evenly
+2. Item Properties
+  - `order`: 0 (default value)
+  - `flex-grow`: 0 (default value)
+  - `flex-shrink`: 1 (default value)
+  - `flex-basis`: auto (default value)
+  - `flex`: 1 1 auto (flex-grow flex-shrink flex-basis)
+  - `align-self`: auto | flex-start | flex-end | center | baseline | stretch
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -695,6 +696,71 @@ body {
 #### Q33
 ### 🍄 How do you vertically and horizontally align a `<p>` element to the centre inside a `<div>`?
 
+1. Using Flexbox
+```css
+<div class="container">
+  <p>Centered Text</p>
+</div>
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;    
+  border: 1px solid #000;
+}
+```
+2. Using Grid
+```js
+<div class="container">
+  <p>Centered Text</p>
+</div>
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  border: 1px solid #000;
+}
+```
+3. Using Absolute Positioning
+```js
+<div class="container">
+  <p>Centered Text</p>
+</div>
+
+.container {
+  position: relative;
+  height: 100vh;
+  border: 1px solid #000;
+}
+
+.container p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+```
+3. Using Table Display
+```js
+<div class="container">
+  <p>Centered Text</p>
+</div>
+
+.container {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  border: 1px solid #000;
+}
+
+.container p {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+```
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -909,6 +975,78 @@ nav {
 #### Q40
 ### 🍄 Write a piece of code to centre a div.
 
+There are many ways to centre a div which uses Flexbox, Grid, and absolute positioning methods.
+
+**Using Flexbox**
+```css
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border: 1px solid #000;
+}
+
+.child {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  text-align: center;
+  line-height: 200px;
+}
+  
+<div class="parent">
+  <div class="child">Centered Div</div>
+</div>
+```
+
+**Using Grid**
+```css
+.parent {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  border: 1px solid #000;
+}
+
+.child {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  text-align: center;
+  line-height: 200px;
+}
+
+<div class="parent">
+  <div class="child">Centered Div</div>
+</div>
+```
+
+**Using Absolute Positioning**
+```css
+.parent {
+  position: relative;
+  height: 100vh;
+  border: 1px solid #000;
+}
+
+.child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  text-align: center;
+  line-height: 200px;
+}
+
+<div class="parent">
+  <div class="child">Centered Div</div>
+</div>
+```
+The `height: 100vh` on the parent container makes it take up the full height of the viewport, ensuring the child is centered within the visible area.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -916,7 +1054,73 @@ nav {
 
 #### Q41
 ### 🍄 How to make a triangle in CSS?
+To create a triangle in CSS, you can use the `border` property. By setting the width and height of an element to `0` and applying different border widths and colors, you can make a triangle shape. Here are some examples:
 
+**Upward Triangle**
+```css
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid blue;
+}
+ 
+<div class="triangle-up"></div>
+```
+
+**Downward Triangle**
+```css
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid red;
+}
+
+<div class="triangle-down"></div>
+```
+
+**Leftward Triangle**
+```css
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-right: 100px solid green;
+}
+<div class="triangle-left"></div>
+```
+
+**Rightward Triangle**
+```css
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 100px solid orange;
+}
+
+<div class="triangle-right"></div>
+```
+
+**Equilateral Triangle**
+
+```css
+.triangle-equilateral {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 86.6px solid purple; /* sqrt(3)/2 * base length */
+}
+
+<div class="triangle-equilateral"></div>
+```
+The transparent borders create the triangle shape by showing only the colored border. Adjust the border sizes and colors as needed to create different triangle shapes and sizes.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -925,6 +1129,51 @@ nav {
 #### Q42
 ### 🍄 Make a bouncing ball entirely with the help of CSS.
 
+Explanation:
+1. Ball Styling:
+  - The .ball class styles the ball with a width and height of 50px, a red background color, and a border radius of 50% to make it circular.
+  - The position: relative; ensures that the ball’s position can be animated relative to its normal position.
+2. Keyframe Animation:
+  - The @keyframes bounce defines the keyframes for the bounce animation.
+  - The ball starts and ends at the initial position (0%, 20%, 50%, 80%, 100%).
+  - At 40%, the ball reaches its highest point (-150px).
+  - At 60%, the ball reaches a midpoint (-75px).
+3. Applying the Animation:
+  - The animation: bounce 2s infinite; property on the .ball class applies the bounce animation with a duration of 2 seconds and repeats it infinitely.
+
+```css
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  position: relative;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-150px);
+  }
+  60% {
+    transform: translateY(-75px);
+  }
+}
+
+<div class="ball"></div>
+```
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -933,6 +1182,85 @@ nav {
 #### Q43
 ### 🍄 What is tailwind css. Enlist few important properties in tailwind css.
 
+Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces. It provides a set of low-level utility classes that can be composed to build any design, without having to write custom CSS.
+
+**Important Properties in Tailwind CSS**
+
+*Margin*
+- `m-0`, `m-1`, `m-2`, ... `m-96` - Margin on all sides
+- `mt-0`, `mr-0`, `mb-0`, `ml-0` - Margin on specific sides (top, right, bottom, left)
+
+*Padding*
+- `p-0`, `p-1`, `p-2`, ... `p-96` - Padding on all sides
+- `pt-0`, `pr-0`, `pb-0`, `pl-0` - Padding on specific sides (top, right, bottom, left)
+
+*Spacing*
+- `space-x-0`, `space-x-1`, ... `space-x-12` - Horizontal spacing between child elements
+- `space-y-0`, `space-y-1`, ... `space-y-12` - Vertical spacing between child elements
+
+*Typography*
+- `text-xs`, `text-sm`, `text-base`, ... `text-9xl` - Font size
+- `font-thin`, `font-light`, `font-normal`, `font-bold` - Font weight
+- `leading-none`, `leading-tight`, `leading-loose` - Line height
+- `tracking-tighter`, `tracking-tight`, `tracking-normal`, `tracking-wide` - Letter spacing
+
+*Borders*
+- `border`, `border-0`, `border-2`, `border-4`, `border-8` - Border width
+- `border-solid`, `border-dashed`, `border-dotted` - Border style
+- `rounded`, `rounded-md`, `rounded-lg`, `rounded-full` - Border radius
+
+*Background*
+- `bg-transparent`, `bg-white`, `bg-gray-500`, `bg-red-500`, ... - Background color
+- `bg-opacity-0`, `bg-opacity-25`, `bg-opacity-50`, `bg-opacity-75`, `bg-opacity-100` - Background opacity
+
+*Layout*
+- `container` - Center and constrain content
+- `float-left`, `float-right`, `clearfix` - Float and clear
+- `object-contain`, `object-cover`, `object-fill`, `object-none` - Object fit
+
+*Sizing*
+- `w-0`, `w-1`, ... `w-full` - Width
+- `h-0`, `h-1`, ... `h-full` - Height
+- `min-w-0`, `min-w-full` - Minimum width
+- `max-w-xs`, `max-w-full` - Maximum width
+- `min-h-0`, `min-h-full` - Minimum height
+- `max-h-0`, `max-h-full` - Maximum height
+
+*Flex*
+- `flex`, `inline-flex` - Flex container
+- `flex-row`, `flex-col` - Flex direction
+- `justify-start`, `justify-center`, `justify-end` - Justify content
+- `items-start`, `items-center`, `items-end` - Align items
+
+*Filters*
+- `filter`, `filter-none` - Apply or remove filter
+- `blur-sm`, `blur-md`, `blur-lg` - Blur filter
+- `grayscale`, `invert`, `sepia` - Color filters
+
+*Effects*
+- `shadow`, `shadow-md`, `shadow-lg` - Box shadow
+- `opacity-0`, `opacity-25`, `opacity-50`, `opacity-75`, `opacity-100` - Opacity
+
+*Tables*
+- `table-auto`, `table-fixed` - Table layout
+- `border-collapse`, `border-separate` - Border collapse
+
+*Transition*
+- `transition`, `transition-none` - Apply or remove transition
+- `duration-100`, `duration-200`, `duration-300`, ... - Transition duration
+- `ease-linear`, `ease-in`, `ease-out`, `ease-in-out` - Transition timing function
+
+*Transform*
+- `transform`, `transform-none` - Apply or remove transform
+- `rotate-0`, `rotate-45`, `rotate-90`, `rotate-180` - Rotate transform
+- `scale-0`, `scale-50`, `scale-100`, `scale-150` - Scale transform
+
+*Interactivity*
+- `cursor-auto`, `cursor-pointer` - Cursor style
+- `pointer-events-none`, `pointer-events-auto` - Pointer events
+- `select-none`, `select-text`, `select-all` - User select
+
+This should give you a quick reference to the most important properties in Tailwind CSS. Do you need any specific examples or additional information on any of these properties?
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
