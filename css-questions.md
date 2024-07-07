@@ -63,7 +63,7 @@ CSS (Cascading Style Sheets) is important because it:
 - Provides consistent styling across the application.
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q2
@@ -73,7 +73,7 @@ CSS (Cascading Style Sheets) is important because it:
 - `initial value = 1.0` could refer to the default value of a property or parameter. In the context of CSS, 1.0 typically represents 100%.
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q3
@@ -100,7 +100,7 @@ CSS can be integrated into HTML in three main ways:
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q4
@@ -110,7 +110,7 @@ The CSS box model describes the rectangular boxes that are generated for element
 
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q5
@@ -130,7 +130,7 @@ The CSS box model describes the rectangular boxes that are generated for element
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q6
@@ -151,7 +151,7 @@ div[data-user-id="12345"] {
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q7
@@ -189,7 +189,7 @@ div {
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q8
@@ -199,7 +199,7 @@ No, CSS properties are not case-sensitive.
 For example, `background-color` is the same as `BACKGROUND-COLOR` or `Background-Color`.
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q9
@@ -221,7 +221,7 @@ The `float` property is used to float elements to the left or right, allowing te
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q10
@@ -240,7 +240,7 @@ The `z-index` property specifies the stack order of an element. Higher values ar
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q11
@@ -253,7 +253,7 @@ But
 - Vertical padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q12
@@ -263,7 +263,7 @@ But
 - We use `<a>` for navigation, linking to different pages or sections.
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q13
@@ -272,7 +272,7 @@ But
 Yes, it will be not responsive. The rem unit is relative to the root element’s font size (typically the `<html>` element), not the viewport size.
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q14
@@ -281,7 +281,7 @@ Yes, it will be not responsive. The rem unit is relative to the root element’s
 With `visibility: hidden` the element is hidden, but it still occupies space in the layout. But with `display: none` the element is completely removed and it does not occupy any space.
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q15
@@ -292,7 +292,7 @@ With `visibility: hidden` the element is hidden, but it still occupies space in 
 3. With `display: inline-block`, elements don't start on a new line, but `margin` and `padding` affect all sides.
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q16
@@ -301,7 +301,7 @@ With `visibility: hidden` the element is hidden, but it still occupies space in 
 Yes, `overflow: hidden` can create a new block formatting context. This can be useful for containing floats or preventing margin collapse.
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q17
@@ -311,7 +311,7 @@ False.
 The `:checked` pseudo-class will select checked `<input>` elements of type `radio` or `checkbox`, as well as `<option>` elements that are selected in a `<select>` dropdown.
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q18
@@ -322,7 +322,7 @@ False.
 The `:hover` pseudo-class can be applied to any element, not just the `<a>` element. It applies styles to an element when the user designates it (generally by holding the mouse pointer over it).
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q19
@@ -337,7 +337,7 @@ The `:hover` pseudo-class can be applied to any element, not just the `<a>` elem
 `rem` for consistent scaling across components, ensuring responsive and accessible design.
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q20
@@ -357,7 +357,7 @@ The `:hover` pseudo-class can be applied to any element, not just the `<a>` elem
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q21
@@ -389,7 +389,7 @@ style="color: purple"
 An element with inline styles will have a color of purple, overriding other selectors.
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q22
@@ -420,7 +420,7 @@ p::before {
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q23
@@ -443,7 +443,7 @@ p::before {
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q24
@@ -452,7 +452,7 @@ p::before {
 No, the `translate()` function can only move elements along the x and y axes. To move an element on the z-axis, you would use the `translateZ()` or `translate3d()` function.
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q25
@@ -474,7 +474,7 @@ body {
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q26
@@ -519,7 +519,7 @@ Media query can be applied on:
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q27
@@ -569,7 +569,7 @@ body {
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q28
@@ -578,7 +578,7 @@ body {
 The `screen` keyword in media queries applies to the browser’s viewport, not the device’s physical screen. Media queries respond to the size of the viewport, which is the visible part of the web page in the browser window.
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q29
@@ -637,7 +637,7 @@ Some important Flexbox Properties:
   - `align-self`: auto | flex-start | flex-end | center | baseline | stretch
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q30
@@ -647,7 +647,7 @@ Some important Flexbox Properties:
 **Positioning**: Refers to how elements are placed relative to their normal flow, parent container, or viewport. Common positioning techniques include static, relative, absolute, fixed, and sticky.
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q31
@@ -661,7 +661,7 @@ html {
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q32
@@ -690,7 +690,7 @@ body {
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q33
@@ -763,7 +763,7 @@ body {
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q34
@@ -793,7 +793,7 @@ icon {
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q35
@@ -812,7 +812,7 @@ You can use JavaScript to load CSS conditionally based on certain conditions:
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q36
@@ -832,7 +832,7 @@ Shadow DOM is a web standard that allows you to encapsulate a part of the DOM an
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q37
@@ -901,7 +901,7 @@ img {
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q38
@@ -953,7 +953,7 @@ nav {
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q39
@@ -969,7 +969,7 @@ nav {
 8. Focus Management: Ensure the focus is correctly managed and visible.
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q40
@@ -1049,7 +1049,7 @@ There are many ways to centre a div which uses Flexbox, Grid, and absolute posit
 The `height: 100vh` on the parent container makes it take up the full height of the viewport, ensuring the child is centered within the visible area.
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q41
@@ -1123,7 +1123,7 @@ To create a triangle in CSS, you can use the `border` property. By setting the w
 The transparent borders create the triangle shape by showing only the colored border. Adjust the border sizes and colors as needed to create different triangle shapes and sizes.
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q42
@@ -1176,7 +1176,7 @@ body, html {
 ```
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q43
@@ -1186,39 +1186,39 @@ Tailwind CSS is a utility-first CSS framework for rapidly building custom user i
 
 **Important Properties in Tailwind CSS**
 
-*Margin*
+**Margin**
 - `m-0`, `m-1`, `m-2`, ... `m-96` - Margin on all sides
 - `mt-0`, `mr-0`, `mb-0`, `ml-0` - Margin on specific sides (top, right, bottom, left)
 
-*Padding*
+**Padding**
 - `p-0`, `p-1`, `p-2`, ... `p-96` - Padding on all sides
 - `pt-0`, `pr-0`, `pb-0`, `pl-0` - Padding on specific sides (top, right, bottom, left)
 
-*Spacing*
+**Spacing**
 - `space-x-0`, `space-x-1`, ... `space-x-12` - Horizontal spacing between child elements
 - `space-y-0`, `space-y-1`, ... `space-y-12` - Vertical spacing between child elements
 
-*Typography*
+**Typography**
 - `text-xs`, `text-sm`, `text-base`, ... `text-9xl` - Font size
 - `font-thin`, `font-light`, `font-normal`, `font-bold` - Font weight
 - `leading-none`, `leading-tight`, `leading-loose` - Line height
 - `tracking-tighter`, `tracking-tight`, `tracking-normal`, `tracking-wide` - Letter spacing
 
-*Borders*
+**Borders**
 - `border`, `border-0`, `border-2`, `border-4`, `border-8` - Border width
 - `border-solid`, `border-dashed`, `border-dotted` - Border style
 - `rounded`, `rounded-md`, `rounded-lg`, `rounded-full` - Border radius
 
-*Background*
+**Background**
 - `bg-transparent`, `bg-white`, `bg-gray-500`, `bg-red-500`, ... - Background color
 - `bg-opacity-0`, `bg-opacity-25`, `bg-opacity-50`, `bg-opacity-75`, `bg-opacity-100` - Background opacity
 
-*Layout*
+**Layout**
 - `container` - Center and constrain content
 - `float-left`, `float-right`, `clearfix` - Float and clear
 - `object-contain`, `object-cover`, `object-fill`, `object-none` - Object fit
 
-*Sizing*
+**Sizing**
 - `w-0`, `w-1`, ... `w-full` - Width
 - `h-0`, `h-1`, ... `h-full` - Height
 - `min-w-0`, `min-w-full` - Minimum width
@@ -1226,36 +1226,36 @@ Tailwind CSS is a utility-first CSS framework for rapidly building custom user i
 - `min-h-0`, `min-h-full` - Minimum height
 - `max-h-0`, `max-h-full` - Maximum height
 
-*Flex*
+**Flex**
 - `flex`, `inline-flex` - Flex container
 - `flex-row`, `flex-col` - Flex direction
 - `justify-start`, `justify-center`, `justify-end` - Justify content
 - `items-start`, `items-center`, `items-end` - Align items
 
-*Filters*
+**Filters**
 - `filter`, `filter-none` - Apply or remove filter
 - `blur-sm`, `blur-md`, `blur-lg` - Blur filter
 - `grayscale`, `invert`, `sepia` - Color filters
 
-*Effects*
+**Effects**
 - `shadow`, `shadow-md`, `shadow-lg` - Box shadow
 - `opacity-0`, `opacity-25`, `opacity-50`, `opacity-75`, `opacity-100` - Opacity
 
-*Tables*
+**Tables**
 - `table-auto`, `table-fixed` - Table layout
 - `border-collapse`, `border-separate` - Border collapse
 
-*Transition*
+**Transition**
 - `transition`, `transition-none` - Apply or remove transition
 - `duration-100`, `duration-200`, `duration-300`, ... - Transition duration
 - `ease-linear`, `ease-in`, `ease-out`, `ease-in-out` - Transition timing function
 
-*Transform*
+**Transform**
 - `transform`, `transform-none` - Apply or remove transform
 - `rotate-0`, `rotate-45`, `rotate-90`, `rotate-180` - Rotate transform
 - `scale-0`, `scale-50`, `scale-100`, `scale-150` - Scale transform
 
-*Interactivity*
+**Interactivity**
 - `cursor-auto`, `cursor-pointer` - Cursor style
 - `pointer-events-none`, `pointer-events-auto` - Pointer events
 - `select-none`, `select-text`, `select-all` - User select
@@ -1263,5 +1263,5 @@ Tailwind CSS is a utility-first CSS framework for rapidly building custom user i
 This should give you a quick reference to the most important properties in Tailwind CSS. Do you need any specific examples or additional information on any of these properties?
 
 <div align="left">
-    <b><a href="#">↥ back to top</a></b>
+  <b><a href="#">↥ back to top</a></b>
 </div>
