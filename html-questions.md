@@ -403,7 +403,7 @@ The `<head>` section includes elements that improve SEO and accessibility.
 </div>
 
 #### Q7
-### ✨ How to embed an image in HTML page. (Hint: `<img />`)
+### ✨ How to embed an image in HTML page.
 
 
 <div align="left">
@@ -521,7 +521,7 @@ The process by which a browser renders HTML and CSS involves several steps, tran
    - The browser may break the painting process into multiple layers and *composite* them into a final image.
    - This step is particularly important for complex pages with animations, fixed positions, and transformations.
 
-### Diagram of the Rendering Process:
+**Diagram of the Rendering Process**:
 
 Here's a simplified diagram representing these steps:
 
@@ -611,6 +611,66 @@ graph TD;
 #### Q19
 ### ✨ What are web workers
 
+Web Workers in HTML5 are a way to run JavaScript in the background, separate from the main browser thread. They let you perform heavy or time-consuming tasks without freezing the UI, keeping the webpage responsive.
+
+**Key Points about Web Workers**
+- Background Thread → Runs parallel to the main thread (UI thread).
+- Non-blocking → User interactions (scrolling, typing, clicking) remain smooth.
+- No DOM Access → Workers cannot directly change the DOM. Communication happens via messages.
+
+**Types**:
+- Dedicated Worker → Used by a single script.
+- Shared Worker → Can be shared across multiple scripts, windows, or iframes.
+
+```html
+<body>
+  <button onclick="startWorker()">Start Worker</button>
+  <button onclick="stopWorker()">Stop Worker</button>
+  <p id="result"></p>
+
+  <script>
+    let worker;
+
+    function startWorker() {
+      if (window.Worker) { // Check if supported
+        worker = new Worker("worker.js");
+        worker.onmessage = function(event) {
+          document.getElementById("result").textContent = event.data;
+        };
+      } else {
+        document.getElementById("result").textContent =
+          "Web Workers are not supported in your browser.";
+      }
+    }
+
+    function stopWorker() {
+      worker.terminate();
+      worker = undefined;
+    }
+  </script>
+</body>
+```
+```javascript
+let i = 0;
+
+function timedCount() {
+  i++;
+  postMessage(i); // Send message to main thread
+  setTimeout(timedCount, 1000);
+}
+
+timedCount();
+```
+
+**Benefits**
+- Keeps UI responsive
+- Handles CPU-heavy tasks (e.g., image processing, sorting, API data parsing)
+- Improves performance in large apps
+
+**Limitations**
+- No direct DOM access (must use postMessage to communicate).
+- Subject to same-origin policy (must come from the same domain).
+- Extra memory/CPU usage if many workers are created.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
