@@ -74,7 +74,7 @@ The Virtual DOM (VDOM) is a key concept in React that significantly enhances per
 **What is the Virtual DOM?**
 The Virtual DOM is a lightweight, in-memory representation of the actual DOM. React creates this virtual representation to track changes and update the actual DOM efficiently. When a component's state or props change, React updates the Virtual DOM first instead of directly manipulating the actual DOM.
 
-How It Works:
+**How It Works:**
 1. **Render Phase**: When changes occur (e.g., user input, data updates), React creates a new Virtual DOM tree representing the updated UI.
 
 2. **Diffing Algorithm**: React compares the new Virtual DOM tree with the previous one to identify changes (differences).
@@ -91,7 +91,7 @@ How It Works:
     - Simplified State Management: By abstracting away direct DOM manipulation, developers can focus on the application logic and state management.
 
 3. **Cross-Platform Consistency**:
-- React Native: The concept of the Virtual DOM extends to React Native, allowing for consistent development practices across web and mobile platforms.
+    - React Native: The concept of the Virtual DOM extends to React Native, allowing for consistent development practices across web and mobile platforms.
 
 4. **Enhanced Debugging**: Component-Based Structure: The modular nature of React components, along with the Virtual DOM, makes it easier to isolate and debug UI issues.
 
@@ -172,24 +172,20 @@ Reconciliation is the process of comparing the current Virtual DOM with the prev
 ### 💥 Understanding the differences between State and Props in React
 
 **State**
-
-**Definition**
 State is a built-in object in React that holds data or information about the component. It is managed within the component and can change over time, typically in response to user actions or network responses.
 
 **Characteristics**
-    - Mutable: State can be changed or updated within the component using the setState function (in class components) or the useState hook (in functional components).
-    - Private: State is local to the component and cannot be accessed or modified directly by child components.
-    - Triggers Re-render: When state changes, React re-renders the component to reflect the new state.
+- Mutable: State can be changed or updated within the component using the setState function (in class components) or the useState hook (in functional components).
+- Private: State is local to the component and cannot be accessed or modified directly by child components.
+- Triggers Re-render: When state changes, React re-renders the component to reflect the new state.
 
 **Props**
-
-**Definition**
 Props (short for properties) are read-only attributes passed from parent components to child components. They allow data to be passed down the component tree and enable component reuse.
 
 **Characteristics**
-    - Immutable: Props cannot be modified by the receiving component. They are read-only and should be treated as immutable.
-    - External: Props are passed to a component by its parent, making them external to the component itself.
-    - No Direct Re-render Trigger: Props themselves do not trigger a re-render. However, if the parent component re-renders and passes new props, the child component will re-render with the new props.
+- Immutable: Props cannot be modified by the receiving component. They are read-only and should be treated as immutable.
+- External: Props are passed to a component by its parent, making them external to the component itself.
+- No Direct Re-render Trigger: Props themselves do not trigger a re-render. However, if the parent component re-renders and passes new props, the child component will re-render with the new props.
 
 **Key Differences**
 1. **Mutability**:
