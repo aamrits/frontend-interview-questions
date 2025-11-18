@@ -405,6 +405,32 @@ The `<head>` section includes elements that improve SEO and accessibility.
 #### Q7
 ### ✨ How to embed an image in HTML page.
 
+To embed an image in an HTML page, you use the `<img>` tag. This tag is a self-closing tag that requires a few attributes to specify the image source and other properties. Here is a step-by-step guide:
+
+**Basic Image Embedding**
+
+The most basic form of the `<img>` tag includes the `src` attribute, which specifies the path to the image, and the `alt` attribute, which provides alternative text for the image:
+
+- **src**: Specifies the path to the image file. This can be a relative path (if the image is located within the same directory structure as your HTML file) or an absolute URL (if the image is hosted online).
+
+- **alt**: Provides a text alternative for the image if it cannot be displayed. This is important for accessibility and SEO.
+
+- **width** and **height**: Specifies the width and height of the image. These values can be in pixels or percentage.
+
+- **title**: Provides additional information about the image, often displayed as a tooltip when the mouse hovers over the image
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Embed Image Example</title>
+</head>
+<body>
+    <img src="https://example.com/mountain.jpg" alt="A beautiful mountain scenery" width="600" height="400" title="Mountain scenery">
+</body>
+</html>
+```
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
