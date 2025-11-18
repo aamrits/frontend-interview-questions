@@ -171,16 +171,14 @@ Reconciliation is the process of comparing the current Virtual DOM with the prev
 #### Q5
 ### 💥 Understanding the differences between State and Props in React
 
-**State**
-State is a built-in object in React that holds data or information about the component. It is managed within the component and can change over time, typically in response to user actions or network responses.
+**State** is a built-in object in React that holds data or information about the component. It is managed within the component and can change over time, typically in response to user actions or network responses.
 
 **Characteristics**
 - Mutable: State can be changed or updated within the component using the setState function (in class components) or the useState hook (in functional components).
 - Private: State is local to the component and cannot be accessed or modified directly by child components.
 - Triggers Re-render: When state changes, React re-renders the component to reflect the new state.
 
-**Props**
-Props (short for properties) are read-only attributes passed from parent components to child components. They allow data to be passed down the component tree and enable component reuse.
+**Props** are read-only attributes passed from parent components to child components. They allow data to be passed down the component tree and enable component reuse.
 
 **Characteristics**
 - Immutable: Props cannot be modified by the receiving component. They are read-only and should be treated as immutable.
@@ -211,24 +209,22 @@ Props (short for properties) are read-only attributes passed from parent compone
 #### Q6
 ### 💥 Dive into Hooks-related questions, such as `useState` and `useEffect`
 
-**useState**
-`useState` is a hook that allows you to add state to functional components. It returns a state variable and a function to update it.
+**useState** is a hook that allows you to add state to functional components. It returns a state variable and a function to update it.
 
 **Usage**
-    - Initialize state with an initial value.
-    - Update state using the provided setter function.
+- Initialize state with an initial value.
+- Update state using the provided setter function.
 
-**useEffect**
-`useEffect` is a hook that allows you to perform side effects in functional components, such as fetching data, subscribing to events, or manually changing the DOM.
+**useEffect** is a hook that allows you to perform side effects in functional components, such as fetching data, subscribing to events, or manually changing the DOM.
 
 **Usage**
-    - Runs after the initial render and after every update (by default).
-    - Can run only once or on specific state/prop changes by providing a dependency array.
-    - Can return a cleanup function to clean up effects.
+- Runs after the initial render and after every update (by default).
+- Can run only once or on specific state/prop changes by providing a dependency array.
+- Can return a cleanup function to clean up effects.
 
 **Key Points**
-    - **useState**: For managing state within functional components.
-    - **useEffect**: For performing side effects, similar to lifecycle methods in class components (like componentDidMount, componentDidUpdate, and componentWillUnmount).
+- **useState**: For managing state within functional components.
+- **useEffect**: For performing side effects, similar to lifecycle methods in class components (like componentDidMount, componentDidUpdate, and componentWillUnmount).
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
