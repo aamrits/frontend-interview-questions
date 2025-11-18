@@ -408,11 +408,9 @@ function AsyncDataFetcher() {
 
 `useMemo` and `useCallback` are both React hooks used to optimize performance by memoizing values and functions, respectively. Here are the differences between them:
 
-**useMemo**
-Memoizes a computed value, so it is only recomputed when one of its dependencies changes. It is useful for expensive calculations or computations that should not be repeated unless necessary.
+**useMemo** memoizes a computed value, so it is only recomputed when one of its dependencies changes. It is useful for expensive calculations or computations that should not be repeated unless necessary.
 
-**useCallback**
-Memoizes a function, so the function instance is only recreated when one of its dependencies changes. It is useful for passing stable functions as props to child components, preventing unnecessary re-renders.
+**useCallback** memoizes a function, so the function instance is only recreated when one of its dependencies changes. It is useful for passing stable functions as props to child components, preventing unnecessary re-renders.
 
 **Key Differences**
 1. **Memoizing Values vs. Functions**:
