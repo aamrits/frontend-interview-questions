@@ -665,7 +665,7 @@ The <!DOCTYPE> declaration is used to specify the version of HTML being used in 
 By including the <!DOCTYPE> declaration, you ensure that your page is rendered consistently across different browsers, adhering to modern web standards.
 
 **Document Type Identification**
-- The <!DOCTYPE> declaration tells the browser which version of HTML or XHTML the document is using. This helps the browser apply the correct rules for parsing and rendering the content.
+The <!DOCTYPE> declaration tells the browser which version of HTML or XHTML the document is using. This helps the browser apply the correct rules for parsing and rendering the content.
 
 **Consequences of Not Specifying <!DOCTYPE>**
 - **Rendering Mode**: Without a <!DOCTYPE>, browsers typically revert to quirks mode, where they try to mimic the behavior of older browsers, leading to inconsistent rendering and potential layout issues.
@@ -687,7 +687,8 @@ The Document Object Model (DOM) is a programming interface for web documents. It
 DOM manipulation involves using JavaScript to interact with and change the content, structure, and style of a web page.
 
 **Examples of DOM Manipulation**
-- **Selecting Elements**
+
+1. **Selecting Elements**
 ```js
 const element = document.getElementById('example'); // Selects an element by ID
 const elements = document.getElementsByClassName('example'); // Selects elements by class name
@@ -695,28 +696,28 @@ const elements = document.getElementsByTagName('p'); // Selects elements by tag 
 const element = document.querySelector('.example'); // Selects the first element matching the selector
 ```
 
-- **Changing Content**
+2. **Changing Content**
 ```js
 const element = document.getElementById('example');
 element.textContent = 'New text content'; // Changes the text content
 element.innerHTML = '<b>Bold text</b>'; // Changes the HTML content
 ```
 
-- **Changing Attributes**
+3. **Changing Attributes**
 ```js
 const element = document.getElementById('example');
 element.setAttribute('src', 'newImage.jpg'); // Sets a new attribute value
 element.removeAttribute('alt'); // Removes an attribute
 ```
 
-- **Changing Styles**
+4. **Changing Styles**
 ```js
 const element = document.getElementById('example');
 element.style.color = 'blue'; // Changes the text color
 element.style.backgroundColor = 'yellow'; // Changes the background color
 ```
 
-- **Adding and Removing Elements**
+5. **Adding and Removing Elements**
 ```js
 const newElement = document.createElement('div'); // Creates a new element
 newElement.textContent = 'New Element'; // Sets the content of the new element
@@ -726,7 +727,7 @@ const elementToRemove = document.getElementById('example');
 elementToRemove.parentNode.removeChild(elementToRemove); // Removes the element
 ```
 
-- **Event Handling**
+6. **Event Handling**
 ```js
 const button = document.getElementById('myButton');
 button.addEventListener('click', function() {
@@ -734,7 +735,7 @@ button.addEventListener('click', function() {
 }); // Adds a click event listener to the button
 ```
 
-- **Modifying classes**
+7. **Modifying classes**
 ```js
 const element = document.getElementById('example');
 element.classList.add('new-class'); // Adds a class
@@ -763,7 +764,7 @@ element.classList.toggle('toggle-class'); // Toggles a class
 
 **Examples**
 
-- **localstorage**:
+**localstorage**:
 ```js
 // Storing data
 localStorage.setItem('key', 'value');
@@ -778,7 +779,7 @@ localStorage.removeItem('key');
 localStorage.clear();
 ```
 
-- **sessionstorage**:
+**sessionstorage**:
 ```js
 // Storing data
 sessionStorage.setItem('key', 'value');
@@ -793,7 +794,7 @@ sessionStorage.removeItem('key');
 sessionStorage.clear();
 ```
 
-- **cookies**:
+**cookies**:
 ```js
 // Setting a cookie
 document.cookie = "username=John Doe; expires=Fri, 31 Dec 2024 23:59:59 GMT; path=/";
@@ -816,12 +817,13 @@ HTML5 introduced a powerful and flexible drag-and-drop API that allows developer
 
 **Key Components of Drag-and-Drop**
 1. **Draggable Attribute**: Elements need to have the draggable attribute set to true to be draggable.
+
 2. **Events**:
-- **Dragstart**: Fired when the user starts dragging an element. Typically used to set data that will be dragged.
-- **Dragover**: Fired when a draggable element is over a valid drop target. This event needs to be canceled to allow dropping.
-- **Drop**: Fired when a draggable element is dropped on a valid drop target.
-- **Dragend**: Fired when the drag operation is complete.
-- **DataTransfer Object**: Used to hold the data being dragged during a drag-and-drop operation.
+    - **Dragstart**: Fired when the user starts dragging an element. Typically used to set data that will be dragged.
+    - **Dragover**: Fired when a draggable element is over a valid drop target. This event needs to be canceled to allow dropping.
+    - **Drop**: Fired when a draggable element is dropped on a valid drop target.
+    - **Dragend**: Fired when the drag operation is complete.
+    - **DataTransfer Object**: Used to hold the data being dragged during a drag-and-drop operation.
 
 **Example of Drag-and-Drop**
 ```js
