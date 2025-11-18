@@ -62,8 +62,7 @@ React provides several benefits that set it apart from other libraries and frame
 
 6. **Cross Platform Development**: With React Native, you can do *Cross-Platform Development* and build mobile applications.
 
-
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -71,7 +70,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Understanding the Virtual DOM and its benefits in React
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -79,7 +78,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Exploring JSX and its advantages in React development
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -87,7 +86,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 The concept of Reconciliation and its significance in React rendering
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -95,7 +94,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Understanding the differences between State and Props in React
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -103,7 +102,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Dive into Hooks-related questions, such as `useState` and `useEffect`
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -111,7 +110,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 The various use cases of `useEffect` in different scenarios
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -119,7 +118,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Exploring the differences between `useMemo` and `useCallback` in React
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -127,7 +126,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Understanding Code Splitting and its role in optimizing React applications
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -135,7 +134,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 The importance of Accessibility considerations in React development
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -143,7 +142,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Unidirectional behaviour in React and its impact on application architecture
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -151,7 +150,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Comparing Pure Components and Higher Order Components (HOC) in React
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -159,7 +158,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Addressing security concerns such as CSRF and XSRF in React applications
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -167,7 +166,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Deepening your understanding of React optimization techniques
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -175,7 +174,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Exploring Lazy Loading and its benefits in React applications
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -183,7 +182,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Comparing Class-based and Functional-based components in React
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -191,7 +190,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Understanding SEO considerations and best practices in React applications
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -199,7 +198,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 React Router and its role in handling client-side routing in React applications
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -207,7 +206,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Context API and how it facilitates state management in React without using Redux
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -215,7 +214,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Server-Side Rendering (SSR) and its benefits for performance and SEO in React applications
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -223,7 +222,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Error Handling and Error Boundaries in React to gracefully handle runtime errors
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -231,7 +230,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Testing React components using tools like Jest and React Testing Library
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -239,7 +238,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Form handling and validation techniques in React applications
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -247,7 +246,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Performance optimizations using memoization and shouldComponentUpdate
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -255,7 +254,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Handling asynchronous operations with async/await and Promises in React
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -263,7 +262,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 React patterns and best practices for maintainable and scalable code
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -271,7 +270,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 What is concurrent rendering in React 18, and how does it improve the performance of applications?
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -279,7 +278,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Explain the concept of automatic batching in React 18.
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -287,7 +286,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 What is the Transition API in React 18, and how is it used?
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -295,7 +294,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 How has Suspense been improved in React 18?
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -303,7 +302,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 What are the major new features introduced in React 19?
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -311,7 +310,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Explain `useReducer` hook. Give some examples and use case scenarios
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -319,7 +318,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Difference between `state` and `ref`
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -327,7 +326,7 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Explain Redux with an example
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -335,6 +334,6 @@ React provides several benefits that set it apart from other libraries and frame
 ### 💥 Enlist some clean code practices in React.
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
