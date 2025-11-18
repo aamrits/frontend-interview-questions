@@ -50,17 +50,17 @@
 
 React provides several benefits that set it apart from other libraries and frameworks.
 
-    1. **Component-Based Architecture**: React follows a *Component-Based Architecture*. Components are reusable, maintainable, and easier to debug.
+1. **Component-Based Architecture**: React follows a *Component-Based Architecture*. Components are reusable, maintainable, and easier to debug.
 
-    2. **Virtual Dom**: React uses a *virtual DOM* to efficiently update and render components, leading to better performance and a smoother user experience.
+2. **Virtual Dom**: React uses a *virtual DOM* to efficiently update and render components, leading to better performance and a smoother user experience.
 
-    3. **Strong Ecosystem**: React has a *vast ecosystem*, including tools for routing and state management, and a large collection of third-party libraries.
+3. **Strong Ecosystem**: React has a *vast ecosystem*, including tools for routing and state management, and a large collection of third-party libraries.
 
-    4. **JSX Syntax**: JSX, which is a syntax extension for JavaScript, allows you to write HTML-like code within JavaScript, making it easier to visualize the UI structure and logic together.
+4. **JSX Syntax**: JSX, which is a syntax extension for JavaScript, allows you to write HTML-like code within JavaScript, making it easier to visualize the UI structure and logic together.
 
-    5. **Community and Support**: React is maintained by Facebook and thus has a *large active community*, ensuring extensive support.
+5. **Community and Support**: React is maintained by Facebook and thus has a *large active community*, ensuring extensive support.
 
-    6. **Cross Platform Development**: With React Native, you can do *Cross-Platform Development* and build mobile applications.
+6. **Cross Platform Development**: With React Native, you can do *Cross-Platform Development* and build mobile applications.
 
 
 <div align="right">
