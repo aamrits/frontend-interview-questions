@@ -761,24 +761,24 @@ export default Counter;
 A Pure Component is a type of React component that implements a shallow comparison on the component's props and state to decide whether the component should re-render. It extends React.PureComponent instead of React.Component.
 
 **Characteristics:**
-    - Shallow Comparison: A Pure Component performs a shallow comparison of the current and previous props and state. If there are no changes, the component does not re-render.
-    - Optimization: Pure Components can optimize performance by reducing unnecessary re-renders.
+- Shallow Comparison: A Pure Component performs a shallow comparison of the current and previous props and state. If there are no changes, the component does not re-render.
+- Optimization: Pure Components can optimize performance by reducing unnecessary re-renders.
 
 **Use Cases:**
-    - Use Pure Components when you have components with props and state that are unlikely to change deeply or frequently.
-    - Useful for functional components that depend only on props and do not manage state internally
+- Use Pure Components when you have components with props and state that are unlikely to change deeply or frequently.
+- Useful for functional components that depend only on props and do not manage state internally
 
 **Higher-Order Components (HOC)**
 A Higher-Order Component is a function that takes a component and returns a new component with additional props or behavior. HOCs are used to reuse component logic across multiple components.
 
 **Characteristics:**
-    - Function as Input: HOCs take a component as input and return a new component.
-    - Code Reusability: HOCs promote code reuse by encapsulating common logic and behavior that can be shared across multiple components.
-    - Composition: HOCs compose components, adding new props, state, or lifecycle methods to the wrapped component.
+- Function as Input: HOCs take a component as input and return a new component.
+- Code Reusability: HOCs promote code reuse by encapsulating common logic and behavior that can be shared across multiple components.
+- Composition: HOCs compose components, adding new props, state, or lifecycle methods to the wrapped component.
 
 **Use Cases:**
-    - Use HOCs to share common functionality, such as authentication checks, data fetching, or logging, across multiple components.
-    - Useful for cross-cutting concerns that affect multiple components.
+- Use HOCs to share common functionality, such as authentication checks, data fetching, or logging, across multiple components.
+- Useful for cross-cutting concerns that affect multiple components.
 
 **Example**
 ```jsx
