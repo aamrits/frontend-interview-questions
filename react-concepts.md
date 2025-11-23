@@ -757,8 +757,7 @@ export default Counter;
 #### Q12
 ### 💥 Comparing Pure Components and Higher Order Components (HOC) in React
 
-**Pure Components**
-A Pure Component is a type of React component that implements a shallow comparison on the component's props and state to decide whether the component should re-render. It extends React.PureComponent instead of React.Component.
+A **Pure Component** is a type of React component that implements a shallow comparison on the component's props and state to decide whether the component should re-render. It extends React.PureComponent instead of React.Component.
 
 **Characteristics:**
 - Shallow Comparison: A Pure Component performs a shallow comparison of the current and previous props and state. If there are no changes, the component does not re-render.
@@ -768,8 +767,7 @@ A Pure Component is a type of React component that implements a shallow comparis
 - Use Pure Components when you have components with props and state that are unlikely to change deeply or frequently.
 - Useful for functional components that depend only on props and do not manage state internally
 
-**Higher-Order Components (HOC)**
-A Higher-Order Component is a function that takes a component and returns a new component with additional props or behavior. HOCs are used to reuse component logic across multiple components.
+A **Higher-Order Component** is a function that takes a component and returns a new component with additional props or behavior. HOCs are used to reuse component logic across multiple components.
 
 **Characteristics:**
 - Function as Input: HOCs take a component as input and return a new component.
@@ -826,6 +824,147 @@ const EnhancedComponent = withExtraInfo(MyPureComponent);
 #### Q13
 ### 💥 Addressing security concerns such as CSRF and XSRF in React applications
 
+**CSRF (Cross-Site Request Forgery)** is an attack that tricks the user into executing unwanted actions on a web application in which they are authenticated.
+
+**Preventive Measures:**
+1. **CSRF Tokens**: Generate a CSRF token on the server side and include it in forms and API requests. Verify this token on the server to ensure the request is legitimate.
+```jsx
+// Example of including a CSRF token in an API request
+
+import React, { useState } from 'react';
+
+function MyComponent() {
+  const [data, setData] = useState(null);
+
+  const fetchData = async () => {
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+    const response = await fetch('/api/data', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': csrfToken,
+      },
+    });
+    const result = await response.json();
+    setData(result);
+  };
+
+  return (
+    <div>
+      <button onClick={fetchData}>Fetch Data</button>
+      {data && <div>{JSON.stringify(data)}</div>}
+    </div>
+  );
+}
+
+export default MyComponent;
+```
+
+2. **Same-Site Cookies**: Set cookies with the SameSite attribute to Strict or Lax to prevent cookies from being sent with cross-site requests.
+```http
+Set-Cookie: sessionid=abcd1234; SameSite=Strict; Secure; HttpOnly
+```
+
+3. **Double Submit Cookies**: Send a CSRF token as a cookie and in a custom header or hidden form field. The server verifies both values match.
+```jsx
+import React, { useState } from 'react';
+
+function MyComponent() {
+  const [data, setData] = useState(null);
+
+  const fetchData = async () => {
+    const csrfToken = document.cookie.split('; ').find(row => row.startsWith('csrfToken')).split('=')[1];
+    const response = await fetch('/api/data', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': csrfToken,
+      },
+    });
+    const result = await response.json();
+    setData(result);
+  };
+
+  return (
+    <div>
+      <button onClick={fetchData}>Fetch Data</button>
+      {data && <div>{JSON.stringify(data)}</div>}
+    </div>
+  );
+}
+
+export default MyComponent;
+```
+
+4. **XSS (Cross-Site Scripting)**: XSS is an attack that injects malicious scripts into web pages viewed by other users.
+- *Sanitize User Input*: Always sanitize and validate user input to ensure it does not contain malicious code.
+```jsx
+import DOMPurify from 'dompurify';
+
+function MyComponent({ userInput }) {
+  const sanitizedInput = DOMPurify.sanitize(userInput);
+  return <div dangerouslySetInnerHTML={{ __html: sanitizedInput }} />;
+}
+
+export default MyComponent;
+```
+- *Avoid dangerouslySetInnerHTML*: Avoid using dangerouslySetInnerHTML unless absolutely necessary. If used, ensure the content is sanitized.
+- *Content Security Policy (CSP)*: Implement a Content Security Policy to restrict the sources from which content can be loaded.
+```http
+Content-Security-Policy: default-src 'self'; script-src 'self' https://trusted.cdn.com
+```
+- *React Escaping*: React automatically escapes any values embedded in JSX to prevent XSS
+
+**Practical Example**
+Combining CSRF protection and XSS prevention in a React application:
+```jsx
+import React, { useState } from 'react';
+import DOMPurify from 'dompurify';
+
+function App() {
+  const [data, setData] = useState(null);
+  const [userInput, setUserInput] = useState('');
+
+  const fetchData = async () => {
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+    const response = await fetch('/api/data', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': csrfToken,
+      },
+    });
+    const result = await response.json();
+    setData(result);
+  };
+
+  const handleInputChange = (e) => {
+    setUserInput(e.target.value);
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    const sanitizedInput = DOMPurify.sanitize(userInput);
+    // Send sanitizedInput to the server
+  };
+
+  return (
+    <div>
+      <button onClick={fetchData}>Fetch Data</button>
+      {data && <div>{JSON.stringify(data)}</div>}
+      
+      <form onSubmit={handleFormSubmit}>
+        <input type="text" value={userInput} onChange={handleInputChange} />
+        <button type="submit">Submit</button>
+      </form>
+
+      <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(userInput) }} />
+    </div>
+  );
+}
+
+export default App;
+```
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -834,6 +973,190 @@ const EnhancedComponent = withExtraInfo(MyPureComponent);
 #### Q14
 ### 💥 Deepening your understanding of React optimization techniques
 
+Optimizing React applications is essential to ensure they run efficiently, providing a smooth and responsive user experience. Here are some key React optimization techniques, along with examples and explanations:
+
+1. **Use React.memo for Functional Components**: Prevents unnecessary re-renders by memoizing the output of functional components.
+```jsx
+import React, { memo } from 'react';
+
+const MyComponent = memo(({ value }) => {
+  console.log('Rendering MyComponent');
+  return <div>{value}</div>;
+});
+
+export default MyComponent;
+```
+
+2. **Use PureComponent for Class Components**: Prevents unnecessary re-renders by implementing a shallow comparison of props and state.
+```jsx
+import React, { PureComponent } from 'react';
+
+class MyComponent extends PureComponent {
+  render() {
+    console.log('Rendering MyComponent');
+    return <div>{this.props.value}</div>;
+  }
+}
+
+export default MyComponent;
+```
+
+3. **Use useCallback for Memoizing Functions**: Memoizes callback functions to prevent them from being recreated on every render.
+```jsx
+import React, { useState, useCallback } from 'react';
+
+const MyComponent = ({ onClick }) => {
+  console.log('Rendering MyComponent');
+  return <button onClick={onClick}>Click Me</button>;
+};
+
+const ParentComponent = () => {
+  const [count, setCount] = useState(0);
+
+  const handleClick = useCallback(() => {
+    setCount(prevCount => prevCount + 1);
+  }, []);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <MyComponent onClick={handleClick} />
+    </div>
+  );
+};
+
+export default ParentComponent;
+```
+
+4. **Use useMemo for Expensive Calculations**: Memoizes the result of expensive calculations to avoid re-computation on every render.
+```jsx
+import React, { useState, useMemo } from 'react';
+
+const ExpensiveComponent = ({ num }) => {
+  const computeExpensiveValue = (num) => {
+    console.log('Computing...');
+    // Simulate an expensive calculation
+    return num * 2;
+  };
+
+  const memoizedValue = useMemo(() => computeExpensiveValue(num), [num]);
+
+  return <div>Computed Value: {memoizedValue}</div>;
+};
+
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <ExpensiveComponent num={count} />
+    </div>
+  );
+};
+
+export default App;
+```
+
+5. **Code Splitting with React.lazy and Suspense**: Splits code into smaller chunks to reduce initial load time and load components on demand.
+```jsx
+import React, { Suspense, lazy } from 'react';
+
+const LazyComponent = lazy(() => import('./LazyComponent'));
+
+const App = () => (
+  <div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <LazyComponent />
+    </Suspense>
+  </div>
+);
+
+export default App;
+```
+
+6. **Avoid Inline Functions and Objects in JSX**: Avoids re-creating functions and objects on every render.
+```jsx
+import React, { useState, useCallback } from 'react';
+
+const MyComponent = ({ onClick }) => {
+  console.log('Rendering MyComponent');
+  return <button onClick={onClick}>Click Me</button>;
+};
+
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  const handleClick = useCallback(() => {
+    setCount(prevCount => prevCount + 1);
+  }, []);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <MyComponent onClick={handleClick} />
+    </div>
+  );
+};
+
+export default App;
+```
+
+7. **Optimize React Performance with React Profiler**: Identify performance bottlenecks in your React application
+```jsx
+import React, { Profiler } from 'react';
+
+const onRenderCallback = (
+  id,
+  phase,
+  actualDuration,
+  baseDuration,
+  startTime,
+  commitTime,
+  interactions
+) => {
+  console.log({ id, phase, actualDuration, baseDuration, startTime, commitTime, interactions });
+};
+
+const App = () => (
+  <Profiler id="App" onRenderCallback={onRenderCallback}>
+    <div>My App</div>
+  </Profiler>
+);
+
+export default App;
+```
+
+8. **Avoid Unnecessary State Updates**: Prevents unnecessary re-renders by ensuring state updates only when needed
+```jsx
+import React, { useState } from 'react';
+
+const App = () => {
+  const [count, setCount] = useState(0);
+  const [name, setName] = useState('');
+
+  const increment = () => {
+    setCount(prevCount => prevCount + 1);
+  };
+
+  const updateName = (event) => {
+    setName(event.target.value);
+  };
+
+  return (
+    <div>
+      <button onClick={increment}>Increment</button>
+      <input type="text" value={name} onChange={updateName} />
+      <p>Count: {count}</p>
+      <p>Name: {name}</p>
+    </div>
+  );
+};
+
+export default App;
+```
+
+Optimizing React applications involves a combination of techniques to ensure efficient rendering and performance. By leveraging tools like `React.memo`, `PureComponent`, `useCallback`, `useMemo`, code splitting, and the React Profiler, developers can create fast and responsive applications.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -842,6 +1165,115 @@ const EnhancedComponent = withExtraInfo(MyPureComponent);
 #### Q15
 ### 💥 Exploring Lazy Loading and its benefits in React applications
 
+**Lazy loading** is the process of deferring the loading of components or resources until they are needed. In React, this can be achieved using dynamic `import()` statements along with React’s `React.lazy` and `Suspense` features.
+
+**Implement Lazy Loading in React**
+
+**Step 1: Create a Lazy Loaded Component**: Use `React.lazy` to dynamically import a component. This will create a lazy-loaded component that will be loaded only when it is rendered.
+
+**Step 2: Use `Suspense` for Fallback**: Wrap the lazy-loaded component with `Suspense` to provide a fallback UI while the component is being loaded.
+
+**Benefits of Lazy Loading**
+
+1. **Improved Performance**:
+
+   * **Reduced Initial Load Time**: By deferring the loading of non-critical components, the initial load time of the application is reduced, leading to a faster start-up experience.
+   * **Efficient Resource Utilization**: Resources such as scripts and stylesheets are loaded only when needed, reducing unnecessary data transfer.
+
+2. **Better User Experience**:
+
+   * **Smooth Interactions**: Lazy loading ensures that the main content is loaded quickly, providing users with immediate access to the core functionality of the application.
+   * **Progressive Loading**: Users can interact with the application while additional components are being loaded in the background.
+
+3. **Optimized Bandwidth Usage**:
+
+   * **Lower Data Consumption**: By loading only the required components, the amount of data transferred is minimized, which is particularly beneficial for users on slow or limited internet connections.
+
+4. **Scalability**:
+
+   * **Easier Maintenance**: Lazy loading helps manage large codebases by splitting them into smaller, manageable chunks. This makes the application more scalable and easier to maintain.
+   * **Modular Architecture**: Encourages a modular architecture where components are loaded independently, promoting better separation of concerns.
+
+**Practical Example: Route-Based Lazy Loading**
+
+Route-based lazy loading is a common use case where routes are loaded only when the user navigates to them.
+
+**Example with React Router**:
+
+```jsx
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+const Home = lazy(() => import('./Home'));
+const About = lazy(() => import('./About'));
+const Contact = lazy(() => import('./Contact'));
+
+const App = () => (
+  <Router>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+      </Switch>
+    </Suspense>
+  </Router>
+);
+
+export default App;
+```
+
+**Advanced Lazy Loading Techniques**
+
+1. **Code Splitting with Webpack**:
+
+   * Use Webpack’s code-splitting capabilities to create separate bundles for different parts of your application.
+
+**Example**:
+
+```javascript
+// Webpack configuration
+module.exports = {
+  entry: {
+    main: './src/index.js',
+    vendor: ['react', 'react-dom']
+  },
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
+};
+```
+
+2. **React Loadable**:
+
+   * Use the `react-loadable` library for advanced loading scenarios, such as handling timeouts or delays in loading components.
+
+**Example**:
+
+```jsx
+import Loadable from 'react-loadable';
+
+const LoadableComponent = Loadable({
+  loader: () => import('./MyComponent'),
+  loading: () => <div>Loading...</div>,
+  delay: 300, // 300ms delay before showing the loading indicator
+  timeout: 10000, // 10 seconds timeout for loading the component
+});
+
+const App = () => (
+  <div>
+    <LoadableComponent />
+  </div>
+);
+
+export default App;
+```
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
