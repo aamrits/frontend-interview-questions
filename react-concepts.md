@@ -1194,9 +1194,7 @@ Optimizing React applications involves a combination of techniques to ensure eff
    * **Easier Maintenance**: Lazy loading helps manage large codebases by splitting them into smaller, manageable chunks. This makes the application more scalable and easier to maintain.
    * **Modular Architecture**: Encourages a modular architecture where components are loaded independently, promoting better separation of concerns.
 
-**Practical Example: Route-Based Lazy Loading**
-
-Route-based lazy loading is a common use case where routes are loaded only when the user navigates to them.
+**Practical Example: Route-Based Lazy Loading**: Route-based lazy loading is a common use case where routes are loaded only when the user navigates to them.
 
 **Example with React Router**:
 
@@ -1282,6 +1280,36 @@ export default App;
 #### Q16
 ### 💥 Comparing Class-based and Functional-based components in React
 
+Certainly! Below is a comparison of Class-based and Functional-based components in React, presented in a tabular format.
+
+| Feature                     | Class-based Components                                                                                  | Functional-based Components                                    |
+| --------------------------- | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| **Definition**              | ES6 classes extending `React.Component`.                                                                | JavaScript functions using hooks for state and lifecycle.      |
+| **State Management**        | Managed using `this.state` and `this.setState()`.                                                       | Managed using the `useState` hook.                             |
+| **Lifecycle Methods**       | Explicit lifecycle methods like `componentDidMount`, `componentDidUpdate`, `componentWillUnmount`, etc. | Managed using the `useEffect` hook.                            |
+| **Syntax**                  | Requires `render()` method to return JSX.                                                               | Returns JSX directly.                                          |
+| **Performance**             | Can be less performant due to the overhead of class instances and method bindings.                      | Generally more performant and lightweight.                     |
+| **Hooks**                   | Not applicable.                                                                                         | Can use hooks like `useState`, `useEffect`, `useContext`, etc. |
+| **Code Complexity**         | Often more verbose and complex.                                                                         | Typically shorter and easier to read/write.                    |
+| **This Binding**            | Requires manual binding of `this` for event handlers.                                                   | No need for `this` binding.                                    |
+| **Higher-Order Components** | Can be used, but might add complexity.                                                                  | Easily composed with hooks, simpler to manage.                 |
+| **Reusability**             | Can be achieved through HOCs and render props.                                                          | Enhanced with hooks and custom hooks for reusability.          |
+| **Examples**                | ```jsx                                                                                                  | ```jsx                                                         |
+|                             | class MyComponent extends React.Component {                                                             | function MyComponent() {                                       |
+|                             | constructor(props) {                                                                                    | const [state, setState] = useState(initialState);              |
+|                             | super(props);                                                                                           | useEffect(() => {                                              |
+|                             | this.state = { ... };                                                                                   | // side effects                                                |
+|                             | }                                                                                                       | }, [dependencies]);                                            |
+|                             |                                                                                                         |                                                                |
+|                             | componentDidMount() {                                                                                   | return <div>...</div>;                                         |
+|                             | // side effects                                                                                         | }                                                              |
+|                             | }                                                                                                       | ```                                                            |
+|                             |                                                                                                         |                                                                |
+|                             | render() {                                                                                              |                                                                |
+|                             | return <div>...</div>;                                                                                  |                                                                |
+|                             | }                                                                                                       |                                                                |
+|                             | }                                                                                                       |                                                                |
+|                             | ```                                                                                                     | ```                                                            |
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -1289,6 +1317,7 @@ export default App;
 
 #### Q17
 ### 💥 Understanding SEO considerations and best practices in React applications
+
 
 
 <div align="left">
