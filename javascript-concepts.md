@@ -102,7 +102,7 @@ JavaScript's concurrency model is based on the concept of the event loop, enabli
 * **Responsive UIs**: By avoiding blocking operations, JavaScript can keep the user interface responsive, improving user experience.
 * **Efficient Resource Use**: The single-threaded model reduces the complexity and overhead associated with managing multiple threads, making JavaScript efficient for many tasks.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -184,7 +184,7 @@ Operators are used to perform operations on variables and values.
 * **`*=`**: Multiplication assignment. Example: `x *= 5; // x is now 50`.
 * **`/=`**: Division assignment. Example: `x /= 5; // x is now 2`.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -286,7 +286,7 @@ sayHello = function() {
 3. **Function declarations are always available**: Function declarations can be invoked before they appear in the code, which can be useful but also lead to confusion if not well-documented.
 4. **Function expressions need to be declared first**: Unlike function declarations, function expressions must be assigned before they are called, which can help enforce a more logical structure in the code.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -348,7 +348,7 @@ Sure, here’s a table summarizing the differences between `let`, `const`, and `
   * `var` variables declared in the global scope become properties of the global object (e.g., `window` in browsers).
   * `let` and `const` do not create properties on the global object.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -509,7 +509,7 @@ const timer = new Timer();
 
 In this example, `this.seconds` correctly refers to the `Timer` instance because arrow functions do not have their own `this` context.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -581,7 +581,7 @@ console.log([] === false); // false (different types)
   console.log(obj1 === obj2); // false
   ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -698,7 +698,7 @@ console.log(undefined === undefined); // true
   config = { apiKey: "12345" };
   ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -830,7 +830,7 @@ console.log(counter()); // 3
 * **Shadowing**: Inner variables with the same name as outer variables override the outer ones within their scope.
 * **Closures**: Functions that retain access to their lexical scope even when executed outside of it.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -986,7 +986,7 @@ The value of `this` depends on the context in which a function is called:
 * **Event Handlers**: `this` refers to the element that received the event.
 * **Explicit Binding**: `this` can be explicitly set using `call`, `apply`, or `bind`.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -1138,7 +1138,7 @@ Closures are a powerful feature in JavaScript that allow functions to retain acc
 * Maintaining state in asynchronous code
 * Implementing iterators and generators
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -1298,7 +1298,7 @@ console.log(str.split("")); // ["H", "e", "l", "l", "o"]
 
 These string manipulation techniques are essential for handling text data in JavaScript. They cover a wide range of operations, from basic tasks like changing case and concatenation to more advanced operations like template literals and working with character codes. Understanding these methods allows for efficient and effective string handling in JavaScript.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -1506,7 +1506,7 @@ In this example:
 * The button with the id `changeTitle` has an event listener attached to it that listens for a `click` event.
 * When the button is clicked, the event handler changes the text content of the `title` element and changes its color to blue.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -1628,7 +1628,7 @@ In this example:
 * **Event Delegation**: Efficiently manage events by attaching a single event listener to a common ancestor of multiple elements.
 * **Event Object**: Contains details about the event, such as the event type, target element, and methods to control the event’s behavior.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -1777,7 +1777,7 @@ console.log(alice.__proto__ === Person.prototype); // true
 * **ES6 Classes**: Syntactic sugar for creating objects with shared prototypes.
 * **prototype vs. **proto****: `prototype` is used for constructor functions; `__proto__` accesses the prototype of an object.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -1905,7 +1905,7 @@ alice.study(); // Alice is studying
 * **Prototypal Inheritance**: Focuses on objects inheriting directly from other objects. It is dynamic and flexible but can lack structure.
 * **Classical Inheritance**: Uses class-based hierarchies. It is structured and encapsulated but can be rigid and complex.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -2080,7 +2080,7 @@ In this example:
 * **Polymorphism**: Allows methods to do different things based on the object it is acting upon, enabling a single interface to control access to a general class of actions.
 * **Inheritance**: Enables new classes to inherit properties and methods from existing classes, promoting code reuse and a hierarchical class structure.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -2216,7 +2216,7 @@ In this example:
 * `curriedMultiply` fixes the first argument, leaving a function that takes the next two arguments.
 * `partiallyAppliedMultiply` fixes the first two arguments, leaving a function that takes the final argument.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -2362,7 +2362,7 @@ console.log(zip); // 10001
 * **Rest Operator (`...`)**: Collects multiple elements into a single array.
 * **Destructuring**: Unpacks values from arrays or properties from objects into individual variables.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -2527,7 +2527,7 @@ fruits.forEach(fruit => console.log(fruit));
 * **`reduce`**: Executes a reducer function on each element of the array, resulting in a single output value.
 * **`forEach`**: Executes a provided function once for each array element, primarily used for side effects.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -2683,7 +2683,7 @@ doTasks();
 * **Promises**: Provide a more structured approach with chainable `.then` and `.catch` methods, improving readability and error handling.
 * **Async/Await**: Built on promises, providing a more synchronous-like syntax, making asynchronous code easier to read and write.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -2826,7 +2826,7 @@ In this example:
 * **Benefits**: Abstraction, declarative code, composability, and immutability.
 * **Role in Functional Programming**: Fundamental to achieving the principles of first-class functions, pure functions, and immutability.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -2980,7 +2980,7 @@ console.log(sum); // 15
 ```
 https://blog.siddhigate.com/i-wrote-polyfills-for-32-javascript-array-methods
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -3303,7 +3303,7 @@ Allows using `await` at the top level of modules.
 const response = await fetch
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -3623,7 +3623,7 @@ offCommand.execute(); // Light is OFF
 Design patterns are not strict rules — they’re **best practices** for solving recurring problems in a structured, efficient way.
 By applying patterns like **Module**, **Factory**, **Observer**, **Strategy**, and **Singleton**, your JavaScript code becomes **cleaner, modular, and maintainable** — especially in large-scale applications.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -3810,7 +3810,7 @@ execute();
 * **Throwing Errors**: Use `throw` to create custom error messages.
 * **Asynchronous Error Handling**: Use `.catch()` for Promises and `try...catch` with async/await.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -3967,7 +3967,7 @@ searchBox.addEventListener('input', debounce(handleSearchInput, 300));
 * **Throttling**: Ensures a function is called at most once in a specified time period. Useful for controlling the rate of execution for frequently occurring events.
 * **Debouncing**: Ensures a function is called only after a specified delay has passed since the last call. Useful for handling events that occur in quick succession but should only be handled once the event stream stops.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -4081,7 +4081,7 @@ Client-side storage options in web development allow you to store data directly 
 * **Local Storage** and **Session Storage** are simpler to use for small, string-based data and provide a synchronous API. They differ in persistence and scope.
 * **IndexedDB** is more powerful, supports larger amounts of data, and complex queries, and provides an asynchronous API. It is suitable for more complex and data-heavy applications.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -4258,7 +4258,7 @@ try {
 * **Handling Dates**: Dates need to be handled explicitly when using JSON.
 * **Error Handling**: Always handle errors when parsing JSON to avoid runtime issues.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -4373,7 +4373,7 @@ lruCache.set('d', 4);
 console.log(lruCache.get('b')); // null (removed because it was the least recently used)
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -4465,7 +4465,7 @@ app.options('/data', cors(corsOptions)); // enable preflight request for /data
 2. **Use `fetch` or other HTTP clients on the client side** to make cross-origin requests, ensuring the server's CORS policy is respected.
 3. **Handle preflight requests** if your application makes non-simple requests.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -4779,7 +4779,7 @@ console.log('Is queue empty?', queue.isEmpty()); // Output: Is queue empty? fals
    * **Dequeue Element:** Removes and returns the front element (10) and prints the updated queue.
    * **Check Empty:** Checks if the queue is empty.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -4940,7 +4940,7 @@ fetchData();
 * **Handling requests** such as GET, POST, PUT, and DELETE can be done using `fetch` or libraries like Axios.
 * **Asynchronous operations** can be managed more effectively using `async/await` syntax.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -5094,7 +5094,7 @@ app.use((err, req, res, next) => {
 });
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -5302,7 +5302,7 @@ import { greet } from './utils.js';
 greet(); // Output: Hello, ES6 Modules
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -5418,7 +5418,7 @@ fetchData('https://api.example.com/data');
 * **Client Error Codes:** Indicate issues with the request (e.g., 400, 401, 404).
 * **Server Error Codes:** Indicate issues on the server (e.g., 500, 503).
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -5578,7 +5578,7 @@ app.listen(port, () => {
 });
 ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -5707,7 +5707,7 @@ In this example, clicking the "Fetch Data" button triggers the `loadData` functi
 
 This basic example demonstrates how to use `XMLHttpRequest` for making asynchronous HTTP requests with AJAX, allowing you to create more dynamic and responsive web applications.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -5877,7 +5877,7 @@ if ('serviceWorker' in navigator) {
 * **Core Concepts:** Include the Web App Manifest and Service Workers.
 * **Service Workers:** Enable offline capabilities, background sync, and push notifications, significantly enhancing user experience.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -6048,7 +6048,7 @@ if ('serviceWorker' in navigator) {
       }
       ```
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -6226,7 +6226,7 @@ modal.querySelector('button.close').focus();
 
 ---
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -6343,7 +6343,7 @@ Content-Security-Policy: default-src 'self'; script-src 'self' https://trusted.c
 
 By implementing a strong Content Security Policy, validating and sanitizing user inputs, using CSRF tokens, and securing XHR requests, you can significantly enhance the security of your web applications and protect against common vulnerabilities such as XSS, CSRF, and XHR attacks. If you need further assistance or have specific questions, feel free to ask!
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -6473,7 +6473,7 @@ console.log(formattedNumber); // Output: 123.456,789
 
 By following these steps, you can internationalize your application and make it multilingual. This involves extracting translatable text, using a translation library like i18next, and formatting dates and numbers according to the user's locale. Additionally, you need to handle special cases like RTL languages. If you need further assistance or have specific questions, feel free to ask!
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -6601,7 +6601,7 @@ Deploy each micro-frontend to a CDN or web server, then integrate them by updati
 
 Building frontends in a microservices architecture using micro-frontends allows for independent development, deployment, and maintenance of different parts of your application. By leveraging frameworks like Single-SPA, web components, and Module Federation, you can create a scalable and flexible frontend architecture. If you need further assistance or have specific questions, feel free to ask!
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -6786,7 +6786,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 The MVC design pattern divides an application into three main components: Model, View, and Controller. This separation of concerns helps manage complexity, promotes organized code, and allows for independent development of components. By using MVC, you can create scalable and maintainable applications. If you need further assistance or have specific questions, feel free to ask!
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -6919,7 +6919,7 @@ Besides prefetching, there are several other techniques to optimize resource loa
 
 Prefetching is a powerful technique for improving resource loading by fetching resources before they are needed. It helps reduce latency and enhance the user experience. Other optimization techniques include lazy loading, code splitting, minification, HTTP/2, caching, using CDNs, image optimization, critical CSS, and service workers. By combining these techniques, you can significantly optimize the performance and efficiency of your web applications. If you have further questions or need specific examples, feel free to ask!
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -7191,7 +7191,7 @@ The SOLID principles provide a solid foundation for designing maintainable, scal
 * **Interface Segregation Principle (ISP):** Clients should not be forced to implement interfaces they don't use.
 * **Dependency Inversion Principle (DIP):** High-level modules should not depend on low-level modules; both should depend on abstractions.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -7292,7 +7292,7 @@ Open your browser and navigate to `http://localhost:3000` to see the server-side
 
 Server-Side Rendering (SSR) improves performance, SEO, user experience, and social media sharing capabilities by rendering pages on the server and delivering fully rendered HTML to the client. Implementing SSR can be done using frameworks like Next.js, which provides a straightforward way to render React applications on the server. By leveraging SSR, developers can create fast, SEO-friendly, and user-friendly web applications.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -7415,7 +7415,7 @@ This will generate a static version of your Next.js site in the `out` directory,
 
 Static Site Generation (SSG) is a powerful technique for creating fast, scalable, and secure websites. By pre-rendering pages at build time, SSG eliminates the need for server-side processing on each request, leading to faster load times and improved performance. Next.js, Gatsby, Hugo, Jekyll, VuePress, and Eleventy are some of the popular frameworks and tools that facilitate SSG. By leveraging SSG, developers can create high-performance, SEO-friendly, and cost-effective websites suitable for a wide range of applications.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -7538,7 +7538,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 Single Page Applications (SPAs) provide a seamless and responsive user experience by dynamically rewriting the current page instead of loading entire new pages from the server. This example demonstrates how to create a basic SPA using plain JavaScript and the History API for client-side routing. SPAs can be built using various frameworks and libraries like React, Vue, and Angular, which offer more advanced features and abstractions to simplify the development process. If you have further questions or need more detailed examples, feel free to ask!
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -7717,7 +7717,7 @@ Optimizing JavaScript applications for SEO involves several strategies to ensure
 
 By implementing these strategies, you can significantly enhance the SEO of your JavaScript applications, leading to better visibility and higher rankings in search engine results.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -7840,7 +7840,7 @@ In your main JavaScript file, create and communicate with the worker:
 
 Web Workers provide a powerful way to perform background processing in web applications, helping to keep the main thread responsive. By offloading heavy computations and time-consuming tasks to workers, you can improve the performance and user experience of your application. However, it's important to be aware of their limitations and to use them appropriately for the best results. If you have further questions or need more detailed examples, feel free to ask!
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -8014,7 +8014,7 @@ Create an `index.html` file:
 
 WebSocket is a powerful protocol for real-time communication, allowing for low-latency, full-duplex communication between the client and server. By maintaining a persistent connection, WebSocket reduces the overhead associated with HTTP, making it ideal for applications that require real-time data exchange. The example provided demonstrates how to set up a simple WebSocket server with Node.js and create a real-time chat application using vanilla JavaScript on the client side. If you have further questions or need more detailed examples, feel free to ask!
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -8212,7 +8212,7 @@ npm run build
 
 JavaScript bundlers play a crucial role in optimizing code for production by combining, minifying, and compressing JavaScript files, performing tree shaking, code splitting, and managing assets. Tools like Webpack, Rollup, and Parcel provide a comprehensive set of features to enhance the performance and efficiency of web applications. By using these bundlers, developers can ensure their applications are fast, scalable, and maintainable. If you have further questions or need more detailed examples, feel free to ask!
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -8421,7 +8421,7 @@ This will transpile all files in the `src` directory and output them to the `lib
 
 **Build Tools** are essential for optimizing and automating tasks in modern web development. Webpack and Babel are two powerful tools that help manage dependencies, bundle modules, and transpile modern JavaScript code to ensure compatibility and performance. Webpack bundles various assets, manages dependencies, and optimizes the output, while Babel focuses on converting modern JavaScript syntax into a backward-compatible version. Together, they streamline the development workflow and ensure that web applications are optimized for production. If you have further questions or need more detailed examples, feel free to ask!
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -8530,7 +8530,7 @@ Test-Driven Development (TDD) is a development methodology where you write tests
 
 By following TDD, you can create robust, well-tested code that meets the requirements defined by your tests.
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
@@ -8698,7 +8698,7 @@ npm run build
 Each tool has its strengths and is suitable for different use cases. The choice between them depends on the specific needs and constraints of your project.
 
 
-<div align="right">
+<div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
