@@ -46,7 +46,7 @@
 ## Answers
 
 #### Q1 
-### 💥 Why choose React? What sets it apart from other libraries and frameworks?
+### Q1. Why choose React? What sets it apart from other libraries and frameworks?
 
 React provides several benefits that set it apart from other libraries and frameworks.
 
@@ -67,7 +67,7 @@ React provides several benefits that set it apart from other libraries and frame
 </div>
 
 #### Q2
-### 💥 Understanding the Virtual DOM and its benefits in React
+### Q2. Understanding the Virtual DOM and its benefits in React
 
 The Virtual DOM (VDOM) is a key concept in React that significantly enhances performance and user experience. Here's an explanation of what the Virtual DOM is and its benefits:
 
@@ -100,7 +100,7 @@ The Virtual DOM is a lightweight, in-memory representation of the actual DOM. Re
 </div>
 
 #### Q3
-### 💥 Exploring JSX and its advantages in React development
+### Q3. Exploring JSX and its advantages in React development
 
 JSX (JavaScript XML) is a syntax extension for JavaScript that allows you to write HTML-like code within JavaScript. It's a core feature of React that makes it easier to describe the UI and how it should appear.
 
@@ -134,12 +134,14 @@ JSX allows you to write HTML-like code within JavaScript. Under the hood, it get
 </div>
 
 #### Q4
-### 💥 The concept of Reconciliation and its significance in React rendering
+### Q4. The concept of Reconciliation and its significance in React rendering
 
-**What is Reconciliation?**
+##### What is Reconciliation?
+
 Reconciliation is the process of comparing the current Virtual DOM with the previous Virtual DOM to identify changes and update the actual DOM accordingly. React uses a diffing algorithm to determine the minimal set of changes needed to keep the actual DOM in sync with the virtual DOM.
 
-**How Reconciliation Works**
+##### How Reconciliation Works
+
 1. **Rendering to Virtual DOM**: When a component's state or props change, React renders a new Virtual DOM tree.
 
 2. **Diffing Algorithm**: React compares the new Virtual DOM tree with the previous one to identify the differences. This process is also known as "diffing."
@@ -148,19 +150,20 @@ Reconciliation is the process of comparing the current Virtual DOM with the prev
 
 4. **Applying Changes**: React updates the actual DOM to reflect the changes identified. Only the parts of the DOM that have changed are updated, reducing the number of DOM operations.
 
-**Key Concepts in Reconciliation**
+##### Key Concepts in Reconciliation
 1. **Keys**: Keys help React identify which items have changed, been added, or removed. They should be unique among siblings. Using keys improves the efficiency of the reconciliation process.
 
 2. **Component Types**: If a component's type changes (e.g., from `<div>` to `<span>`), React unmounts the old component and mounts a new one.
 
 3. **Element Updates**: If a component's type remains the same, React updates the existing component with new props and state, minimizing the number of changes to the DOM.
 
-**Significance of Reconciliation**
+##### Significance of Reconciliation
+
 1. **Performance Optimization**: Reconciliation ensures that only the necessary changes are made to the actual DOM, reducing the number of reflows and repaints. This leads to better performance and a smoother user experience.
 
 2. **Predictable UI Updates**: The reconciliation process provides a predictable way to update the UI, ensuring that the actual DOM always reflects the current state and props of the components.
 
-3. E**fficient Resource Utilization**: By minimizing direct DOM manipulations, reconciliation helps in efficient utilization of resources, making applications more responsive.
+3. **Efficient Resource Utilization**: By minimizing direct DOM manipulations, reconciliation helps in efficient utilization of resources, making applications more responsive.
 
 4. **Scalability**: React's reconciliation process allows applications to scale efficiently, as it can handle complex UI updates with minimal performance overhead.
 
@@ -169,7 +172,7 @@ Reconciliation is the process of comparing the current Virtual DOM with the prev
 </div>
 
 #### Q5
-### 💥 Understanding the differences between State and Props in React
+### Q5. Understanding the differences between State and Props in React
 
 **State** is a built-in object in React that holds data or information about the component. It is managed within the component and can change over time, typically in response to user actions or network responses.
 
@@ -207,7 +210,7 @@ Reconciliation is the process of comparing the current Virtual DOM with the prev
 </div>
 
 #### Q6
-### 💥 Dive into Hooks-related questions, such as `useState` and `useEffect`
+### Q6. Dive into Hooks-related questions, such as `useState` and `useEffect`
 
 **useState** is a hook that allows you to add state to functional components. It returns a state variable and a function to update it.
 
@@ -231,7 +234,7 @@ Reconciliation is the process of comparing the current Virtual DOM with the prev
 </div>
 
 #### Q7
-### 💥 The various use cases of `useEffect` in different scenarios
+### Q7. The various use cases of `useEffect` in different scenarios
 
 The `useEffect` hook in React is used to handle side effects in functional components. Side effects include tasks like fetching data, directly manipulating the DOM, setting up subscriptions, and cleaning up resources. Here are various use cases of `useEffect` in different scenarios:
 
@@ -404,7 +407,7 @@ function AsyncDataFetcher() {
 </div>
 
 #### Q8
-### 💥 Exploring the differences between `useMemo` and `useCallback` in React
+### Q8. Exploring the differences between `useMemo` and `useCallback` in React
 
 `useMemo` and `useCallback` are both React hooks used to optimize performance by memoizing values and functions, respectively. Here are the differences between them:
 
@@ -454,7 +457,7 @@ function ExampleComponent({ a, b }) {
 </div>
 
 #### Q9
-### 💥 Understanding Code Splitting and its role in optimizing React applications
+### Q9. Understanding Code Splitting and its role in optimizing React applications
 
 Code splitting is a powerful optimization technique in React applications that helps improve performance by dividing a large bundle of JavaScript code into smaller, more manageable chunks. This allows parts of the application to be loaded on demand, reducing the initial load time and enhancing the user experience. This is typically achieved using features provided by modern JavaScript bundlers like Webpack.
 
@@ -530,7 +533,7 @@ export default App;
 </div>
 
 #### Q10
-### 💥 The importance of Accessibility considerations in React development
+### Q10. The importance of Accessibility considerations in React development
 
 Accessibility (a11y) is a crucial aspect of web development, ensuring that applications are usable by as many people as possible, including those with disabilities. Here’s why accessibility is important in React development and how to address it:
 
@@ -660,7 +663,7 @@ export default AccessibleButton;
 </div>
 
 #### Q11
-### 💥 Unidirectional behaviour in React and its impact on application architecture
+### Q11. Unidirectional behaviour in React and its impact on application architecture
 
 Unidirectional data flow is a core principle of React that defines how data should move through an application. This concept impacts the architecture of React applications significantly, promoting predictability, easier debugging, and maintainability. Unidirectional data flow means that data moves in a single direction through the application: from parent components to child components. This flow is often described as top-down or one-way binding.
 
@@ -755,7 +758,7 @@ export default Counter;
 </div>
 
 #### Q12
-### 💥 Comparing Pure Components and Higher Order Components (HOC) in React
+### Q12. Comparing Pure Components and Higher Order Components (HOC) in React
 
 A **Pure Component** is a type of React component that implements a shallow comparison on the component's props and state to decide whether the component should re-render. It extends React.PureComponent instead of React.Component.
 
@@ -822,7 +825,7 @@ const EnhancedComponent = withExtraInfo(MyPureComponent);
 </div>
 
 #### Q13
-### 💥 Addressing security concerns such as CSRF and XSRF in React applications
+### Q13. Addressing security concerns such as CSRF and XSRF in React applications
 
 **CSRF (Cross-Site Request Forgery)** is an attack that tricks the user into executing unwanted actions on a web application in which they are authenticated.
 
@@ -971,7 +974,7 @@ export default App;
 </div>
 
 #### Q14
-### 💥 Deepening your understanding of React optimization techniques
+### Q14. Deepening your understanding of React optimization techniques
 
 Optimizing React applications is essential to ensure they run efficiently, providing a smooth and responsive user experience. Here are some key React optimization techniques, along with examples and explanations:
 
@@ -1163,7 +1166,7 @@ Optimizing React applications involves a combination of techniques to ensure eff
 </div>
 
 #### Q15
-### 💥 Exploring Lazy Loading and its benefits in React applications
+### Q15. Exploring Lazy Loading and its benefits in React applications
 
 **Lazy loading** is the process of deferring the loading of components or resources until they are needed. In React, this can be achieved using dynamic `import()` statements along with React’s `React.lazy` and `Suspense` features.
 
@@ -1278,7 +1281,7 @@ export default App;
 </div>
 
 #### Q16
-### 💥 Comparing Class-based and Functional-based components in React
+### Q16. Comparing Class-based and Functional-based components in React
 
 Certainly! Below is a comparison of Class-based and Functional-based components in React, presented in a tabular format.
 
@@ -1300,11 +1303,11 @@ Certainly! Below is a comparison of Class-based and Functional-based components 
 </div>
 
 #### Q17
-### 💥 Understanding SEO considerations and best practices in React applications
+### Q17. Understanding SEO considerations and best practices in React applications
 
 Optimizing React applications for search engine optimization (SEO) can be challenging due to the dynamic nature of single-page applications (SPAs). However, there are several best practices and considerations to ensure better SEO performance. Here’s a comprehensive guide:
 
-### SEO Considerations and Best Practices in React Applications
+##### SEO Considerations and Best Practices in React Applications
 
 1. **Server-Side Rendering (SSR)**
 
@@ -1527,7 +1530,7 @@ Optimizing React applications for search engine optimization (SEO) can be challe
      export default Home;
      ```
 
-### Conclusion
+##### Conclusion
 
 SEO optimization in React applications involves a combination of server-side rendering, static site generation, proper use of meta tags, clean URLs, structured data, and more. By following these best practices, you can ensure that your React application is not only fast and user-friendly but also well-optimized for search engines.
 
@@ -1537,11 +1540,11 @@ SEO optimization in React applications involves a combination of server-side ren
 </div>
 
 #### Q18
-### 💥 React Router and its role in handling client-side routing in React applications
+### Q18. React Router and its role in handling client-side routing in React applications
 
 React Router is a popular library used to handle client-side routing in React applications. It allows developers to create single-page applications (SPAs) with dynamic navigation and URL handling without needing to reload the entire page. Here’s a detailed description of React Router and its role in client-side routing:
 
-### What is React Router?
+##### What is React Router?
 
 React Router is a collection of navigational components that compose declaratively with your application. It allows you to:
 
@@ -1550,7 +1553,7 @@ React Router is a collection of navigational components that compose declarative
 * Pass and retrieve parameters in the URL.
 * Manage browser history.
 
-### Key Components of React Router
+##### Key Components of React Router
 
 1. **Router**: The core component that enables routing in your application. There are different types of routers based on your needs:
 
@@ -1565,7 +1568,7 @@ React Router is a collection of navigational components that compose declarative
 
 5. **Redirect**: Redirects from one route to another programmatically.
 
-### Example of React Router in Action
+##### Example of React Router in Action
 
 Here’s a basic example demonstrating how to set up React Router in a React application:
 
@@ -1600,7 +1603,7 @@ function App() {
 export default App;
 ```
 
-### Components (Home.js, About.js, Contact.js)
+##### Components (Home.js, About.js, Contact.js)
 
 **Home.js**
 
@@ -1638,7 +1641,7 @@ function Contact() {
 export default Contact;
 ```
 
-### Role of React Router in Client-Side Routing
+##### Role of React Router in Client-Side Routing
 
 1. **Single Page Application (SPA) Navigation**:
 
@@ -1711,7 +1714,7 @@ function App() {
 export default App;
 ```
 
-### Benefits of Using React Router
+##### Benefits of Using React Router
 
 1. **Declarative Routing**:
 
@@ -1729,7 +1732,7 @@ export default App;
 
    * Can be used with server-side rendering frameworks like Next.js to improve SEO and initial load times.
 
-### Conclusion
+##### Conclusion
 
 React Router is an essential library for handling client-side routing in React applications. It provides a simple and powerful way to manage navigation, URL parameters, and route transitions, enhancing both the developer experience and the user experience.
 
@@ -1738,11 +1741,11 @@ React Router is an essential library for handling client-side routing in React a
 </div>
 
 #### Q19
-### 💥 Context API and how it facilitates state management in React without using Redux
+### Q19. Context API and how it facilitates state management in React without using Redux
 
 The Context API is a feature in React that enables you to share state and other data across your component tree without having to pass props down manually at every level. It is particularly useful for global state management in situations where using Redux might be overkill. Here’s an in-depth look at the Context API and how it facilitates state management in React:
 
-### What is the Context API?
+##### What is the Context API?
 
 The Context API provides a way to pass data through the component tree without having to pass props down manually at every level. It consists of three main components:
 
@@ -1750,7 +1753,7 @@ The Context API provides a way to pass data through the component tree without h
 2. **Provider**: A component that provides the context value to its descendants.
 3. **Consumer**: A component that subscribes to context changes.
 
-### How to Use the Context API
+##### How to Use the Context API
 
 1. **Create a Context**:
 
@@ -1832,7 +1835,7 @@ const MyComponent = () => (
 export default MyComponent;
 ```
 
-### Practical Example: Theme Context
+##### Practical Example: Theme Context
 
 Here’s a more detailed example demonstrating how to manage a theme (light/dark) using the Context API:
 
@@ -1916,7 +1919,7 @@ Here’s a more detailed example demonstrating how to manage a theme (light/dark
    export default App;
    ```
 
-### Benefits of Using Context API for State Management
+##### Benefits of Using Context API for State Management
 
 1. **Simplicity**:
 
@@ -1934,7 +1937,7 @@ Here’s a more detailed example demonstrating how to manage a theme (light/dark
 
    * The Context API helps avoid prop drilling by allowing you to pass data through the component tree without manually passing props at every level.
 
-### Considerations
+##### Considerations
 
 * **Performance Overhead**:
 
@@ -1943,7 +1946,7 @@ Here’s a more detailed example demonstrating how to manage a theme (light/dark
 
   * For very complex state management needs, especially in large applications, Redux or other state management libraries might still be more suitable.
 
-### Conclusion
+##### Conclusion
 
 The Context API is a powerful tool for managing state in React applications, providing a simpler alternative to Redux for many use cases. It enables you to pass data through the component tree without prop drilling, making your code cleaner and easier to maintain.
 
@@ -1952,17 +1955,17 @@ The Context API is a powerful tool for managing state in React applications, pro
 </div>
 
 #### Q20
-### 💥 Server-Side Rendering (SSR) and its benefits for performance and SEO in React applications
+### Q20. Server-Side Rendering (SSR) and its benefits for performance and SEO in React applications
 
 Server-Side Rendering (SSR) is a technique in which the React components of a web application are rendered on the server rather than on the client (browser). This process generates HTML content on the server and sends it to the client, where it is displayed immediately. The JavaScript bundle is then hydrated on the client side to enable full interactivity.
 
-### What is Server-Side Rendering (SSR)?
+##### What is Server-Side Rendering (SSR)?
 
 **Definition**:
 
 * SSR involves rendering web pages on the server into HTML before they are sent to the client. In the context of React, this means running the React code on the server to generate the initial HTML of a web page.
 
-### How SSR Works in React
+##### How SSR Works in React
 
 1. **Initial Request**:
 
@@ -1974,7 +1977,7 @@ Server-Side Rendering (SSR) is a technique in which the React components of a we
 
    * The client loads the JavaScript bundle, React takes over, and the page becomes interactive. This process is known as hydration.
 
-### Example of SSR with Next.js
+##### Example of SSR with Next.js
 
 Next.js is a popular framework for React that supports SSR out of the box.
 
@@ -2006,9 +2009,9 @@ In this example:
 
 * The `getServerSideProps` function fetches data on the server and passes it as props to the `Home` component, which is then rendered on the server.
 
-### Benefits of SSR for Performance and SEO
+##### Benefits of SSR for Performance and SEO
 
-#### Performance Benefits
+##### Performance Benefits
 
 1. **Faster Initial Load**:
 
@@ -2023,7 +2026,7 @@ In this example:
 
    * **Static Caching**: Rendered HTML can be cached by CDNs and served quickly to users, improving load times and reducing server load.
 
-#### SEO Benefits
+##### SEO Benefits
 
 1. **Search Engine Crawling**:
 
@@ -2038,7 +2041,7 @@ In this example:
 
    * **Preview Snippets**: When sharing links on social media, preview snippets are more accurately generated from the fully rendered HTML.
 
-### Additional Considerations
+##### Additional Considerations
 
 1. **Complexity**:
 
@@ -2052,7 +2055,7 @@ In this example:
 
    * **Consistency**: Ensuring consistency between server-rendered and client-rendered content can be challenging, requiring careful handling of side effects and data fetching.
 
-### Conclusion
+##### Conclusion
 
 Server-Side Rendering (SSR) significantly enhances both performance and SEO in React applications by providing faster initial load times, improved perceived performance, better search engine indexing, and more accurate social media previews. Frameworks like Next.js make it easier to implement SSR in React projects, enabling developers to build highly performant and SEO-friendly applications.
 
@@ -2061,18 +2064,18 @@ Server-Side Rendering (SSR) significantly enhances both performance and SEO in R
 </div>
 
 #### Q21
-### 💥 Error Handling and Error Boundaries in React to gracefully handle runtime errors
+### Q21. Error Handling and Error Boundaries in React to gracefully handle runtime errors
 
 Error handling is crucial in any application to ensure that runtime errors do not crash the entire app and to provide a better user experience. React provides a feature called Error Boundaries to gracefully handle runtime errors in a React application. Here’s an explanation of Error Handling and Error Boundaries in React:
 
-### Error Handling in React
+##### Error Handling in React
 
 Error handling in React can be managed at different levels:
 
 1. **Component Level**: Handling errors within a component using try-catch blocks, conditional rendering, or error states.
 2. **Global Level**: Using Error Boundaries to catch errors in the component tree and display fallback UI.
 
-### Error Boundaries in React
+##### Error Boundaries in React
 
 **Definition**:
 
@@ -2083,7 +2086,7 @@ Error handling in React can be managed at different levels:
 1. `static getDerivedStateFromError(error)`: Used to render a fallback UI after an error is thrown.
 2. `componentDidCatch(error, info)`: Used to log error information.
 
-### Creating an Error Boundary
+##### Creating an Error Boundary
 
 1. **Define an Error Boundary Component**:
 
@@ -2148,7 +2151,7 @@ function App() {
 export default App;
 ```
 
-### Key Points about Error Boundaries
+##### Key Points about Error Boundaries
 
 1. **Scope**:
 
@@ -2178,7 +2181,7 @@ function MyComponent() {
 
    * You can wrap multiple Error Boundaries around different parts of your application to provide more granular error handling and specific fallback UIs for different components.
 
-### Practical Example
+##### Practical Example
 
 **Component with Potential Errors**:
 
@@ -2220,7 +2223,7 @@ In this example:
 * `BuggyComponent` intentionally throws an error when the button is clicked.
 * Each `BuggyComponent` is wrapped in an `ErrorBoundary` to catch and handle errors separately.
 
-### Conclusion
+##### Conclusion
 
 Error handling and Error Boundaries in React are essential for creating robust and user-friendly applications. By using Error Boundaries, you can ensure that runtime errors do not crash your entire app, and you can provide meaningful fallback UIs to enhance the user experience. Additionally, catching errors in event handlers and other critical points ensures that your application remains stable and responsive.
 
@@ -2229,11 +2232,11 @@ Error handling and Error Boundaries in React are essential for creating robust a
 </div>
 
 #### Q22
-### 💥 Testing React components using tools like Jest and React Testing Library
+### Q22. Testing React components using tools like Jest and React Testing Library
 
 Testing React components is essential to ensure they work as expected and to maintain a robust and error-free application. Jest and React Testing Library (RTL) are two popular tools used for this purpose. Here’s an overview of how to use them together to test React components effectively.
 
-### Setting Up Jest and React Testing Library
+##### Setting Up Jest and React Testing Library
 
 1. **Install Dependencies**:
 
@@ -2255,7 +2258,7 @@ npm install --save-dev jest @testing-library/react @testing-library/jest-dom
 }
 ```
 
-### Writing Tests with Jest and React Testing Library
+##### Writing Tests with Jest and React Testing Library
 
 **1. Basic Component Testing**
 
@@ -2287,7 +2290,7 @@ test('renders greeting with name', () => {
 });
 ```
 
-### Key Concepts in React Testing Library
+##### Key Concepts in React Testing Library
 
 1. **Render**:
 
@@ -2316,7 +2319,7 @@ expect(screen.getByText('Hello, John!')).toBeInTheDocument();
 * `getByLabelText`: Finds an element by its associated label text.
 * `getByPlaceholderText`: Finds an element by its placeholder text.
 
-### Testing User Interactions
+##### Testing User Interactions
 
 **Component** (`Counter.js`):
 
@@ -2356,7 +2359,7 @@ test('increments count on button click', () => {
 });
 ```
 
-### Advanced Testing with Mocking and Asynchronous Code
+##### Advanced Testing with Mocking and Asynchronous Code
 
 **Component** (`FetchData.js`):
 
@@ -2405,7 +2408,7 @@ test('fetches and displays data', async () => {
 });
 ```
 
-### Conclusion
+##### Conclusion
 
 Testing React components using Jest and React Testing Library ensures that your components work as expected and can handle user interactions and asynchronous operations. These tools provide a robust framework for writing unit tests and integration tests, improving the reliability and maintainability of your application.
 
@@ -2414,11 +2417,11 @@ Testing React components using Jest and React Testing Library ensures that your 
 </div>
 
 #### Q23
-### 💥 Form handling and validation techniques in React applications
+### Q23. Form handling and validation techniques in React applications
 
 Handling forms and performing validation in React applications are essential aspects of building user interfaces. There are various techniques and libraries available to manage form state and validation effectively. Here’s a comprehensive guide on form handling and validation techniques in React applications.
 
-### Basic Form Handling in React
+##### Basic Form Handling in React
 
 **Example of Basic Form Handling:**
 
@@ -2485,9 +2488,9 @@ function BasicForm() {
 export default BasicForm;
 ```
 
-### Form Validation Techniques
+##### Form Validation Techniques
 
-#### 1. Custom Validation
+##### 1. Custom Validation
 
 **Example of Custom Validation:**
 
@@ -2565,7 +2568,7 @@ function CustomValidationForm() {
 export default CustomValidationForm;
 ```
 
-#### 2. Using Formik
+##### 2. Using Formik
 
 Formik is a popular library for managing form state and validation in React applications.
 
@@ -2625,7 +2628,7 @@ const FormikForm = () => (
 export default FormikForm;
 ```
 
-#### 3. Using React Hook Form
+##### 3. Using React Hook Form
 
 React Hook Form is another library that simplifies form handling by using React hooks.
 
@@ -2676,7 +2679,7 @@ const ReactHookForm = () => {
 export default ReactHookForm;
 ```
 
-### Conclusion
+##### Conclusion
 
 Managing forms and performing validation in React can be efficiently handled using various techniques and libraries. Custom validation, Formik, and React Hook Form are popular options that provide flexibility and ease of use.
 
@@ -2689,15 +2692,15 @@ Managing forms and performing validation in React can be efficiently handled usi
 </div>
 
 #### Q24
-### 💥 Performance optimizations using memoization and shouldComponentUpdate
+### Q24. Performance optimizations using memoization and shouldComponentUpdate
 
 Performance optimizations are crucial in React applications, especially when dealing with large components or complex state management. Memoization and lifecycle methods like `shouldComponentUpdate` are powerful techniques to improve performance by preventing unnecessary re-renders.
 
-### Memoization in React
+##### Memoization in React
 
 Memoization is a technique to cache the result of a function call and return the cached result when the same inputs occur again. In React, memoization can be achieved using the `React.memo` higher-order component and hooks like `useMemo` and `useCallback`.
 
-#### 1. `React.memo`
+##### 1. `React.memo`
 
 `React.memo` is a higher-order component that prevents re-rendering of functional components if their props have not changed.
 
@@ -2718,7 +2721,7 @@ export default MyComponent;
 
 * `React.memo` wraps the component and performs a shallow comparison of props. If the props haven’t changed, the component does not re-render.
 
-#### 2. `useMemo`
+##### 2. `useMemo`
 
 `useMemo` is a hook that memoizes the result of a computation. It only recomputes the memoized value when one of the dependencies changes.
 
@@ -2756,7 +2759,7 @@ export default App;
 
 * `useMemo` caches the result of `computeExpensiveValue` and only recalculates it if `num` changes.
 
-#### 3. `useCallback`
+##### 3. `useCallback`
 
 `useCallback` is a hook that returns a memoized version of a callback function. It only recreates the function if one of its dependencies changes.
 
@@ -2792,7 +2795,7 @@ export default App;
 
 * `useCallback` ensures that `handleClick` is only recreated if its dependencies change, preventing unnecessary re-renders of `MyButton`.
 
-### `shouldComponentUpdate`
+##### `shouldComponentUpdate`
 
 `shouldComponentUpdate` is a lifecycle method used in class components to determine whether a component should re-render when receiving new props or state. It can be used to prevent unnecessary updates by comparing the current and next props and state.
 
@@ -2843,7 +2846,7 @@ export default App;
 
 * `shouldComponentUpdate` allows control over the component’s re-rendering behavior by comparing the current and next props or state. In this example, `MyComponent` only re-renders if `props.value` changes.
 
-### Conclusion
+##### Conclusion
 
 Memoization and lifecycle methods like `shouldComponentUpdate` are essential techniques to optimize performance in React applications by preventing unnecessary re-renders.
 
@@ -2857,13 +2860,13 @@ By using these techniques, you can ensure your React application remains perform
 </div>
 
 #### Q25
-### 💥 Handling asynchronous operations with async/await and Promises in React
+### Q25. Handling asynchronous operations with async/await and Promises in React
 
 Handling asynchronous operations is a common requirement in React applications, whether it’s fetching data from an API, performing calculations, or handling other time-consuming tasks. React provides a flexible way to handle these operations using JavaScript’s `async/await` and Promises. Here’s a comprehensive guide on how to handle asynchronous operations in React:
 
-### Using `async/await` and Promises in React
+##### Using `async/await` and Promises in React
 
-### 1. Fetching Data in Functional Components
+##### 1. Fetching Data in Functional Components
 
 **Example: Basic Fetch with `useEffect` and `async/await`**
 
@@ -2908,7 +2911,7 @@ const FetchDataComponent = () => {
 export default FetchDataComponent;
 ```
 
-### 2. Fetching Data in Class Components
+##### 2. Fetching Data in Class Components
 
 **Example: Basic Fetch with `componentDidMount` and Promises**
 
@@ -2960,7 +2963,7 @@ class FetchDataComponent extends Component {
 export default FetchDataComponent;
 ```
 
-### 3. Handling Multiple Asynchronous Requests
+##### 3. Handling Multiple Asynchronous Requests
 
 **Example: Using `Promise.all`**
 
@@ -3016,7 +3019,7 @@ const FetchMultipleData = () => {
 export default FetchMultipleData;
 ```
 
-### 4. Error Handling
+##### 4. Error Handling
 
 Handling errors effectively is crucial in asynchronous operations to ensure the application can gracefully handle failures.
 
@@ -3063,7 +3066,7 @@ const FetchDataWithErrorHandling = () => {
 export default FetchDataWithErrorHandling;
 ```
 
-### 5. Custom Hooks for Asynchronous Operations
+##### 5. Custom Hooks for Asynchronous Operations
 
 Creating custom hooks can simplify the process of handling asynchronous operations and make your components cleaner.
 
@@ -3125,7 +3128,7 @@ const FetchDataComponent = () => {
 export default FetchDataComponent;
 ```
 
-### Conclusion
+##### Conclusion
 
 Handling asynchronous operations in React using `async/await` and Promises allows for more readable and maintainable code. Whether fetching data, performing multiple requests, or handling errors, React provides the flexibility to manage asynchronous tasks effectively. Using custom hooks can further simplify these operations and promote code reuse.
 
@@ -3134,13 +3137,13 @@ Handling asynchronous operations in React using `async/await` and Promises allow
 </div>
 
 #### Q26
-### 💥 React patterns and best practices for maintainable and scalable code
+### Q26. React patterns and best practices for maintainable and scalable code
 
 Maintaining and scaling a React application involves following various patterns and best practices. These help in managing the complexity of the application and making it more maintainable and robust. Here are some key patterns and best practices:
 
-### 1. Component Patterns
+##### 1. Component Patterns
 
-#### 1.1 Presentational and Container Components
+##### 1.1 Presentational and Container Components
 
 * **Presentational Components**: Focus on how things look. They receive data and callbacks exclusively via props.
 * **Container Components**: Focus on how things work. They handle fetching data, state management, and passing data to presentational components.
@@ -3182,7 +3185,7 @@ const TodoApp = () => {
 export default TodoApp;
 ```
 
-#### 1.2 Higher-Order Components (HOC)
+##### 1.2 Higher-Order Components (HOC)
 
 HOCs are functions that take a component and return a new component with additional props or behavior.
 
@@ -3209,7 +3212,7 @@ const MyComponentWithLoading = withLoading(MyComponent);
 export default MyComponentWithLoading;
 ```
 
-#### 1.3 Render Props
+##### 1.3 Render Props
 
 Render props is a technique for sharing code between React components using a prop whose value is a function.
 
@@ -3241,7 +3244,7 @@ const MyComponent = () => (
 export default MyComponent;
 ```
 
-#### 1.4 Custom Hooks
+##### 1.4 Custom Hooks
 
 Custom hooks allow you to extract and reuse stateful logic between components.
 
@@ -3292,9 +3295,9 @@ const MyComponent = () => {
 export default MyComponent;
 ```
 
-### 2. State Management
+##### 2. State Management
 
-#### 2.1 Lifting State Up
+##### 2.1 Lifting State Up
 
 State should be lifted up to the closest common ancestor of the components that need it.
 
@@ -3327,7 +3330,7 @@ const Calculator = () => {
 export default Calculator;
 ```
 
-#### 2.2 Context API
+##### 2.2 Context API
 
 The Context API is useful for passing data deeply through the component tree without using props.
 
@@ -3367,7 +3370,7 @@ const App = () => (
 export default App;
 ```
 
-### 3. Best Practices
+##### 3. Best Practices
 
 #### 3.1 Folder Structure
 
@@ -3416,7 +3419,7 @@ const App = () => (
 export default App;
 ```
 
-#### 3.3 Prop Types and Default Props
+##### 3.3 Prop Types and Default Props
 
 Use PropTypes to type-check props and define default values for optional props.
 
@@ -3445,7 +3448,7 @@ MyComponent.defaultProps = {
 export default MyComponent;
 ```
 
-### Conclusion
+##### Conclusion
 
 By following these patterns and best practices, you can create maintainable, scalable, and efficient React applications. These techniques help in organizing code, managing state, optimizing performance, and ensuring code quality.
 
@@ -3454,15 +3457,15 @@ By following these patterns and best practices, you can create maintainable, sca
 </div>
 
 #### Q27
-### 💥 What is concurrent rendering in React 18, and how does it improve the performance of applications?
+### Q27. What is concurrent rendering in React 18, and how does it improve the performance of applications?
 
 Concurrent rendering in React 18 is a major enhancement to React’s rendering engine that allows React to prepare multiple versions of the UI at the same time. This new capability helps to improve the performance and responsiveness of applications by allowing React to interrupt ongoing rendering work to handle more urgent updates, thereby ensuring smoother user experiences. Here's a detailed explanation of concurrent rendering and how it improves application performance:
 
-### What is Concurrent Rendering?
+##### What is Concurrent Rendering?
 
 Concurrent rendering allows React to work on multiple tasks simultaneously, pausing and resuming work as necessary. This means React can keep the UI responsive and prioritize tasks such as user interactions over less urgent tasks like background data fetching.
 
-### Key Features of Concurrent Rendering
+##### Key Features of Concurrent Rendering
 
 1. **Interruptible Rendering**:
 
@@ -3476,7 +3479,7 @@ Concurrent rendering allows React to work on multiple tasks simultaneously, paus
 
    * React 18 introduces a new mode that activates concurrent features. This mode can be applied incrementally to parts of the application.
 
-### Benefits of Concurrent Rendering
+##### Benefits of Concurrent Rendering
 
 1. **Improved Responsiveness**:
 
@@ -3490,7 +3493,7 @@ Concurrent rendering allows React to work on multiple tasks simultaneously, paus
 
    * React can make smarter decisions about when to render and what to render, leading to more efficient updates and better performance.
 
-### How Concurrent Rendering Improves Performance
+##### How Concurrent Rendering Improves Performance
 
 1. **Time-Slicing**:
 
@@ -3504,7 +3507,7 @@ Concurrent rendering allows React to work on multiple tasks simultaneously, paus
 
    * React 18 introduces automatic batching for updates, which means multiple state updates within an event handler are batched together into a single render, reducing the number of re-renders and improving performance.
 
-### Example of Concurrent Rendering Features
+##### Example of Concurrent Rendering Features
 
 **Using `startTransition` for Low-Priority Updates**
 
@@ -3541,7 +3544,7 @@ export default ConcurrentExample;
 
 * The `startTransition` function marks the state update within it as a low-priority update. This means if there are more urgent updates (like typing in an input field), React can prioritize those over the transition update.
 
-### How to Enable Concurrent Mode
+##### How to Enable Concurrent Mode
 
 In React 18, you can opt into concurrent features incrementally. Here’s how to enable concurrent mode:
 
@@ -3559,7 +3562,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(<App />);
 
 * `ReactDOM.createRoot` enables the concurrent mode features for the application.
 
-### Conclusion
+##### Conclusion
 
 Concurrent rendering in React 18 introduces significant improvements in how React handles rendering, making applications more responsive and providing a better user experience. By allowing React to interrupt and prioritize rendering work, concurrent rendering ensures smoother and more efficient updates. Features like time-slicing, enhanced Suspense, and automatic batching are key components that contribute to these performance gains.
 
@@ -3568,15 +3571,15 @@ Concurrent rendering in React 18 introduces significant improvements in how Reac
 </div>
 
 #### Q28
-### 💥 Explain the concept of automatic batching in React 18.
+### Q28. Explain the concept of automatic batching in React 18.
 
 Automatic batching in React 18 is a significant enhancement that optimizes how React handles state updates and re-renders components. Batching is the process of grouping multiple state updates into a single re-render, which can improve performance by reducing the number of renders and avoiding unnecessary updates. React 18 expands the scope of batching beyond just event handlers, making it more automatic and comprehensive.
 
-### What is Automatic Batching?
+##### What is Automatic Batching?
 
 Automatic batching means that React will automatically batch multiple state updates that occur during the same synchronous event, and re-render the components only once after all the updates have been processed. In previous versions of React, batching was limited to event handlers, but React 18 extends this capability to cover other situations like async updates, effects, timeouts, and more.
 
-### Benefits of Automatic Batching
+##### Benefits of Automatic Batching
 
 1. **Improved Performance**:
 
@@ -3585,9 +3588,9 @@ Automatic batching means that React will automatically batch multiple state upda
 
    * Developers no longer need to manually batch updates in various contexts (e.g., inside promises or timeouts). React handles it automatically, making the code cleaner and easier to maintain.
 
-### Examples of Automatic Batching
+##### Examples of Automatic Batching
 
-#### 1. Batching in Event Handlers
+##### 1. Batching in Event Handlers
 
 In React 17 and earlier, multiple state updates within an event handler are batched automatically:
 
@@ -3611,7 +3614,7 @@ const Counter = () => {
 export default Counter;
 ```
 
-#### 2. Batching in Asynchronous Code
+##### 2. Batching in Asynchronous Code
 
 In React 17, updates inside asynchronous code like promises or setTimeout were not batched automatically. React 18 changes this behavior.
 
@@ -3639,7 +3642,7 @@ const AsyncCounter = () => {
 export default AsyncCounter;
 ```
 
-#### 3. Batching in Promises
+##### 3. Batching in Promises
 
 In React 18, state updates within promises are batched automatically.
 
@@ -3666,7 +3669,7 @@ const PromiseCounter = () => {
 export default PromiseCounter;
 ```
 
-### Opting Out of Automatic Batching
+##### Opting Out of Automatic Batching
 
 In some rare cases, you might want to force React to apply state updates immediately. You can use the `flushSync` method from `react-dom` to achieve this.
 
@@ -3691,7 +3694,7 @@ const NonBatchedCounter = () => {
 export default NonBatchedCounter;
 ```
 
-### Conclusion
+##### Conclusion
 
 Automatic batching in React 18 enhances the efficiency of React applications by grouping multiple state updates into a single render, reducing unnecessary renders and improving performance. By extending batching to include asynchronous code, effects, and other contexts, React 18 simplifies the development process and helps maintain a smooth user experience. While React handles most batching scenarios automatically, developers can still opt out when necessary using `flushSync`.
 
@@ -3700,11 +3703,11 @@ Automatic batching in React 18 enhances the efficiency of React applications by 
 </div>
 
 #### Q29
-### 💥 What is the Transition API in React 18, and how is it used?
+### Q29. What is the Transition API in React 18, and how is it used?
 
 The Transition API in React 18 is a new feature that helps manage state transitions in a way that keeps the user interface responsive and smooth. This API allows developers to mark certain updates as non-urgent or low-priority transitions, which helps React differentiate between urgent and non-urgent updates. By doing this, React can prioritize rendering tasks that keep the application responsive to user input.
 
-### Key Concepts of the Transition API
+##### Key Concepts of the Transition API
 
 1. **Urgent vs. Non-Urgent Updates**:
 
@@ -3719,9 +3722,9 @@ The Transition API in React 18 is a new feature that helps manage state transiti
 
    * The `useTransition` hook is used to track the progress of a transition and provide feedback to the user if needed.
 
-### How to Use the Transition API
+##### How to Use the Transition API
 
-#### 1. Using `startTransition`
+##### 1. Using `startTransition`
 
 The `startTransition` function allows you to wrap state updates that are considered low-priority. This helps React manage the rendering process more efficiently.
 
@@ -3764,7 +3767,7 @@ export default TransitionExample;
 * The `handleChange` function updates the input value immediately.
 * The search results update is wrapped in `startTransition`, indicating that it is a low-priority update.
 
-#### 2. Using `useTransition`
+##### 2. Using `useTransition`
 
 The `useTransition` hook provides a way to manage and track the state of transitions. It returns a boolean indicating whether a transition is in progress and a function to start the transition.
 
@@ -3809,7 +3812,7 @@ export default TransitionExample;
 * The `isPending` boolean indicates whether the transition is ongoing.
 * The `Loading...` message is displayed while the transition is in progress, providing feedback to the user.
 
-### Benefits of the Transition API
+##### Benefits of the Transition API
 
 1. **Improved User Experience**:
 
@@ -3823,7 +3826,7 @@ export default TransitionExample;
 
    * By deferring non-urgent updates, the main thread is less likely to be blocked, reducing jank and improving the overall performance of the application.
 
-### Practical Use Cases
+##### Practical Use Cases
 
 1. **Search Results Filtering**:
 
@@ -3837,7 +3840,7 @@ export default TransitionExample;
 
    * Fetching additional data based on user actions, such as loading more content when scrolling, can be treated as a transition.
 
-### Conclusion
+##### Conclusion
 
 The Transition API in React 18 offers a powerful way to improve the responsiveness and performance of your application by allowing you to distinguish between urgent and non-urgent updates. By using `startTransition` and `useTransition`, you can ensure that critical user interactions are prioritized, resulting in a smoother and more responsive user experience.
 
@@ -3846,11 +3849,11 @@ The Transition API in React 18 offers a powerful way to improve the responsivene
 </div>
 
 #### Q30
-### 💥 How has Suspense been improved in React 18?
+### Q30. How has Suspense been improved in React 18?
 
 React 18 introduces several improvements to Suspense, making it more powerful and flexible for managing asynchronous operations and improving the user experience. Suspense is a React feature that allows you to wait for some condition before rendering a component. Here are the key improvements in Suspense with React 18:
 
-### Key Improvements in Suspense
+##### Key Improvements in Suspense
 
 1. **Concurrent Rendering Support**:
 
@@ -3868,9 +3871,9 @@ React 18 introduces several improvements to Suspense, making it more powerful an
 
    * With the new Transition API, you can manage asynchronous UI updates more effectively, marking non-urgent updates as transitions. Suspense works seamlessly with this API to provide a better user experience during these transitions.
 
-### Practical Use Cases of Improved Suspense
+##### Practical Use Cases of Improved Suspense
 
-#### 1. Suspense for Data Fetching
+##### 1. Suspense for Data Fetching
 
 **Example: Fetching Data with Suspense and `useTransition`**
 
@@ -3919,7 +3922,7 @@ export default App;
 * The `Suspense` component displays a fallback while `UserProfile` is loading.
 * The `useTransition` hook is used to mark the `setUserId` update as a transition, allowing React to prioritize it appropriately.
 
-#### 2. Suspense with Server-Side Rendering
+##### 2. Suspense with Server-Side Rendering
 
 React 18 introduces support for streaming server-side rendering with Suspense. This allows the server to progressively send HTML to the client, improving load times and making the app interactive sooner.
 
@@ -3957,7 +3960,7 @@ app.listen(3000);
 * `renderToPipeableStream` is used to render the React app to a stream, allowing HTML to be sent progressively.
 * `onShellReady` is called when the initial HTML shell is ready to be sent to the client, improving perceived load times.
 
-### Benefits of Improved Suspense in React 18
+##### Benefits of Improved Suspense in React 18
 
 1. **Enhanced User Experience**:
 
@@ -3975,7 +3978,7 @@ app.listen(3000);
 
    * The new streaming SSR architecture enables React to progressively hydrate apps on the client, leading to faster load times and a more responsive interface.
 
-### Conclusion
+##### Conclusion
 
 The improvements in Suspense in React 18 make it a powerful tool for managing asynchronous operations and enhancing the performance and user experience of React applications. By leveraging concurrent rendering, better SSR support, and integration with the Transition API, developers can create more responsive and efficient applications.
 
@@ -3984,11 +3987,11 @@ The improvements in Suspense in React 18 make it a powerful tool for managing as
 </div>
 
 #### Q31
-### 💥 What are the major new features introduced in React 19?
+### Q31. What are the major new features introduced in React 19?
 
 As of my knowledge cutoff in June 2024, React 19 has not been released, and there have been no official announcements regarding its features. However, based on the advancements and trends seen in React 18, we can speculate on potential areas of improvement and new features that might be included in future versions of React. Here are some possibilities:
 
-### Speculative Features for React 19
+##### Speculative Features for React 19
 
 1. **Enhanced Concurrent Rendering Capabilities**:
 
@@ -4040,7 +4043,7 @@ As of my knowledge cutoff in June 2024, React 19 has not been released, and ther
     * Introduction of new patterns and best practices to handle common challenges in modern React development.
     * More comprehensive examples and documentation to guide developers in adopting new features.
 
-### What You Can Do Now
+##### What You Can Do Now
 
 While waiting for official announcements and releases, you can:
 
@@ -4048,7 +4051,7 @@ While waiting for official announcements and releases, you can:
 * **Explore Existing Features**: Make sure you are familiar with the new features introduced in React 18, such as concurrent rendering, the Transition API, and Suspense improvements.
 * **Participate in the Community**: Engage with the React community, contribute to discussions, and provide feedback on proposed features or improvements.
 
-### Conclusion
+##### Conclusion
 
 While React 19 has not been officially announced, we can expect continued improvements and new features that build on the advancements introduced in React 18. These may include enhancements to concurrent rendering, server-side rendering, data fetching, and more. Stay tuned to official React channels for the latest updates and releases.
 
@@ -4057,11 +4060,11 @@ While React 19 has not been officially announced, we can expect continued improv
 </div>
 
 #### Q32
-### 💥 Explain `useReducer` hook. Give some examples and use case scenarios
+### Q32. Explain `useReducer` hook. Give some examples and use case scenarios
 
 The `useReducer` hook in React is a powerful tool for managing state in a more predictable and maintainable way, especially when dealing with complex state logic. It is an alternative to `useState` and is particularly useful for handling state transitions that involve multiple sub-values or when the next state depends on the previous one.
 
-### Understanding `useReducer`
+##### Understanding `useReducer`
 
 The `useReducer` hook takes three arguments:
 
@@ -4078,9 +4081,9 @@ const [state, dispatch] = useReducer(reducer, initialState);
 * `state`: The current state.
 * `dispatch`: A function to dispatch actions to the reducer.
 
-### Example Usage
+##### Example Usage
 
-#### Counter Example
+##### Counter Example
 
 **Reducer Function**:
 
@@ -4119,9 +4122,9 @@ function Counter() {
 export default Counter;
 ```
 
-### Use Case Scenarios
+##### Use Case Scenarios
 
-#### 1. Complex State Management
+##### 1. Complex State Management
 
 When the state logic involves multiple sub-values or requires complex transitions, `useReducer` can help keep the logic more organized.
 
@@ -4188,7 +4191,7 @@ function UserForm() {
 export default UserForm;
 ```
 
-#### 2. Managing State with Side Effects
+##### 2. Managing State with Side Effects
 
 When you need to handle side effects like data fetching or caching, combining `useReducer` with `useEffect` can be very effective.
 
@@ -4244,7 +4247,7 @@ function DataFetchingComponent() {
 export default DataFetchingComponent;
 ```
 
-### When to Use `useReducer` vs `useState`
+##### When to Use `useReducer` vs `useState`
 
 * **`useState`**:
 
@@ -4257,7 +4260,7 @@ export default DataFetchingComponent;
   * Useful when the next state depends on the previous state.
   * Helps to centralize state management logic in a single function (reducer).
 
-### Conclusion
+##### Conclusion
 
 The `useReducer` hook is a powerful alternative to `useState` for managing complex state logic in React components. It provides a structured way to handle state transitions, making your code more predictable and easier to maintain. By understanding when to use `useReducer` and how to implement it effectively, you can manage state in your React applications more efficiently.
 
@@ -4266,11 +4269,11 @@ The `useReducer` hook is a powerful alternative to `useState` for managing compl
 </div>
 
 #### Q33
-### 💥 Difference between `state` and `ref`
+### Q33. Difference between `state` and `ref`
 
 In React, both state and refs are used to manage data within components, but they serve different purposes and have distinct characteristics. Here’s a detailed explanation of the differences between state and refs, along with examples to illustrate their use cases.
 
-### State
+##### State
 
 **Definition**:
 
@@ -4306,7 +4309,7 @@ function Counter() {
 export default Counter;
 ```
 
-### Refs
+##### Refs
 
 **Definition**:
 
@@ -4342,7 +4345,7 @@ function TextInput() {
 export default TextInput;
 ```
 
-### Key Differences Between State and Refs
+##### Key Differences Between State and Refs
 
 | Feature            | State                                                         | Refs                                                                |
 | ------------------ | ------------------------------------------------------------- | ------------------------------------------------------------------- |
@@ -4352,7 +4355,7 @@ export default TextInput;
 | **Usage**          | Use for data that drives the component’s output               | Use for accessing DOM elements or storing mutable values            |
 | **Initialization** | Initialized with `useState` or in class component constructor | Created using `useRef`                                              |
 
-### When to Use State
+##### When to Use State
 
 1. **Data that Affects Rendering**:
 
@@ -4383,7 +4386,7 @@ function ToggleButton() {
 export default ToggleButton;
 ```
 
-### When to Use Refs
+##### When to Use Refs
 
 1. **Accessing DOM Elements**:
 
@@ -4422,7 +4425,7 @@ function Timer() {
 export default Timer;
 ```
 
-### Conclusion
+##### Conclusion
 
 State and refs serve different purposes in React applications. State is used for managing data that affects rendering and causes re-renders, while refs are used for accessing DOM elements and storing mutable values without causing re-renders. Understanding these differences and using them appropriately helps in building efficient and maintainable React applications.
 
@@ -4431,11 +4434,11 @@ State and refs serve different purposes in React applications. State is used for
 </div>
 
 #### Q34
-### 💥 Explain Redux with an example
+### Q34. Explain Redux with an example
 
 Redux is a predictable state container for JavaScript applications, which helps manage the state of your application in a centralized and predictable way. Here, I'll explain Redux state management with a practical example involving CRUD operations using the Fetch API.
 
-### Setting Up Redux
+##### Setting Up Redux
 
 First, we need to set up a React application with Redux. If you haven't already, install the necessary packages:
 
@@ -4443,7 +4446,7 @@ First, we need to set up a React application with Redux. If you haven't already,
 npm install redux react-redux
 ```
 
-### Directory Structure
+##### Directory Structure
 
 To keep things organized, you might structure your files like this:
 
@@ -4458,7 +4461,7 @@ src/
   index.js
 ```
 
-### 1. Setting Up Redux Store
+##### 1. Setting Up Redux Store
 
 **store.js**:
 
@@ -4474,7 +4477,7 @@ export default store;
 
 * We use `redux-thunk` middleware to handle asynchronous actions.
 
-### 2. Creating Actions
+##### 2. Creating Actions
 
 **actions.js**:
 
@@ -4539,7 +4542,7 @@ export const deleteItem = (id) => async (dispatch) => {
 };
 ```
 
-### 3. Creating Reducers
+##### 3. Creating Reducers
 
 **reducers.js**:
 
@@ -4589,7 +4592,7 @@ const itemsReducer = (state = initialState, action) => {
 export default itemsReducer;
 ```
 
-### 4. Integrating Redux with React
+##### 4. Integrating Redux with React
 
 **index.js**:
 
@@ -4667,14 +4670,14 @@ const App = () => {
 export default App;
 ```
 
-### Explanation
+##### Explanation
 
 1. **Redux Store**: The store is configured with the reducer and thunk middleware to handle async actions.
 2. **Actions**: Action creators are defined for fetching, creating, updating, and deleting items, using async functions with `redux-thunk`.
 3. **Reducers**: The reducer handles different action types and updates the state accordingly.
 4. **React Integration**: The `Provider` component from `react-redux` makes the Redux store available to the React application. The `App` component uses hooks (`useDispatch` and `useSelector`) to dispatch actions and select state from the store.
 
-### Summary
+##### Summary
 
 In this example, we've set up a Redux store and integrated it with a React application to handle CRUD operations. We used `redux-thunk` to manage asynchronous actions and the Fetch API to interact with a backend. This setup allows for predictable state management and makes it easier to maintain and scale the application.
 
@@ -4683,11 +4686,11 @@ In this example, we've set up a Redux store and integrated it with a React appli
 </div>
 
 #### Q35
-### 💥 Enlist some clean code practices in React.
+### Q35. Enlist some clean code practices in React.
 
 Writing clean code in React is essential for maintaining readability, scalability, and ease of maintenance. Here are some best practices for writing clean and maintainable React code:
 
-### 1. **Use Functional Components and Hooks**
+##### 1. **Use Functional Components and Hooks**
 
 * Prefer functional components over class components, as they are simpler and more concise.
 * Use hooks like `useState`, `useEffect`, and custom hooks for state and side-effect management.
@@ -4715,7 +4718,7 @@ const Counter = () => {
 export default Counter;
 ```
 
-### 2. **Keep Components Small and Focused**
+##### 2. **Keep Components Small and Focused**
 
 * Each component should have a single responsibility.
 * Break down large components into smaller, reusable components.
@@ -4752,7 +4755,7 @@ const UserBio = ({ bio }) => <p>{bio}</p>;
 export default UserBio;
 ```
 
-### 3. **Use Descriptive Naming**
+##### 3. **Use Descriptive Naming**
 
 * Use clear and descriptive names for variables, functions, and components.
 * Avoid abbreviations and single-letter names.
@@ -4775,7 +4778,7 @@ const getData = async () => {
 };
 ```
 
-### 4. **Use PropTypes for Type Checking**
+##### 4. **Use PropTypes for Type Checking**
 
 * Use `PropTypes` to enforce type checking on props passed to components.
 * Alternatively, consider using TypeScript for stronger type safety.
@@ -4803,7 +4806,7 @@ UserProfile.propTypes = {
 export default UserProfile;
 ```
 
-### 5. **Avoid Inline Styles and Inline Functions**
+##### 5. **Avoid Inline Styles and Inline Functions**
 
 * Use CSS classes or styled-components for styling.
 * Define functions outside of JSX to avoid creating new instances on every render.
@@ -4839,7 +4842,7 @@ const MyComponent = () => (
 );
 ```
 
-### 6. **Organize Project Structure**
+##### 6. **Organize Project Structure**
 
 * Organize your project files and folders in a logical manner.
 * Group related files together, such as components, hooks, and utilities.
@@ -4861,7 +4864,7 @@ src/
   index.js
 ```
 
-### 7. **Use Constants for Action Types**
+##### 7. **Use Constants for Action Types**
 
 * Define action types as constants to avoid typos and improve maintainability.
 
@@ -4888,7 +4891,7 @@ export const fetchUser = () => async (dispatch) => {
 };
 ```
 
-### 8. **Handle Side Effects with Hooks**
+##### 8. **Handle Side Effects with Hooks**
 
 * Use `useEffect` for side effects like data fetching, subscriptions, and manually changing the DOM.
 
@@ -4918,7 +4921,7 @@ const DataFetcher = () => {
 export default DataFetcher;
 ```
 
-### 9. **Use Fragments to Avoid Extra Markup**
+##### 9. **Use Fragments to Avoid Extra Markup**
 
 * Use React Fragments (`<></>` or `<React.Fragment>`) to group elements without adding extra nodes to the DOM.
 
@@ -4937,7 +4940,7 @@ const MyComponent = () => (
 export default MyComponent;
 ```
 
-### 10. **Keep Logic Outside of JSX**
+##### 10. **Keep Logic Outside of JSX**
 
 * Avoid complex logic inside JSX. Extract logic into variables or functions outside the JSX block.
 
@@ -4961,7 +4964,7 @@ const MyComponent = ({ items }) => (
 );
 ```
 
-### Conclusion
+##### Conclusion
 
 Following these clean code practices can significantly improve the readability, maintainability, and scalability of your React applications. By writing clean and organized code, you make it easier for yourself and others to understand and work on the codebase, leading to more efficient development and fewer bugs.
 

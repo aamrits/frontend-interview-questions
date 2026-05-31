@@ -6,75 +6,67 @@
 
 |Sl.No| Questions                                                                         |
 |-----|-----------------------------------------------------------------------------------|
-| 01.|[The significance of the Event Loop and Concurrency Model in JavaScript](#QA1)|
-| 02.|[Explain briefly about the following: variables, data types, and operators](#QA2)|
-| 03.|[Understanding Hoisting and its impact on variable and function declarations](#QA3)|
-| 04.|[The differences between `let`, `const`, and `var` in variable declaration and scope](#QA4)|
-| 05.|[Dive deep into functions, function declarations, function expressions IIFE, arrow functions](#QA5)|
-| 06.|[The difference between `==` and `===` in JavaScript for value comparison](#QA6)|
-| 07.|[`null` vs. `Undefined`: Differences and usage](#QA7)|
-| 08.|[Scope chain and Lexical Scoping: How JavaScript handles variable access](#QA8)|
-| 09.|[Help me understand keyword `this` in JavaScript and how is it scoped. Give some examples](#QA9)|
-| 10.|[Define Closures and their practical applications in JavaScript](#QA10)|
-| 11.|[Common string manipulation techniques in JavaScript](#QA11)|
-| 12.|[What is DOM Manipulation. Understand how to interact with the Document Object Model (DOM) effectively](#QA12)|
-| 13.|[What is Event Handling. Briefly explain about event listeners, event delegation, and the event object](#QA13)|
-| 14.|[Understanding the concept of Prototypes and how they relate to Objects](#QA14)|
-| 15.|[Prototypal Inheritance vs. Classical Inheritance: A comparison of object-oriented paradigms](#QA15)|
-| 16.|[Object-Oriented Programming (OOP): Abstraction, Encapsulation, Polymorphism, inheritance in JavaScript](#QA16)|
-| 17.|[The concept of currying and partial application in functional programming](#QA17)|
-| 18.|[Describe the ES6 features like Arrow functions, Template literals, spread/rest and Destructuring](#QA18)|
-| 19.|[Explain deeply about Array methods like `map`, `filter`, `reduce`, and `forEach` (ES6)](#QA19)|
-| 20.|[Elaborate Callbacks, Promises, and Async/Await: Managing asynchronous operations in JavaScript](#QA20)|
-| 21.|[Explain Higher-order Functions and their role in functional programming](#QA21)|
-| 22.|[What are Polyfills. Write polyfills for array methods like `map`, `forEach`, `filter`, `reduce`.](#QA22)|
-| 23.|[JavaScript's new features in ES7, ES8, and beyond](#QA23)|
-| 24.|[Elaborate JavaScript Design Patterns for writing efficient and maintainable code](#QA24)|
-| 25.|[Handling errors and exceptions using `try...catch` blocks in JavaScript](#QA25)|
-| 26.|[How Throttling and Debouncing control the rate of function execution. Give examples](#QA26)|
-| 27.|[Local Storage vs. Session Storage vs. IndexedDB: Client-side storage options. Enlist difference in tabular form.](#QA27)|
-| 28.|[JSON: Understand JSON parsing, stringify, etc](#QA28)|
-
-
-## Some more(deep) JavaScript questions and misc.
-
-<br/>
-
-|Sl.No| Questions                                                                         |
-|-----|-----------------------------------------------------------------------------------|
-| 01.|[Caching and Memoization techniques for optimizing performance](#QB1)|
-| 02.|[Understanding CORS (Cross-Origin Resource Sharing) and how to handle it](#QB2)|
-| 03.|[Implementing data structures like linked lists, stacks, and queues in JavaScript](#QB3)|
-| 04.|[The importance of Web APIs and how to work with them in JavaScript](#QB4)|
-| 05.|[Security best practices for JavaScript applications](#QB5)|
-| 06.|[Module Systems: Explore CommonJS, AMD, and ES6 modules](#QB6)|
-| 07.|[HTTP Headers: Understanding and using HTTP headers](#QB7)|
-| 08.|[RESTful API: Principles of RESTful API design](#QB8)|
-| 09.|[Briefly elaborate on AJAX. Using AJAX, give a basic example of how to make asynchronous HTTP requests using XMLHttpRequest (XHR)](#QB9)|
-| 10.|[Progressive Web Apps (PWAs): Understand PWA concepts and service workers](#QB10)|
-| 11.|[Elaborate Web Performance. Mention few ways to Optimize your code for speed and efficiency in JavaScript](#QB11)|
-| 12.|[Explain Accessibility (a11y). Ensure your applications are accessible to all users](#QB12)|
-| 13.|[What is Content Security Policy (CSP). Mention ways to Protect your site from XSS attacks, CSRF, XHR.](#QB13)|
-| 14.|[Internationalization (i18n) and Making your applications multilingual](#QB14)|
-| 15.|[What are Micro-Frontends. How do we build frontends in a microservices architecture](#QB15)|
-| 16.|[Elaborate MVC model (Model-View-Controller design pattern).](#QB16)|
-| 17.|[Explain the role of Prefetch in Optimizing resource loading. Are there any other optimization techniques.](#QB17)|
-| 18.|[Elaborate SOLID Principles.](#QB18)|
-| 19.|[Server-Side Rendering (SSR): Benefits and implementation](#QB19)|
-| 20.|[Static Site Generation (SSG): Generating static sites](#QB20)|
-| 21.|[Single Page Application (SPA): Building SPAs with JavaScript](#QB21)|
-| 22.|[SEO: Optimizing JavaScript applications for search engines](#QB22)|
-| 23.|[Web Workers: Background processing with web workers](#QB23)|
-| 24.|[WebSocket: Real-time communication with Web Sockets](#QB24)|
-| 25.|[JavaScript bundlers and their role in optimizing code for production](#QB25)|
-| 26.|[Build Tools: Grasp Webpack and Babel for bundling and transpiling](#QB26)|
-| 27.|[Test-Driven Development (TDD): Writing tests before code](#QB27)|
-| 28.|[`yarn` vs. `npm` vs. `pnpm`: Comparing JavaScript package managers](#QB28)|
+| 01.|[The significance of the Event Loop and Concurrency Model in JavaScript](#Q1)|
+| 02.|[Explain briefly about the following: variables, data types, and operators](#Q2)|
+| 03.|[Understanding Hoisting and its impact on variable and function declarations](#Q3)|
+| 04.|[The differences between `let`, `const`, and `var` in variable declaration and scope](#Q4)|
+| 05.|[Dive deep into functions, function declarations, function expressions IIFE, arrow functions](#Q5)|
+| 06.|[The difference between `==` and `===` in JavaScript for value comparison](#Q6)|
+| 07.|[`null` vs. `Undefined`: Differences and usage](#Q7)|
+| 08.|[Scope chain and Lexical Scoping: How JavaScript handles variable access](#Q8)|
+| 09.|[Help me understand keyword `this` in JavaScript and how is it scoped. Give some examples](#Q9)|
+| 10.|[Define Closures and their practical applications in JavaScript](#Q10)|
+| 11.|[Common string manipulation techniques in JavaScript](#Q11)|
+| 12.|[What is DOM Manipulation. Understand how to interact with the Document Object Model (DOM) effectively](#Q12)|
+| 13.|[What is Event Handling. Briefly explain about event listeners, event delegation, and the event object](#Q13)|
+| 14.|[Understanding the concept of Prototypes and how they relate to Objects](#Q14)|
+| 15.|[Prototypal Inheritance vs. Classical Inheritance: A comparison of object-oriented paradigms](#Q15)|
+| 16.|[Object-Oriented Programming (OOP): Abstraction, Encapsulation, Polymorphism, inheritance in JavaScript](#Q16)|
+| 17.|[The concept of currying and partial application in functional programming](#Q17)|
+| 18.|[Describe the ES6 features like Arrow functions, Template literals, spread/rest and Destructuring](#Q18)|
+| 19.|[Explain deeply about Array methods like `map`, `filter`, `reduce`, and `forEach` (ES6)](#Q19)|
+| 20.|[Elaborate Callbacks, Promises, and Async/Await: Managing asynchronous operations in JavaScript](#Q20)|
+| 21.|[Explain Higher-order Functions and their role in functional programming](#Q21)|
+| 22.|[What are Polyfills. Write polyfills for array methods like `map`, `forEach`, `filter`, `reduce`.](#Q22)|
+| 23.|[JavaScript's new features in ES7, ES8, and beyond](#Q23)|
+| 24.|[Elaborate JavaScript Design Patterns for writing efficient and maintainable code](#Q24)|
+| 25.|[Handling errors and exceptions using `try...catch` blocks in JavaScript](#Q25)|
+| 26.|[How Throttling and Debouncing control the rate of function execution. Give examples](#Q26)|
+| 27.|[Local Storage vs. Session Storage vs. IndexedDB: Client-side storage options. Enlist difference in tabular form.](#Q27)|
+| 28.|[JSON: Understand JSON parsing, stringify, etc](#Q28)|
+| 29.|[Caching and Memoization techniques for optimizing performance](#Q29)|
+| 30.|[Understanding CORS (Cross-Origin Resource Sharing) and how to handle it](#Q30)|
+| 31.|[Implementing data structures like linked lists, stacks, and queues in JavaScript](#Q31)|
+| 32.|[The importance of Web APIs and how to work with them in JavaScript](#Q32)|
+| 33.|[Security best practices for JavaScript applications](#Q33)|
+| 34.|[Module Systems: Explore CommonJS, AMD, and ES6 modules](#Q34)|
+| 35.|[HTTP Headers: Understanding and using HTTP headers](#Q35)|
+| 36.|[RESTful API: Principles of RESTful API design](#Q36)|
+| 37.|[Briefly elaborate on AJAX. Using AJAX, give a basic example of how to make asynchronous HTTP requests using XMLHttpRequest (XHR)](#Q37)|
+| 38.|[Progressive Web Apps (PWAs): Understand PWA concepts and service workers](#Q38)|
+| 39.|[Elaborate Web Performance. Mention few ways to Optimize your code for speed and efficiency in JavaScript](#Q39)|
+| 40.|[Explain Accessibility (a11y). Ensure your applications are accessible to all users](#Q40)|
+| 41.|[What is Content Security Policy (CSP). Mention ways to Protect your site from XSS attacks, CSRF, XHR.](#Q41)|
+| 42.|[Internationalization (i18n) and Making your applications multilingual](#Q42)|
+| 43.|[What are Micro-Frontends. How do we build frontends in a microservices architecture](#Q43)|
+| 44.|[Elaborate MVC model (Model-View-Controller design pattern).](#Q44)|
+| 45.|[Explain the role of Prefetch in Optimizing resource loading. Are there any other optimization techniques.](#Q45)|
+| 46.|[Elaborate SOLID Principles.](#Q46)|
+| 47.|[Server-Side Rendering (SSR): Benefits and implementation](#Q47)|
+| 48.|[Static Site Generation (SSG): Generating static sites](#Q48)|
+| 49.|[Single Page Application (SPA): Building SPAs with JavaScript](#Q49)|
+| 50.|[SEO: Optimizing JavaScript applications for search engines](#Q50)|
+| 51.|[Web Workers: Background processing with web workers](#Q51)|
+| 52.|[WebSocket: Real-time communication with Web Sockets](#Q52)|
+| 53.|[JavaScript bundlers and their role in optimizing code for production](#Q53)|
+| 54.|[Build Tools: Grasp Webpack and Babel for bundling and transpiling](#Q54)|
+| 55.|[Test-Driven Development (TDD): Writing tests before code](#Q55)|
+| 56.|[`yarn` vs. `npm` vs. `pnpm`: Comparing JavaScript package managers](#Q56)|
 
 
 ## Answers
 
-#### QA1 
+##### Q1 
 ### ☘️ The significance of the Event Loop and Concurrency Model in JavaScript
 
 The Event Loop and Concurrency Model are fundamental concepts in JavaScript that enable it to handle asynchronous operations efficiently. Here's a concise explanation:
@@ -106,7 +98,7 @@ JavaScript's concurrency model is based on the concept of the event loop, enabli
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA2
+##### Q2
 ### ☘️ Explain briefly about the following: variables, data types, and operators
 
 Sure! Here's a brief explanation of variables, data types, and operators in JavaScript:
@@ -188,7 +180,7 @@ Operators are used to perform operations on variables and values.
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA3
+##### Q3
 ### ☘️ Understanding Hoisting and its impact on variable and function declarations
 
 Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their containing scope during the compile phase, before code execution. This means that no matter where functions and variables are declared, they are moved to the top of their scope. However, only the declarations are hoisted, not the initializations.
@@ -290,7 +282,7 @@ sayHello = function() {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA4
+##### Q4
 ### ☘️ The differences between `let`, `const`, and `var` in variable declaration and scope
 
 Sure, here’s a table summarizing the differences between `let`, `const`, and `var` in JavaScript variable declarations and scope:
@@ -352,7 +344,7 @@ Sure, here’s a table summarizing the differences between `let`, `const`, and `
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA5
+##### Q5
 ### ☘️ Dive deep into functions, function declarations, function expressions IIFE, arrow functions
 
 Sure, let's dive deep into the different types of functions in JavaScript: function declarations, function expressions, Immediately Invoked Function Expressions (IIFE), and arrow functions.
@@ -513,7 +505,7 @@ In this example, `this.seconds` correctly refers to the `Timer` instance because
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA6
+##### Q6
 ### ☘️ The difference between `==` and `===` in JavaScript for value comparison
 
 In JavaScript, `==` and `===` are used for value comparison, but they work differently in terms of how they handle type coercion.
@@ -585,7 +577,7 @@ console.log([] === false); // false (different types)
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA7
+##### Q7
 ### ☘️ `null` vs. `undefined`: Differences and usage
 
 In JavaScript, `null` and `undefined` are two distinct types representing the absence of value, but they have different meanings and uses. Here’s a detailed comparison:
@@ -702,7 +694,7 @@ console.log(undefined === undefined); // true
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA8
+##### Q8
 ### ☘️ Scope chain and Lexical Scoping: How JavaScript handles variable access
 
 In JavaScript, the concepts of scope chain and lexical scoping are fundamental to understanding how the language handles variable access and lookup. Here’s an in-depth explanation of these concepts:
@@ -834,7 +826,7 @@ console.log(counter()); // 3
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA9
+##### Q9
 ### ☘️ Help me understand keyword `this` in JavaScript and how is it scoped. Give some examples
 
 Understanding the `this` keyword in JavaScript can be challenging because its value is determined dynamically, based on how and where the function is called. Here's a detailed explanation of how `this` works in different contexts, along with examples.
@@ -990,7 +982,7 @@ The value of `this` depends on the context in which a function is called:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA10
+##### Q10
 ### ☘️ Define Closures and their practical applications in JavaScript
 
 ### Closures in JavaScript
@@ -1142,7 +1134,7 @@ Closures are a powerful feature in JavaScript that allow functions to retain acc
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA11
+##### Q11
 ### ☘️ Common string manipulation techniques in JavaScript
 
 String manipulation is a common task in JavaScript, and there are various methods and techniques available to manipulate strings. Here are some of the most commonly used string manipulation techniques:
@@ -1302,7 +1294,7 @@ These string manipulation techniques are essential for handling text data in Jav
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA12
+##### Q12
 ### ☘️ What is DOM Manipulation. Understand how to interact with the Document Object Model (DOM) effectively
 
 ### What is DOM Manipulation?
@@ -1510,7 +1502,7 @@ In this example:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA13
+##### Q13
 ### ☘️ What is Event Handling. Briefly explain about event listeners, event delegation, and the event object
 
 ### Event Handling in JavaScript
@@ -1632,7 +1624,7 @@ In this example:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA14
+##### Q14
 ### ☘️ Understanding the concept of Prototypes and how they relate to Objects
 
 ### Understanding Prototypes in JavaScript
@@ -1781,7 +1773,7 @@ console.log(alice.__proto__ === Person.prototype); // true
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA15
+##### Q15
 ### ☘️ Prototypal Inheritance vs. Classical Inheritance: A comparison of object-oriented paradigms
 
 In JavaScript, inheritance can be implemented using the prototypal inheritance model. This contrasts with classical inheritance found in many other object-oriented languages like Java and C++. Here's a comparison of prototypal inheritance and classical inheritance, including their key characteristics, benefits, and drawbacks.
@@ -1909,7 +1901,7 @@ alice.study(); // Alice is studying
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA16
+##### Q16
 ### ☘️ Object-Oriented Programming (OOP): Abstraction, Encapsulation, Polymorphism, inheritance in JavaScript
 
 Object-Oriented Programming (OOP) in JavaScript is a programming paradigm that uses objects and classes to structure and manage code in a modular and reusable manner. It includes key principles such as abstraction, encapsulation, polymorphism, and inheritance.
@@ -2084,7 +2076,7 @@ In this example:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA17
+##### Q17
 ### ☘️ The concept of currying and partial application in functional programming
 
 Currying and partial application are two concepts in functional programming that transform functions to make them more versatile and reusable. Both techniques deal with the transformation of functions, but they have different purposes and implementations.
@@ -2220,7 +2212,7 @@ In this example:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA18
+##### Q18
 ### ☘️ Describe the ES6 features like Arrow functions, Template literals, spread/rest and Destructuring
 
 ES6 (ECMAScript 2015) introduced several new features that enhance JavaScript's functionality and make the code more concise and readable. Here are some of the key features:
@@ -2366,7 +2358,7 @@ console.log(zip); // 10001
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA19
+##### Q19
 ### ☘️ Explain deeply about Array methods like `map`, `filter`, `reduce`, and `forEach` (ES6)
 
 ### Array Methods in ES6: `map`, `filter`, `reduce`, and `forEach`
@@ -2531,7 +2523,7 @@ fruits.forEach(fruit => console.log(fruit));
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA20
+##### Q20
 ### ☘️ Elaborate Callbacks, Promises, and Async/Await: Managing asynchronous operations in JavaScript
 
 Managing asynchronous operations in JavaScript is crucial for developing responsive and performant applications. There are three primary techniques for handling asynchronous code: Callbacks, Promises, and Async/Await. Let's dive into each of these concepts.
@@ -2687,7 +2679,7 @@ doTasks();
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA21
+##### Q21
 ### ☘️ Explain Higher-order Functions and their role in functional programming
 
 ### Higher-order Functions in Functional Programming
@@ -2830,7 +2822,7 @@ In this example:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA22
+##### Q22
 ### ☘️ What are Polyfills. Write polyfills for array methods like `map`, `forEach`, `filter`, `reduce`.
 
 ### What are Polyfills?
@@ -2984,7 +2976,7 @@ https://blog.siddhigate.com/i-wrote-polyfills-for-32-javascript-array-methods
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA23
+##### Q23
 ### ☘️ JavaScript's new features in ES7, ES8, and beyond
 
 JavaScript continues to evolve with new features and improvements in each version of ECMAScript (the standard for JavaScript). Here's an overview of some of the notable features introduced in ES7 (ES2016), ES8 (ES2017), ES9 (ES2018), ES10 (ES2019), ES11 (ES2020), ES12 (ES2021), and beyond.
@@ -3307,7 +3299,7 @@ const response = await fetch
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA24
+##### Q24
 ### ☘️ Elaborate JavaScript Design Patterns for writing efficient and maintainable code
 
 ### 🧠 JavaScript Design Patterns
@@ -3627,7 +3619,7 @@ By applying patterns like **Module**, **Factory**, **Observer**, **Strategy**, a
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA25
+##### Q25
 ### ☘️ Handling errors and exceptions using `try...catch` blocks in JavaScript
 
 Handling errors and exceptions is a crucial part of writing robust and reliable JavaScript code. The `try...catch` statement provides a way to handle exceptions that occur during code execution. Here's a detailed explanation of how to use `try...catch` blocks effectively.
@@ -3814,7 +3806,7 @@ execute();
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA26
+##### Q26
 ### ☘️ How Throttling and Debouncing control the rate of function execution. Give examples
 
 Throttling and debouncing are two techniques used to control the rate of function execution in JavaScript, especially in the context of event handling. These techniques help to improve performance and ensure that functions are not called too frequently, which can lead to performance issues.
@@ -3971,7 +3963,7 @@ searchBox.addEventListener('input', debounce(handleSearchInput, 300));
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA27
+##### Q27
 ### ☘️ Local Storage vs. Session Storage vs. IndexedDB: Client-side storage options. Enlist difference in tabular form.
 
 Client-side storage options in web development allow you to store data directly in the user's browser. The most common options are Local Storage, Session Storage, and IndexedDB. Each of these has unique characteristics and use cases. Here is a detailed comparison in tabular form:
@@ -4085,7 +4077,7 @@ Client-side storage options in web development allow you to store data directly 
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QA28
+##### Q28
 ### ☘️ JSON: Understand JSON parsing, stringify, etc
 
 ### JSON: JavaScript Object Notation
@@ -4264,7 +4256,7 @@ try {
 
 ---
 
-#### QB1
+##### Q29
 ### ☘️ Caching and Memoization techniques for optimizing performance
 
 Sure, let's dive into caching and memoization techniques for optimizing performance in JavaScript.
@@ -4377,7 +4369,7 @@ console.log(lruCache.get('b')); // null (removed because it was the least recent
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB2
+##### Q30
 ### ☘️ Understanding CORS (Cross-Origin Resource Sharing) and how to handle it
 
 ### Understanding CORS (Cross-Origin Resource Sharing)
@@ -4469,7 +4461,7 @@ app.options('/data', cors(corsOptions)); // enable preflight request for /data
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB3
+##### Q31
 ### ☘️ Implementing data structures like linked lists, stacks, and queues in JavaScript
 
 Sure! Below is a simple implementation of a singly linked list in JavaScript. This includes basic operations such as adding a node, removing a node, and displaying the list.
@@ -4783,7 +4775,7 @@ console.log('Is queue empty?', queue.isEmpty()); // Output: Is queue empty? fals
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB4
+##### Q32
 ### ☘️ The importance of Web APIs and how to work with them in JavaScript
 
 ### Importance of Web APIs
@@ -4944,7 +4936,7 @@ fetchData();
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB5
+##### Q33
 ### ☘️ Security best practices for JavaScript applications
 
 Sure! Here are some security best practices for JavaScript applications:
@@ -5098,7 +5090,7 @@ app.use((err, req, res, next) => {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB6
+##### Q34
 ### ☘️ Module Systems: Explore CommonJS, AMD, and ES6 modules
 
 Sure, let's delve into the different module systems in JavaScript: CommonJS, AMD, and ES6 modules. Each of these systems has its own syntax and use cases, and they have evolved to address different needs in JavaScript development.
@@ -5306,7 +5298,7 @@ greet(); // Output: Hello, ES6 Modules
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB7
+##### Q35
 ### ☘️ HTTP Headers: Understanding and using HTTP headers
 
 ### Understanding HTTP Headers
@@ -5422,7 +5414,7 @@ fetchData('https://api.example.com/data');
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB8
+##### Q36
 ### ☘️ RESTful API: Principles of RESTful API design
 
 ### Understanding RESTful API
@@ -5582,7 +5574,7 @@ app.listen(port, () => {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB9
+##### Q37
 ### ☘️ Briefly elaborate on AJAX. Using AJAX, give a basic example of how to make asynchronous HTTP requests using XMLHttpRequest (XHR)
 
 ### Understanding AJAX
@@ -5711,7 +5703,7 @@ This basic example demonstrates how to use `XMLHttpRequest` for making asynchron
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB10
+##### Q38
 ### ☘️ Progressive Web Apps (PWAs): Understand PWA concepts and service workers
 
 ### Progressive Web Apps (PWAs)
@@ -5881,7 +5873,7 @@ if ('serviceWorker' in navigator) {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB11
+##### Q39
 ### ☘️ Elaborate Web Performance. Mention few ways to Optimize your code for speed and efficiency in JavaScript
 
 ### Understanding Web Performance
@@ -6052,7 +6044,7 @@ if ('serviceWorker' in navigator) {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB12
+##### Q40
 ### ☘️ Explain Accessibility (a11y). Ensure your applications are accessible to all users
 
 ### Accessibility (a11y) in Web Development
@@ -6230,7 +6222,7 @@ modal.querySelector('button.close').focus();
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB13
+##### Q41
 ### ☘️ What is Content Security Policy (CSP). Mention ways to Protect your site from XSS attacks, CSRF, XHR. 
 
 ### Content Security Policy (CSP)
@@ -6347,7 +6339,7 @@ By implementing a strong Content Security Policy, validating and sanitizing user
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB14
+##### Q42
 ### ☘️ Internationalization (i18n) and Making your applications multilingual
 
 ### Internationalization (i18n) and Making Your Applications Multilingual
@@ -6477,7 +6469,7 @@ By following these steps, you can internationalize your application and make it 
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB15
+##### Q43
 ### ☘️ What are Micro-Frontends. How do we build frontends in a microservices architecture
 
 ### Micro-Frontends
@@ -6605,7 +6597,7 @@ Building frontends in a microservices architecture using micro-frontends allows 
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB16
+##### Q44
 ### ☘️ Elaborate MVC model (Model-View-Controller design pattern).
 
 ### MVC Model (Model-View-Controller Design Pattern)
@@ -6790,7 +6782,7 @@ The MVC design pattern divides an application into three main components: Model,
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB17
+##### Q45
 ### ☘️ Explain the role of Prefetch in Optimizing resource loading. Are there any other optimization techniques.
 
 ### The Role of Prefetch in Optimizing Resource Loading
@@ -6923,7 +6915,7 @@ Prefetching is a powerful technique for improving resource loading by fetching r
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB18
+##### Q46
 ### ☘️ Elaborate SOLID Principles.
 
 ### SOLID Principles
@@ -7195,7 +7187,7 @@ The SOLID principles provide a solid foundation for designing maintainable, scal
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB19
+##### Q47
 ### ☘️ Server-Side Rendering (SSR): Benefits and implementation
 
 ### Server-Side Rendering (SSR)
@@ -7296,7 +7288,7 @@ Server-Side Rendering (SSR) improves performance, SEO, user experience, and soci
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB20
+##### Q48
 ### ☘️ Static Site Generation (SSG): Generating static sites
 
 ### Static Site Generation (SSG)
@@ -7419,7 +7411,7 @@ Static Site Generation (SSG) is a powerful technique for creating fast, scalable
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB21
+##### Q49
 ### ☘️ Single Page Application (SPA): Building SPAs with JavaScript
 
 ### Single Page Application (SPA)
@@ -7542,7 +7534,7 @@ Single Page Applications (SPAs) provide a seamless and responsive user experienc
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB22
+##### Q50
 ### ☘️ SEO: Optimizing JavaScript applications for search engines
 
 ### Understanding SEO
@@ -7721,7 +7713,7 @@ By implementing these strategies, you can significantly enhance the SEO of your 
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB23
+##### Q51
 ### ☘️ Web Workers: Background processing with web workers
 
 ### Web Workers: Background Processing with Web Workers
@@ -7844,7 +7836,7 @@ Web Workers provide a powerful way to perform background processing in web appli
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB24
+##### Q52
 ### ☘️ WebSocket: Real-time communication with Web Sockets
 
 ### WebSocket: Real-Time Communication with Web Sockets
@@ -8018,7 +8010,7 @@ WebSocket is a powerful protocol for real-time communication, allowing for low-l
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB25
+##### Q53
 ### ☘️ JavaScript bundlers and their role in optimizing code for production
 
 ### JavaScript Bundlers and Their Role in Optimizing Code for Production
@@ -8216,7 +8208,7 @@ JavaScript bundlers play a crucial role in optimizing code for production by com
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB26
+##### Q54
 ### ☘️ Build Tools: Grasp Webpack and Babel for bundling and transpiling
 
 ### Build Tools in Web Development
@@ -8425,7 +8417,7 @@ This will transpile all files in the `src` directory and output them to the `lib
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB27
+##### Q55
 ### ☘️ Test-Driven Development (TDD): Writing tests before code
 
 ### Test-Driven Development (TDD)
@@ -8534,7 +8526,7 @@ By following TDD, you can create robust, well-tested code that meets the require
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### QB28
+##### Q56
 ### ☘️ `yarn` vs. `npm` vs. `pnpm` vs. `vite`: Comparing JavaScript package managers
 
 ### Comparing JavaScript Package Managers: `yarn`, `npm`, `pnpm`, and `vite`

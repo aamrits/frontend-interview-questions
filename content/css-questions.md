@@ -54,7 +54,7 @@
 ## Answers
 
 #### Q1 
-### 🍄 Why is CSS important.
+### Q1. Why is CSS important.
 
 CSS (Cascading Style Sheets) is important because it:
 - Separates content from design, allowing for easier maintenance and updating.
@@ -67,7 +67,7 @@ CSS (Cascading Style Sheets) is important because it:
 </div>
 
 #### Q2
-### 🍄 What do you mean by `meta` tag in HTML? And why is meant by `initial value = 1.0`
+### Q2. What do you mean by `meta` tag in HTML? And why is meant by `initial value = 1.0`
 
 - A `meta` tag in HTML provides metadata about the HTML document. It is placed inside the <head> section and is used for various purposes, such as setting the character set, viewport settings, and SEO information.
 - `initial value = 1.0` could refer to the default value of a property or parameter. In the context of CSS, 1.0 typically represents 100%.
@@ -77,7 +77,7 @@ CSS (Cascading Style Sheets) is important because it:
 </div>
 
 #### Q3
-### 🍄 In how many ways can CSS be integrated.
+### Q3. In how many ways can CSS be integrated.
 
 CSS can be integrated into HTML in three main ways:
 1. Inline CSS: Using the `style` attribute within HTML tags.
@@ -104,7 +104,7 @@ CSS can be integrated into HTML in three main ways:
 </div>
 
 #### Q4
-### 🍄 Explain the box model.
+### Q4. Explain the box model.
 
 The CSS box model describes the rectangular boxes that are generated for elements in the document tree. Box model wraps every HTML elements. A Box model consists of margin, border, padding and the actual content.
 
@@ -114,7 +114,7 @@ The CSS box model describes the rectangular boxes that are generated for element
 </div>
 
 #### Q5
-### 🍄 Difference between id and class selectors.
+### Q5. Difference between id and class selectors.
 
 - `id` are unique and can be applied to only one element in a web page. If a web page has both `id` and `class` same name, then `id` takes precedence.
 - `class` can be applied to multiple elements as they can share the same class name.
@@ -134,7 +134,7 @@ The CSS box model describes the rectangular boxes that are generated for element
 </div>
 
 #### Q6
-### 🍄 What are data attributes?
+### Q6. What are data attributes?
 
 Data attributes are custom attributes that can be added to HTML elements to store extra information. They are prefixed with `data-` and can be accessed using JavaScript or CSS.
 ```js
@@ -155,7 +155,7 @@ div[data-user-id="12345"] {
 </div>
 
 #### Q7
-### 🍄 Position in CSS: Difference between `static`, `absolute`, `relative`, and `fixed`.
+### Q7. Position in CSS: Difference between `static`, `absolute`, `relative`, and `fixed`.
 
 1. `static`: The default position, where elements are positioned according to the normal flow of the document.
 ```css
@@ -193,7 +193,7 @@ div {
 </div>
 
 #### Q8
-### 🍄 Are CSS properties case-sensitive?
+### Q8. Are CSS properties case-sensitive?
 
 No, CSS properties are not case-sensitive. 
 For example, `background-color` is the same as `BACKGROUND-COLOR` or `Background-Color`.
@@ -203,7 +203,7 @@ For example, `background-color` is the same as `BACKGROUND-COLOR` or `Background
 </div>
 
 #### Q9
-### 🍄 Describe floats and how they work. How to clear floating sides
+### Q9. Describe floats and how they work. How to clear floating sides
 
 The `float` property is used to float elements to the left or right, allowing text and inline elements to wrap around it.
 ```js
@@ -225,7 +225,7 @@ The `float` property is used to float elements to the left or right, allowing te
 </div>
 
 #### Q10
-### 🍄 Describe `z-index` and how stacking context is formed.
+### Q10. Describe `z-index` and how stacking context is formed.
 
 The `z-index` property specifies the stack order of an element. Higher values are closer to the viewer. Stacking context is formed by elements with a position value other than `static` and specific properties like `opacity`, `transform`, `filter`, etc.
 ```css
@@ -244,7 +244,7 @@ The `z-index` property specifies the stack order of an element. Higher values ar
 </div>
 
 #### Q11
-### 🍄 Do `margin` and `padding` have an effect on inline elements.
+### Q11. Do `margin` and `padding` have an effect on inline elements.
 
 Horizontal padding, margins, and borders will apply and will cause other inline boxes to move away from the box.
 But
@@ -257,7 +257,7 @@ But
 </div>
 
 #### Q12
-### 🍄 How will you decide when to use a `button` or `tag`?
+### Q12. How will you decide when to use a `button` or `tag`?
 
 - We use `<button>` for actions within a web application (e.g., forms, modals, interactive features).
 - We use `<a>` for navigation, linking to different pages or sections.
@@ -267,7 +267,7 @@ But
 </div>
 
 #### Q13
-### 🍄 If you have a `<p>` element with `font-size: 10rem`, will the text be responsive when the user resizes or drags the browser window?
+### Q13. If you have a `<p>` element with `font-size: 10rem`, will the text be responsive when the user resizes or drags the browser window?
 
 Yes, it will be not responsive. The rem unit is relative to the root element’s font size (typically the `<html>` element), not the viewport size.
 
@@ -276,7 +276,7 @@ Yes, it will be not responsive. The rem unit is relative to the root element’s
 </div>
 
 #### Q14
-### 🍄 What are the differences between `visibility: hidden` and `display: none`?
+### Q14. What are the differences between `visibility: hidden` and `display: none`?
 
 With `visibility: hidden` the element is hidden, but it still occupies space in the layout. But with `display: none` the element is completely removed and it does not occupy any space.
 
@@ -285,7 +285,7 @@ With `visibility: hidden` the element is hidden, but it still occupies space in 
 </div>
 
 #### Q15
-### 🍄 What are the differences between `inline`, `block`, and `inline-block` display types?
+### Q15. What are the differences between `inline`, `block`, and `inline-block` display types?
 
 1. With `display: inline`, elements do not start on a new line and only take up as much width as necessary. `margin` and `padding` affect only the horizontal space.
 2. With `display: block`, elements start on a new line and take up the full width available. `margin` and `padding` affect all sides.
@@ -296,7 +296,7 @@ With `visibility: hidden` the element is hidden, but it still occupies space in 
 </div>
 
 #### Q16
-### 🍄 Does `overflow: hidden` create a new block formatting context?
+### Q16. Does `overflow: hidden` create a new block formatting context?
 
 Yes, `overflow: hidden` can create a new block formatting context. This can be useful for containing floats or preventing margin collapse.
 
@@ -305,7 +305,7 @@ Yes, `overflow: hidden` can create a new block formatting context. This can be u
 </div>
 
 #### Q17
-### 🍄 The pseudo-class will select inputs with type `radio` or `checkbox`, but not elements. True or False?
+### Q17. The pseudo-class will select inputs with type `radio` or `checkbox`, but not elements. True or False?
 
 False.
 The `:checked` pseudo-class will select checked `<input>` elements of type `radio` or `checkbox`, as well as `<option>` elements that are selected in a `<select>` dropdown.
@@ -315,7 +315,7 @@ The `:checked` pseudo-class will select checked `<input>` elements of type `radi
 </div>
 
 #### Q18
-### 🍄 In an HTML document, the pseudo-class always refers to the element. True or False?
+### Q18. In an HTML document, the pseudo-class always refers to the element. True or False?
 
 False.
 
@@ -326,7 +326,7 @@ The `:hover` pseudo-class can be applied to any element, not just the `<a>` elem
 </div>
 
 #### Q19
-### 🍄 Which unit of measurement would you prefer among `px`, `rem`, `em`, `%`, or `pt`, and why?
+### Q19. Which unit of measurement would you prefer among `px`, `rem`, `em`, `%`, or `pt`, and why?
 
 1. `px`: Absolute unit, useful for precise control.
 2. `rem`: Relative to the root element's font size, useful for consistent scaling across components.
@@ -341,7 +341,7 @@ The `:hover` pseudo-class can be applied to any element, not just the `<a>` elem
 </div>
 
 #### Q20
-### 🍄 Difference between `div p`, `div > p`, `div + p`, and `div ~ p`.
+### Q20. Difference between `div p`, `div > p`, `div + p`, and `div ~ p`.
 1. `div p`: Selects all `<p>` elements inside a `<div>`, regardless of depth.
 2. `div > p`: Selects all `<p>` elements that are direct children of a `<div>`.
 3. `div + p`: Selects the `<p>` element immediately following a `<div>`.
@@ -361,7 +361,7 @@ The `:hover` pseudo-class can be applied to any element, not just the `<a>` elem
 </div>
 
 #### Q21
-### 🍄 What is specificity in CSS.
+### Q21. What is specificity in CSS.
 
 Specificity is a measure of how specific a CSS selector is. Specificity is calculated based on the types of selectors used:
 1. Inline styles have the highest specificity.
@@ -393,7 +393,7 @@ An element with inline styles will have a color of purple, overriding other sele
 </div>
 
 #### Q22
-### 🍄 Explain CSS pseudo-selectors, pseudo-classes, and pseudo-elements. Name few
+### Q22. Explain CSS pseudo-selectors, pseudo-classes, and pseudo-elements. Name few
 
 **Pseudo-selectors**: A general term encompassing pseudo-classes and pseudo-elements.
 **Pseudo-classes**: Used to define the special state of an element.
@@ -424,7 +424,7 @@ p::before {
 </div>
 
 #### Q23
-### 🍄 Difference between `transition` and `transform` property in CSS.
+### Q23. Difference between `transition` and `transform` property in CSS.
 
 **transition**: Used to create smooth transitions between property values.
 **transform**: Used to apply transformations like rotation, scaling, translation, and skewing to an element.
@@ -447,7 +447,7 @@ p::before {
 </div>
 
 #### Q24
-### 🍄 Can the `translate()` function move the position of an element on the z-axis?
+### Q24. Can the `translate()` function move the position of an element on the z-axis?
 
 No, the `translate()` function can only move elements along the x and y axes. To move an element on the z-axis, you would use the `translateZ()` or `translate3d()` function.
 
@@ -456,7 +456,7 @@ No, the `translate()` function can only move elements along the x and y axes. To
 </div>
 
 #### Q25
-### 🍄 How is `font-face` used?
+### Q25. How is `font-face` used?
 
 The `@font-face` rule allows you to define custom fonts for your web pages. You specify the font name and the URL of the font file.
 ```css
@@ -478,7 +478,7 @@ body {
 </div>
 
 #### Q26
-### 🍄 What are media queries and explain them in detail.
+### Q26. What are media queries and explain them in detail.
 
 Media queries are a feature of CSS used to apply styles based on the characteristics of the device or viewport displaying the content. They enable responsive design.
 
@@ -523,7 +523,7 @@ Media query can be applied on:
 </div>
 
 #### Q27
-### 🍄 What is Mobile-First Approach and Desktop First approach and which one you follow and why?
+### Q27. What is Mobile-First Approach and Desktop First approach and which one you follow and why?
 
 **Mobile-First Approach**: Designing the web application starting with the smallest screen size and then adding styles for larger screens. This approach ensures that the base styles are optimized for mobile devices. *This approach is mostly preferred.*
 ```css
@@ -573,7 +573,7 @@ body {
 </div>
 
 #### Q28
-### 🍄 Does the screen keyword in media queries apply to the device's physical screen or the browser's viewport?
+### Q28. Does the screen keyword in media queries apply to the device's physical screen or the browser's viewport?
 
 The `screen` keyword in media queries applies to the browser’s viewport, not the device’s physical screen. Media queries respond to the size of the viewport, which is the visible part of the web page in the browser window.
 
@@ -582,7 +582,7 @@ The `screen` keyword in media queries applies to the browser’s viewport, not t
 </div>
 
 #### Q29
-### 🍄 Explain CSS Flexbox and how CSS Grid layout is different.
+### Q29. Explain CSS Flexbox and how CSS Grid layout is different.
 
 **CSS Flexbox**: Designed for one-dimensional layouts (either a row or a column). It helps distribute space along the main axis and align items along the cross axis.
 ```js
@@ -641,7 +641,7 @@ Some important Flexbox Properties:
 </div>
 
 #### Q30
-### 🍄 What is the difference between layout and positioning in CSS?
+### Q30. What is the difference between layout and positioning in CSS?
 
 **Layout**: Refers to the process of arranging elements within a container to create a structured and organized design. Common layout techniques include Flexbox, Grid, and floats.
 **Positioning**: Refers to how elements are placed relative to their normal flow, parent container, or viewport. Common positioning techniques include static, relative, absolute, fixed, and sticky.
@@ -651,7 +651,7 @@ Some important Flexbox Properties:
 </div>
 
 #### Q31
-### 🍄 How can we achieve smooth scrolling?
+### Q31. How can we achieve smooth scrolling?
 
 To achieve smooth scrolling, you can use the CSS scroll-behavior property:
 ```css
@@ -665,7 +665,7 @@ html {
 </div>
 
 #### Q32
-### 🍄 What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+### Q32. What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
 
 **Resetting CSS**: Strips all default browser styling. This removes all built-in styles and forces you to style everything from scratch.
 ```css
@@ -694,7 +694,7 @@ body {
 </div>
 
 #### Q33
-### 🍄 How do you vertically and horizontally align a `<p>` element to the centre inside a `<div>`?
+### Q33. How do you vertically and horizontally align a `<p>` element to the centre inside a `<div>`?
 
 1. Using Flexbox
 ```css
@@ -767,7 +767,7 @@ body {
 </div>
 
 #### Q34
-### 🍄 How can you optimize CSS selectors for better performance? (Hint: sprites)
+### Q34. How can you optimize CSS selectors for better performance? (Hint: sprites)
 
 - Use IDs and classes instead of tag selectors: IDs and classes are faster to process.
 - Avoid descendant selectors: These can be slow as they need to check each level of the DOM tree.
@@ -797,7 +797,7 @@ icon {
 </div>
 
 #### Q35
-### 🍄 How can you load CSS resources conditionally in a web page?
+### Q35. How can you load CSS resources conditionally in a web page?
 
 You can use JavaScript to load CSS conditionally based on certain conditions:
 ```js
@@ -816,7 +816,7 @@ You can use JavaScript to load CSS conditionally based on certain conditions:
 </div>
 
 #### Q36
-### 🍄 What is the shadow DOM in web development?
+### Q36. What is the shadow DOM in web development?
 
 Shadow DOM is a web standard that allows you to encapsulate a part of the DOM and style it independently from the rest of the document. It is primarily used in Web Components to prevent styles and scripts from affecting the component’s internals.
 ```html
@@ -836,7 +836,7 @@ Shadow DOM is a web standard that allows you to encapsulate a part of the DOM an
 </div>
 
 #### Q37
-### 🍄 Name some different CSS filters you can use to modify elements.
+### Q37. Name some different CSS filters you can use to modify elements.
 
 CSS filters can be used to apply graphical effects to elements. Some common CSS filters include:
 1. blur(): Applies a blur effect to the element.
@@ -905,7 +905,7 @@ img {
 </div>
 
 #### Q38
-### 🍄 What are the reasons to use a CSS preprocessor in web development?
+### Q38. What are the reasons to use a CSS preprocessor in web development?
 
 1. Variables: Store values that you use repeatedly (e.g., colors, fonts).
 ```css
@@ -957,7 +957,7 @@ nav {
 </div>
 
 #### Q39
-### 🍄 What are some of the things you would test while doing accessibility testing?
+### Q39. What are some of the things you would test while doing accessibility testing?
 
 1. Keyboard Navigation: Ensure all interactive elements are accessible via keyboard.
 2. Screen Reader Compatibility: Check how content is read by screen readers.
@@ -973,7 +973,7 @@ nav {
 </div>
 
 #### Q40
-### 🍄 Write a piece of code to centre a div.
+### Q40. Write a piece of code to centre a div.
 
 There are many ways to centre a div which uses Flexbox, Grid, and absolute positioning methods.
 
@@ -1053,7 +1053,7 @@ The `height: 100vh` on the parent container makes it take up the full height of 
 </div>
 
 #### Q41
-### 🍄 How to make a triangle in CSS?
+### Q41. How to make a triangle in CSS?
 To create a triangle in CSS, you can use the `border` property. By setting the width and height of an element to `0` and applying different border widths and colors, you can make a triangle shape. Here are some examples:
 
 **Upward Triangle**
@@ -1127,7 +1127,7 @@ The transparent borders create the triangle shape by showing only the colored bo
 </div>
 
 #### Q42
-### 🍄 Make a bouncing ball entirely with the help of CSS.
+### Q42. Make a bouncing ball entirely with the help of CSS.
 
 Explanation:
 1. Ball Styling:
@@ -1180,7 +1180,7 @@ body, html {
 </div>
 
 #### Q43
-### 🍄 What is tailwind css. Enlist few important properties in tailwind css.
+### Q43. What is tailwind css. Enlist few important properties in tailwind css.
 
 Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces. It provides a set of low-level utility classes that can be composed to build any design, without having to write custom CSS.
 
