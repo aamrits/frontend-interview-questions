@@ -12,7 +12,9 @@
 </div>
 
 <div align="center">
-    <img src="content/assets/banner.png" alt="banner" />
+    <a href="https://frontend-interview-questions-nu.vercel.app/" target="_blank">
+        <img src="content/assets/banner.png" alt="banner" />
+    </a>
 </div>
 
 <div align="center">
@@ -36,7 +38,8 @@ All content is authored in simple `.md` files. These markdown files are parsed a
 * Syntax highlighted code blocks
 * Dark mode support
 * Topic-wise categorization
-<!-- * Responsive layouts -->
+
+**The repo is live on <a href="https://frontend-interview-questions-nu.vercel.app/" target="_blank">Vercel</a>**
 
 ---
 
@@ -68,11 +71,10 @@ All content is authored in simple `.md` files. These markdown files are parsed a
 * 📖 Markdown-based content management
 * 📝 Code snippets with syntax highlighting
 * 🔍 Quick question navigation
-<!-- * 📱 Responsive UI -->
 
 ---
 
-<!-- ## How the App Works
+## How the App Works
 
 ### Content Layer
 
@@ -83,25 +85,9 @@ Example:
 ```text
 content/
 ├── react-concepts.md
-├── react-machine-coding.md
 ├── javascript-concepts.md
-├── javascript-machine-coding.md
 ├── html-questions.md
 └── css-questions.md
-```
-
-Each question follows a simple structure:
-
-```md
-#### Q1
-
-### Q1. What is React?
-
-React is a JavaScript library for building user interfaces.
-
-<div align="left">
-  <b><a href="#">↥ back to top</a></b>
-</div>
 ```
 
 ---
@@ -130,85 +116,44 @@ and converts them into structured objects that can be rendered inside the UI.
 
 ---
 
-### Rendering Layer
+## 🛠️ Tech Stack
 
-Markdown answers are rendered using:
+<p>
+  <!-- Next.js -->
+  <img alt="Next.js" src="https://img.shields.io/badge/-Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
 
-```tsx
-react-markdown
-```
+  <!-- React -->
+  <img alt="React" src="https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=white" />
 
-with support for:
+  <!-- TypeScript -->
+  <img alt="TypeScript" src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+  
+  <!-- HTML5 -->
+  <img alt="HTML5" src="https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" />
+  
+  <!-- CSS3 -->
+  <img alt="CSS3" src="https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" />
+  
+  <!-- Tailwind CSS -->
+  <img alt="Tailwind CSS" src="https://img.shields.io/badge/-Tailwind%20CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
 
-* Bold text
-* Italics
-* Tables
-* Ordered Lists
-* Unordered Lists
-* Blockquotes
-* Code Blocks
+  <!-- React Markdown -->
+  <img alt="React Markdown" src="https://img.shields.io/badge/-React%20Markdown-61DAFB?style=flat-square&logo=react&logoColor=black" />
 
----
+  <!-- shadcn/ui -->
+  <img alt="shadcn/ui" src="https://img.shields.io/badge/-shadcn%2Fui-000000?style=flat-square&logo=shadcnui&logoColor=white" />
 
-## Tech Stack
+  <!-- Lucide Icons -->
+  <img alt="Lucide Icons" src="https://img.shields.io/badge/-Lucide%20Icons-F56565?style=flat-square&logo=lucide&logoColor=white" />
 
-### Framework
+  <!-- Animate UI -->
+  <img alt="Animate UI" src="https://img.shields.io/badge/-Animate%20UI-7C3AED?style=flat-square&logo=framer&logoColor=white" />
 
-* Next.js 15
-* React 19
-* TypeScript
-
-### Styling
-
-* Tailwind CSS
-* Shadcn UI
-* Tailwind Typography
-
-### Markdown
-
-* React Markdown
-* Remark GFM
-
-### UI Components
-
-* Shadcn Accordion
-* Shadcn Tabs
-* Shadcn Cards
-* Lucide Icons
-
-### Animations
-
-* Animate UI
+  <!-- React GFM -->
+  <img alt="React GFM" src="https://img.shields.io/badge/-React%20GFM-181717?style=flat-square&logo=github&logoColor=white" />
+</p>
 
 ---
-
-## Project Structure
-
-```text
-app/
-├── page.tsx
-├── [document]/
-│   └── page.tsx
-
-components/
-├── Accordion.tsx
-├── MarkdownRenderer.tsx
-├── Navigation.tsx
-├── QuestionNavigation.tsx
-├── QuestionViewer.tsx
-└── ModeToggle.tsx
-
-content/
-├── react-concepts.md
-├── javascript-concepts.md
-├── html-questions.md
-└── css-questions.md
-
-lib/
-├── parseMarkdown.ts
-├── navigation.ts
-└── utils.ts
-``` -->
 
 ## Running Locally
 
@@ -225,54 +170,6 @@ http://localhost:3000
 ```
 
 ---
-
-<!-- ## Building for Production
-
-```bash
-npm run build
-```
-
-Run production build:
-
-```bash
-npm start
-``` -->
-
-<!-- ---
-
-## Deploying to Vercel
-
-### Install Vercel CLI
-
-```bash
-npm install -g vercel
-```
-
-### Deploy
-
-```bash
-vercel
-```
-
-Or simply:
-
-1. Push code to GitHub
-2. Import repository into Vercel
-3. Deploy
-
-No additional configuration is required. -->
-
-<!-- ---
-
-## Future Enhancements
-
-* Search functionality
-* Progress tracking
-* Bookmarks
-* Interview Tips section
-* Copy code snippets
-* Syntax highlighting with Shiki
-* Mobile optimized navigation -->
 
 ## License
 
