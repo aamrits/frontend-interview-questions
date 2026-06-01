@@ -32,12 +32,10 @@ export default function RootLayout({
       <body className={`${lora.variable} ${dmSans.variable} font-sans`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
+          enableSystem={false}
         >
-          {/* Header */}
           <main className="min-h-screen">{children}</main>
-          {/* Footer */}
         </ThemeProvider>
       </body>
     </html>

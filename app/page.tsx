@@ -49,22 +49,23 @@ export default function HomePage() {
 
       {/* Top Navigation */}
       <header className="border-b z-10">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-          <div className="w-12" />
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-center md:justify-between px-6">
 
           <h1 className="text-xl font-bold">
             Frontend Interview Questions
           </h1>
 
-          <ModeToggle />
+          <div className="hidden md:block">
+            <ModeToggle />
+          </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <section className="mx-auto max-w-screen px-6 py-12 h-[80vh] flex items-center justify-center">
-        <div className="grid items-center gap-12 lg:grid-cols-[2fr_2fr]">
+      <section className="x-auto max-w-screen-2xl px-4 py-12 mt-8 md:px-8 xl:px-12 h-[80vh] flex items-center justify-center">
+        <div className="grid items-center gap-8 xl:grid-cols-[2fr_2fr]">
           {/* Left Side */}
-          <div>
+          <div className="hidden xl:block">
             <CodeDemo
               duration={10000}
               delay={1000}
@@ -74,7 +75,7 @@ export default function HomePage() {
           </div>
 
           {/* Right Side */}
-          <div className="grid gap-8 sm:grid-cols-2 z-10">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 z-10">
             {navigationItems.map((item) => (
               <Link
                 key={item.href}

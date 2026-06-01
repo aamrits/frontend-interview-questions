@@ -32,13 +32,15 @@ export default function QuestionViewer({
     }, [openItem]);
 
     return (
-        <div className="grid grid-cols-[320px_1fr] gap-8">
-            <QuestionNavigation
-                questions={questions}
-                onSelect={(id) =>
-                    setOpenItem(id)
-                }
-            />
+        <div className="grid gap-8 lg:grid-cols-[320px_1fr]">
+            <div className="hidden lg:block">
+                <QuestionNavigation
+                    questions={questions}
+                    onSelect={(id) =>
+                        setOpenItem(id)
+                    }
+                />
+            </div>
 
             <Accordion
                 items={questions}

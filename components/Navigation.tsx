@@ -11,7 +11,7 @@ export default function Navigation({
 }: Props) {
     return (
         <Tabs value={currentDocument}>
-            <TabsList className="bg-(--color-green) dark:bg-transparent p-2">
+            <TabsList className="bg-(--color-green) dark:bg-transparent p-2 flex flex-wrap h-15 mb-2.5">
                 {navigation.map((item) => (
                     <TabsTrigger
                         className="text-base text-white hover:text-white data-[state=active]:hover:text-black p-3"

@@ -60,7 +60,9 @@ export default async function Page({
                     >
                         <House className="h-5 w-5" />
                     </Link>
-                    <ModeToggle />
+                    <div className="hidden md:block">
+                        <ModeToggle />
+                    </div>
                 </div>
             </div>
 
