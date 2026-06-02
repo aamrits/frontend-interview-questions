@@ -19,7 +19,7 @@ export default function MarkdownRenderer({
                         if (isInline) {
                             return (
                                 <code className="rounded bg-muted px-1.5 py-0.5 text-sm font-mono">
-                                    {children}
+                                {children}
                                 </code>
                             );
                         }
@@ -27,18 +27,26 @@ export default function MarkdownRenderer({
                         return (
                             <pre className="overflow-x-auto rounded-lg bg-black p-4">
                                 <code
-                                    className={className}
-                                    {...props}
+                                className={className}
+                                {...props}
                                 >
-                                    {children}
+                                {children}
                                 </code>
                             </pre>
+                        );
+                    },
+
+                    table({ children }) {
+                        return (
+                            <div className="overflow-x-auto">
+                                <table>{children}</table>
+                            </div>
                         );
                     },
                 }}
             >
                 {content}
-            </ReactMarkdown >
-        </div >
+            </ReactMarkdown>
+            </div>
     );
 }
