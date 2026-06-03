@@ -39,7 +39,7 @@ All content is authored in simple `.md` files. These markdown files are parsed a
 * Dark mode support
 * Topic-wise categorization
 
-**The repo is live on <a href="https://frontend-interview-questions-nu.vercel.app/" target="_blank">Vercel</a>**
+🚀 **Website is Live on:** [Frontend Interview Questions](https://frontend-interview-questions-nu.vercel.app/)
 
 ---
 
