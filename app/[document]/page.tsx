@@ -56,7 +56,7 @@ export default async function Page({
                 <div className="flex items-center gap-3">
                     <Link
                         href="/"
-                        className="flex items-center justify-center rounded-md border border-[rgba(0,0,0,0.1)] px-2 py-1.5 hover:bg-accent bg-background"
+                        className="flex items-center justify-center rounded-md border border-(--color-red) px-2 py-1.5 hover:bg-accent bg-background"
                     >
                         <House className="h-5 w-5" />
                     </Link>

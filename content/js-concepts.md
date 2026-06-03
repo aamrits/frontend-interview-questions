@@ -66,12 +66,12 @@
 
 ## Answers
 
-##### Q1 
+#### Q1 
 ### Q1. The significance of the Event Loop and Concurrency Model in JavaScript
 
 The Event Loop and Concurrency Model are fundamental concepts in JavaScript that enable it to handle asynchronous operations efficiently. Here's a concise explanation:
 
-### Event Loop
+##### Event Loop
 
 The Event Loop is a mechanism that allows JavaScript to perform non-blocking operations, despite being single-threaded. It works as follows:
 
@@ -80,7 +80,7 @@ The Event Loop is a mechanism that allows JavaScript to perform non-blocking ope
 3. **Callback Queue**: Once an asynchronous operation completes, its callback is pushed to the callback queue.
 4. **Event Loop**: The event loop continuously checks the call stack and the callback queue. If the call stack is empty, it pushes the first callback from the queue to the stack for execution.
 
-### Concurrency Model
+##### Concurrency Model
 
 JavaScript's concurrency model is based on the concept of the event loop, enabling it to manage multiple tasks efficiently without using multiple threads.
 
@@ -88,7 +88,7 @@ JavaScript's concurrency model is based on the concept of the event loop, enabli
 * **Promises and Async/Await**: Modern JavaScript provides promises and the `async/await` syntax for more readable and manageable asynchronous code.
 * **Microtasks and Macrotasks**: JavaScript distinguishes between microtasks (e.g., promise callbacks) and macrotasks (e.g., `setTimeout`). Microtasks are processed before the event loop moves to the next macrotask.
 
-### Significance
+##### Significance
 
 * **Non-Blocking I/O**: The event loop allows JavaScript to handle I/O operations (e.g., network requests, file reading) without blocking the execution of other code.
 * **Responsive UIs**: By avoiding blocking operations, JavaScript can keep the user interface responsive, improving user experience.
@@ -98,12 +98,12 @@ JavaScript's concurrency model is based on the concept of the event loop, enabli
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q2
+#### Q2
 ### Q2. Explain briefly about the following: variables, data types, and operators
 
 Sure! Here's a brief explanation of variables, data types, and operators in JavaScript:
 
-### Variables
+##### Variables
 
 Variables are containers for storing data values. In JavaScript, you can declare variables using `var`, `let`, or `const`.
 
@@ -119,11 +119,11 @@ const name = "Alice";
 var city = "New York";
 ```
 
-### Data Types
+##### Data Types
 
 JavaScript has several data types, categorized into primitive and object types.
 
-#### Primitive Data Types
+##### Primitive Data Types
 
 * **Number**: Represents numeric values. Example: `42`, `3.14`.
 * **String**: Represents text. Example: `"Hello, world!"`.
@@ -133,17 +133,17 @@ JavaScript has several data types, categorized into primitive and object types.
 * **Symbol**: Represents a unique identifier. Example: `let sym = Symbol();`.
 * **BigInt**: Represents integers with arbitrary precision. Example: `let bigInt = 123n;`.
 
-#### Object Types
+##### Object Types
 
 * **Object**: A collection of key-value pairs. Example: `let person = { name: "Alice", age: 25 };`.
 * **Array**: An ordered list of values. Example: `let numbers = [1, 2, 3];`.
 * **Function**: A reusable block of code. Example: `function greet() { return "Hello"; }`.
 
-### Operators
+##### Operators
 
 Operators are used to perform operations on variables and values.
 
-#### Arithmetic Operators
+**Arithmetic Operators**
 
 * **`+`**: Addition. Example: `5 + 3` results in `8`.
 * **`-`**: Subtraction. Example: `5 - 3` results in `2`.
@@ -151,7 +151,7 @@ Operators are used to perform operations on variables and values.
 * **`/`**: Division. Example: `5 / 3` results in `1.67`.
 * **`%`**: Modulus (remainder). Example: `5 % 3` results in `2`.
 
-#### Comparison Operators
+**Comparison Operators**
 
 * **`==`**: Equality. Example: `5 == "5"` results in `true`.
 * **`===`**: Strict equality. Example: `5 === "5"` results in `false`.
@@ -162,13 +162,13 @@ Operators are used to perform operations on variables and values.
 * **`>=`**: Greater than or equal to. Example: `5 >= 3` results in `true`.
 * **`<=`**: Less than or equal to. Example: `5 <= 3` results in `false`.
 
-#### Logical Operators
+**Logical Operators**
 
 * **`&&`**: Logical AND. Example: `true && false` results in `false`.
 * **`||`**: Logical OR. Example: `true || false` results in `true`.
 * **`!`**: Logical NOT. Example: `!true` results in `false`.
 
-#### Assignment Operators
+**Assignment Operators**
 
 * **`=`**: Assignment. Example: `let x = 10;`.
 * **`+=`**: Addition assignment. Example: `x += 5; // x is now 15`.
@@ -180,109 +180,163 @@ Operators are used to perform operations on variables and values.
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q3
+#### Q3
 ### Q3. Understanding Hoisting and its impact on variable and function declarations
 
-Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their containing scope during the compile phase, before code execution. This means that no matter where functions and variables are declared, they are moved to the top of their scope. However, only the declarations are hoisted, not the initializations.
+**Hoisting**
 
-### Variables Hoisting
+**What is it?**
 
-#### `var`
+Hoisting is a JavaScript behavior where variable and function declarations are processed before code execution begins.
 
-Variables declared with `var` are hoisted and initialized with `undefined`. The actual assignment happens where the variable is defined.
+This allows variables and functions to be referenced before their declaration appears in the code. However, **only declarations are hoisted, not initializations (assignments).**
 
-Example:
+**How it Works**
 
-```javascript
+During the creation phase of execution:
+
+* `var` declarations are hoisted and initialized with `undefined`.
+* `let` and `const` declarations are hoisted but remain uninitialized in the **Temporal Dead Zone (TDZ)**.
+* Function declarations are fully hoisted, including their implementation.
+* Function expressions are not fully hoisted; only the variable declaration is hoisted.
+
+**Variable Hoisting**
+
+**`var`**
+
+Variables declared with `var` are hoisted and initialized with `undefined`.
+
+**Example**
+
+```js
 console.log(a); // undefined
+
 var a = 10;
+
 console.log(a); // 10
 ```
 
-This code is interpreted as:
+**JavaScript Interprets It As**
 
-```javascript
+```js
 var a;
+
 console.log(a); // undefined
+
 a = 10;
+
 console.log(a); // 10
 ```
 
-#### `let` and `const`
+> **Note**
+> Only the declaration is hoisted. The assignment remains in its original position.
 
-Variables declared with `let` and `const` are also hoisted, but they are not initialized. They remain in a "temporal dead zone" from the start of the block until the declaration is encountered.
+---
 
-Example:
+**`let` and `const`**
 
-```javascript
-console.log(b); // ReferenceError: Cannot access 'b' before initialization
+Variables declared with `let` and `const` are hoisted but are not initialized immediately.
+
+They remain in the **Temporal Dead Zone (TDZ)** until execution reaches their declaration.
+
+**Example**
+
+```js
+console.log(b); // ReferenceError
 let b = 20;
-console.log(b); // 20
 
-console.log(c); // ReferenceError: Cannot access 'c' before initialization
+console.log(c); // ReferenceError
 const c = 30;
-console.log(c); // 30
 ```
 
-### Function Hoisting
+**Why?**
 
-#### Function Declarations
+Although the declarations are hoisted, JavaScript does not allow access to them before initialization.
 
-Function declarations are hoisted completely, meaning both the function name and its definition are hoisted.
+**Function Hoisting**
 
-Example:
+1. **Function Declarations**
 
-```javascript
-greet(); // "Hello, world!"
+Function declarations are fully hoisted, including the function body.
+
+**Example**
+
+```js
+greet();
+
 function greet() {
   console.log("Hello, world!");
 }
 ```
 
-This code is interpreted as:
+**JavaScript Interprets It As**
 
-```javascript
+```js
 function greet() {
   console.log("Hello, world!");
 }
-greet(); // "Hello, world!"
+
+greet();
 ```
 
-#### Function Expressions
+✅ The function can be called before its declaration.
 
-Function expressions, whether named or anonymous, are not hoisted. Only the variable declaration is hoisted, not the function assignment.
+---
 
-Example:
+2. **Function Expressions**
 
-```javascript
-sayHello(); // TypeError: sayHello is not a function
-var sayHello = function() {
+Function expressions are not fully hoisted.
+
+Only the variable declaration is hoisted.
+
+**Example**
+
+```js
+sayHello();
+
+var sayHello = function () {
   console.log("Hello, world!");
 };
 ```
 
-This code is interpreted as:
+**JavaScript Interprets It As**
 
-```javascript
+```js
 var sayHello;
-sayHello(); // TypeError: sayHello is not a function
-sayHello = function() {
+
+sayHello(); // TypeError
+
+sayHello = function () {
   console.log("Hello, world!");
 };
 ```
 
-### Impact of Hoisting
+❌ The function cannot be called before the assignment occurs.
 
-1. **Unexpected `undefined` values**: Using `var` can lead to unexpected `undefined` values if the variable is referenced before its assignment.
-2. **Temporal Dead Zone (TDZ)**: With `let` and `const`, referencing a variable before its declaration results in a `ReferenceError`, due to the TDZ.
-3. **Function declarations are always available**: Function declarations can be invoked before they appear in the code, which can be useful but also lead to confusion if not well-documented.
-4. **Function expressions need to be declared first**: Unlike function declarations, function expressions must be assigned before they are called, which can help enforce a more logical structure in the code.
+**Hoisting Summary**
+
+| Declaration Type     | Hoisted | Initialized   | Can Be Used Before Declaration? |
+| -------------------- | ------- | ------------- | ------------------------------- |
+| `var`                | ✅ Yes   | ✅ `undefined` | ✅ Yes                           |
+| `let`                | ✅ Yes   | ❌ No          | ❌ ReferenceError (TDZ)          |
+| `const`              | ✅ Yes   | ❌ No          | ❌ ReferenceError (TDZ)          |
+| Function Declaration | ✅ Yes   | ✅ Yes         | ✅ Yes                           |
+| Function Expression  | Partial | Variable only | ❌ No                            |
+
+**Key Takeaway**
+
+* Hoisting happens during the creation phase of execution.
+* `var` is hoisted and initialized with `undefined`.
+* `let` and `const` are hoisted but remain in the TDZ.
+* Function declarations are fully hoisted.
+* Function expressions must be assigned before they are called.
+* Understanding hoisting helps avoid unexpected `undefined`, `ReferenceError`, and `TypeError` issues.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q4
+#### Q4
 ### Q4. The differences between `let`, `const`, and `var` in variable declaration and scope
 
 Sure, here’s a table summarizing the differences between `let`, `const`, and `var` in JavaScript variable declarations and scope:
@@ -295,16 +349,9 @@ Sure, here’s a table summarizing the differences between `let`, `const`, and `
 | **Re-assignment**          | Allowed                                     | Allowed                                | Not allowed                            |
 | **Initialization**         | Optional                                    | Optional                               | Required                               |
 | **Temporal Dead Zone**     | No                                          | Yes                                    | Yes                                    |
-| **Global Object Property** | Yes (`window.varName` in browsers)          | No                                     | No                                     |
-| **Block Scope Example**    | ```javascript                               | ```javascript                          | ```javascript                          |
-|                            | {                                           | {                                      | {                                      |
-|                            | var x = 1;                                  | let x = 1;                             | const x = 1;                           |
-|                            | { var x = 2; }                              | { let x = 2; }                         | { const x = 2; }                       |
-|                            | console.log(x); // 2                        | console.log(x); // 1                   | console.log(x); // 1                   |
-|                            | }                                           | }                                      | }                                      |
-|                            | ```                                         | ```                                    | ```                                    |
+| **Global Object Property** | Yes (`window.varName` in browsers)          | No                                     | No                                     |                               |
 
-### Explanation
+##### Explanation
 
 * **Scope**:
 
@@ -344,12 +391,12 @@ Sure, here’s a table summarizing the differences between `let`, `const`, and `
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q5
+#### Q5
 ### Q5. Dive deep into functions, function declarations, function expressions IIFE, arrow functions
 
 Sure, let's dive deep into the different types of functions in JavaScript: function declarations, function expressions, Immediately Invoked Function Expressions (IIFE), and arrow functions.
 
-### Function Declarations
+##### Function Declarations
 
 Function declarations define a function with a specific name and can be invoked before they are defined in the code due to hoisting.
 
@@ -368,7 +415,7 @@ Key points:
 * Hoisted to the top of their scope.
 * Can be called before they are declared in the code.
 
-### Function Expressions
+##### Function Expressions
 
 Function expressions define a function as part of an expression, typically assigned to a variable. They are not hoisted, meaning they cannot be called before they are defined.
 
@@ -387,7 +434,7 @@ Key points:
 * Not hoisted.
 * Can be anonymous or named.
 
-### Immediately Invoked Function Expressions (IIFE)
+##### Immediately Invoked Function Expressions (IIFE)
 
 IIFEs are functions that are defined and immediately executed. They create a new scope, which can be useful for avoiding global variable pollution.
 
@@ -410,7 +457,7 @@ Key points:
 * Can be anonymous.
 * Useful for creating a new scope.
 
-### Arrow Functions
+##### Arrow Functions
 
 Arrow functions provide a shorter syntax for writing functions. They do not have their own `this` context, meaning `this` is lexically bound to the surrounding scope.
 
@@ -429,7 +476,7 @@ Key points:
 * Cannot be used as constructors.
 * Not suitable for methods that need their own `this`.
 
-### Detailed Comparison
+##### Detailed Comparison
 
 | Feature                | Function Declaration | Function Expression           | IIFE                                  | Arrow Function                       |
 | ---------------------- | -------------------- | ----------------------------- | ------------------------------------- | ------------------------------------ |
@@ -441,9 +488,9 @@ Key points:
 | **Arguments Object**   | Yes                  | Yes                           | Yes                                   | No                                   |
 | **New Scope Creation** | No                   | No                            | Yes                                   | No                                   |
 
-### Examples and Use Cases
+##### Examples and Use Cases
 
-#### Function Declaration
+##### Function Declaration
 
 ```javascript
 function add(a, b) {
@@ -453,7 +500,7 @@ function add(a, b) {
 console.log(add(2, 3)); // 5
 ```
 
-#### Function Expression
+##### Function Expression
 
 ```javascript
 const multiply = function(a, b) {
@@ -463,7 +510,7 @@ const multiply = function(a, b) {
 console.log(multiply(2, 3)); // 6
 ```
 
-#### IIFE
+##### IIFE
 
 ```javascript
 (function() {
@@ -477,7 +524,7 @@ console.log(multiply(2, 3)); // 6
 })();
 ```
 
-#### Arrow Function
+##### Arrow Function
 
 ```javascript
 const divide = (a, b) => a / b;
@@ -485,7 +532,7 @@ const divide = (a, b) => a / b;
 console.log(divide(6, 3)); // 2
 ```
 
-#### Arrow Function with Lexical `this`
+##### Arrow Function with Lexical `this`
 
 ```javascript
 function Timer() {
@@ -505,12 +552,12 @@ In this example, `this.seconds` correctly refers to the `Timer` instance because
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q6
+#### Q6
 ### Q6. The difference between `==` and `===` in JavaScript for value comparison
 
 In JavaScript, `==` and `===` are used for value comparison, but they work differently in terms of how they handle type coercion.
 
-### `==` (Equality Operator)
+##### `==` (Equality Operator)
 
 * **Type Coercion**: The `==` operator performs type coercion, meaning it converts the operands to the same type before making the comparison.
 * **Usage**: Often used when the type of the operands is not known or irrelevant.
@@ -524,7 +571,7 @@ console.log(true == 1); // true (boolean is converted to number)
 console.log([] == false); // true (array is converted to boolean and then to number)
 ```
 
-### `===` (Strict Equality Operator)
+##### `===` (Strict Equality Operator)
 
 * **No Type Coercion**: The `===` operator does not perform type coercion. It compares both the value and the type of the operands.
 * **Usage**: Preferred for precise and predictable comparisons, especially when the types of the operands are known.
@@ -538,7 +585,7 @@ console.log(true === 1); // false (different types: boolean vs. number)
 console.log([] === false); // false (different types)
 ```
 
-### Comparison Table
+##### Comparison Table
 
 | Example                        | `==` Result | `===` Result |
 | ------------------------------ | ----------- | ------------ |
@@ -551,12 +598,12 @@ console.log([] === false); // false (different types)
 | `[1,2] == '1,2'`               | `true`      | `false`      |
 | `new String('test') == 'test'` | `true`      | `false`      |
 
-### Best Practices
+##### Best Practices
 
 * **Use `===` for most comparisons**: It avoids unexpected results due to type coercion, leading to more predictable and reliable code.
 * **Use `==` when type coercion is desired**: There are specific cases where `==` might be useful, such as comparing `null` and `undefined`.
 
-### Special Cases
+##### Special Cases
 
 * **`null` and `undefined`**: These are considered equal with `==`, but not with `===`.
 
@@ -577,12 +624,12 @@ console.log([] === false); // false (different types)
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q7
+#### Q7
 ### Q7. `null` vs. `undefined`: Differences and usage
 
 In JavaScript, `null` and `undefined` are two distinct types representing the absence of value, but they have different meanings and uses. Here’s a detailed comparison:
 
-### Differences
+##### Differences
 
 | Aspect                      | `null`                                  | `undefined`                                                       |
 | --------------------------- | --------------------------------------- | ----------------------------------------------------------------- |
@@ -594,9 +641,9 @@ In JavaScript, `null` and `undefined` are two distinct types representing the ab
 | **Equality (`==`)**         | `true` when compared with `undefined`   | `true` when compared with `null`                                  |
 | **Strict Equality (`===`)** | `false` when compared with `undefined`  | `false` when compared with `null`                                 |
 
-### Usage
+##### Usage
 
-#### `null`
+##### `null`
 
 * **Intentional Absence**: Use `null` when you want to explicitly indicate that a variable should have no value.
 * **Object Initialization**: Often used to initialize a variable that is expected to hold an object at a later point.
@@ -617,7 +664,7 @@ if (userData === null) {
 }
 ```
 
-#### `undefined`
+##### `undefined`
 
 * **Uninitialized Variables**: When a variable is declared but not assigned a value, it is `undefined`.
 * **Function Parameters**: Function parameters that are not provided default to `undefined`.
@@ -638,9 +685,9 @@ let person = {};
 console.log(person.age); // undefined, as age property does not exist
 ```
 
-### Comparison
+##### Comparison
 
-#### Loose Equality (`==`)
+##### Loose Equality (`==`)
 
 `null` and `undefined` are loosely equal, but not strictly equal to anything else.
 
@@ -652,7 +699,7 @@ console.log(null == false); // false
 console.log(undefined == false); // false
 ```
 
-#### Strict Equality (`===`)
+##### Strict Equality (`===`)
 
 `null` and `undefined` are not strictly equal to each other or any other value.
 
@@ -662,7 +709,7 @@ console.log(null === null); // true
 console.log(undefined === undefined); // true
 ```
 
-### Common Use Cases
+##### Common Use Cases
 
 * **Checking for both `null` and `undefined`**: Use loose equality to check if a variable is either `null` or `undefined`.
 
@@ -694,12 +741,12 @@ console.log(undefined === undefined); // true
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q8
+#### Q8
 ### Q8. Scope chain and Lexical Scoping: How JavaScript handles variable access
 
 In JavaScript, the concepts of scope chain and lexical scoping are fundamental to understanding how the language handles variable access and lookup. Here’s an in-depth explanation of these concepts:
 
-### Scope Chain
+##### Scope Chain
 
 The scope chain is a list of objects that JavaScript uses to manage variable resolution. It determines the order in which the JavaScript engine looks up variables.
 
@@ -709,7 +756,7 @@ The scope chain is a list of objects that JavaScript uses to manage variable res
 
 When JavaScript tries to access a variable, it starts from the current scope and goes up the scope chain until it finds the variable or reaches the global scope.
 
-### Lexical Scoping
+##### Lexical Scoping
 
 Lexical scoping (or static scoping) means that the scope of a variable is determined by its position in the source code. Nested functions have access to variables declared in their outer scope.
 
@@ -736,7 +783,7 @@ In this example:
 * `innerFunction` can access `outerVar` because of lexical scoping.
 * `outerFunction` cannot access `innerVar` because `innerVar` is scoped to `innerFunction`.
 
-### Scope Chain and Lexical Scoping in Action
+##### Scope Chain and Lexical Scoping in Action
 
 Let's consider a more detailed example to see how the scope chain and lexical scoping work together:
 
@@ -762,7 +809,7 @@ outerFunction();
 * `innerFunction` has access to `globalVar`, `outerVar`, and `innerVar` because of the scope chain.
 * `outerFunction` can access `globalVar` but not `innerVar` because `innerVar` is only within the `innerFunction`.
 
-### Shadowing
+##### Shadowing
 
 Shadowing occurs when a variable declared within a certain scope has the same name as a variable declared in an outer scope. The inner variable "shadows" the outer variable.
 
@@ -790,7 +837,7 @@ console.log(name); // Global
 * In `outerFunction`, `name` refers to the middle declaration (`const name = 'Outer'`).
 * In the global scope, `name` refers to the outermost declaration (`const name = 'Global'`).
 
-### Practical Example with Closures
+##### Practical Example with Closures
 
 Closures are functions that retain access to their lexical scope, even when the function is executed outside that scope.
 
@@ -815,7 +862,7 @@ console.log(counter()); // 3
 * The inner function returned by `makeCounter` forms a closure.
 * It retains access to `count` even after `makeCounter` has finished executing.
 
-### Summary
+##### Summary
 
 * **Scope Chain**: Determines the order of variable lookup, starting from the innermost scope and moving outward.
 * **Lexical Scoping**: Variable scope is determined by the physical structure of the code.
@@ -826,12 +873,12 @@ console.log(counter()); // 3
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q9
+#### Q9
 ### Q9. Help me understand keyword `this` in JavaScript and how is it scoped. Give some examples
 
 Understanding the `this` keyword in JavaScript can be challenging because its value is determined dynamically, based on how and where the function is called. Here's a detailed explanation of how `this` works in different contexts, along with examples.
 
-### Global Context
+##### Global Context
 
 In the global execution context (outside of any function), `this` refers to the global object. In a browser, the global object is `window`.
 
@@ -841,7 +888,7 @@ Example:
 console.log(this); // In a browser, this will log the `window` object
 ```
 
-### Function Context
+##### Function Context
 
 In a regular function, `this` refers to the global object when not in strict mode. In strict mode, `this` is `undefined`.
 
@@ -864,7 +911,7 @@ function strictFunction() {
 strictFunction(); // Logs `undefined`
 ```
 
-### Method Context
+##### Method Context
 
 When a function is called as a property of an object, `this` refers to the object that owns the method.
 
@@ -881,7 +928,7 @@ const person = {
 person.greet(); // Logs "Alice"
 ```
 
-### Constructor Context
+##### Constructor Context
 
 When a function is used as a constructor (called with the `new` keyword), `this` refers to the newly created instance.
 
@@ -896,7 +943,7 @@ const alice = new Person("Alice");
 console.log(alice.name); // Logs "Alice"
 ```
 
-### Arrow Functions
+##### Arrow Functions
 
 Arrow functions do not have their own `this` context. Instead, `this` is lexically bound to the `this` value of the enclosing execution context.
 
@@ -916,7 +963,7 @@ const person = {
 person.greet(); // Logs "Bob"
 ```
 
-### Event Handlers
+##### Event Handlers
 
 In event handlers, `this` refers to the element that received the event.
 
@@ -928,11 +975,11 @@ document.getElementById("myButton").addEventListener("click", function() {
 });
 ```
 
-### Explicit Binding
+##### Explicit Binding
 
 JavaScript allows explicitly setting `this` using `call`, `apply`, or `bind`.
 
-#### `call` and `apply`
+##### `call` and `apply`
 
 The `call` and `apply` methods allow you to call a function with a specific `this` value and arguments.
 
@@ -949,7 +996,7 @@ greet.call(person); // Logs "Charlie"
 greet.apply(person); // Logs "Charlie"
 ```
 
-#### `bind`
+##### `bind`
 
 The `bind` method creates a new function with a specific `this` value.
 
@@ -966,7 +1013,7 @@ const boundGreet = greet.bind(person);
 boundGreet(); // Logs "David"
 ```
 
-### Summary
+**Key Takeaway**
 
 The value of `this` depends on the context in which a function is called:
 
@@ -982,18 +1029,18 @@ The value of `this` depends on the context in which a function is called:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q10
+#### Q10
 ### Q10. Define Closures and their practical applications in JavaScript
 
-### Closures in JavaScript
+##### Closures in JavaScript
 
 A closure is a feature in JavaScript where an inner function has access to its outer enclosing function's variables. This includes access to the variables, parameters, and even the outer function's scope chain. Closures allow these inner functions to retain access to their outer function's scope even after the outer function has finished executing.
 
-### How Closures Work
+##### How Closures Work
 
 Closures work by maintaining a reference to the variables in the outer scope. When a function is returned or passed as a value, it retains a link to the outer function's variables, enabling it to access those variables even after the outer function has exited.
 
-### Example of a Closure
+##### Example of a Closure
 
 ```javascript
 function outerFunction(outerVariable) {
@@ -1016,9 +1063,9 @@ In this example:
 * `innerFunction` is a closure that captures the `outerVariable` from `outerFunction`.
 * Even after `outerFunction` has finished executing, `innerFunction` retains access to `outerVariable`.
 
-### Practical Applications of Closures
+##### Practical Applications of Closures
 
-#### 1. Data Privacy and Encapsulation
+##### 1. Data Privacy and Encapsulation
 
 Closures allow you to create private variables that cannot be accessed directly from outside the function. This is useful for encapsulating data and preventing it from being modified directly.
 
@@ -1052,7 +1099,7 @@ In this example:
 
 * The `count` variable is private and can only be accessed or modified through the methods `increment`, `decrement`, and `getCount`.
 
-#### 2. Function Factories
+##### 2. Function Factories
 
 Closures can be used to create function factories, functions that return other functions with specific behavior.
 
@@ -1073,7 +1120,7 @@ In this example:
 * `createAdder` creates a new function that adds a specific number (`x`) to its argument (`y`).
 * The `addFive` function retains access to `x` (which is 5) and adds it to its argument.
 
-#### 3. Maintaining State in Asynchronous Code
+##### 3. Maintaining State in Asynchronous Code
 
 Closures are useful in asynchronous programming for maintaining state between asynchronous operations.
 
@@ -1121,7 +1168,7 @@ In this example:
 
 * The `createIterator` function returns an object with a `next` method that maintains the current index of the iteration.
 
-### Summary
+##### Summary
 
 Closures are a powerful feature in JavaScript that allow functions to retain access to their outer scope. They are used for:
 
@@ -1134,12 +1181,12 @@ Closures are a powerful feature in JavaScript that allow functions to retain acc
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q11
+#### Q11
 ### Q11. Common string manipulation techniques in JavaScript
 
 String manipulation is a common task in JavaScript, and there are various methods and techniques available to manipulate strings. Here are some of the most commonly used string manipulation techniques:
 
-### 1. String Length
+##### 1. String Length
 
 You can get the length of a string using the `.length` property.
 
@@ -1148,7 +1195,7 @@ const str = "Hello, world!";
 console.log(str.length); // 13
 ```
 
-### 2. Accessing Characters
+##### 2. Accessing Characters
 
 You can access characters in a string using bracket notation or the `.charAt()` method.
 
@@ -1158,7 +1205,7 @@ console.log(str[0]); // "H"
 console.log(str.charAt(1)); // "e"
 ```
 
-### 3. Changing Case
+##### 3. Changing Case
 
 Convert strings to upper or lower case.
 
@@ -1168,7 +1215,7 @@ console.log(str.toUpperCase()); // "HELLO, WORLD!"
 console.log(str.toLowerCase()); // "hello, world!"
 ```
 
-### 4. Substring Extraction
+##### 4. Substring Extraction
 
 Extract parts of a string using `.substring()`, `.substr()`, or `.slice()`.
 
@@ -1179,7 +1226,7 @@ console.log(str.substr(7, 5)); // "world"
 console.log(str.slice(7, 12)); // "world"
 ```
 
-### 5. Searching within a String
+##### 5. Searching within a String
 
 Find the position of a substring using `.indexOf()` and `.lastIndexOf()`.
 
@@ -1189,7 +1236,7 @@ console.log(str.indexOf("world")); // 7
 console.log(str.lastIndexOf("o")); // 8
 ```
 
-### 6. Checking for Substring
+##### 6. Checking for Substring
 
 Check if a string contains a substring using `.includes()`, `.startsWith()`, and `.endsWith()`.
 
@@ -1200,7 +1247,7 @@ console.log(str.startsWith("Hello")); // true
 console.log(str.endsWith("!")); // true
 ```
 
-### 7. String Replacement
+##### 7. String Replacement
 
 Replace parts of a string using `.replace()`.
 
@@ -1209,7 +1256,7 @@ const str = "Hello, world!";
 console.log(str.replace("world", "JavaScript")); // "Hello, JavaScript!"
 ```
 
-### 8. Splitting and Joining Strings
+##### 8. Splitting and Joining Strings
 
 Split a string into an array and join an array into a string.
 
@@ -1222,7 +1269,7 @@ const newStr = arr.join(" - ");
 console.log(newStr); // "Hello - world!"
 ```
 
-### 9. Trimming Whitespace
+##### 9. Trimming Whitespace
 
 Remove whitespace from both ends of a string using `.trim()`, `.trimStart()`, and `.trimEnd()`.
 
@@ -1233,7 +1280,7 @@ console.log(str.trimStart()); // "Hello, world!   "
 console.log(str.trimEnd()); // "   Hello, world!"
 ```
 
-### 10. String Concatenation
+##### 10. String Concatenation
 
 Concatenate strings using the `+` operator or `.concat()` method.
 
@@ -1244,7 +1291,7 @@ console.log(str1 + ", " + str2 + "!"); // "Hello, World!"
 console.log(str1.concat(", ", str2, "!")); // "Hello, World!"
 ```
 
-### 11. Template Literals
+##### 11. Template Literals
 
 Use template literals for string interpolation and multi-line strings.
 
@@ -1258,7 +1305,7 @@ multi-line string.`;
 console.log(multiLineString);
 ```
 
-### 12. Repeating Strings
+##### 12. Repeating Strings
 
 Repeat a string multiple times using `.repeat()`.
 
@@ -1267,7 +1314,7 @@ const str = "Hello!";
 console.log(str.repeat(3)); // "Hello!Hello!Hello!"
 ```
 
-### 13. Character Codes
+##### 13. Character Codes
 
 Get the character code using `.charCodeAt()` and convert codes to characters using `String.fromCharCode()`.
 
@@ -1277,7 +1324,7 @@ console.log(str.charCodeAt(0)); // 65
 console.log(String.fromCharCode(65, 66, 67)); // "ABC"
 ```
 
-### 14. Splitting into Characters
+##### 14. Splitting into Characters
 
 Convert a string into an array of characters using `split("")`.
 
@@ -1286,7 +1333,7 @@ const str = "Hello";
 console.log(str.split("")); // ["H", "e", "l", "l", "o"]
 ```
 
-### Summary
+##### Summary
 
 These string manipulation techniques are essential for handling text data in JavaScript. They cover a wide range of operations, from basic tasks like changing case and concatenation to more advanced operations like template literals and working with character codes. Understanding these methods allows for efficient and effective string handling in JavaScript.
 
@@ -1294,14 +1341,14 @@ These string manipulation techniques are essential for handling text data in Jav
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q12
+#### Q12
 ### Q12. What is DOM Manipulation. Understand how to interact with the Document Object Model (DOM) effectively
 
-### What is DOM Manipulation?
+##### What is DOM Manipulation?
 
 DOM (Document Object Model) manipulation is the process of dynamically changing the content, structure, or style of a web page using JavaScript. The DOM is an interface that allows scripts to update the document's content, structure, and style. It represents the page so that programs can change the document structure, style, and content.
 
-### Understanding the DOM
+##### Understanding the DOM
 
 The DOM is a tree-like structure where each node represents a part of the document:
 
@@ -1310,9 +1357,9 @@ The DOM is a tree-like structure where each node represents a part of the docume
 * **Attributes**: Represent the attributes of HTML elements (e.g., `id`, `class`).
 * **Text**: Represents text content within elements.
 
-### Common DOM Manipulation Techniques
+##### Common DOM Manipulation Techniques
 
-#### 1. Accessing Elements
+##### 1. Accessing Elements
 
 To manipulate the DOM, you first need to access the elements you want to change. Here are some common methods:
 
@@ -1346,7 +1393,7 @@ To manipulate the DOM, you first need to access the elements you want to change.
   const elements = document.querySelectorAll('.myClass');
   ```
 
-#### 2. Changing Content
+##### 2. Changing Content
 
 * **`innerHTML`**: Gets or sets the HTML content of an element.
 
@@ -1362,7 +1409,7 @@ To manipulate the DOM, you first need to access the elements you want to change.
   element.textContent = 'New text content';
   ```
 
-#### 3. Modifying Attributes
+##### 3. Modifying Attributes
 
 * **`getAttribute`**: Gets the value of an attribute.
 
@@ -1385,7 +1432,7 @@ To manipulate the DOM, you first need to access the elements you want to change.
   element.removeAttribute('class');
   ```
 
-#### 4. Changing Styles
+##### 4. Changing Styles
 
 * **Inline Styles**: Directly set CSS properties on an element.
 
@@ -1404,7 +1451,7 @@ To manipulate the DOM, you first need to access the elements you want to change.
   element.classList.toggle('toggleClass');
   ```
 
-#### 5. Adding and Removing Elements
+##### 5. Adding and Removing Elements
 
 * **`createElement`**: Creates a new element.
 
@@ -1436,7 +1483,7 @@ To manipulate the DOM, you first need to access the elements you want to change.
   parent.replaceChild(newChild, oldChild);
   ```
 
-#### 6. Event Handling
+##### 6. Event Handling
 
 Add event listeners to elements to respond to user interactions.
 
@@ -1460,7 +1507,7 @@ Add event listeners to elements to respond to user interactions.
   button.removeEventListener('click', handleClick);
   ```
 
-### Example: Creating a Simple Interactive Page
+##### Example: Creating a Simple Interactive Page
 
 Here's a simple example of DOM manipulation to create an interactive page:
 
@@ -1502,18 +1549,18 @@ In this example:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q13
+#### Q13
 ### Q13. What is Event Handling. Briefly explain about event listeners, event delegation, and the event object
 
-### Event Handling in JavaScript
+##### Event Handling in JavaScript
 
 Event handling is a fundamental concept in JavaScript that allows developers to execute code in response to user actions or other events on a web page. It involves capturing, processing, and responding to events triggered by the user or the browser.
 
-### Event Listeners
+##### Event Listeners
 
 Event listeners are functions that are called when a specified event occurs on a particular element. You can attach an event listener to an element using the `addEventListener` method.
 
-#### Example:
+##### Example:
 
 ```html
 <!DOCTYPE html>
@@ -1534,11 +1581,11 @@ Event listeners are functions that are called when a specified event occurs on a
 </html>
 ```
 
-### Event Delegation
+##### Event Delegation
 
 Event delegation is a technique used to handle events efficiently. Instead of adding event listeners to multiple child elements, you add a single event listener to their common ancestor. The event then bubbles up to the ancestor, where it can be handled.
 
-#### Example:
+##### Example:
 
 ```html
 <!DOCTYPE html>
@@ -1570,11 +1617,11 @@ In this example:
 * The event listener is attached to the `ul` element.
 * When a `li` element is clicked, the event bubbles up to the `ul`, and the listener checks if the event target is an `li` before handling it.
 
-### The Event Object
+##### The Event Object
 
 When an event occurs, an event object is created and passed to the event handler. This object contains information about the event and provides methods to interact with it.
 
-#### Common Properties and Methods:
+##### Common Properties and Methods:
 
 * **`type`**: The type of event (e.g., `click`, `mouseover`).
 * **`target`**: The element that triggered the event.
@@ -1582,7 +1629,7 @@ When an event occurs, an event object is created and passed to the event handler
 * **`preventDefault()`**: Prevents the default action associated with the event.
 * **`stopPropagation()`**: Stops the event from propagating (bubbling) up the DOM tree.
 
-#### Example:
+##### Example:
 
 ```html
 <!DOCTYPE html>
@@ -1614,7 +1661,7 @@ In this example:
 * `event.preventDefault()` is called to prevent the form from submitting.
 * The event object provides access to the input element's value.
 
-### Summary
+##### Summary
 
 * **Event Listeners**: Functions that respond to specific events on elements, attached using `addEventListener`.
 * **Event Delegation**: Efficiently manage events by attaching a single event listener to a common ancestor of multiple elements.
@@ -1624,22 +1671,22 @@ In this example:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q14
+#### Q14
 ### Q14. Understanding the concept of Prototypes and how they relate to Objects
 
-### Understanding Prototypes in JavaScript
+##### Understanding Prototypes in JavaScript
 
 Prototypes are a fundamental concept in JavaScript, forming the basis for inheritance and the object system in the language. They allow objects to share properties and methods through a chain of linked objects, known as the prototype chain.
 
-### What is a Prototype?
+##### What is a Prototype?
 
 A prototype is an object from which other objects inherit properties and methods. Every JavaScript object has a prototype, which is used as a blueprint for creating new objects.
 
-### Prototype Chain
+##### Prototype Chain
 
 When you access a property or method on an object, JavaScript will first look for that property on the object itself. If it doesn't find it, it will look at the object's prototype, and then the prototype's prototype, and so on, until it reaches the end of the prototype chain, which is `null`.
 
-### Example of Prototype Chain
+##### Example of Prototype Chain
 
 ```javascript
 const person = {
@@ -1667,11 +1714,11 @@ In this example:
 * `student` has its own `name` property and `study` method.
 * When `student.greet()` is called, JavaScript looks up the prototype chain to find the `greet` method on `person`.
 
-### Creating Objects with Prototypes
+##### Creating Objects with Prototypes
 
 There are several ways to create objects with prototypes:
 
-#### Using Object.create
+##### Using Object.create
 
 The `Object.create` method creates a new object with the specified prototype.
 
@@ -1692,7 +1739,7 @@ student.greet(); // Hello, my name is Alice
 student.study(); // Alice is studying
 ```
 
-#### Using Constructor Functions
+##### Using Constructor Functions
 
 Constructor functions are a common way to create objects with shared prototypes. They are used with the `new` keyword.
 
@@ -1715,7 +1762,7 @@ In this example:
 * `Person.prototype` is used to define methods that should be shared among all instances of `Person`.
 * The `new` keyword creates a new object, sets its prototype to `Person.prototype`, and calls the constructor function with `this` bound to the new object.
 
-#### ES6 Classes
+##### ES6 Classes
 
 ES6 introduced classes as syntactic sugar over the existing prototype-based inheritance.
 
@@ -1740,12 +1787,12 @@ In this example:
 * Methods defined inside the class are added to `Person.prototype`.
 * `new Person('Alice')` creates a new instance of `Person`.
 
-### Prototype vs. proto
+##### Prototype vs. proto
 
 * **Prototype**: The `prototype` property is used to set the prototype for objects created by constructor functions.
 * ****proto****: The `__proto__` property (now deprecated) is used to access the prototype of an existing object.
 
-### Example
+##### Example
 
 ```javascript
 function Person(name) {
@@ -1760,7 +1807,7 @@ const alice = new Person('Alice');
 console.log(alice.__proto__ === Person.prototype); // true
 ```
 
-### Summary
+##### Summary
 
 * **Prototypes**: Objects from which other objects inherit properties and methods.
 * **Prototype Chain**: The chain of linked objects that JavaScript follows to find properties and methods.
@@ -1773,22 +1820,22 @@ console.log(alice.__proto__ === Person.prototype); // true
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q15
+#### Q15
 ### Q15. Prototypal Inheritance vs. Classical Inheritance: A comparison of object-oriented paradigms
 
 In JavaScript, inheritance can be implemented using the prototypal inheritance model. This contrasts with classical inheritance found in many other object-oriented languages like Java and C++. Here's a comparison of prototypal inheritance and classical inheritance, including their key characteristics, benefits, and drawbacks.
 
-### Prototypal Inheritance
+##### Prototypal Inheritance
 
 Prototypal inheritance is a feature of JavaScript where objects inherit properties and methods directly from other objects. This model is more flexible and dynamic compared to classical inheritance.
 
-#### Key Characteristics:
+##### Key Characteristics:
 
 1. **Prototype Chain**: Objects are linked through a chain of prototypes.
 2. **Dynamic Extension**: Objects can be extended at runtime.
 3. **Object-centric**: Emphasizes objects and their relationships.
 
-#### Example:
+##### Example:
 
 ```javascript
 // Prototypal Inheritance Example
@@ -1808,28 +1855,28 @@ student.greet(); // Hello, my name is Alice
 student.study(); // Alice is studying
 ```
 
-#### Benefits:
+##### Benefits:
 
 1. **Flexibility**: Objects can be easily extended and modified.
 2. **Simplicity**: Simpler inheritance model without the need for classes.
 3. **Dynamic**: New properties and methods can be added at runtime.
 
-#### Drawbacks:
+##### Drawbacks:
 
 1. **Less Structure**: Can lead to less predictable code without a formal class structure.
 2. **Performance Overhead**: Prototype chain lookups can add overhead.
 
-### Classical Inheritance
+##### Classical Inheritance
 
 Classical inheritance is based on classes and typically involves creating class hierarchies. This is the model used in languages like Java, C++, and Python.
 
-#### Key Characteristics:
+##### Key Characteristics:
 
 1. **Class-based**: Involves defining classes and creating objects from them.
 2. **Static**: Class structures are defined at compile-time.
 3. **Inheritance Hierarchies**: Classes inherit from other classes.
 
-#### Example:
+##### Example:
 
 ```javascript
 // Classical Inheritance Example (using ES6 classes)
@@ -1854,18 +1901,18 @@ alice.greet(); // Hello, my name is Alice
 alice.study(); // Alice is studying
 ```
 
-#### Benefits:
+##### Benefits:
 
 1. **Structure**: Clear and predictable class hierarchy.
 2. **Reusability**: Easy to reuse and extend code through inheritance.
 3. **Encapsulation**: Classes can encapsulate data and methods.
 
-#### Drawbacks:
+##### Drawbacks:
 
 1. **Rigidity**: Less flexible than prototypal inheritance.
 2. **Complexity**: Can lead to complex and deep inheritance hierarchies.
 
-### Comparison Table
+##### Comparison Table
 
 | Aspect                    | Prototypal Inheritance                      | Classical Inheritance                       |
 | ------------------------- | ------------------------------------------- | ------------------------------------------- |
@@ -1878,7 +1925,7 @@ alice.study(); // Alice is studying
 | **Performance**           | Prototype chain lookups can be slower       | Typically faster due to direct access       |
 | **Use Case**              | Dynamic behavior, simpler object structures | Large-scale applications, clear hierarchies |
 
-### When to Use Each Paradigm
+##### When to Use Each Paradigm
 
 * **Prototypal Inheritance**:
 
@@ -1892,7 +1939,7 @@ alice.study(); // Alice is studying
   * When using a more traditional object-oriented design.
   * Beneficial for scenarios where encapsulation and reusability through inheritance are important.
 
-### Summary
+##### Summary
 
 * **Prototypal Inheritance**: Focuses on objects inheriting directly from other objects. It is dynamic and flexible but can lack structure.
 * **Classical Inheritance**: Uses class-based hierarchies. It is structured and encapsulated but can be rigid and complex.
@@ -1901,16 +1948,16 @@ alice.study(); // Alice is studying
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q16
+#### Q16
 ### Q16. Object-Oriented Programming (OOP): Abstraction, Encapsulation, Polymorphism, inheritance in JavaScript
 
 Object-Oriented Programming (OOP) in JavaScript is a programming paradigm that uses objects and classes to structure and manage code in a modular and reusable manner. It includes key principles such as abstraction, encapsulation, polymorphism, and inheritance.
 
-### 1. Abstraction
+##### 1. Abstraction
 
 **Abstraction** involves hiding complex implementation details and showing only the necessary features of an object. This simplifies the interaction with the object and allows the developer to focus on high-level functionality.
 
-#### Example:
+##### Example:
 
 ```javascript
 class Car {
@@ -1938,11 +1985,11 @@ In this example:
 * The `Car` class abstracts the details of starting and driving a car.
 * The user interacts with simple methods (`start`, `drive`) without worrying about the underlying implementation.
 
-### 2. Encapsulation
+##### 2. Encapsulation
 
 **Encapsulation** involves bundling the data (attributes) and methods (functions) that operate on the data into a single unit or class, and restricting access to some of the object's components. This helps protect the internal state of the object from unintended interference.
 
-#### Example:
+##### Example:
 
 ```javascript
 class Person {
@@ -1984,11 +2031,11 @@ In this example:
 * The properties `_name` and `_age` are encapsulated within the `Person` class.
 * Access to these properties is controlled through getters and setters.
 
-### 3. Polymorphism
+##### 3. Polymorphism
 
 **Polymorphism** allows objects to be treated as instances of their parent class rather than their actual class. It enables a single interface to represent different underlying forms (data types).
 
-#### Example:
+##### Example:
 
 ```javascript
 class Animal {
@@ -2026,11 +2073,11 @@ In this example:
 * The `Dog` and `Cat` classes override the `speak` method.
 * The `makeAnimalSpeak` function can take any object that is an instance of `Animal` and call its `speak` method, demonstrating polymorphism.
 
-### 4. Inheritance
+##### 4. Inheritance
 
 **Inheritance** is a mechanism where one class (child class) inherits the properties and methods of another class (parent class). This promotes code reuse and establishes a natural hierarchy.
 
-#### Example:
+##### Example:
 
 ```javascript
 class Vehicle {
@@ -2065,7 +2112,7 @@ In this example:
 * The `Car` class extends `Vehicle` and inherits its properties and methods.
 * The `Car` class adds additional properties (`model`) and methods (`drive`).
 
-### Summary
+##### Summary
 
 * **Abstraction**: Simplifies complex systems by modeling classes appropriate to the problem, exposing only relevant details.
 * **Encapsulation**: Keeps data safe from outside interference and misuse by bundling the data and methods into a single unit and restricting access.
@@ -2076,16 +2123,16 @@ In this example:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q17
+#### Q17
 ### Q17. The concept of currying and partial application in functional programming
 
 Currying and partial application are two concepts in functional programming that transform functions to make them more versatile and reusable. Both techniques deal with the transformation of functions, but they have different purposes and implementations.
 
-### Currying
+##### Currying
 
 **Currying** is the process of transforming a function that takes multiple arguments into a sequence of functions that each take a single argument. A curried function allows you to call a function with fewer arguments than it expects and returns a new function that takes the remaining arguments.
 
-#### Example:
+##### Example:
 
 A regular function that adds two numbers:
 
@@ -2113,7 +2160,7 @@ console.log(addOne(2)); // 3
 console.log(curriedAdd(1)(2)); // 3
 ```
 
-#### Currying with ES6 Arrow Functions:
+##### Currying with ES6 Arrow Functions:
 
 ```javascript
 const curriedAdd = x => y => x + y;
@@ -2123,11 +2170,11 @@ console.log(addOne(2)); // 3
 console.log(curriedAdd(1)(2)); // 3
 ```
 
-### Partial Application
+##### Partial Application
 
 **Partial application** is the process of fixing a number of arguments to a function, producing another function of smaller arity (number of arguments). This means you create a new function by pre-filling some of the arguments to the original function.
 
-#### Example:
+##### Example:
 
 A function that adds three numbers:
 
@@ -2152,7 +2199,7 @@ const addFive = partialAdd(5);
 console.log(addFive(2, 3)); // 10
 ```
 
-#### Partial Application with ES6 Arrow Functions:
+##### Partial Application with ES6 Arrow Functions:
 
 ```javascript
 const add = (x, y, z) => x + y + z;
@@ -2163,7 +2210,7 @@ const addFive = partialAdd(5);
 console.log(addFive(2, 3)); // 10
 ```
 
-### Differences Between Currying and Partial Application
+##### Differences Between Currying and Partial Application
 
 | Aspect                 | Currying                                                                          | Partial Application                                                                        |
 | ---------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
@@ -2172,7 +2219,7 @@ console.log(addFive(2, 3)); // 10
 | **Example Function**   | `f(a, b, c) -> f(a)(b)(c)`                                                        | `f(a, b, c) -> g(b, c)` where `a` is fixed                                                 |
 | **Resulting Function** | Returns a series of nested functions until all arguments are provided             | Returns a new function with some arguments already applied                                 |
 
-### Practical Applications
+##### Practical Applications
 
 * **Currying**:
 
@@ -2186,7 +2233,7 @@ console.log(addFive(2, 3)); // 10
   * Useful in situations where certain arguments are frequently reused.
   * Simplifies complex function calls by pre-filling some arguments.
 
-### Example of Currying and Partial Application Together
+##### Example of Currying and Partial Application Together
 
 Combining currying and partial application can be very powerful:
 
@@ -2212,16 +2259,16 @@ In this example:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q18
+#### Q18
 ### Q18. Describe the ES6 features like Arrow functions, Template literals, spread/rest and Destructuring
 
 ES6 (ECMAScript 2015) introduced several new features that enhance JavaScript's functionality and make the code more concise and readable. Here are some of the key features:
 
-### Arrow Functions
+##### Arrow Functions
 
 Arrow functions provide a shorter syntax for writing functions. They also lexically bind the `this` value, which means they inherit `this` from the parent scope.
 
-#### Syntax:
+##### Syntax:
 
 ```javascript
 // Traditional function
@@ -2233,7 +2280,7 @@ function add(a, b) {
 const add = (a, b) => a + b;
 ```
 
-#### Example:
+##### Example:
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5];
@@ -2249,18 +2296,18 @@ const squares = numbers.map(n => n * n);
 console.log(squares); // [1, 4, 9, 16, 25]
 ```
 
-### Template Literals
+##### Template Literals
 
 Template literals provide an easier way to create strings with embedded expressions. They are enclosed by backticks (`` ` ``) instead of single or double quotes.
 
-#### Syntax:
+##### Syntax:
 
 ```javascript
 const name = 'Alice';
 const greeting = `Hello, ${name}!`;
 ```
 
-#### Example:
+##### Example:
 
 ```javascript
 const name = 'Alice';
@@ -2270,11 +2317,11 @@ const message = `My name is ${name} and I am ${age} years old.`;
 console.log(message); // "My name is Alice and I am 25 years old."
 ```
 
-### Spread and Rest Operators
+##### Spread and Rest Operators
 
 The spread operator (`...`) allows an iterable (like an array) to be expanded in places where zero or more arguments or elements are expected. The rest operator (`...`) allows you to represent an indefinite number of arguments as an array.
 
-#### Spread Syntax:
+##### Spread Syntax:
 
 ```javascript
 // Spread in arrays
@@ -2287,7 +2334,7 @@ const max = Math.max(...arr1);
 console.log(max); // 3
 ```
 
-#### Rest Syntax:
+##### Rest Syntax:
 
 ```javascript
 function sum(...numbers) {
@@ -2297,11 +2344,11 @@ function sum(...numbers) {
 console.log(sum(1, 2, 3, 4)); // 10
 ```
 
-### Destructuring
+##### Destructuring
 
 Destructuring allows you to unpack values from arrays or properties from objects into distinct variables.
 
-#### Array Destructuring:
+##### Array Destructuring:
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5];
@@ -2311,7 +2358,7 @@ console.log(second); // 2
 console.log(rest); // [3, 4, 5]
 ```
 
-#### Object Destructuring:
+##### Object Destructuring:
 
 ```javascript
 const person = {
@@ -2326,7 +2373,7 @@ console.log(age); // 25
 console.log(city); // New York
 ```
 
-#### Nested Destructuring:
+##### Nested Destructuring:
 
 ```javascript
 const person = {
@@ -2346,7 +2393,7 @@ console.log(city); // New York
 console.log(zip); // 10001
 ```
 
-### Summary
+##### Summary
 
 * **Arrow Functions**: Provide a concise syntax for writing functions and lexically bind `this`.
 * **Template Literals**: Allow easier string creation with embedded expressions using backticks.
@@ -2358,24 +2405,24 @@ console.log(zip); // 10001
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q19
+#### Q19
 ### Q19. Explain deeply about Array methods like `map`, `filter`, `reduce`, and `forEach` (ES6)
 
-### Array Methods in ES6: `map`, `filter`, `reduce`, and `forEach`
+##### Array Methods in ES6: `map`, `filter`, `reduce`, and `forEach`
 
 ES6 introduced several powerful array methods that allow for more functional programming approaches to handling arrays. These methods—`map`, `filter`, `reduce`, and `forEach`—are fundamental for performing transformations and computations on arrays. Let's dive deeply into each one.
 
-### `map`
+##### `map`
 
 The `map` method creates a new array populated with the results of calling a provided function on every element in the calling array. It does not modify the original array.
 
-#### Syntax:
+##### Syntax:
 
 ```javascript
 const newArray = array.map(callback(currentValue[, index[, array]])[, thisArg]);
 ```
 
-#### Example:
+##### Example:
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5];
@@ -2386,17 +2433,17 @@ const squares = numbers.map(num => num * num);
 console.log(squares); // [1, 4, 9, 16, 25]
 ```
 
-### `filter`
+##### `filter`
 
 The `filter` method creates a new array with all elements that pass the test implemented by the provided function. It does not modify the original array.
 
-#### Syntax:
+##### Syntax:
 
 ```javascript
 const newArray = array.filter(callback(element[, index[, array]])[, thisArg]);
 ```
 
-#### Example:
+##### Example:
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5];
@@ -2407,17 +2454,17 @@ const filtered = numbers.filter(num => num > 3);
 console.log(filtered); // [4, 5]
 ```
 
-### `reduce`
+##### `reduce`
 
 The `reduce` method executes a reducer function (that you provide) on each element of the array, resulting in a single output value. It is useful for accumulating values (e.g., sum, product) from an array.
 
-#### Syntax:
+##### Syntax:
 
 ```javascript
 const result = array.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue]);
 ```
 
-#### Example:
+##### Example:
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5];
@@ -2428,17 +2475,17 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
 console.log(sum); // 15
 ```
 
-### `forEach`
+##### `forEach`
 
 The `forEach` method executes a provided function once for each array element. It does not return a new array and does not modify the original array. It is primarily used for side effects such as logging or updating the UI.
 
-#### Syntax:
+##### Syntax:
 
 ```javascript
 array.forEach(callback(currentValue[, index[, array]])[, thisArg]);
 ```
 
-#### Example:
+##### Example:
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5];
@@ -2454,7 +2501,7 @@ numbers.forEach(num => console.log(num));
 // 5
 ```
 
-### Detailed Comparison
+##### Detailed Comparison
 
 | Method    | Purpose                                    | Returns      | Use Case                                                                                     |
 | --------- | ------------------------------------------ | ------------ | -------------------------------------------------------------------------------------------- |
@@ -2463,9 +2510,9 @@ numbers.forEach(num => console.log(num));
 | `reduce`  | Reduces the array to a single value        | Single value | When you need to aggregate or accumulate values, such as summing or averaging numbers.       |
 | `forEach` | Executes a function for each array element | `undefined`  | When you need to perform side effects for each element, such as logging or updating the DOM. |
 
-### Use Cases and Examples
+##### Use Cases and Examples
 
-#### `map` - Transforming Data
+##### `map` - Transforming Data
 
 You might use `map` when you need to apply a transformation to each element in an array, such as converting an array of strings to uppercase:
 
@@ -2476,7 +2523,7 @@ const uppercasedWords = words.map(word => word.toUpperCase());
 console.log(uppercasedWords); // ["HELLO", "WORLD", "JAVASCRIPT"]
 ```
 
-#### `filter` - Filtering Data
+##### `filter` - Filtering Data
 
 You might use `filter` when you need to extract a subset of elements that meet a certain condition, such as finding all even numbers in an array:
 
@@ -2487,7 +2534,7 @@ const evenNumbers = numbers.filter(num => num % 2 === 0);
 console.log(evenNumbers); // [2, 4, 6]
 ```
 
-#### `reduce` - Accumulating Data
+##### `reduce` - Accumulating Data
 
 You might use `reduce` when you need to calculate a cumulative result, such as finding the product of all numbers in an array:
 
@@ -2498,7 +2545,7 @@ const product = numbers.reduce((acc, num) => acc * num, 1);
 console.log(product); // 24
 ```
 
-#### `forEach` - Side Effects
+##### `forEach` - Side Effects
 
 You might use `forEach` when you need to execute a function for each element, such as printing each element to the console:
 
@@ -2512,7 +2559,7 @@ fruits.forEach(fruit => console.log(fruit));
 // cherry
 ```
 
-### Summary
+##### Summary
 
 * **`map`**: Creates a new array by applying a function to each element of the original array.
 * **`filter`**: Creates a new array with only elements that pass a test implemented by a provided function.
@@ -2523,16 +2570,16 @@ fruits.forEach(fruit => console.log(fruit));
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q20
+#### Q20
 ### Q20. Elaborate Callbacks, Promises, and Async/Await: Managing asynchronous operations in JavaScript
 
 Managing asynchronous operations in JavaScript is crucial for developing responsive and performant applications. There are three primary techniques for handling asynchronous code: Callbacks, Promises, and Async/Await. Let's dive into each of these concepts.
 
-### Callbacks
+##### Callbacks
 
 Callbacks are functions passed as arguments to other functions, which are then executed once an asynchronous operation completes. This was the traditional way of handling asynchronous operations in JavaScript.
 
-#### Example:
+##### Example:
 
 ```javascript
 function fetchData(callback) {
@@ -2549,7 +2596,7 @@ function handleData(data) {
 fetchData(handleData); // After 1 second, logs: "Here is your data"
 ```
 
-#### Issues with Callbacks:
+##### Issues with Callbacks:
 
 * **Callback Hell**: Nested callbacks lead to deeply nested code, which is hard to read and maintain.
 * **Error Handling**: Managing errors in nested callbacks can be cumbersome.
@@ -2564,17 +2611,17 @@ doSomething(function(result) {
 });
 ```
 
-### Promises
+##### Promises
 
 Promises provide a more structured and cleaner way to handle asynchronous operations. A promise represents a value that may be available now, or in the future, or never.
 
-#### States of a Promise:
+##### States of a Promise:
 
 * **Pending**: Initial state, neither fulfilled nor rejected.
 * **Fulfilled**: Operation completed successfully.
 * **Rejected**: Operation failed.
 
-#### Creating and Using Promises:
+##### Creating and Using Promises:
 
 ```javascript
 function fetchData() {
@@ -2595,7 +2642,7 @@ fetchData()
     });
 ```
 
-#### Chaining Promises:
+##### Chaining Promises:
 
 ```javascript
 doSomething()
@@ -2609,16 +2656,16 @@ doSomething()
     });
 ```
 
-### Async/Await
+##### Async/Await
 
 `async` and `await` provide a more synchronous way to write asynchronous code, built on top of promises. They make the code easier to read and write.
 
-#### Using Async/Await:
+##### Using Async/Await:
 
 * **`async` function**: Declares an asynchronous function that returns a promise.
 * **`await` expression**: Pauses the execution of an `async` function and waits for the promise to resolve.
 
-#### Example:
+##### Example:
 
 ```javascript
 async function fetchData() {
@@ -2642,7 +2689,7 @@ async function handleData() {
 handleData();
 ```
 
-#### Chaining with Async/Await:
+##### Chaining with Async/Await:
 
 ```javascript
 async function doTasks() {
@@ -2659,7 +2706,7 @@ async function doTasks() {
 doTasks();
 ```
 
-### Comparison
+##### Comparison
 
 | Aspect             | Callbacks                     | Promises                           | Async/Await                            |
 | ------------------ | ----------------------------- | ---------------------------------- | -------------------------------------- |
@@ -2669,7 +2716,7 @@ doTasks();
 | **Debugging**      | Harder to trace               | Easier than callbacks              | Easiest with stack trace support       |
 | **Control Flow**   | Difficult to manage           | Better than callbacks              | Straightforward, like synchronous code |
 
-### Summary
+##### Summary
 
 * **Callbacks**: The traditional method of handling asynchronous operations, which can lead to deeply nested code and harder error handling.
 * **Promises**: Provide a more structured approach with chainable `.then` and `.catch` methods, improving readability and error handling.
@@ -2679,10 +2726,10 @@ doTasks();
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q21
+#### Q21
 ### Q21. Explain Higher-order Functions and their role in functional programming
 
-### Higher-order Functions in Functional Programming
+##### Higher-order Functions in Functional Programming
 
 Higher-order functions are a key concept in functional programming. They are functions that can either:
 
@@ -2691,18 +2738,18 @@ Higher-order functions are a key concept in functional programming. They are fun
 
 This capability allows for greater abstraction and code reuse, leading to more expressive and modular code.
 
-### Characteristics of Higher-order Functions
+##### Characteristics of Higher-order Functions
 
 1. **Accepts Functions as Arguments**: Higher-order functions can take other functions as parameters, enabling operations like mapping, filtering, and reducing arrays.
 2. **Returns Functions**: They can return new functions, which can be used to create function factories or for partial application and currying.
 
-### Examples and Use Cases
+##### Examples and Use Cases
 
-#### 1. Functions as Arguments
+##### 1. Functions as Arguments
 
 One common use of higher-order functions is to take other functions as arguments. This is often seen in array manipulation methods like `map`, `filter`, and `reduce`.
 
-##### `map`
+###### `map`
 
 The `map` method takes a function as an argument and applies it to every element of an array, returning a new array with the transformed elements.
 
@@ -2713,7 +2760,7 @@ const squares = numbers.map(num => num * num);
 console.log(squares); // [1, 4, 9, 16, 25]
 ```
 
-##### `filter`
+###### `filter`
 
 The `filter` method takes a function as an argument and returns a new array containing only the elements that pass a specified test.
 
@@ -2724,7 +2771,7 @@ const evenNumbers = numbers.filter(num => num % 2 === 0);
 console.log(evenNumbers); // [2, 4]
 ```
 
-##### `reduce`
+###### `reduce`
 
 The `reduce` method takes a function as an argument and applies it against an accumulator and each element in the array (from left to right) to reduce it to a single value.
 
@@ -2735,11 +2782,11 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
 console.log(sum); // 15
 ```
 
-#### 2. Functions as Return Values
+##### 2. Functions as Return Values
 
 Higher-order functions can also return new functions. This can be used for function factories, currying, and partial application.
 
-##### Function Factory
+###### Function Factory
 
 A function factory creates functions dynamically, often customizing them based on parameters.
 
@@ -2757,7 +2804,7 @@ console.log(double(5)); // 10
 console.log(triple(5)); // 15
 ```
 
-##### Currying
+###### Currying
 
 Currying transforms a function that takes multiple arguments into a sequence of functions, each taking a single argument.
 
@@ -2777,14 +2824,14 @@ const addFive = add(5);
 console.log(addFive(3)); // 8
 ```
 
-### Benefits of Higher-order Functions
+##### Benefits of Higher-order Functions
 
 1. **Abstraction**: Higher-order functions allow you to abstract common patterns, making your code more modular and reusable.
 2. **Declarative Code**: Using higher-order functions can lead to more declarative code, where you describe what you want to achieve rather than how to achieve it.
 3. **Composability**: They promote function composition, enabling you to build complex functionality by combining simpler functions.
 4. **Immutability**: Higher-order functions often work with immutable data structures, which can lead to fewer side effects and bugs.
 
-### Role in Functional Programming
+##### Role in Functional Programming
 
 Higher-order functions are fundamental in functional programming because they align with the core principles of this paradigm:
 
@@ -2792,7 +2839,7 @@ Higher-order functions are fundamental in functional programming because they al
 * **Pure Functions**: Emphasizing pure functions that do not cause side effects and return the same output given the same input.
 * **Immutability**: Promoting immutability, where data is not modified in place but rather new data structures are returned.
 
-### Example: Composing Functions
+##### Example: Composing Functions
 
 Function composition is a powerful technique enabled by higher-order functions, where you combine simple functions to build more complex ones.
 
@@ -2811,7 +2858,7 @@ In this example:
 * `compose` is a higher-order function that takes two functions (`f` and `g`) and returns a new function.
 * `add1ThenDouble` is a composed function that first adds 1 to the input and then doubles the result.
 
-### Summary
+##### Summary
 
 * **Higher-order Functions**: Functions that take other functions as arguments or return functions as results.
 * **Key Uses**: `map`, `filter`, `reduce`, function factories, currying, and function composition.
@@ -2822,18 +2869,18 @@ In this example:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q22
+#### Q22
 ### Q22. What are Polyfills. Write polyfills for array methods like `map`, `forEach`, `filter`, `reduce`.
 
-### What are Polyfills?
+##### What are Polyfills?
 
 A polyfill is a piece of code (usually JavaScript on the web) that provides functionality that is not built into a web browser or is missing from the JavaScript runtime environment. Polyfills enable you to use modern features in older browsers that do not natively support them.
 
-### Writing Polyfills for Array Methods
+##### Writing Polyfills for Array Methods
 
 Let's write polyfills for the commonly used array methods `map`, `forEach`, `filter`, and `reduce`. These polyfills will ensure that the methods are available in environments where they are not natively supported.
 
-### 1. Polyfill for `Array.prototype.map`
+##### 1. Polyfill for `Array.prototype.map`
 
 The `map` method creates a new array populated with the results of calling a provided function on every element in the calling array.
 
@@ -2858,7 +2905,7 @@ if (!Array.prototype.map) {
 }
 ```
 
-### 2. Polyfill for `Array.prototype.forEach`
+##### 2. Polyfill for `Array.prototype.forEach`
 
 The `forEach` method executes a provided function once for each array element.
 
@@ -2881,7 +2928,7 @@ if (!Array.prototype.forEach) {
 }
 ```
 
-### 3. Polyfill for `Array.prototype.filter`
+##### 3. Polyfill for `Array.prototype.filter`
 
 The `filter` method creates a new array with all elements that pass the test implemented by the provided function.
 
@@ -2908,7 +2955,7 @@ if (!Array.prototype.filter) {
 }
 ```
 
-### 4. Polyfill for `Array.prototype.reduce`
+##### 4. Polyfill for `Array.prototype.reduce`
 
 The `reduce` method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
 
@@ -2945,14 +2992,14 @@ if (!Array.prototype.reduce) {
 }
 ```
 
-### Explanation
+##### Explanation
 
 * **Existence Check**: Each polyfill first checks if the method already exists to avoid overwriting native implementations.
 * **Type Checking**: The polyfills perform type checking to ensure the method is called on an array and the provided callback is a function.
 * **Handling `thisArg`**: The polyfills allow passing a `thisArg` to set the `this` context for the callback function.
 * **Index Checking**: The polyfills check if the index exists in the array to handle sparse arrays correctly.
 
-### Usage
+##### Usage
 
 These polyfills can be included in your codebase to ensure compatibility with older browsers that do not support these methods natively. For example:
 
@@ -2976,14 +3023,14 @@ https://blog.siddhigate.com/i-wrote-polyfills-for-32-javascript-array-methods
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q23
+#### Q23
 ### Q23. JavaScript's new features in ES7, ES8, and beyond
 
 JavaScript continues to evolve with new features and improvements in each version of ECMAScript (the standard for JavaScript). Here's an overview of some of the notable features introduced in ES7 (ES2016), ES8 (ES2017), ES9 (ES2018), ES10 (ES2019), ES11 (ES2020), ES12 (ES2021), and beyond.
 
-### ES7 (ES2016)
+##### ES7 (ES2016)
 
-#### 1. `Array.prototype.includes`
+##### 1. `Array.prototype.includes`
 
 The `includes` method checks if an array contains a certain value, returning `true` or `false`.
 
@@ -2993,7 +3040,7 @@ console.log(numbers.includes(3)); // true
 console.log(numbers.includes(6)); // false
 ```
 
-#### 2. Exponentiation Operator (`**`)
+##### 2. Exponentiation Operator (`**`)
 
 The exponentiation operator provides a more concise way to raise a number to a power.
 
@@ -3002,9 +3049,9 @@ console.log(2 ** 3); // 8
 console.log(10 ** 2); // 100
 ```
 
-### ES8 (ES2017)
+##### ES8 (ES2017)
 
-#### 1. `Object.values` and `Object.entries`
+##### 1. `Object.values` and `Object.entries`
 
 * `Object.values` returns an array of a given object's values.
 * `Object.entries` returns an array of a given object's key-value pairs.
@@ -3016,7 +3063,7 @@ console.log(Object.values(obj)); // [1, 2, 3]
 console.log(Object.entries(obj)); // [['a', 1], ['b', 2], ['c', 3]]
 ```
 
-#### 2. String Padding
+##### 2. String Padding
 
 * `padStart` pads the current string with another string until it reaches the given length from the start.
 * `padEnd` pads the current string with another string until it reaches the given length from the end.
@@ -3026,7 +3073,7 @@ console.log('5'.padStart(3, '0')); // "005"
 console.log('5'.padEnd(3, '0')); // "500"
 ```
 
-#### 3. Trailing Commas in Function Parameters
+##### 3. Trailing Commas in Function Parameters
 
 Trailing commas are now allowed in function parameter lists and calls, improving the consistency of syntax and version control diffs.
 
@@ -3045,7 +3092,7 @@ foo(
 );
 ```
 
-#### 4. `async` and `await`
+##### 4. `async` and `await`
 
 `async` functions and the `await` keyword provide a more readable and concise way to work with asynchronous operations, built on top of Promises.
 
@@ -3059,9 +3106,9 @@ async function fetchData() {
 fetchData();
 ```
 
-### ES9 (ES2018)
+##### ES9 (ES2018)
 
-#### 1. `Object.getOwnPropertyDescriptors`
+##### 1. `Object.getOwnPropertyDescriptors`
 
 Returns all own property descriptors of a given object.
 
@@ -3081,7 +3128,7 @@ console.log(descriptors);
 */
 ```
 
-#### 2. `String.prototype.trimStart` and `String.prototype.trimEnd`
+##### 2. `String.prototype.trimStart` and `String.prototype.trimEnd`
 
 These methods trim whitespace from the start or end of a string.
 
@@ -3091,7 +3138,7 @@ console.log(str.trimStart()); // "Hello, World!   "
 console.log(str.trimEnd()); // "   Hello, World!"
 ```
 
-#### 3. Asynchronous Iteration
+##### 3. Asynchronous Iteration
 
 Allows for-loop to work with asynchronous iterators using `for await...of`.
 
@@ -3113,7 +3160,7 @@ async function* asyncGenerator() {
 // World
 ```
 
-#### 4. Rest/Spread Properties for Objects
+##### 4. Rest/Spread Properties for Objects
 
 Rest properties collect the remaining own enumerable property keys that are not already picked off by the destructuring pattern. Spread properties spread out own enumerable properties of an object.
 
@@ -3128,9 +3175,9 @@ const obj2 = { ...obj1, c: 3 };
 console.log(obj2); // { a: 1, b: 2, c: 3 }
 ```
 
-### ES10 (ES2019)
+##### ES10 (ES2019)
 
-#### 1. `Array.prototype.flat` and `Array.prototype.flatMap`
+##### 1. `Array.prototype.flat` and `Array.prototype.flatMap`
 
 * `flat` creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
 * `flatMap` maps each element using a mapping function, then flattens the result into a new array.
@@ -3143,7 +3190,7 @@ const arr2 = [1, 2, 3];
 console.log(arr2.flatMap(x => [x, x * 2])); // [1, 2, 2, 4, 3, 6]
 ```
 
-#### 2. `Object.fromEntries`
+##### 2. `Object.fromEntries`
 
 Transforms a list of key-value pairs into an object.
 
@@ -3153,13 +3200,13 @@ const obj = Object.fromEntries(entries);
 console.log(obj); // { a: 1, b: 2, c: 3 }
 ```
 
-#### 3. `String.prototype.trimStart` and `String.prototype.trimEnd`
+##### 3. `String.prototype.trimStart` and `String.prototype.trimEnd`
 
 These methods are identical to `String.prototype.trimLeft` and `String.prototype.trimRight`.
 
-### ES11 (ES2020)
+##### ES11 (ES2020)
 
-#### 1. Dynamic `import`
+##### 1. Dynamic `import`
 
 Allows importing modules dynamically.
 
@@ -3172,7 +3219,7 @@ async function loadModule() {
 loadModule();
 ```
 
-#### 2. BigInt
+##### 2. BigInt
 
 A new primitive type to handle arbitrarily large integers.
 
@@ -3181,7 +3228,7 @@ const bigInt = 123456789012345678901234567890n;
 console.log(bigInt); // 123456789012345678901234567890n
 ```
 
-#### 3. `Promise.allSettled`
+##### 3. `Promise.allSettled`
 
 Waits for all promises to settle (either fulfilled or rejected).
 
@@ -3204,7 +3251,7 @@ Promise.allSettled(promises).then(results => {
 });
 ```
 
-#### 4. Nullish Coalescing Operator (`??`)
+##### 4. Nullish Coalescing Operator (`??`)
 
 Returns the right-hand operand when the left-hand operand is `null` or `undefined`, otherwise returns the left-hand operand.
 
@@ -3213,7 +3260,7 @@ const foo = null ?? 'default';
 console.log(foo); // "default"
 ```
 
-#### 5. Optional Chaining Operator (`?.`)
+##### 5. Optional Chaining Operator (`?.`)
 
 Allows reading the value of a property deep within a chain of connected objects without having to explicitly check if each reference in the chain is null or undefined.
 
@@ -3223,9 +3270,9 @@ console.log(obj?.a?.b?.c); // 3
 console.log(obj?.a?.b?.d); // undefined
 ```
 
-### ES12 (ES2021)
+##### ES12 (ES2021)
 
-#### 1. Logical Assignment Operators
+##### 1. Logical Assignment Operators
 
 Combines logical operators (`&&`, `||`, `??`) with assignment.
 
@@ -3243,7 +3290,7 @@ a ??= b; // a = a ?? b;
 console.log(a); // 2
 ```
 
-#### 2. Numeric Separators
+##### 2. Numeric Separators
 
 Improves readability of numeric literals by allowing underscores (`_`) as separators.
 
@@ -3252,7 +3299,7 @@ const largeNumber = 1_000_000_000;
 console.log(largeNumber); // 1000000000
 ```
 
-#### 3. `String.prototype.replaceAll`
+##### 3. `String.prototype.replaceAll`
 
 Replaces all occurrences of a substring with a new substring.
 
@@ -3261,7 +3308,7 @@ const str = 'foo foo foo';
 console.log(str.replaceAll('foo', 'bar')); // "bar bar bar"
 ```
 
-#### 4. WeakRefs and FinalizationRegistry
+##### 4. WeakRefs and FinalizationRegistry
 
 Provides a way to hold weak references to objects, and allows for cleanup operations when objects are garbage collected.
 
@@ -3276,9 +3323,9 @@ registry.register(obj, 'Object');
 obj = null; // Dereference the object
 ```
 
-### ES13 (ES2022)
+##### ES13 (ES2022)
 
-#### 1. `Array.prototype.at`
+##### 1. `Array.prototype.at`
 
 Allows accessing elements using relative indexing with support for negative indices.
 
@@ -3287,7 +3334,7 @@ const arr = [10, 20, 30, 40];
 console.log(arr.at(-1)); // 40
 ```
 
-#### 2. Top-level `await`
+##### 2. Top-level `await`
 
 Allows using `await` at the top level of modules.
 
@@ -3299,19 +3346,17 @@ const response = await fetch
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q24
+#### Q24
 ### Q24. Elaborate JavaScript Design Patterns for writing efficient and maintainable code
 
-### 🧠 JavaScript Design Patterns
+##### 🧠 JavaScript Design Patterns
 
 **Design Patterns** are reusable solutions to common problems in software design.
 They help make your code **more efficient, maintainable, scalable, and readable** — ensuring consistency across projects.
 
 In JavaScript, design patterns are especially useful for managing complexity in large applications, improving code reuse, and ensuring separation of concerns.
 
----
-
-## 🔹 Categories of Design Patterns
+##### 🔹 Categories of Design Patterns
 
 Design patterns are generally divided into three main categories:
 
@@ -3319,11 +3364,9 @@ Design patterns are generally divided into three main categories:
 2. **Structural Patterns** → Composition of classes and objects
 3. **Behavioral Patterns** → Communication between objects
 
----
+##### 🧩 1. Creational Design Patterns
 
-## 🧩 1. Creational Design Patterns
-
-### **a. Singleton Pattern**
+##### **a. Singleton Pattern**
 
 Ensures a class has only **one instance** and provides a global point of access to it.
 
@@ -3357,7 +3400,7 @@ console.log(instance2.getAll()); // ["Hello"] — same instance!
 
 ---
 
-### **b. Factory Pattern**
+##### **b. Factory Pattern**
 
 Creates objects **without specifying the exact class** of the object that will be created.
 
@@ -3390,9 +3433,9 @@ console.log(car.type); // Car
 
 ---
 
-## 🏗️ 2. Structural Design Patterns
+##### 🏗️ 2. Structural Design Patterns
 
-### **a. Module Pattern**
+##### **a. Module Pattern**
 
 Encapsulates code into self-contained modules using closures — helps organize code and **avoid polluting the global scope**.
 
@@ -3424,7 +3467,7 @@ CounterModule.reset();
 
 ---
 
-### **b. Observer Pattern**
+##### **b. Observer Pattern**
 
 Defines a **one-to-many** dependency — when one object (subject) changes, all dependents (observers) are notified automatically.
 
@@ -3466,7 +3509,7 @@ subject.notify("Hello Observers!");
 
 ---
 
-### **c. Decorator Pattern**
+##### **c. Decorator Pattern**
 
 Adds new behavior to an object **without modifying its structure**.
 
@@ -3495,9 +3538,9 @@ console.log(fancyCoffee()); // Coffee + Milk + Sugar
 
 ---
 
-## ⚙️ 3. Behavioral Design Patterns
+##### ⚙️ 3. Behavioral Design Patterns
 
-### **a. Strategy Pattern**
+##### **a. Strategy Pattern**
 
 Defines a family of algorithms and makes them **interchangeable at runtime**.
 
@@ -3536,7 +3579,7 @@ payment.pay(250); // Paid $250 using Credit Card.
 
 ---
 
-### **b. Command Pattern**
+##### **b. Command Pattern**
 
 Encapsulates a request as an object, allowing you to **queue, log, or undo** actions.
 
@@ -3586,7 +3629,7 @@ offCommand.execute(); // Light is OFF
 
 ---
 
-## 🧱 Summary Table
+##### 🧱 Summary Table
 
 | **Category**   | **Pattern** | **Purpose**                | **Example Use Case**       |
 | -------------- | ----------- | -------------------------- | -------------------------- |
@@ -3600,7 +3643,7 @@ offCommand.execute(); // Light is OFF
 
 ---
 
-### 🧩 Why Use Design Patterns in JavaScript
+##### 🧩 Why Use Design Patterns in JavaScript
 
 ✅ Encourages **code reusability**
 ✅ Improves **maintainability and scalability**
@@ -3610,7 +3653,7 @@ offCommand.execute(); // Light is OFF
 
 ---
 
-### 🚀 Takeaway
+##### 🚀 Takeaway
 
 Design patterns are not strict rules — they’re **best practices** for solving recurring problems in a structured, efficient way.
 By applying patterns like **Module**, **Factory**, **Observer**, **Strategy**, and **Singleton**, your JavaScript code becomes **cleaner, modular, and maintainable** — especially in large-scale applications.
@@ -3619,12 +3662,12 @@ By applying patterns like **Module**, **Factory**, **Observer**, **Strategy**, a
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q25
+#### Q25
 ### Q25. Handling errors and exceptions using `try...catch` blocks in JavaScript
 
 Handling errors and exceptions is a crucial part of writing robust and reliable JavaScript code. The `try...catch` statement provides a way to handle exceptions that occur during code execution. Here's a detailed explanation of how to use `try...catch` blocks effectively.
 
-### Basic Syntax
+##### Basic Syntax
 
 The basic syntax for a `try...catch` block is as follows:
 
@@ -3636,7 +3679,7 @@ try {
 }
 ```
 
-### Example
+##### Example
 
 Here's a simple example of using a `try...catch` block to handle an error:
 
@@ -3654,7 +3697,7 @@ In this example:
 * The `try` block contains code that might throw an error.
 * The `catch` block contains code that will run if an error occurs in the `try` block.
 
-### Handling Specific Errors
+##### Handling Specific Errors
 
 You can handle specific types of errors by checking the error object inside the `catch` block:
 
@@ -3673,7 +3716,7 @@ try {
 }
 ```
 
-### The `finally` Block
+##### The `finally` Block
 
 The `finally` block is optional and can be added to execute code regardless of whether an error was thrown or not. This is useful for cleanup operations.
 
@@ -3688,7 +3731,7 @@ try {
 }
 ```
 
-### Nested `try...catch` Blocks
+##### Nested `try...catch` Blocks
 
 You can nest `try...catch` blocks if you need to handle different errors at different levels of your code:
 
@@ -3705,7 +3748,7 @@ try {
 }
 ```
 
-### Throwing Errors
+##### Throwing Errors
 
 You can throw your own errors using the `throw` statement. This is useful for creating custom error messages and handling specific error conditions.
 
@@ -3724,11 +3767,11 @@ try {
 }
 ```
 
-### Example: Asynchronous Error Handling
+##### Example: Asynchronous Error Handling
 
 Handling errors in asynchronous code (e.g., with Promises or async/await) requires special attention. With Promises, you use `.catch()`, and with async/await, you use `try...catch`.
 
-#### Using Promises:
+##### Using Promises:
 
 ```javascript
 riskyOperation()
@@ -3740,7 +3783,7 @@ riskyOperation()
     });
 ```
 
-#### Using async/await:
+##### Using async/await:
 
 ```javascript
 async function execute() {
@@ -3755,7 +3798,7 @@ async function execute() {
 execute();
 ```
 
-### Example: Comprehensive Error Handling
+##### Example: Comprehensive Error Handling
 
 Here's a comprehensive example demonstrating various aspects of error handling:
 
@@ -3794,7 +3837,7 @@ async function execute() {
 execute();
 ```
 
-### Summary
+##### Summary
 
 * **`try...catch`**: Used to handle synchronous errors.
 * **`finally`**: An optional block to execute code regardless of whether an error occurred.
@@ -3806,16 +3849,16 @@ execute();
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q26
+#### Q26
 ### Q26. How Throttling and Debouncing control the rate of function execution. Give examples
 
 Throttling and debouncing are two techniques used to control the rate of function execution in JavaScript, especially in the context of event handling. These techniques help to improve performance and ensure that functions are not called too frequently, which can lead to performance issues.
 
-### Throttling
+##### Throttling
 
 Throttling ensures that a function is called at most once in a specified time period. This is useful for scenarios where you want to limit the rate of function execution, such as resizing the window or scrolling.
 
-#### Example:
+##### Example:
 
 ```javascript
 function throttle(func, limit) {
@@ -3853,11 +3896,11 @@ In this example:
 * The `throttle` function takes a function `func` and a `limit` in milliseconds.
 * The `handleResize` function will be called at most once every second (1000 milliseconds), even if the `resize` event fires more frequently.
 
-### Debouncing
+##### Debouncing
 
 Debouncing ensures that a function is called only after a specified amount of time has passed since the last time it was invoked. This is useful for scenarios like search input where you want to wait until the user has finished typing before making an API call.
 
-#### Example:
+##### Example:
 
 ```javascript
 function debounce(func, delay) {
@@ -3886,7 +3929,7 @@ In this example:
 * The `debounce` function takes a function `func` and a `delay` in milliseconds.
 * The `handleSearch` function will be called only after 500 milliseconds have passed since the last `input` event on the search input field.
 
-### Comparison
+##### Comparison
 
 | Aspect        | Throttling                                      | Debouncing                                              |
 | ------------- | ----------------------------------------------- | ------------------------------------------------------- |
@@ -3895,9 +3938,9 @@ In this example:
 | **Execution** | Executes immediately, then once per time period | Executes after a specified delay without repeated calls |
 | **Example**   | Handling resize event                           | Handling input event                                    |
 
-### Visual Example:
+##### Visual Example:
 
-#### Throttling
+##### Throttling
 
 ```javascript
 function throttle(func, limit) {
@@ -3930,7 +3973,7 @@ const logMousePosition = (event) => {
 document.addEventListener('mousemove', throttle(logMousePosition, 500));
 ```
 
-#### Debouncing
+##### Debouncing
 
 ```javascript
 function debounce(func, delay) {
@@ -3954,7 +3997,7 @@ const searchBox = document.getElementById('searchBox');
 searchBox.addEventListener('input', debounce(handleSearchInput, 300));
 ```
 
-### Summary
+##### Summary
 
 * **Throttling**: Ensures a function is called at most once in a specified time period. Useful for controlling the rate of execution for frequently occurring events.
 * **Debouncing**: Ensures a function is called only after a specified delay has passed since the last call. Useful for handling events that occur in quick succession but should only be handled once the event stream stops.
@@ -3963,12 +4006,12 @@ searchBox.addEventListener('input', debounce(handleSearchInput, 300));
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q27
+#### Q27
 ### Q27. Local Storage vs. Session Storage vs. IndexedDB: Client-side storage options. Enlist difference in tabular form.
 
 Client-side storage options in web development allow you to store data directly in the user's browser. The most common options are Local Storage, Session Storage, and IndexedDB. Each of these has unique characteristics and use cases. Here is a detailed comparison in tabular form:
 
-### Comparison Table
+##### Comparison Table
 
 | Feature           | Local Storage                                                           | Session Storage                                                    | IndexedDB                                                                          |
 | ----------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
@@ -3983,9 +4026,9 @@ Client-side storage options in web development allow you to store data directly 
 | **Performance**   | Fast for small amounts of data                                          | Fast for small amounts of data                                     | More complex, designed for larger datasets, better performance for bulk operations |
 | **APIs**          | `localStorage`                                                          | `sessionStorage`                                                   | `indexedDB`                                                                        |
 
-### Detailed Overview
+##### Detailed Overview
 
-#### Local Storage
+##### Local Storage
 
 * **Capacity**: Typically around 5-10 MB.
 * **Persistence**: Data persists even after the browser is closed and reopened, until explicitly deleted.
@@ -4009,7 +4052,7 @@ Client-side storage options in web development allow you to store data directly 
   localStorage.clear();
   ```
 
-#### Session Storage
+##### Session Storage
 
 * **Capacity**: Typically around 5-10 MB.
 * **Persistence**: Data persists only for the duration of the page session. It is cleared when the tab or window is closed.
@@ -4033,7 +4076,7 @@ Client-side storage options in web development allow you to store data directly 
   sessionStorage.clear();
   ```
 
-#### IndexedDB
+##### IndexedDB
 
 * **Capacity**: Much larger storage limits, potentially hundreds of MB.
 * **Persistence**: Data persists until explicitly deleted.
@@ -4068,7 +4111,7 @@ Client-side storage options in web development allow you to store data directly 
   };
   ```
 
-### Summary
+##### Summary
 
 * **Local Storage** and **Session Storage** are simpler to use for small, string-based data and provide a synchronous API. They differ in persistence and scope.
 * **IndexedDB** is more powerful, supports larger amounts of data, and complex queries, and provides an asynchronous API. It is suitable for more complex and data-heavy applications.
@@ -4077,21 +4120,21 @@ Client-side storage options in web development allow you to store data directly 
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q28
+#### Q28
 ### Q28. JSON: Understand JSON parsing, stringify, etc
 
-### JSON: JavaScript Object Notation
+##### JSON: JavaScript Object Notation
 
 JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. JSON is a text format that is completely language-independent but uses conventions familiar to programmers of the C family of languages, including JavaScript, Python, and more.
 
-### JSON Syntax
+##### JSON Syntax
 
 JSON is built on two structures:
 
 * A collection of name/value pairs (often realized as an object, record, struct, dictionary, hash table, keyed list, or associative array).
 * An ordered list of values (often realized as an array, vector, list, or sequence).
 
-#### Example of JSON Data
+##### Example of JSON Data
 
 ```json
 {
@@ -4107,11 +4150,11 @@ JSON is built on two structures:
 }
 ```
 
-### JSON Parsing
+##### JSON Parsing
 
 Parsing JSON means converting a JSON string into a JavaScript object. This is done using the `JSON.parse()` method.
 
-#### Example of JSON Parsing
+##### Example of JSON Parsing
 
 ```javascript
 const jsonString = '{"name":"John Doe","age":30,"isStudent":false,"courses":["Mathematics","Physics"],"address":{"street":"123 Main St","city":"Anytown","country":"USA"}}';
@@ -4123,11 +4166,11 @@ console.log(jsonObj.age); // 30
 console.log(jsonObj.courses); // ["Mathematics", "Physics"]
 ```
 
-### JSON Stringification
+##### JSON Stringification
 
 Stringifying JSON means converting a JavaScript object into a JSON string. This is done using the `JSON.stringify()` method.
 
-#### Example of JSON Stringification
+##### Example of JSON Stringification
 
 ```javascript
 const jsonObj = {
@@ -4148,7 +4191,7 @@ console.log(jsonString);
 // '{"name":"John Doe","age":30,"isStudent":false,"courses":["Mathematics","Physics"],"address":{"street":"123 Main St","city":"Anytown","country":"USA"}}'
 ```
 
-### Customizing JSON.stringify()
+##### Customizing JSON.stringify()
 
 The `JSON.stringify()` method can take two additional optional parameters: a replacer function and a space parameter.
 
@@ -4196,11 +4239,11 @@ console.log(jsonString);
 */
 ```
 
-### JSON with Dates
+##### JSON with Dates
 
 JSON does not support native date objects. Dates need to be converted to strings before stringifying and parsed back to dates when parsing.
 
-#### Example:
+##### Example:
 
 ```javascript
 const jsonObj = {
@@ -4218,11 +4261,11 @@ console.log(parsedObj.birthDate);
 // Date object: Mon Jan 01 1990 00:00:00 GMT+0000 (UTC)
 ```
 
-### Handling Errors
+##### Handling Errors
 
 When parsing JSON, it’s important to handle potential errors due to invalid JSON strings.
 
-#### Example:
+##### Example:
 
 ```javascript
 const jsonString = '{"name": "John Doe", "age": 30}';
@@ -4235,14 +4278,14 @@ try {
 }
 ```
 
-### Use Cases for JSON
+##### Use Cases for JSON
 
 * **Data Exchange**: JSON is commonly used for data exchange between a server and web application.
 * **Configuration Files**: JSON is often used to store configuration settings.
 * **APIs**: Many web APIs use JSON as the format for request and response payloads.
 * **Local Storage**: JSON is often used to store complex data structures in browser local storage.
 
-### Summary
+##### Summary
 
 * **JSON Parsing**: Converts a JSON string into a JavaScript object using `JSON.parse()`.
 * **JSON Stringification**: Converts a JavaScript object into a JSON string using `JSON.stringify()`.
@@ -4256,12 +4299,12 @@ try {
 
 ---
 
-##### Q29
+#### Q29
 ### Q29. Caching and Memoization techniques for optimizing performance
 
 Sure, let's dive into caching and memoization techniques for optimizing performance in JavaScript.
 
-### Caching
+##### Caching
 
 **Caching** involves storing the results of expensive function calls and reusing the cached result when the same inputs occur again.
 
@@ -4290,7 +4333,7 @@ console.log(expensiveOperation(5)); // First call, computes result
 console.log(expensiveOperation(5)); // Second call, returns cached result
 ```
 
-### Memoization
+##### Memoization
 
 **Memoization** is a specific form of caching where you store the results of a function call and return the cached result when the same inputs occur again. It's typically used to optimize recursive functions.
 
@@ -4320,7 +4363,7 @@ console.log(factorial(5)); // Computes result
 console.log(factorial(5)); // Returns cached result
 ```
 
-### Other Techniques
+##### Other Techniques
 
 1. **LRU Cache (Least Recently Used):**
    An LRU cache evicts the least recently used items first. This can be useful when the cache has a size limit.
@@ -4369,10 +4412,10 @@ console.log(lruCache.get('b')); // null (removed because it was the least recent
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q30
+#### Q30
 ### Q30. Understanding CORS (Cross-Origin Resource Sharing) and how to handle it
 
-### Understanding CORS (Cross-Origin Resource Sharing)
+##### Understanding CORS (Cross-Origin Resource Sharing)
 
 **CORS (Cross-Origin Resource Sharing)** is a security feature implemented in browsers to restrict web pages from making requests to a different domain than the one that served the web page. This is done to prevent malicious sites from accessing sensitive information from another site.
 
@@ -4382,7 +4425,7 @@ console.log(lruCache.get('b')); // null (removed because it was the least recent
 2. **CORS Headers:** To allow cross-origin requests, the server must include specific headers in its response.
 3. **Preflight Requests:** For certain types of requests (like those with methods other than GET/POST or with certain headers), the browser sends an OPTIONS request to check if the actual request is safe.
 
-### CORS Headers
+##### CORS Headers
 
 1. **Access-Control-Allow-Origin:** Specifies which origin can access the resource. Can be a specific origin or `*` for any origin.
 2. **Access-Control-Allow-Methods:** Lists the HTTP methods allowed for cross-origin requests.
@@ -4390,7 +4433,7 @@ console.log(lruCache.get('b')); // null (removed because it was the least recent
 4. **Access-Control-Allow-Credentials:** Indicates whether credentials (cookies, authorization headers, etc.) are allowed in the request.
 5. **Access-Control-Expose-Headers:** Lists the headers that are safe to expose to the client.
 
-### Example: Setting Up CORS in a Server
+##### Example: Setting Up CORS in a Server
 
 Here is an example of how to set up CORS in a Node.js server using the Express framework:
 
@@ -4419,7 +4462,7 @@ app.listen(3000, () => {
 });
 ```
 
-### Handling CORS Client-Side
+##### Handling CORS Client-Side
 
 On the client side, when making a request to a cross-origin resource, ensure the server allows CORS.
 
@@ -4435,7 +4478,7 @@ fetch('http://example.com/data', {
 .catch(error => console.error('Error:', error));
 ```
 
-### Preflight Requests
+##### Preflight Requests
 
 A preflight request is an OPTIONS request sent by the browser to determine if the actual request is safe. This happens for:
 
@@ -4451,7 +4494,7 @@ The server should handle preflight requests by responding to the OPTIONS method 
 app.options('/data', cors(corsOptions)); // enable preflight request for /data
 ```
 
-### Summary
+##### Summary
 
 1. **Set up CORS on the server** to specify which origins, methods, headers, and credentials are allowed.
 2. **Use `fetch` or other HTTP clients on the client side** to make cross-origin requests, ensuring the server's CORS policy is respected.
@@ -4461,12 +4504,12 @@ app.options('/data', cors(corsOptions)); // enable preflight request for /data
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q31
+#### Q31
 ### Q31. Implementing data structures like linked lists, stacks, and queues in JavaScript
 
 Sure! Below is a simple implementation of a singly linked list in JavaScript. This includes basic operations such as adding a node, removing a node, and displaying the list.
 
-### Linked List Implementation
+##### Linked List Implementation
 
 1. **Node Class:** Represents a node in the linked list.
 2. **LinkedList Class:** Manages the linked list operations.
@@ -4561,7 +4604,7 @@ list.print(); // Output: 1 -> 3 -> null
 console.log('Size:', list.getSize()); // Output: Size: 2
 ```
 
-### Explanation
+##### Explanation
 
 * **Node Class:** Each node has a `value` and a `next` pointer to the next node.
 * **LinkedList Class:**
@@ -4573,7 +4616,7 @@ console.log('Size:', list.getSize()); // Output: Size: 2
 
 Sure! A stack is a data structure that follows the Last In, First Out (LIFO) principle. This means that the last element added to the stack will be the first one to be removed.
 
-### Stack Implementation in JavaScript
+##### Stack Implementation in JavaScript
 
 **Stack Class:**
 
@@ -4650,7 +4693,7 @@ stack.print(); // Output: 10 20
 console.log('Is stack empty?', stack.isEmpty()); // Output: Is stack empty? false
 ```
 
-### Explanation
+##### Explanation
 
 1. **Stack Class:**
 
@@ -4673,7 +4716,7 @@ console.log('Is stack empty?', stack.isEmpty()); // Output: Is stack empty? fals
 
 Sure! A queue is a data structure that follows the First In, First Out (FIFO) principle. This means that the first element added to the queue will be the first one to be removed.
 
-### Queue Implementation in JavaScript
+##### Queue Implementation in JavaScript
 
 **Queue Class:**
 
@@ -4750,7 +4793,7 @@ queue.print(); // Output: 20 30
 console.log('Is queue empty?', queue.isEmpty()); // Output: Is queue empty? false
 ```
 
-### Explanation
+##### Explanation
 
 1. **Queue Class:**
 
@@ -4775,10 +4818,10 @@ console.log('Is queue empty?', queue.isEmpty()); // Output: Is queue empty? fals
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q32
+#### Q32
 ### Q32. The importance of Web APIs and how to work with them in JavaScript
 
-### Importance of Web APIs
+##### Importance of Web APIs
 
 **Web APIs** (Application Programming Interfaces) are essential for modern web development because they allow different software systems to communicate with each other. Here's why they are important:
 
@@ -4788,11 +4831,11 @@ console.log('Is queue empty?', queue.isEmpty()); // Output: Is queue empty? fals
 4. **Scalability:** By decoupling the front-end and back-end, APIs help build scalable applications where different parts can be developed, maintained, and scaled independently.
 5. **Third-Party Services:** APIs enable the integration of third-party services like payment gateways, social media platforms, and analytics tools, enhancing the functionality of web applications.
 
-### Working with Web APIs in JavaScript
+##### Working with Web APIs in JavaScript
 
 To work with Web APIs in JavaScript, you typically use the `fetch` API or third-party libraries like Axios to make HTTP requests. Below are examples of how to use the `fetch` API for different types of requests.
 
-#### Making GET Requests
+##### Making GET Requests
 
 **Example:**
 
@@ -4813,7 +4856,7 @@ fetch('https://api.example.com/data')
   });
 ```
 
-#### Making POST Requests
+##### Making POST Requests
 
 **Example:**
 
@@ -4846,7 +4889,7 @@ fetch('https://api.example.com/users', {
   });
 ```
 
-#### Making PUT Requests
+##### Making PUT Requests
 
 **Example:**
 
@@ -4879,7 +4922,7 @@ fetch('https://api.example.com/users/1', {
   });
 ```
 
-#### Making DELETE Requests
+##### Making DELETE Requests
 
 **Example:**
 
@@ -4902,7 +4945,7 @@ fetch('https://api.example.com/users/1', {
   });
 ```
 
-### Handling Asynchronous Operations
+##### Handling Asynchronous Operations
 
 When working with Web APIs, you often deal with asynchronous operations. Modern JavaScript provides `async/await` syntax for handling these operations more cleanly.
 
@@ -4925,7 +4968,7 @@ async function fetchData() {
 fetchData();
 ```
 
-### Summary
+##### Summary
 
 * **Web APIs** are crucial for enabling communication between different software systems, allowing for data access, integration, interoperability, reusability, and scalability.
 * **JavaScript** provides built-in support for making HTTP requests to Web APIs through the `fetch` API.
@@ -4936,12 +4979,12 @@ fetchData();
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q33
+#### Q33
 ### Q33. Security best practices for JavaScript applications
 
 Sure! Here are some security best practices for JavaScript applications:
 
-### 1. **Sanitize User Inputs**
+##### 1. **Sanitize User Inputs**
 
 * Always validate and sanitize user inputs to prevent injection attacks like XSS and SQL injection.
 * Use libraries like DOMPurify for sanitizing HTML.
@@ -4953,7 +4996,7 @@ const DOMPurify = require('dompurify');
 const sanitizedInput = DOMPurify.sanitize(userInput);
 ```
 
-### 2. **Avoid Eval**
+##### 2. **Avoid Eval**
 
 * Avoid using `eval()` and other functions like `setTimeout()`, `setInterval()`, `Function()` with string inputs as they can execute arbitrary code.
 
@@ -4968,11 +5011,11 @@ const fn = new Function('a', 'b', 'return a + b');
 fn(1, 2);
 ```
 
-### 3. **Use HTTPS**
+##### 3. **Use HTTPS**
 
 * Ensure your application is served over HTTPS to encrypt data in transit and prevent man-in-the-middle attacks.
 
-### 4. **Content Security Policy (CSP)**
+##### 4. **Content Security Policy (CSP)**
 
 * Implement CSP headers to restrict sources for scripts, styles, and other resources to mitigate XSS attacks.
 
@@ -4982,7 +5025,7 @@ fn(1, 2);
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-...';">
 ```
 
-### 5. **Secure Cookies**
+##### 5. **Secure Cookies**
 
 * Use secure attributes for cookies to prevent them from being accessed through client-side scripts.
 
@@ -4992,11 +5035,11 @@ fn(1, 2);
 document.cookie = "username=JohnDoe; Secure; HttpOnly; SameSite=Strict";
 ```
 
-### 6. **Avoid Exposing Sensitive Data**
+##### 6. **Avoid Exposing Sensitive Data**
 
 * Do not expose sensitive data like API keys, credentials, or personal information in client-side code.
 
-### 7. **Limit Scope of Variables**
+##### 7. **Limit Scope of Variables**
 
 * Use `let` and `const` instead of `var` to limit the scope of variables and avoid accidental global variables.
 
@@ -5006,15 +5049,15 @@ document.cookie = "username=JohnDoe; Secure; HttpOnly; SameSite=Strict";
 const username = 'JohnDoe'; // Block-scoped
 ```
 
-### 8. **Implement Proper Authentication and Authorization**
+##### 8. **Implement Proper Authentication and Authorization**
 
 * Use strong authentication mechanisms and ensure proper authorization checks on both client and server sides.
 
-### 9. **Use Security Libraries**
+##### 9. **Use Security Libraries**
 
 * Leverage security-focused libraries and frameworks that provide built-in protection against common vulnerabilities.
 
-### 10. **Regularly Update Dependencies**
+##### 10. **Regularly Update Dependencies**
 
 * Keep your dependencies up-to-date to avoid known vulnerabilities in third-party libraries.
 
@@ -5024,7 +5067,7 @@ const username = 'JohnDoe'; // Block-scoped
 npm update
 ```
 
-### 11. **Use Security Linters**
+##### 11. **Use Security Linters**
 
 * Use linters like ESLint with security plugins to catch potential security issues in your code.
 
@@ -5034,11 +5077,11 @@ npm update
 npm install eslint-plugin-security --save-dev
 ```
 
-### 12. **Implement Rate Limiting**
+##### 12. **Implement Rate Limiting**
 
 * Use rate limiting to prevent brute-force attacks and abuse of your API endpoints.
 
-### 13. **Disable Browser Features**
+##### 13. **Disable Browser Features**
 
 * Disable unnecessary browser features like `X-Powered-By` header to avoid revealing the technology stack.
 
@@ -5048,19 +5091,19 @@ npm install eslint-plugin-security --save-dev
 app.disable('x-powered-by');
 ```
 
-### 14. **Secure API Endpoints**
+##### 14. **Secure API Endpoints**
 
 * Ensure API endpoints are protected with proper authentication and authorization mechanisms.
 
-### 15. **Code Reviews and Audits**
+##### 15. **Code Reviews and Audits**
 
 * Regularly conduct code reviews and security audits to identify and fix vulnerabilities.
 
-### 16. **Use Secure Storage**
+##### 16. **Use Secure Storage**
 
 * Store sensitive data securely using secure storage mechanisms like encrypted databases and local storage.
 
-### 17. **Prevent Clickjacking**
+##### 17. **Prevent Clickjacking**
 
 * Use the `X-Frame-Options` header to prevent clickjacking attacks.
 
@@ -5073,7 +5116,7 @@ app.use((req, res, next) => {
 });
 ```
 
-### 18. **Handle Errors Properly**
+##### 18. **Handle Errors Properly**
 
 * Do not expose detailed error messages to users as they can reveal sensitive information. Log errors securely on the server.
 
@@ -5090,12 +5133,12 @@ app.use((err, req, res, next) => {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q34
+#### Q34
 ### Q34. Module Systems: Explore CommonJS, AMD, and ES6 modules
 
 Sure, let's delve into the different module systems in JavaScript: CommonJS, AMD, and ES6 modules. Each of these systems has its own syntax and use cases, and they have evolved to address different needs in JavaScript development.
 
-### 1. CommonJS
+##### 1. CommonJS
 
 **CommonJS** is a module system used primarily in Node.js. It uses synchronous loading and is designed for server-side JavaScript environments.
 
@@ -5130,7 +5173,7 @@ Sure, let's delve into the different module systems in JavaScript: CommonJS, AMD
   myModule.farewell(); // Output: Goodbye, CommonJS
   ```
 
-### 2. AMD (Asynchronous Module Definition)
+##### 2. AMD (Asynchronous Module Definition)
 
 **AMD** is a module system designed for asynchronous loading of modules in the browser. It was developed for use in environments where scripts are loaded on demand.
 
@@ -5181,7 +5224,7 @@ define([], function() {
 });
 ```
 
-### 3. ES6 Modules
+##### 3. ES6 Modules
 
 **ES6 Modules** (also known as ECMAScript Modules or ES Modules) are the standardized module system introduced in ECMAScript 2015 (ES6). They are now widely supported in both browsers and Node.js.
 
@@ -5220,7 +5263,7 @@ define([], function() {
   myDefaultFunction(); // Output: Hello, Default Export
   ```
 
-### Key Differences
+##### Key Differences
 
 1. **Loading Mechanism:**
 
@@ -5246,7 +5289,7 @@ define([], function() {
    * **AMD:** Primarily used in browsers with script loaders like RequireJS.
    * **ES6 Modules:** Supported natively in modern browsers and Node.js.
 
-### Example Comparisons
+##### Example Comparisons
 
 **CommonJS Example:**
 
@@ -5298,14 +5341,14 @@ greet(); // Output: Hello, ES6 Modules
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q35
+#### Q35
 ### Q35. HTTP Headers: Understanding and using HTTP headers
 
-### Understanding HTTP Headers
+##### Understanding HTTP Headers
 
 **HTTP Headers** are key-value pairs sent between the client and the server with each HTTP request and response. They provide essential information about the request or response, such as content type, length, encoding, and more.
 
-### Common HTTP Headers
+##### Common HTTP Headers
 
 1. **Request Headers:**
 
@@ -5321,7 +5364,7 @@ greet(); // Output: Hello, ES6 Modules
    * **Set-Cookie:** Sends cookies from the server to the client.
    * **Access-Control-Allow-Origin:** Specifies which origins are allowed to access the resource.
 
-### HTTP Status Codes
+##### HTTP Status Codes
 
 1. **Success Codes:**
 
@@ -5341,7 +5384,7 @@ greet(); // Output: Hello, ES6 Modules
    * **500 Internal Server Error:** The server encountered a situation it doesn't know how to handle.
    * **503 Service Unavailable:** The server is not ready to handle the request, often due to maintenance or overloading.
 
-### Example with JavaScript Code
+##### Example with JavaScript Code
 
 Here is a JavaScript example that demonstrates how to make an HTTP request with headers using the `fetch` API and handle different status codes.
 
@@ -5386,7 +5429,7 @@ async function fetchData(url) {
 fetchData('https://api.example.com/data');
 ```
 
-### Explanation
+##### Explanation
 
 1. **Headers in the Request:**
 
@@ -5402,7 +5445,7 @@ fetchData('https://api.example.com/data');
    * **500:** Logs an error indicating an internal server error.
    * **Default:** Logs unexpected status codes.
 
-### Summary
+##### Summary
 
 * **HTTP Headers** provide important information about HTTP requests and responses.
 * **Status Codes** indicate the result of the HTTP request.
@@ -5414,14 +5457,14 @@ fetchData('https://api.example.com/data');
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q36
+#### Q36
 ### Q36. RESTful API: Principles of RESTful API design
 
-### Understanding RESTful API
+##### Understanding RESTful API
 
 **RESTful API** stands for Representational State Transfer (REST) Application Programming Interface (API). It is an architectural style for designing networked applications that use HTTP requests to perform CRUD (Create, Read, Update, Delete) operations on resources. RESTful APIs are stateless, meaning each request from a client to server must contain all the information the server needs to understand and process the request.
 
-### Principles of RESTful API Design
+##### Principles of RESTful API Design
 
 1. **Uniform Interface:**
 
@@ -5455,7 +5498,7 @@ fetchData('https://api.example.com/data');
 
    * Servers can temporarily extend or customize the functionality of a client by transferring executable code (e.g., JavaScript).
 
-### RESTful API Design Best Practices
+##### RESTful API Design Best Practices
 
 1. **Use Nouns for Resources:**
 
@@ -5495,7 +5538,7 @@ fetchData('https://api.example.com/data');
    * Provide comprehensive and clear documentation for your API.
    * Include details about endpoints, request/response formats, and examples.
 
-### Example RESTful API
+##### Example RESTful API
 
 Here's an example of a RESTful API design for managing users and their posts:
 
@@ -5515,7 +5558,7 @@ Here's an example of a RESTful API design for managing users and their posts:
 * **PUT /users/{userId}/posts/{postId}:** Update a specific post.
 * **DELETE /users/{userId}/posts/{postId}:** Delete a specific post.
 
-### Example Implementation
+##### Example Implementation
 
 Here's a simple example using Express.js to create a RESTful API for managing users:
 
@@ -5574,23 +5617,23 @@ app.listen(port, () => {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q37
+#### Q37
 ### Q37. Briefly elaborate on AJAX. Using AJAX, give a basic example of how to make asynchronous HTTP requests using XMLHttpRequest (XHR)
 
-### Understanding AJAX
+##### Understanding AJAX
 
 **AJAX** (Asynchronous JavaScript and XML) is a technique for creating fast and dynamic web pages. It allows web pages to be updated asynchronously by exchanging small amounts of data with the server behind the scenes. This means that parts of a web page can be updated without reloading the whole page.
 
-### Key Features of AJAX
+##### Key Features of AJAX
 
 * **Asynchronous:** Requests are made in the background without interfering with the display and behavior of the existing page.
 * **JavaScript and XML:** Although XML was traditionally used for data interchange, JSON is now more commonly used.
 
-### Using XMLHttpRequest (XHR) for AJAX
+##### Using XMLHttpRequest (XHR) for AJAX
 
 **XMLHttpRequest** is an API in the form of an object whose methods transfer data between a web browser and a web server. Below is a basic example of how to use `XMLHttpRequest` to make an asynchronous HTTP request.
 
-### Example: Making an Asynchronous HTTP Request Using XMLHttpRequest
+##### Example: Making an Asynchronous HTTP Request Using XMLHttpRequest
 
 Here is a simple example where we use `XMLHttpRequest` to fetch data from a server and update the web page without reloading it.
 
@@ -5648,7 +5691,7 @@ Here is a simple example where we use `XMLHttpRequest` to fetch data from a serv
 </html>
 ```
 
-### Explanation
+##### Explanation
 
 1. **Creating the XMLHttpRequest Object:**
 
@@ -5703,14 +5746,14 @@ This basic example demonstrates how to use `XMLHttpRequest` for making asynchron
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q38
+#### Q38
 ### Q38. Progressive Web Apps (PWAs): Understand PWA concepts and service workers
 
-### Progressive Web Apps (PWAs)
+##### Progressive Web Apps (PWAs)
 
 **Progressive Web Apps (PWAs)** are web applications that use modern web capabilities to deliver an app-like experience to users. They are designed to work on any platform that uses a standards-compliant browser, including both desktop and mobile devices.
 
-### Key Characteristics of PWAs
+##### Key Characteristics of PWAs
 
 1. **Responsive:** Adapt to different screen sizes and orientations.
 2. **Connectivity Independent:** Work offline or on low-quality networks using service workers.
@@ -5722,7 +5765,7 @@ This basic example demonstrates how to use `XMLHttpRequest` for making asynchron
 8. **Installable:** Can be installed on the user’s home screen without needing an app store.
 9. **Linkable:** Shareable via URLs, eliminating the need for complex installation.
 
-### Core Concepts of PWAs
+##### Core Concepts of PWAs
 
 1. **Web App Manifest:**
 
@@ -5757,11 +5800,11 @@ This basic example demonstrates how to use `XMLHttpRequest` for making asynchron
    * JavaScript files that run in the background and enable features like offline capabilities, background sync, and push notifications.
    * They intercept network requests and can serve cached content when offline.
 
-### Understanding Service Workers
+##### Understanding Service Workers
 
 **Service Workers** are a key technology enabling PWAs. They act as a proxy between the web application and the network, allowing developers to control how network requests are handled. This makes it possible to cache resources and provide offline functionality.
 
-#### Lifecycle of a Service Worker
+##### Lifecycle of a Service Worker
 
 1. **Installation:**
 
@@ -5845,7 +5888,7 @@ This basic example demonstrates how to use `XMLHttpRequest` for making asynchron
      });
      ```
 
-### Example: Registering a Service Worker
+##### Example: Registering a Service Worker
 
 To use a service worker in your web application, you need to register it in your JavaScript code:
 
@@ -5863,7 +5906,7 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-### Summary
+##### Summary
 
 * **Progressive Web Apps (PWAs)** provide a fast, reliable, and engaging user experience.
 * **Core Concepts:** Include the Web App Manifest and Service Workers.
@@ -5873,14 +5916,14 @@ if ('serviceWorker' in navigator) {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q39
+#### Q39
 ### Q39. Elaborate Web Performance. Mention few ways to Optimize your code for speed and efficiency in JavaScript
 
-### Understanding Web Performance
+##### Understanding Web Performance
 
 **Web performance** refers to the speed and efficiency with which web pages are loaded, rendered, and interact with users. Good web performance ensures that users have a smooth and responsive experience, which can significantly affect user satisfaction, engagement, and conversion rates.
 
-### Key Metrics for Web Performance
+##### Key Metrics for Web Performance
 
 1. **Page Load Time:** The time it takes for a web page to load completely.
 2. **Time to First Byte (TTFB):** The time taken to receive the first byte of data from the server.
@@ -5889,7 +5932,7 @@ if ('serviceWorker' in navigator) {
 5. **Time to Interactive (TTI):** The time it takes for the page to become fully interactive.
 6. **First Input Delay (FID):** The time it takes for the page to respond to the first user interaction.
 
-### Ways to Optimize JavaScript for Speed and Efficiency
+##### Ways to Optimize JavaScript for Speed and Efficiency
 
 1. **Minimize and Bundle Files:**
 
@@ -6044,10 +6087,10 @@ if ('serviceWorker' in navigator) {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q40
+#### Q40
 ### Q40. Explain Accessibility (a11y). Ensure your applications are accessible to all users
 
-### Accessibility (a11y) in Web Development
+##### Accessibility (a11y) in Web Development
 
 **Accessibility (a11y)** refers to designing and developing web applications that are usable by everyone — including people with disabilities such as visual, auditory, motor, or cognitive impairments.
 The shorthand “**a11y**” comes from the word *accessibility* (11 letters between “a” and “y”).
@@ -6056,7 +6099,7 @@ The goal is to ensure that **all users**, regardless of ability or device, can p
 
 ---
 
-### 🔑 Principles of Accessibility (POUR)
+##### 🔑 Principles of Accessibility (POUR)
 
 Based on **W3C’s Web Content Accessibility Guidelines (WCAG)**, accessibility follows four key principles, abbreviated as **POUR**:
 
@@ -6082,7 +6125,7 @@ Based on **W3C’s Web Content Accessibility Guidelines (WCAG)**, accessibility 
 
 ---
 
-### 🧠 Why Accessibility Matters
+##### 🧠 Why Accessibility Matters
 
 * **Legal compliance:** Required under laws like ADA (U.S.), Section 508, and EN 301 549 (EU).
 * **Inclusive experience:** Allows everyone — including users with disabilities — to interact with your application.
@@ -6091,9 +6134,9 @@ Based on **W3C’s Web Content Accessibility Guidelines (WCAG)**, accessibility 
 
 ---
 
-### ✅ Best Practices for Accessible Applications
+##### ✅ Best Practices for Accessible Applications
 
-#### 1. Use Semantic HTML
+##### 1. Use Semantic HTML
 
 Proper HTML tags convey meaning to browsers and assistive technologies.
 
@@ -6110,7 +6153,7 @@ Proper HTML tags convey meaning to browsers and assistive technologies.
 
 ---
 
-#### 2. Provide Alternative Text for Images
+##### 2. Provide Alternative Text for Images
 
 ```html
 <img src="team.jpg" alt="Our development team working together">
@@ -6120,7 +6163,7 @@ Proper HTML tags convey meaning to browsers and assistive technologies.
 
 ---
 
-#### 3. Ensure Keyboard Accessibility
+##### 3. Ensure Keyboard Accessibility
 
 All interactive elements (buttons, links, forms) should be accessible using the **Tab**, **Enter**, and **Space** keys.
 
@@ -6133,7 +6176,7 @@ All interactive elements (buttons, links, forms) should be accessible using the 
 
 ---
 
-#### 4. Maintain Sufficient Color Contrast
+##### 4. Maintain Sufficient Color Contrast
 
 Use contrast ratios of at least **4.5:1** for text and background.
 
@@ -6148,7 +6191,7 @@ body {
 
 ---
 
-#### 5. Use ARIA (Accessible Rich Internet Applications) Roles When Needed
+##### 5. Use ARIA (Accessible Rich Internet Applications) Roles When Needed
 
 ARIA attributes make dynamic or custom elements accessible.
 
@@ -6161,7 +6204,7 @@ ARIA attributes make dynamic or custom elements accessible.
 
 ---
 
-#### 6. Add Labels to Form Elements
+##### 6. Add Labels to Form Elements
 
 ```html
 <label for="email">Email Address:</label>
@@ -6172,7 +6215,7 @@ ARIA attributes make dynamic or custom elements accessible.
 
 ---
 
-#### 7. Provide Captions and Transcripts for Media
+##### 7. Provide Captions and Transcripts for Media
 
 ```html
 <video controls>
@@ -6185,7 +6228,7 @@ ARIA attributes make dynamic or custom elements accessible.
 
 ---
 
-#### 8. Manage Focus for Dynamic Content
+##### 8. Manage Focus for Dynamic Content
 
 When modals or dynamic content appear, shift focus appropriately.
 
@@ -6198,7 +6241,7 @@ modal.querySelector('button.close').focus();
 
 ---
 
-### 🧩 Tools for Testing Accessibility
+##### 🧩 Tools for Testing Accessibility
 
 * **Lighthouse (Chrome DevTools):** Built-in audits for accessibility.
 * **axe DevTools:** Browser extension for automated accessibility testing.
@@ -6207,7 +6250,7 @@ modal.querySelector('button.close').focus();
 
 ---
 
-### 🌍 Summary
+##### 🌍 Summary
 
 | Principle          | Meaning                    | Example             |
 | ------------------ | -------------------------- | ------------------- |
@@ -6222,14 +6265,14 @@ modal.querySelector('button.close').focus();
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q41
+#### Q41
 ### Q41. What is Content Security Policy (CSP). Mention ways to Protect your site from XSS attacks, CSRF, XHR. 
 
-### Content Security Policy (CSP)
+##### Content Security Policy (CSP)
 
 **Content Security Policy (CSP)** is a security feature that helps prevent various types of attacks, including Cross-Site Scripting (XSS) and data injection attacks. CSP works by allowing web developers to specify the sources of content that browsers should be allowed to load on their websites. By defining a strict policy, developers can restrict the loading of resources like scripts, styles, images, etc., from untrusted sources, thereby reducing the risk of malicious code execution.
 
-### Implementing CSP
+##### Implementing CSP
 
 To implement CSP, you need to add a Content-Security-Policy header to your web server response. Here's an example:
 
@@ -6237,9 +6280,9 @@ To implement CSP, you need to add a Content-Security-Policy header to your web s
 Content-Security-Policy: default-src 'self'; script-src 'self' https://trustedscripts.example.com; object-src 'none'; style-src 'self' https://trustedstyles.example.com; img-src 'self' data:;
 ```
 
-### Ways to Protect Your Site
+##### Ways to Protect Your Site
 
-#### 1. **Cross-Site Scripting (XSS) Attacks**
+##### 1. **Cross-Site Scripting (XSS) Attacks**
 
 XSS attacks occur when malicious scripts are injected into otherwise benign and trusted websites. To protect against XSS:
 
@@ -6274,7 +6317,7 @@ XSS attacks occur when malicious scripts are injected into otherwise benign and 
 
 * **Validate and Sanitize User Input:** Always validate and sanitize inputs on both the client and server sides.
 
-#### 2. **Cross-Site Request Forgery (CSRF)**
+##### 2. **Cross-Site Request Forgery (CSRF)**
 
 CSRF attacks trick the victim into submitting a request to a web application where they are authenticated. To prevent CSRF:
 
@@ -6294,7 +6337,7 @@ CSRF attacks trick the victim into submitting a request to a web application whe
 
 * **Double Submit Cookie Pattern:** Send the CSRF token as both a cookie and a request parameter, then validate both on the server.
 
-#### 3. **XMLHttpRequest (XHR) Security**
+##### 3. **XMLHttpRequest (XHR) Security**
 
 To secure XHR requests:
 
@@ -6323,7 +6366,7 @@ To secure XHR requests:
   Access-Control-Allow-Headers: Content-Type, Authorization
   ```
 
-### Example of CSP Implementation
+##### Example of CSP Implementation
 
 Here’s a practical example of how to set a Content Security Policy in an HTTP header:
 
@@ -6331,7 +6374,7 @@ Here’s a practical example of how to set a Content Security Policy in an HTTP 
 Content-Security-Policy: default-src 'self'; script-src 'self' https://trusted.cdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://images.example.com;
 ```
 
-### Summary
+##### Summary
 
 By implementing a strong Content Security Policy, validating and sanitizing user inputs, using CSRF tokens, and securing XHR requests, you can significantly enhance the security of your web applications and protect against common vulnerabilities such as XSS, CSRF, and XHR attacks. If you need further assistance or have specific questions, feel free to ask!
 
@@ -6339,14 +6382,14 @@ By implementing a strong Content Security Policy, validating and sanitizing user
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q42
+#### Q42
 ### Q42. Internationalization (i18n) and Making your applications multilingual
 
-### Internationalization (i18n) and Making Your Applications Multilingual
+##### Internationalization (i18n) and Making Your Applications Multilingual
 
 **Internationalization (i18n)** is the process of designing and preparing your software application so that it can be easily adapted to various languages and regions without requiring engineering changes. This involves structuring your code and content to support multiple languages and regional differences.
 
-### Key Concepts in Internationalization
+##### Key Concepts in Internationalization
 
 1. **Localization (l10n):** The process of adapting an internationalized application to a specific language, culture, and region. This includes translating text, formatting dates and numbers, and adapting to local customs.
 
@@ -6354,7 +6397,7 @@ By implementing a strong Content Security Policy, validating and sanitizing user
 
 3. **Translation Files:** These are files that contain translations for different languages. Common formats include JSON, YAML, and PO files.
 
-### Steps to Internationalize Your Application
+##### Steps to Internationalize Your Application
 
 1. **Extract Translatable Text:**
 
@@ -6372,18 +6415,18 @@ By implementing a strong Content Security Policy, validating and sanitizing user
 
    * Ensure that your application can support RTL languages like Arabic and Hebrew.
 
-### Example Using JavaScript and i18next
+##### Example Using JavaScript and i18next
 
 **i18next** is a popular internationalization framework for JavaScript.
 
-#### 1. Install i18next
+##### 1. Install i18next
 
 ```sh
 npm install i18next
 npm install react-i18next # For React applications
 ```
 
-#### 2. Initialize i18next
+##### 2. Initialize i18next
 
 Create an `i18n.js` file for initializing i18next.
 
@@ -6422,7 +6465,7 @@ i18n.use(initReactI18next).init({
 export default i18n;
 ```
 
-#### 3. Use Translations in Your Code
+##### 3. Use Translations in Your Code
 
 Now, you can use the `useTranslation` hook (for React) or `i18n.t` function to access translations.
 
@@ -6447,7 +6490,7 @@ function App() {
 export default App;
 ```
 
-#### 4. Format Dates and Numbers
+##### 4. Format Dates and Numbers
 
 Use the built-in `Intl` object for formatting dates and numbers.
 
@@ -6461,7 +6504,7 @@ const formattedNumber = new Intl.NumberFormat('de-DE').format(number);
 console.log(formattedNumber); // Output: 123.456,789
 ```
 
-### Summary
+##### Summary
 
 By following these steps, you can internationalize your application and make it multilingual. This involves extracting translatable text, using a translation library like i18next, and formatting dates and numbers according to the user's locale. Additionally, you need to handle special cases like RTL languages. If you need further assistance or have specific questions, feel free to ask!
 
@@ -6469,51 +6512,51 @@ By following these steps, you can internationalize your application and make it 
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q43
+#### Q43
 ### Q43. What are Micro-Frontends. How do we build frontends in a microservices architecture
 
-### Micro-Frontends
+##### Micro-Frontends
 
 **Micro-Frontends** is an architectural style where the frontend application is divided into smaller, independent, and self-contained micro-applications. Each micro-frontend is developed, deployed, and maintained independently, similar to how microservices work on the backend.
 
-### Key Concepts of Micro-Frontends
+##### Key Concepts of Micro-Frontends
 
 1. **Independent Deployment:** Each micro-frontend can be deployed independently without affecting the others.
 2. **Technology Agnostic:** Different micro-frontends can use different technologies, frameworks, or libraries.
 3. **Isolation:** Each micro-frontend runs in isolation, managing its own state and side effects.
 4. **Composition:** The final user experience is composed of multiple micro-frontends integrated together.
 
-### Building Frontends in a Microservices Architecture
+##### Building Frontends in a Microservices Architecture
 
 To build frontends in a microservices architecture, you need to follow these steps:
 
-#### 1. **Divide the Application into Micro-Frontends:**
+##### 1. **Divide the Application into Micro-Frontends:**
 
 * Identify the different features or sections of your application that can be developed independently.
 * For example, a web application might be divided into micro-frontends for the header, footer, user profile, dashboard, etc.
 
-#### 2. **Choose a Framework or Approach for Integration:**
+##### 2. **Choose a Framework or Approach for Integration:**
 
 * **Web Components:** Use web standards like Custom Elements, Shadow DOM, and HTML Templates to create reusable components.
 * **Module Federation:** Use Webpack 5's Module Federation to dynamically import and load micro-frontends at runtime.
 * **iframes:** Embed micro-frontends in iframes to ensure complete isolation.
 * **Single-SPA:** A micro-frontend framework for orchestrating multiple micro-frontends within a single application.
 
-#### 3. **Ensure Communication and Shared State:**
+##### 3. **Ensure Communication and Shared State:**
 
 * Use custom events, shared state libraries, or context APIs to enable communication between micro-frontends.
 * Ensure that each micro-frontend can share common state (like user authentication status) without tightly coupling them.
 
-#### 4. **Independent Development and Deployment:**
+##### 4. **Independent Development and Deployment:**
 
 * Set up independent repositories, CI/CD pipelines, and deployment processes for each micro-frontend.
 * Ensure that each team can develop, test, and deploy their micro-frontend independently.
 
-### Example Using Single-SPA
+##### Example Using Single-SPA
 
 Single-SPA is a popular framework for building micro-frontends. Here's an example of how to set up a micro-frontend architecture using Single-SPA.
 
-#### 1. **Set Up a Root Config:**
+##### 1. **Set Up a Root Config:**
 
 Create a root configuration project to load and mount micro-frontends.
 
@@ -6523,7 +6566,7 @@ npx create-single-spa
 
 Choose the root config option and follow the prompts to set up the project.
 
-#### 2. **Register Micro-Frontends:**
+##### 2. **Register Micro-Frontends:**
 
 In the root configuration project, register your micro-frontends.
 
@@ -6552,7 +6595,7 @@ registerApplication({
 start();
 ```
 
-#### 3. **Create a Micro-Frontend:**
+##### 3. **Create a Micro-Frontend:**
 
 Create a micro-frontend project (e.g., Navbar).
 
@@ -6562,7 +6605,7 @@ npx create-single-spa
 
 Choose the application option and set up the project.
 
-#### 4. **Expose the Micro-Frontend:**
+##### 4. **Expose the Micro-Frontend:**
 
 Configure the micro-frontend to be loaded by the root config.
 
@@ -6585,11 +6628,11 @@ module.exports = (webpackConfigEnv, argv) => {
 };
 ```
 
-#### 5. **Deploy and Integrate:**
+##### 5. **Deploy and Integrate:**
 
 Deploy each micro-frontend to a CDN or web server, then integrate them by updating the root configuration project.
 
-### Summary
+##### Summary
 
 Building frontends in a microservices architecture using micro-frontends allows for independent development, deployment, and maintenance of different parts of your application. By leveraging frameworks like Single-SPA, web components, and Module Federation, you can create a scalable and flexible frontend architecture. If you need further assistance or have specific questions, feel free to ask!
 
@@ -6597,14 +6640,14 @@ Building frontends in a microservices architecture using micro-frontends allows 
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q44
+#### Q44
 ### Q44. Elaborate MVC model (Model-View-Controller design pattern).
 
-### MVC Model (Model-View-Controller Design Pattern)
+##### MVC Model (Model-View-Controller Design Pattern)
 
 The Model-View-Controller (MVC) design pattern is a software architectural pattern that separates an application into three interconnected components. This separation helps manage the complexity of application development by promoting organized code and separating concerns.
 
-### Components of MVC
+##### Components of MVC
 
 1. **Model:**
 
@@ -6627,7 +6670,7 @@ The Model-View-Controller (MVC) design pattern is a software architectural patte
    * Updates the Model based on user actions.
    * Updates the View when the Model changes.
 
-### How MVC Works
+##### How MVC Works
 
 1. **User Interaction:**
 
@@ -6648,11 +6691,11 @@ The Model-View-Controller (MVC) design pattern is a software architectural patte
    * The View queries the Model for updated data.
    * The View updates the UI to reflect the new data.
 
-### Example of MVC in JavaScript
+##### Example of MVC in JavaScript
 
 Let's create a simple Todo application using the MVC pattern.
 
-#### Model
+##### Model
 
 The Model represents the data and business logic of the application.
 
@@ -6687,7 +6730,7 @@ class TodoModel {
 }
 ```
 
-#### View
+##### View
 
 The View handles the presentation of the data and user interaction.
 
@@ -6735,7 +6778,7 @@ class TodoView {
 }
 ```
 
-#### Controller
+##### Controller
 
 The Controller handles the logic and communication between the Model and the View.
 
@@ -6762,7 +6805,7 @@ class TodoController {
 }
 ```
 
-#### Initializing the MVC Components
+##### Initializing the MVC Components
 
 ```javascript
 document.addEventListener('DOMContentLoaded', () => {
@@ -6774,7 +6817,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-### Summary
+##### Summary
 
 The MVC design pattern divides an application into three main components: Model, View, and Controller. This separation of concerns helps manage complexity, promotes organized code, and allows for independent development of components. By using MVC, you can create scalable and maintainable applications. If you need further assistance or have specific questions, feel free to ask!
 
@@ -6782,14 +6825,14 @@ The MVC design pattern divides an application into three main components: Model,
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q45
+#### Q45
 ### Q45. Explain the role of Prefetch in Optimizing resource loading. Are there any other optimization techniques.
 
-### The Role of Prefetch in Optimizing Resource Loading
+##### The Role of Prefetch in Optimizing Resource Loading
 
 **Prefetch** is a technique used to improve the performance and responsiveness of web applications by loading resources (like scripts, stylesheets, images, etc.) before they are needed. This can help reduce the perceived latency when the resource is actually required by the user.
 
-#### Types of Prefetching
+##### Types of Prefetching
 
 1. **DNS Prefetching:**
 
@@ -6811,11 +6854,11 @@ The MVC design pattern divides an application into three main components: Model,
    * Fetches critical resources required for the current navigation.
    * Example: `<link rel="preload" href="/path/to/resource" as="script">`
 
-#### How Prefetch Works
+##### How Prefetch Works
 
 Prefetching allows the browser to fetch and cache resources in the background so that they are available immediately when required. This can significantly reduce the load time for subsequent navigation or user interactions.
 
-### Example of Prefetching
+##### Example of Prefetching
 
 ```html
 <!DOCTYPE html>
@@ -6841,7 +6884,7 @@ Prefetching allows the browser to fetch and cache resources in the background so
 </html>
 ```
 
-### Other Optimization Techniques
+##### Other Optimization Techniques
 
 Besides prefetching, there are several other techniques to optimize resource loading:
 
@@ -6907,7 +6950,7 @@ Besides prefetching, there are several other techniques to optimize resource loa
      });
      ```
 
-### Summary
+##### Summary
 
 Prefetching is a powerful technique for improving resource loading by fetching resources before they are needed. It helps reduce latency and enhance the user experience. Other optimization techniques include lazy loading, code splitting, minification, HTTP/2, caching, using CDNs, image optimization, critical CSS, and service workers. By combining these techniques, you can significantly optimize the performance and efficiency of your web applications. If you have further questions or need specific examples, feel free to ask!
 
@@ -6915,14 +6958,14 @@ Prefetching is a powerful technique for improving resource loading by fetching r
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q46
+#### Q46
 ### Q46. Elaborate SOLID Principles.
 
-### SOLID Principles
+##### SOLID Principles
 
 The SOLID principles are a set of five design principles intended to make software designs more understandable, flexible, and maintainable. These principles were introduced by Robert C. Martin and are widely used in object-oriented design.
 
-### 1. Single Responsibility Principle (SRP)
+##### 1. Single Responsibility Principle (SRP)
 
 **Principle:**
 
@@ -6970,7 +7013,7 @@ class EmailService {
 }
 ```
 
-### 2. Open/Closed Principle (OCP)
+##### 2. Open/Closed Principle (OCP)
 
 **Principle:**
 
@@ -7018,7 +7061,7 @@ class Square extends Shape {
 }
 ```
 
-### 3. Liskov Substitution Principle (LSP)
+##### 3. Liskov Substitution Principle (LSP)
 
 **Principle:**
 
@@ -7064,7 +7107,7 @@ class Ostrich extends Bird {
 }
 ```
 
-### 4. Interface Segregation Principle (ISP)
+##### 4. Interface Segregation Principle (ISP)
 
 **Principle:**
 
@@ -7120,7 +7163,7 @@ class UserData {
 }
 ```
 
-### 5. Dependency Inversion Principle (DIP)
+##### 5. Dependency Inversion Principle (DIP)
 
 **Principle:**
 
@@ -7173,7 +7216,7 @@ const database = new Database();
 const userService = new UserService(database);
 ```
 
-### Summary
+##### Summary
 
 The SOLID principles provide a solid foundation for designing maintainable, scalable, and flexible object-oriented software. By adhering to these principles, you can create code that is easier to understand, test, and extend. The principles are:
 
@@ -7187,14 +7230,14 @@ The SOLID principles provide a solid foundation for designing maintainable, scal
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q47
+#### Q47
 ### Q47. Server-Side Rendering (SSR): Benefits and implementation
 
-### Server-Side Rendering (SSR)
+##### Server-Side Rendering (SSR)
 
 **Server-Side Rendering (SSR)** is the process of rendering web pages on the server instead of the client. This means that when a user requests a web page, the server processes the request, generates the HTML content, and sends a fully rendered page to the client. This is in contrast to Client-Side Rendering (CSR), where the browser renders the page using JavaScript.
 
-### Benefits of SSR
+##### Benefits of SSR
 
 1. **Improved Performance:**
 
@@ -7215,11 +7258,11 @@ The SOLID principles provide a solid foundation for designing maintainable, scal
 
    * **Accurate Previews:** When links are shared on social media, the shared previews (meta tags, images) are correctly rendered.
 
-### Implementation of SSR
+##### Implementation of SSR
 
 To implement SSR, you typically need a framework or library that supports it. Here, we'll look at an example using **Next.js**, a popular React framework that supports SSR out of the box.
 
-### Example Using Next.js
+##### Example Using Next.js
 
 1. **Set Up a New Next.js Project:**
 
@@ -7274,13 +7317,13 @@ npm run dev
 
 Open your browser and navigate to `http://localhost:3000` to see the server-side rendered page.
 
-### Other Frameworks and Libraries for SSR
+##### Other Frameworks and Libraries for SSR
 
 * **Nuxt.js (for Vue.js):** Similar to Next.js but for Vue.js, providing out-of-the-box SSR support.
 * **Angular Universal:** Adds SSR capabilities to Angular applications.
 * **Sapper (for Svelte):** Provides SSR support for Svelte applications.
 
-### Summary
+##### Summary
 
 Server-Side Rendering (SSR) improves performance, SEO, user experience, and social media sharing capabilities by rendering pages on the server and delivering fully rendered HTML to the client. Implementing SSR can be done using frameworks like Next.js, which provides a straightforward way to render React applications on the server. By leveraging SSR, developers can create fast, SEO-friendly, and user-friendly web applications.
 
@@ -7288,14 +7331,14 @@ Server-Side Rendering (SSR) improves performance, SEO, user experience, and soci
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q48
+#### Q48
 ### Q48. Static Site Generation (SSG): Generating static sites
 
-### Static Site Generation (SSG)
+##### Static Site Generation (SSG)
 
 **Static Site Generation (SSG)** is a web development technique that generates static HTML pages at build time. Unlike Server-Side Rendering (SSR), which renders pages on each request, SSG pre-renders the pages ahead of time, allowing them to be served quickly and efficiently as static files.
 
-### Key Concepts of SSG
+##### Key Concepts of SSG
 
 1. **Build Time Rendering:**
 
@@ -7312,7 +7355,7 @@ Server-Side Rendering (SSR) improves performance, SEO, user experience, and soci
    * SSG works well with content that doesn't change frequently.
    * For dynamic content, static pages can be regenerated periodically or on content updates.
 
-### Benefits of SSG
+##### Benefits of SSG
 
 1. **Performance:**
 
@@ -7337,7 +7380,7 @@ Server-Side Rendering (SSR) improves performance, SEO, user experience, and soci
 
    * Lower hosting costs since static files can be hosted on inexpensive platforms and CDNs.
 
-### Example Using Next.js for SSG
+##### Example Using Next.js for SSG
 
 Next.js is a React framework that supports SSG out of the box. Here’s how you can generate a static site using Next.js:
 
@@ -7395,7 +7438,7 @@ npm run export
 
 This will generate a static version of your Next.js site in the `out` directory, which you can then deploy to a static hosting service.
 
-### Other SSG Frameworks
+##### Other SSG Frameworks
 
 * **Gatsby (for React):** A popular framework that uses React and GraphQL for building static sites.
 * **Hugo:** A fast and flexible static site generator written in Go.
@@ -7403,7 +7446,7 @@ This will generate a static version of your Next.js site in the `out` directory,
 * **VuePress (for Vue.js):** A static site generator powered by Vue.js.
 * **Eleventy:** A simpler static site generator that works with multiple templating engines.
 
-### Summary
+##### Summary
 
 Static Site Generation (SSG) is a powerful technique for creating fast, scalable, and secure websites. By pre-rendering pages at build time, SSG eliminates the need for server-side processing on each request, leading to faster load times and improved performance. Next.js, Gatsby, Hugo, Jekyll, VuePress, and Eleventy are some of the popular frameworks and tools that facilitate SSG. By leveraging SSG, developers can create high-performance, SEO-friendly, and cost-effective websites suitable for a wide range of applications.
 
@@ -7411,14 +7454,14 @@ Static Site Generation (SSG) is a powerful technique for creating fast, scalable
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q49
+#### Q49
 ### Q49. Single Page Application (SPA): Building SPAs with JavaScript
 
-### Single Page Application (SPA)
+##### Single Page Application (SPA)
 
 A **Single Page Application (SPA)** is a web application that dynamically rewrites the current page rather than loading entire new pages from the server. This approach avoids interruptions in the user experience between successive pages, making the application feel more like a desktop application.
 
-### Key Characteristics of SPAs
+##### Key Characteristics of SPAs
 
 1. **Client-Side Routing:**
 
@@ -7436,11 +7479,11 @@ A **Single Page Application (SPA)** is a web application that dynamically rewrit
 
    * The server typically serves a single HTML file, and subsequent interactions with the server are handled through API requests.
 
-### Building a Simple SPA with JavaScript
+##### Building a Simple SPA with JavaScript
 
 Here's a basic example of building an SPA using plain JavaScript and the History API for client-side routing.
 
-#### HTML Structure
+##### HTML Structure
 
 Create an `index.html` file:
 
@@ -7472,7 +7515,7 @@ Create an `index.html` file:
 </html>
 ```
 
-#### JavaScript for Routing
+##### JavaScript for Routing
 
 Create an `app.js` file:
 
@@ -7512,7 +7555,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-### Explanation
+##### Explanation
 
 1. **HTML Structure:**
 
@@ -7526,7 +7569,7 @@ document.addEventListener('DOMContentLoaded', () => {
    * **Popstate Event:** Listen for `popstate` events to handle back/forward navigation.
    * **Initial Load:** Call `handleRouteChange` on page load to render the initial content.
 
-### Summary
+##### Summary
 
 Single Page Applications (SPAs) provide a seamless and responsive user experience by dynamically rewriting the current page instead of loading entire new pages from the server. This example demonstrates how to create a basic SPA using plain JavaScript and the History API for client-side routing. SPAs can be built using various frameworks and libraries like React, Vue, and Angular, which offer more advanced features and abstractions to simplify the development process. If you have further questions or need more detailed examples, feel free to ask!
 
@@ -7534,14 +7577,14 @@ Single Page Applications (SPAs) provide a seamless and responsive user experienc
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q50
+#### Q50
 ### Q50. SEO: Optimizing JavaScript applications for search engines
 
-### Understanding SEO
+##### Understanding SEO
 
 **SEO (Search Engine Optimization)** is the practice of optimizing your website to improve its visibility and ranking in search engine results pages (SERPs). Effective SEO helps attract more organic traffic from search engines like Google, Bing, and Yahoo by making your site more attractive to search engine algorithms.
 
-### Key Aspects of SEO
+##### Key Aspects of SEO
 
 1. **Keyword Research:**
 
@@ -7559,11 +7602,11 @@ Single Page Applications (SPAs) provide a seamless and responsive user experienc
 
    * Ensuring that your site meets the technical requirements of search engines. This includes aspects like site speed, mobile-friendliness, crawlability, and structured data.
 
-### Optimizing JavaScript Applications for Search Engines
+##### Optimizing JavaScript Applications for Search Engines
 
 JavaScript applications pose unique challenges for SEO because search engines historically had difficulty rendering and indexing JavaScript content. Modern search engines are improving in this regard, but there are still best practices to follow.
 
-#### 1. **Server-Side Rendering (SSR):**
+##### 1. **Server-Side Rendering (SSR):**
 
 **Benefits:**
 
@@ -7592,7 +7635,7 @@ export async function getServerSideProps() {
 export default HomePage;
 ```
 
-#### 2. **Static Site Generation (SSG):**
+##### 2. **Static Site Generation (SSG):**
 
 **Benefits:**
 
@@ -7621,7 +7664,7 @@ export async function getStaticProps() {
 export default HomePage;
 ```
 
-#### 3. **Prerendering:**
+##### 3. **Prerendering:**
 
 **Benefits:**
 
@@ -7633,7 +7676,7 @@ export default HomePage;
 * **Prerender.io**: A service that can prerender your JavaScript applications.
 * **React Snap**: A pre-rendering solution for React apps.
 
-#### 4. **Progressive Enhancement:**
+##### 4. **Progressive Enhancement:**
 
 **Benefits:**
 
@@ -7660,7 +7703,7 @@ export default HomePage;
 </html>
 ```
 
-#### 5. **Using Fetch As Google:**
+##### 5. **Using Fetch As Google:**
 
 **Benefits:**
 
@@ -7672,7 +7715,7 @@ export default HomePage;
 * Use the "URL Inspection" tool in Google Search Console.
 * Fetch your page and view the rendered HTML.
 
-#### 6. **Structured Data:**
+##### 6. **Structured Data:**
 
 **Benefits:**
 
@@ -7696,7 +7739,7 @@ export default HomePage;
 </script>
 ```
 
-### Summary
+##### Summary
 
 Optimizing JavaScript applications for SEO involves several strategies to ensure that search engines can crawl, index, and understand your content. Key techniques include:
 
@@ -7713,30 +7756,30 @@ By implementing these strategies, you can significantly enhance the SEO of your 
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q51
+#### Q51
 ### Q51. Web Workers: Background processing with web workers
 
-### Web Workers: Background Processing with Web Workers
+##### Web Workers: Background Processing with Web Workers
 
 **Web Workers** are a feature in JavaScript that allows you to run scripts in the background independently of the main execution thread. This helps keep your web application responsive by offloading time-consuming tasks such as data processing, computation, and other intensive operations to background threads.
 
-### Key Features of Web Workers
+##### Key Features of Web Workers
 
 1. **Concurrency:** Web Workers run in the background and do not block the main UI thread.
 2. **Isolation:** Each worker runs in its own global context, separate from the main thread, meaning it does not have access to the DOM.
 3. **Communication:** The main thread and workers communicate via message passing, using the `postMessage` method and `onmessage` event handler.
 4. **Standardized API:** Web Workers are part of the HTML5 standard and are supported by all modern browsers.
 
-### Types of Web Workers
+##### Types of Web Workers
 
 1. **Dedicated Workers:** Used by a single script and can communicate only with the script that created it.
 2. **Shared Workers:** Can be accessed by multiple scripts running in different windows, iframes, or tabs.
 
-### Creating and Using Web Workers
+##### Creating and Using Web Workers
 
 Here’s a simple example of how to create and use a Web Worker in a web application:
 
-#### 1. Creating a Worker Script
+##### 1. Creating a Worker Script
 
 Create a separate JavaScript file for the worker, e.g., `worker.js`:
 
@@ -7753,7 +7796,7 @@ self.onmessage = function(event) {
 };
 ```
 
-#### 2. Using the Worker in the Main Script
+##### 2. Using the Worker in the Main Script
 
 In your main JavaScript file, create and communicate with the worker:
 
@@ -7798,7 +7841,7 @@ In your main JavaScript file, create and communicate with the worker:
 </html>
 ```
 
-### Explanation
+##### Explanation
 
 1. **Worker Script (`worker.js`):**
 
@@ -7813,7 +7856,7 @@ In your main JavaScript file, create and communicate with the worker:
    * Listens for messages from the worker using `worker.onmessage` to handle the results.
    * Handles errors using `worker.onerror`.
 
-### Use Cases for Web Workers
+##### Use Cases for Web Workers
 
 1. **Data Processing:** Perform heavy computations or data parsing (e.g., large JSON files, image processing) without blocking the main thread.
 2. **Background Sync:** Sync data with the server in the background.
@@ -7821,14 +7864,14 @@ In your main JavaScript file, create and communicate with the worker:
 4. **WebAssembly:** Run WebAssembly modules for performance-critical tasks.
 5. **Complex Algorithms:** Run complex algorithms like pathfinding, simulations, and machine learning models.
 
-### Limitations of Web Workers
+##### Limitations of Web Workers
 
 1. **No DOM Access:** Workers do not have access to the DOM, so they cannot directly manipulate the UI.
 2. **Limited Communication:** Communication between the main thread and workers is done via message passing, which can be less efficient for very large amounts of data.
 3. **Security Restrictions:** Workers must be hosted on the same origin or domain for security reasons.
 4. **Resource Usage:** Creating many workers can consume significant system resources, so they should be used judiciously.
 
-### Summary
+##### Summary
 
 Web Workers provide a powerful way to perform background processing in web applications, helping to keep the main thread responsive. By offloading heavy computations and time-consuming tasks to workers, you can improve the performance and user experience of your application. However, it's important to be aware of their limitations and to use them appropriately for the best results. If you have further questions or need more detailed examples, feel free to ask!
 
@@ -7836,14 +7879,14 @@ Web Workers provide a powerful way to perform background processing in web appli
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q52
+#### Q52
 ### Q52. WebSocket: Real-time communication with Web Sockets
 
-### WebSocket: Real-Time Communication with Web Sockets
+##### WebSocket: Real-Time Communication with Web Sockets
 
 **WebSocket** is a communication protocol that provides full-duplex communication channels over a single TCP connection. WebSockets are designed to be a low-latency protocol suitable for real-time applications. Unlike HTTP, which is request-response based and unidirectional, WebSockets allow for continuous two-way communication between the client and server.
 
-### Key Features of WebSocket
+##### Key Features of WebSocket
 
 1. **Full-Duplex Communication:**
 
@@ -7861,7 +7904,7 @@ Web Workers provide a powerful way to perform background processing in web appli
 
    * Reduces the overhead associated with HTTP headers by maintaining a persistent connection, resulting in more efficient data transmission.
 
-### How WebSocket Works
+##### How WebSocket Works
 
 1. **Handshake:**
 
@@ -7875,11 +7918,11 @@ Web Workers provide a powerful way to perform background processing in web appli
 
    * Data is transmitted in small packets called frames. Frames can be either text or binary.
 
-### Example of WebSocket Implementation
+##### Example of WebSocket Implementation
 
 Let's build a simple real-time chat application using WebSocket with Node.js on the server side and vanilla JavaScript on the client side.
 
-#### Server-Side: Node.js with `ws` Library
+##### Server-Side: Node.js with `ws` Library
 
 1. **Install `ws` Library:**
 
@@ -7920,7 +7963,7 @@ server.on('connection', (socket) => {
 console.log('WebSocket server is running on ws://localhost:8080');
 ```
 
-#### Client-Side: HTML and JavaScript
+##### Client-Side: HTML and JavaScript
 
 1. **Create HTML File:**
 
@@ -7978,7 +8021,7 @@ Create an `index.html` file:
 </html>
 ```
 
-### Explanation
+##### Explanation
 
 1. **Server-Side:**
 
@@ -7994,7 +8037,7 @@ Create an `index.html` file:
    * **Message Event:** Listens for messages from the server and appends them to the messages list.
    * **Send Message:** Sends messages to the server when the send button is clicked.
 
-### Use Cases for WebSocket
+##### Use Cases for WebSocket
 
 1. **Real-Time Chat Applications:** Instant messaging and group chat applications.
 2. **Live Sports Updates:** Real-time scores and updates for sports events.
@@ -8002,7 +8045,7 @@ Create an `index.html` file:
 4. **Financial Trading Platforms:** Live stock prices and market data updates.
 5. **Collaborative Editing:** Real-time collaborative document editing tools.
 
-### Summary
+##### Summary
 
 WebSocket is a powerful protocol for real-time communication, allowing for low-latency, full-duplex communication between the client and server. By maintaining a persistent connection, WebSocket reduces the overhead associated with HTTP, making it ideal for applications that require real-time data exchange. The example provided demonstrates how to set up a simple WebSocket server with Node.js and create a real-time chat application using vanilla JavaScript on the client side. If you have further questions or need more detailed examples, feel free to ask!
 
@@ -8010,14 +8053,14 @@ WebSocket is a powerful protocol for real-time communication, allowing for low-l
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q53
+#### Q53
 ### Q53. JavaScript bundlers and their role in optimizing code for production
 
-### JavaScript Bundlers and Their Role in Optimizing Code for Production
+##### JavaScript Bundlers and Their Role in Optimizing Code for Production
 
 JavaScript bundlers are tools that compile multiple JavaScript files into a single file (or a few files) that can be efficiently loaded by a web browser. They are essential in modern web development for optimizing code for production, improving performance, and managing dependencies.
 
-### Key Features of JavaScript Bundlers
+##### Key Features of JavaScript Bundlers
 
 1. **Module Bundling:**
 
@@ -8048,7 +8091,7 @@ JavaScript bundlers are tools that compile multiple JavaScript files into a sing
 
    * Handles and optimizes non-JavaScript assets such as CSS, images, and fonts.
 
-### Popular JavaScript Bundlers
+##### Popular JavaScript Bundlers
 
 1. **Webpack:**
 
@@ -8065,9 +8108,9 @@ JavaScript bundlers are tools that compile multiple JavaScript files into a sing
    * A zero-configuration bundler that works out of the box with minimal setup.
    * Automatically handles common optimizations and supports many file types.
 
-### Example: Using Webpack to Bundle JavaScript for Production
+##### Example: Using Webpack to Bundle JavaScript for Production
 
-#### 1. Install Webpack and Dependencies
+##### 1. Install Webpack and Dependencies
 
 First, install Webpack and its CLI along with Babel for transpiling modern JavaScript.
 
@@ -8076,7 +8119,7 @@ npm install webpack webpack-cli --save-dev
 npm install babel-loader @babel/core @babel/preset-env --save-dev
 ```
 
-#### 2. Configure Webpack
+##### 2. Configure Webpack
 
 Create a `webpack.config.js` file to configure Webpack.
 
@@ -8113,7 +8156,7 @@ module.exports = {
 };
 ```
 
-#### 3. Babel Configuration
+##### 3. Babel Configuration
 
 Create a `.babelrc` file to configure Babel.
 
@@ -8123,7 +8166,7 @@ Create a `.babelrc` file to configure Babel.
 }
 ```
 
-#### 4. Project Structure
+##### 4. Project Structure
 
 Organize your project as follows:
 
@@ -8138,7 +8181,7 @@ my-project/
 └── webpack.config.js
 ```
 
-#### 5. Entry JavaScript File
+##### 5. Entry JavaScript File
 
 Create an `index.js` file in the `src` directory.
 
@@ -8156,7 +8199,7 @@ Create a `message.js` file in the `src` directory.
 export const message = 'Hello, Webpack!';
 ```
 
-#### 6. Build the Project
+##### 6. Build the Project
 
 Add a build script to your `package.json` file.
 
@@ -8174,7 +8217,7 @@ Run the build script.
 npm run build
 ```
 
-### Role of Bundlers in Optimizing Code for Production
+##### Role of Bundlers in Optimizing Code for Production
 
 1. **Combining Files:**
 
@@ -8200,7 +8243,7 @@ npm run build
 
    * Bundlers generate source maps, which help in debugging by providing a way to map the minified code back to the original source code.
 
-### Summary
+##### Summary
 
 JavaScript bundlers play a crucial role in optimizing code for production by combining, minifying, and compressing JavaScript files, performing tree shaking, code splitting, and managing assets. Tools like Webpack, Rollup, and Parcel provide a comprehensive set of features to enhance the performance and efficiency of web applications. By using these bundlers, developers can ensure their applications are fast, scalable, and maintainable. If you have further questions or need more detailed examples, feel free to ask!
 
@@ -8208,18 +8251,18 @@ JavaScript bundlers play a crucial role in optimizing code for production by com
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q54
+#### Q54
 ### Q54. Build Tools: Grasp Webpack and Babel for bundling and transpiling
 
-### Build Tools in Web Development
+##### Build Tools in Web Development
 
 **Build tools** are essential in modern web development for automating tasks and optimizing your code for production. They help in managing dependencies, bundling, minifying, and transpiling code, as well as optimizing assets like images and CSS. Two of the most important build tools in JavaScript development are **Webpack** and **Babel**.
 
-### Understanding Webpack
+##### Understanding Webpack
 
 **Webpack** is a powerful module bundler for JavaScript applications. It takes modules with dependencies and generates static assets representing those modules. Webpack is highly configurable and supports loaders and plugins to handle different types of files and transformations.
 
-#### Key Features of Webpack
+##### Key Features of Webpack
 
 1. **Entry Point:**
 
@@ -8246,7 +8289,7 @@ JavaScript bundlers play a crucial role in optimizing code for production by com
    * Splits your code into separate bundles that can be loaded on demand.
    * Example: Using `import()` syntax for dynamic imports.
 
-#### Example Webpack Configuration
+##### Example Webpack Configuration
 
 Here's a simple Webpack configuration to bundle JavaScript files and transpile ES6+ code using Babel.
 
@@ -8349,11 +8392,11 @@ Run the build script:
 npm run build
 ```
 
-### Understanding Babel
+##### Understanding Babel
 
 **Babel** is a JavaScript compiler that allows you to use next-generation JavaScript features today. It transpiles modern JavaScript code (ES6+) into a version compatible with older browsers (ES5).
 
-#### Key Features of Babel
+##### Key Features of Babel
 
 1. **Transpiling Modern JavaScript:**
 
@@ -8371,7 +8414,7 @@ npm run build
 
    * Highly configurable via `.babelrc` or `babel.config.json` files.
 
-### Example Babel Configuration
+##### Example Babel Configuration
 
 1. **.babelrc File:**
 
@@ -8409,7 +8452,7 @@ npm run build
 
 This will transpile all files in the `src` directory and output them to the `lib` directory.
 
-### Summary
+##### Summary
 
 **Build Tools** are essential for optimizing and automating tasks in modern web development. Webpack and Babel are two powerful tools that help manage dependencies, bundle modules, and transpile modern JavaScript code to ensure compatibility and performance. Webpack bundles various assets, manages dependencies, and optimizes the output, while Babel focuses on converting modern JavaScript syntax into a backward-compatible version. Together, they streamline the development workflow and ensure that web applications are optimized for production. If you have further questions or need more detailed examples, feel free to ask!
 
@@ -8417,10 +8460,10 @@ This will transpile all files in the `src` directory and output them to the `lib
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q55
+#### Q55
 ### Q55. Test-Driven Development (TDD): Writing tests before code
 
-### Test-Driven Development (TDD)
+##### Test-Driven Development (TDD)
 
 **Test-Driven Development (TDD)** is a software development approach where you write tests for your code before writing the actual implementation. The process typically follows these steps:
 
@@ -8431,11 +8474,11 @@ This will transpile all files in the `src` directory and output them to the `lib
 5. **Refactor:** Refactor the code to improve its structure while ensuring that the test still passes.
 6. **Repeat:** Repeat the cycle for each new piece of functionality.
 
-### Example of TDD with JavaScript
+##### Example of TDD with JavaScript
 
 Let's go through a simple example of TDD using JavaScript and the Jest testing framework. We will write a function that adds two numbers.
 
-#### 1. Set Up the Project
+##### 1. Set Up the Project
 
 First, initialize a new Node.js project and install Jest.
 
@@ -8446,7 +8489,7 @@ npm init -y
 npm install --save-dev jest
 ```
 
-#### 2. Configure Jest
+##### 2. Configure Jest
 
 Add the following script to your `package.json` file to run Jest.
 
@@ -8458,7 +8501,7 @@ Add the following script to your `package.json` file to run Jest.
 }
 ```
 
-#### 3. Write a Test
+##### 3. Write a Test
 
 Create a test file named `sum.test.js` in the `tests` directory. This test file will contain our first test case.
 
@@ -8472,7 +8515,7 @@ test('adds 1 + 2 to equal 3', () => {
 });
 ```
 
-#### 4. Run the Test
+##### 4. Run the Test
 
 Run the test to see it fail, since we haven't implemented the `sum` function yet.
 
@@ -8482,7 +8525,7 @@ npm test
 
 You should see an error indicating that the `sum` module cannot be found.
 
-#### 5. Write the Code
+##### 5. Write the Code
 
 Create the `sum` function in a file named `sum.js` in the `src` directory.
 
@@ -8496,7 +8539,7 @@ function sum(a, b) {
 module.exports = sum;
 ```
 
-#### 6. Run the Test Again
+##### 6. Run the Test Again
 
 Run the test again to see if it passes.
 
@@ -8506,11 +8549,11 @@ npm test
 
 You should see the test pass, indicating that the `sum` function works as expected.
 
-#### 7. Refactor (if necessary)
+##### 7. Refactor (if necessary)
 
 In this simple example, there's no need to refactor the code, but in a real-world scenario, you might need to refactor the code to improve its structure or performance while ensuring that all tests still pass.
 
-### Summary
+##### Summary
 
 Test-Driven Development (TDD) is a development methodology where you write tests before writing the actual code. This approach helps ensure that your code is reliable and meets the required specifications. In the example above, we followed these steps:
 
@@ -8526,14 +8569,14 @@ By following TDD, you can create robust, well-tested code that meets the require
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-##### Q56
+#### Q56
 ### Q56. `yarn` vs. `npm` vs. `pnpm` vs. `vite`: Comparing JavaScript package managers
 
-### Comparing JavaScript Package Managers: `yarn`, `npm`, `pnpm`, and `vite`
+##### Comparing JavaScript Package Managers: `yarn`, `npm`, `pnpm`, and `vite`
 
 JavaScript package managers and build tools are essential components of modern web development. Let's compare `yarn`, `npm`, `pnpm`, and `vite` in terms of their features, performance, and use cases.
 
-### 1. `npm` (Node Package Manager)
+##### 1. `npm` (Node Package Manager)
 
 **Overview:**
 
@@ -8568,7 +8611,7 @@ npm install lodash
 npm run build
 ```
 
-### 2. `yarn`
+##### 2. `yarn`
 
 **Overview:**
 
@@ -8604,7 +8647,7 @@ yarn add lodash
 yarn run build
 ```
 
-### 3. `pnpm`
+##### 3. `pnpm`
 
 **Overview:**
 
@@ -8639,7 +8682,7 @@ pnpm add lodash
 pnpm run build
 ```
 
-### 4. `vite`
+##### 4. `vite`
 
 **Overview:**
 
@@ -8680,7 +8723,7 @@ npm run dev
 npm run build
 ```
 
-### Summary
+##### Summary
 
 * **npm:** Default package manager for Node.js, known for its simplicity and ubiquity. Suitable for general JavaScript development.
 * **yarn:** Faster and more reliable than npm with features like parallel installation, deterministic lockfiles, and Plug'n'Play.

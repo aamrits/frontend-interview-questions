@@ -81,7 +81,7 @@ export default function HomePage() {
                 key={item.href}
                 href={item.href}
               >
-                <Card className="w-62.5 cursor-pointer transition-all hover:scale-[1.02] hover:shadow-xl bg-(--color-green) text-white">
+                <Card className="w-62.5 cursor-pointer transition-all hover:scale-[1.02] hover:shadow-xl bg-(--color-red) text-white">
                   <CardHeader>
                     <CardTitle className="text-lg font-bold">
                       {item.title}
