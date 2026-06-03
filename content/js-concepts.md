@@ -69,18 +69,16 @@
 #### Q1 
 ### Q1. The significance of the Event Loop and Concurrency Model in JavaScript
 
-The Event Loop and Concurrency Model are fundamental concepts in JavaScript that enable it to handle asynchronous operations efficiently. Here's a concise explanation:
+**What is Event Loop**
 
-##### Event Loop
-
-The Event Loop is a mechanism that allows JavaScript to perform non-blocking operations, despite being single-threaded. It works as follows:
+The Event Loop is a mechanism that allows JavaScript to perform non-blocking asynchronous operations, despite being single-threaded. It works as follows:
 
 1. **Call Stack**: JavaScript executes functions using a call stack, where functions are added to the stack when called and removed when execution completes.
 2. **Web APIs**: For asynchronous operations (e.g., `setTimeout`, `fetch`), the browser provides Web APIs to handle these tasks in the background.
 3. **Callback Queue**: Once an asynchronous operation completes, its callback is pushed to the callback queue.
 4. **Event Loop**: The event loop continuously checks the call stack and the callback queue. If the call stack is empty, it pushes the first callback from the queue to the stack for execution.
 
-##### Concurrency Model
+**What is Concurrency Model**
 
 JavaScript's concurrency model is based on the concept of the event loop, enabling it to manage multiple tasks efficiently without using multiple threads.
 
@@ -88,11 +86,13 @@ JavaScript's concurrency model is based on the concept of the event loop, enabli
 * **Promises and Async/Await**: Modern JavaScript provides promises and the `async/await` syntax for more readable and manageable asynchronous code.
 * **Microtasks and Macrotasks**: JavaScript distinguishes between microtasks (e.g., promise callbacks) and macrotasks (e.g., `setTimeout`). Microtasks are processed before the event loop moves to the next macrotask.
 
-##### Significance
+> Promises are executed before setTimeout. After that, functions are executed.
+
+**Key Takeaway**
 
 * **Non-Blocking I/O**: The event loop allows JavaScript to handle I/O operations (e.g., network requests, file reading) without blocking the execution of other code.
 * **Responsive UIs**: By avoiding blocking operations, JavaScript can keep the user interface responsive, improving user experience.
-* **Efficient Resource Use**: The single-threaded model reduces the complexity and overhead associated with managing multiple threads, making JavaScript efficient for many tasks.
+* **Efficient Resource Use**: The single-threaded model reduces the complexity with managing multiple threads, making JavaScript efficient for many tasks.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -101,15 +101,13 @@ JavaScript's concurrency model is based on the concept of the event loop, enabli
 #### Q2
 ### Q2. Explain briefly about the following: variables, data types, and operators
 
-Sure! Here's a brief explanation of variables, data types, and operators in JavaScript:
-
-##### Variables
+**Variables**
 
 Variables are containers for storing data values. In JavaScript, you can declare variables using `var`, `let`, or `const`.
 
-* **`var`**: Function-scoped and can be re-declared. It has hoisting behavior.
-* **`let`**: Block-scoped and cannot be re-declared within the same scope. It avoids issues with hoisting.
-* **`const`**: Block-scoped and must be initialized at declaration. It cannot be re-assigned, ensuring the variable reference remains constant.
+1. **`var`**: Function-scoped and can be re-declared. It has hoisting behavior.
+2. **`let`**: Block-scoped and cannot be re-declared within the same scope. It avoids issues with hoisting.
+3. **`const`**: Block-scoped and must be initialized at declaration. It cannot be re-assigned, ensuring the variable reference remains constant.
 
 Example:
 
@@ -119,62 +117,66 @@ const name = "Alice";
 var city = "New York";
 ```
 
-##### Data Types
+**Data Types**
 
-JavaScript has several data types, categorized into primitive and object types.
+Data types are categorized into *primitive* and *object types*.
 
-##### Primitive Data Types
+**Primitive Data Types**
 
-* **Number**: Represents numeric values. Example: `42`, `3.14`.
-* **String**: Represents text. Example: `"Hello, world!"`.
-* **Boolean**: Represents logical values, `true` or `false`.
-* **Undefined**: A variable that has been declared but not assigned a value. Example: `let x; // x is undefined`.
-* **Null**: Represents the intentional absence of any object value. Example: `let y = null;`.
-* **Symbol**: Represents a unique identifier. Example: `let sym = Symbol();`.
-* **BigInt**: Represents integers with arbitrary precision. Example: `let bigInt = 123n;`.
+1. **Number**: Represents numeric values. Example: `42`, `3.14`.
+2. **String**: Represents text. Example: `"Hello, world!"`.
+3. **Boolean**: Represents logical values, `true` or `false`.
+4. **Undefined**: A variable that has been declared but not assigned a value. Example: `let x; // x is undefined`.
+5. **Null**: Represents the intentional absence of any object value. Example: `let y = null;`.
+6. **Symbol**: Represents a unique identifier. Example: `let sym = Symbol();`.
+7. **BigInt**: Represents integers with arbitrary precision. Example: `let bigInt = 123n;`.
 
-##### Object Types
+**Object Types**
 
-* **Object**: A collection of key-value pairs. Example: `let person = { name: "Alice", age: 25 };`.
-* **Array**: An ordered list of values. Example: `let numbers = [1, 2, 3];`.
-* **Function**: A reusable block of code. Example: `function greet() { return "Hello"; }`.
+1. **Object**: A collection of key-value pairs. Example: `let person = { name: "Alice", age: 25 };`.
+2. **Array**: An ordered list of values. Example: `let numbers = [1, 2, 3];`.
+3. **Function**: A reusable block of code. Example: `function greet() { return "Hello"; }`.
 
-##### Operators
-
-Operators are used to perform operations on variables and values.
+**Operators**
 
 **Arithmetic Operators**
 
-* **`+`**: Addition. Example: `5 + 3` results in `8`.
-* **`-`**: Subtraction. Example: `5 - 3` results in `2`.
-* **`*`**: Multiplication. Example: `5 * 3` results in `15`.
-* **`/`**: Division. Example: `5 / 3` results in `1.67`.
-* **`%`**: Modulus (remainder). Example: `5 % 3` results in `2`.
+1. **Addition (+)** `5 + 3` results in `8`.
+2. **Subtraction (-)** `5 - 3` results in `2`.
+3. **Multiplication (*)** `5 * 3` results in `15`.
+4. **Division (/)** `5 / 3` results in `1.67`.
+5. **Modulus (%)** `5 % 3` results in `2`.
 
 **Comparison Operators**
 
-* **`==`**: Equality. Example: `5 == "5"` results in `true`.
-* **`===`**: Strict equality. Example: `5 === "5"` results in `false`.
-* **`!=`**: Inequality. Example: `5 != "5"` results in `false`.
-* **`!==`**: Strict inequality. Example: `5 !== "5"` results in `true`.
-* **`>`**: Greater than. Example: `5 > 3` results in `true`.
-* **`<`**: Less than. Example: `5 < 3` results in `false`.
-* **`>=`**: Greater than or equal to. Example: `5 >= 3` results in `true`.
-* **`<=`**: Less than or equal to. Example: `5 <= 3` results in `false`.
+1. **Equality (`==`)** `5 == "5"` results in `true`.
+2. **Strict equality (`===`)** `5 === "5"` results in `false`.
+3. **Inequality (`!=`)** `5 != "5"` results in `false`.
+4. **Strict inequality (`!==`)** `5 !== "5"` results in `true`.
+5. **Greater than (`>`)** `5 > 3` results in `true`.
+6. **Less than (`<`)** `5 < 3` results in `false`.
+7. **Greater than or equal to (`>=`)** `5 >= 3` results in `true`.
+8. **Less than or equal to (`<=`)** `5 <= 3` results in `false`.
 
 **Logical Operators**
 
-* **`&&`**: Logical AND. Example: `true && false` results in `false`.
-* **`||`**: Logical OR. Example: `true || false` results in `true`.
-* **`!`**: Logical NOT. Example: `!true` results in `false`.
+1. **AND (`&&`)** `true && false` results in `false`.
+2. **OR (`||`)** `true || false` results in `true`.
+3. **NOT (`!`)** `!true` results in `false`.
 
 **Assignment Operators**
 
-* **`=`**: Assignment. Example: `let x = 10;`.
-* **`+=`**: Addition assignment. Example: `x += 5; // x is now 15`.
-* **`-=`**: Subtraction assignment. Example: `x -= 5; // x is now 5`.
-* **`*=`**: Multiplication assignment. Example: `x *= 5; // x is now 50`.
-* **`/=`**: Division assignment. Example: `x /= 5; // x is now 2`.
+1. **Assignment (`=`)** `let x = 10;`.
+2. **Addition assignment (`+=`)** `x += 5; // x is now 15`.
+3. **Subtraction assignment (`-=`)** `x -= 5; // x is now 5`.
+4. **Multiplication assignment (`*=`)** `x *= 5; // x is now 50`.
+5. **Division assignment (`/=`)** `x /= 5; // x is now 2`.
+
+**Key Takeaway**
+
+| Variables | Data Types | Operators |
+|-----------|------------|------------|
+| `var`, `let`, `const` | **Primitive Types:** `number`, `string`, `boolean`, `undefined`, `null`, `symbol`, `bigint`<br><br>**Object Types:** `object`, `array`, `function` | **Arithmetic:** `+`, `-`, `*`, `/`, `%`<br>**Comparison:** `==`, `===`, `!=`, `!==`, `>`, `<`, `>=`, `<=`<br>**Logical:** `&&` (AND), `\|\|` (OR), `!` (NOT)<br>**Assignment:** `=`, `+=`, `-=`, `*=`, `/=` |
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
