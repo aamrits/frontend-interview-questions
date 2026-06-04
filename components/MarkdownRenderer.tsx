@@ -9,7 +9,7 @@ export default function MarkdownRenderer({
     content,
 }: Props) {
     return (
-        <div className="prose prose-neutral dark:prose-invert max-w-none">
+        <div className="prose prose-neutral dark:prose-invert prose-code:before:content-none prose-code:after:content-none max-w-none">
             <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
@@ -19,7 +19,7 @@ export default function MarkdownRenderer({
                         if (isInline) {
                             return (
                                 <code className="rounded bg-muted px-1.5 py-0.5 text-sm font-mono">
-                                {children}
+                                    {children}
                                 </code>
                             );
                         }
@@ -27,10 +27,10 @@ export default function MarkdownRenderer({
                         return (
                             <pre className="overflow-x-auto rounded-lg bg-black p-4">
                                 <code
-                                className={className}
-                                {...props}
+                                    className={className}
+                                    {...props}
                                 >
-                                {children}
+                                    {children}
                                 </code>
                             </pre>
                         );
@@ -47,6 +47,6 @@ export default function MarkdownRenderer({
             >
                 {content}
             </ReactMarkdown>
-            </div>
+        </div>
     );
 }
