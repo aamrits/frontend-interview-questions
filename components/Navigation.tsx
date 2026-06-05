@@ -39,7 +39,7 @@ export default function Navigation({
             {/* For other screens */}
             <div className="hidden sm:block">
                 <Tabs value={currentDocument}>
-                    <TabsList className="bg-(--color-red) dark:bg-transparent p-1 flex flex-wrap h-15 mb-2.5">
+                    <TabsList className="bg-(--color-red) dark:bg-transparent p-0.75 flex flex-wrap h-15 mb-2.5">
                         {navigation.map((item) => (
                             <TabsTrigger
                                 className="text-base text-white hover:text-white data-[state=active]:hover:text-black p-3"
