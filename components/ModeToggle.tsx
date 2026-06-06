@@ -18,19 +18,19 @@ export function ModeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="lg" className="gap-2 flex align-middle z-10 border-(--color-red)">
+        <Button variant="outline" size="lg" className="flex items-center gap-2 rounded-full bg-white p-5 font-medium text-black shadow-md transition hover:scale-105">
           <div className="relative h-[1.2rem] w-[1.2rem]">
             <Sun className="absolute h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90 mt-0.5" />
-            <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0 mt-0.5" />
+            <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0 dark:text-white mt-0.5" />
           </div>
 
-          <span className="hidden dark:inline">
+          {/* <span className="hidden dark:inline">
             Dark
           </span>
 
           <span className="dark:hidden">
             Light
-          </span>
+          </span> */}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

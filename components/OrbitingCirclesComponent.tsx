@@ -6,7 +6,7 @@ import { MdCss } from "react-icons/md";
 export function OrbitingCirclesComponent() {
     return (
         <div className="relative flex h-125 w-full flex-col items-center justify-center overflow-hidden">
-            <OrbitingCircles iconSize={60}>
+            <OrbitingCircles iconSize={60} className="hidden xl:block">
                 <FaNodeJs className="text-black" size={'3em'} />
                 <SiReact className="text-black" size={'3em'} />
                 <FaHtml5 className="text-black" size={'3em'} />
