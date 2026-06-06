@@ -9,7 +9,7 @@ export default function MobileScreen() {
 
     return (
         <div className="relative">
-            <div className="mx-auto w-full overflow-hidden rounded-[40px] bg-white shadow-2xl">
+            <div className="mx-auto w-full overflow-hidden bg-white shadow-2xl">
                 {/* Hero Section */}
                 <div
                     className={`relative h-72 transition-all duration-500 ${selectedCourse.heroGradient}`}
@@ -32,7 +32,7 @@ export default function MobileScreen() {
                 </div>
 
                 {/* Bottom Sheet */}
-                <div className="-mt-12 rounded-t-[40px] bg-white px-5 py-6 relative z-10">
+                <div className="-mt-12 h-[calc(100vh-18rem+3rem)] rounded-t-[40px] bg-white px-5 py-6 relative z-10">
                     <div className="mx-auto mb-6 h-1.5 w-16 rounded-full bg-gray-200" />
 
                     <div className="space-y-4">
@@ -83,6 +83,11 @@ export default function MobileScreen() {
                         })}
                     </div>
                 </div>
+
+                {/* Footer */}
+                <footer className="fixed bottom-4 left-1/2 z-50 -translate-x-1/2 rounded-full bg-white/80 px-4 py-2 text-xs text-gray-500 shadow-sm backdrop-blur">
+                    Built with ❤️ by Amrit • © {new Date().getFullYear()}.
+                </footer>
             </div>
         </div>
     );

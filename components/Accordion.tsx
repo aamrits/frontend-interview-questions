@@ -31,7 +31,7 @@ export default function Accordion({
             type="single"
             value={openItem}
             onValueChange={onOpenChange}
-            className="w-full border rounded-md h-[80vh] overflow-y-auto"
+            className="w-full border rounded-md h-[65vh] overflow-y-auto"
         >
             {items.map((item, index) => (
                 <AccordionItem

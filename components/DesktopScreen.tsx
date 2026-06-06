@@ -109,6 +109,11 @@ export default function DesktopScreen() {
                     </div>
                 </div>
             </section>
+
+            {/* Footer */}
+            <footer className="fixed bottom-4 left-1/2 z-50 -translate-x-1/2 rounded-full bg-white/80 px-4 py-2 text-xs text-gray-500 shadow-sm backdrop-blur">
+                Built with ❤️ by Amrit • © {new Date().getFullYear()}.
+            </footer>
         </div>
     );
 }

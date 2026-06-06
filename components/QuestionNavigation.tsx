@@ -15,7 +15,7 @@ export default function QuestionNavigation({
     onSelect,
 }: Props) {
     return (
-        <div className="mb-6 rounded-lg border p-4 h-[80vh] overflow-y-auto">
+        <div className="mb-6 rounded-lg border p-4 h-[65vh] overflow-y-auto">
             <h2 className="mb-4 text-lg font-semibold">
                 Questions ({questions.length})
             </h2>
