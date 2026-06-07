@@ -112,7 +112,7 @@ export default function DesktopScreen() {
 
             {/* Footer */}
             <footer className="fixed bottom-4 left-1/2 z-50 -translate-x-1/2 rounded-full bg-white/80 px-4 py-2 text-xs text-gray-500 shadow-sm backdrop-blur">
-                Built with ❤️ by Amrit • © {new Date().getFullYear()}.
+                © {new Date().getFullYear()} Frontend Interview Questions. Built with ❤️ by Amrit
             </footer>
         </div>
     );

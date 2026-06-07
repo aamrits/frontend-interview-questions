@@ -82,12 +82,12 @@ export default function MobileScreen() {
                             );
                         })}
                     </div>
-                </div>
 
-                {/* Footer */}
-                <footer className="fixed bottom-4 left-1/2 z-50 -translate-x-1/2 rounded-full bg-white/80 px-4 py-2 text-xs text-gray-500 shadow-sm backdrop-blur">
-                    Built with ❤️ by Amrit • © {new Date().getFullYear()}.
-                </footer>
+                    {/* Footer */}
+                    <footer className="mt-4 rounded-full bg-white/80 px-4 py-2 text-center text-xs text-gray-500 shadow-sm backdrop-blur">
+                        Built with ❤️ by Amrit • © {new Date().getFullYear()}.
+                    </footer>
+                </div>
             </div>
         </div>
     );
