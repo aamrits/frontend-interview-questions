@@ -93,7 +93,7 @@ export default function DesktopScreen() {
                                             {item.title}
                                         </CardTitle>
 
-                                        <CardDescription className="mt-1 text-white/90 min-">
+                                        <CardDescription className="mt-1 text-white/90 h-[40px]">
                                             {item.shortDescription}
                                         </CardDescription>
                                     </CardHeader>
