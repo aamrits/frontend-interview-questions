@@ -161,7 +161,8 @@
     background-color: var(--background);
   }
   .prose h5 {
-    @apply font-bold;
+    @apply font-bold underline decoration-double;
+    text-underline-offset: 6px;
   }
   .prose p {
     margin-top: 0.75rem !important;

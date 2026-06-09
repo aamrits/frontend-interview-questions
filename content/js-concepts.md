@@ -69,7 +69,7 @@
 #### Q1 
 ### Q1. The significance of the Event Loop and Concurrency Model in JavaScript
 
-**What is Event Loop**
+##### What is Event Loop
 
 The Event Loop is a mechanism that allows JavaScript to perform non-blocking asynchronous operations, despite being single-threaded. It works as follows:
 
@@ -78,7 +78,7 @@ The Event Loop is a mechanism that allows JavaScript to perform non-blocking asy
 3. **Callback Queue**: Once an asynchronous operation completes, its callback is pushed to the callback queue.
 4. **Event Loop**: The event loop continuously checks the call stack and the callback queue. If the call stack is empty, it pushes the first callback from the queue to the stack for execution.
 
-**What is Concurrency Model**
+##### What is Concurrency Model
 
 JavaScript's concurrency model is based on the concept of the event loop, enabling it to manage multiple tasks efficiently without using multiple threads.
 
@@ -88,7 +88,7 @@ JavaScript's concurrency model is based on the concept of the event loop, enabli
 
 > Promises are executed before setTimeout. After that, functions are executed.
 
-**Key Takeaway**
+##### Key Takeaway
 
 * **Non-Blocking I/O**: The event loop allows JavaScript to handle I/O operations (e.g., network requests, file reading) without blocking the execution of other code.
 * **Responsive UIs**: By avoiding blocking operations, JavaScript can keep the user interface responsive, improving user experience.
@@ -101,7 +101,7 @@ JavaScript's concurrency model is based on the concept of the event loop, enabli
 #### Q2
 ### Q2. Explain briefly about the following: variables, data types, and operators
 
-**Variables**
+##### Variables
 
 Variables are containers for storing data values. In JavaScript, you can declare variables using `var`, `let`, or `const`.
 
@@ -117,66 +117,70 @@ const name = "Alice";
 var city = "New York";
 ```
 
-**Data Types**
+##### Data Types
 
 Data types are categorized into *primitive* and *object types*.
 
-**Primitive Data Types**
+1. **Primitive Data Types**
 
-1. **Number**: Represents numeric values. Example: `42`, `3.14`.
-2. **String**: Represents text. Example: `"Hello, world!"`.
-3. **Boolean**: Represents logical values, `true` or `false`.
-4. **Undefined**: A variable that has been declared but not assigned a value. Example: `let x; // x is undefined`.
-5. **Null**: Represents the intentional absence of any object value. Example: `let y = null;`.
-6. **Symbol**: Represents a unique identifier. Example: `let sym = Symbol();`.
-7. **BigInt**: Represents integers with arbitrary precision. Example: `let bigInt = 123n;`.
+  - **Number**: Represents numeric values. Example: `42`, `3.14`.
+  - **String**: Represents text. Example: `"Hello, world!"`.
+  - **Boolean**: Represents logical values, `true` or `false`.
+  - **Undefined**: A variable that has been declared but not assigned a value. Example: `let x; // x is undefined`.
+  - **Null**: Represents the intentional absence of any object value. Example: `let y = null;`.
+  - **Symbol**: Represents a unique identifier. Example: `let sym = Symbol();`.
+  - **BigInt**: Represents integers with arbitrary precision. Example: `let bigInt = 123n;`.
 
-**Object Types**
+2. **Object Types**
 
-1. **Object**: A collection of key-value pairs. Example: `let person = { name: "Alice", age: 25 };`.
-2. **Array**: An ordered list of values. Example: `let numbers = [1, 2, 3];`.
-3. **Function**: A reusable block of code. Example: `function greet() { return "Hello"; }`.
+ - **Object**: A collection of key-value pairs. Example: `let person = { name: "Alice", age: 25 };`.
+ - **Array**: An ordered list of values. Example: `let numbers = [1, 2, 3];`.
+ - **Function**: A reusable block of code. Example: `function greet() { return "Hello"; }`.
 
-**Operators**
+3. **Operators**
 
-**Arithmetic Operators**
+  - **Arithmetic Operators**
+    - **Addition (+)** `5 + 3` results in `8`.
+    - **Subtraction (-)** `5 - 3` results in `2`.
+    - **Multiplication (*)** `5 * 3` results in `15`.
+    - **Division (/)** `5 / 3` results in `1.67`.
+    - **Modulus (%)** `5 % 3` results in `2`.
 
-1. **Addition (+)** `5 + 3` results in `8`.
-2. **Subtraction (-)** `5 - 3` results in `2`.
-3. **Multiplication (*)** `5 * 3` results in `15`.
-4. **Division (/)** `5 / 3` results in `1.67`.
-5. **Modulus (%)** `5 % 3` results in `2`.
+  - **Comparison Operators**
+    - **Equality (`==`)** `5 == "5"` results in `true`.
+    - **Strict equality (`===`)** `5 === "5"` results in `false`.
+    - **Inequality (`!=`)** `5 != "5"` results in `false`.
+    - **Strict inequality (`!==`)** `5 !== "5"` results in `true`.
+    - **Greater than (`>`)** `5 > 3` results in `true`.
+    - **Less than (`<`)** `5 < 3` results in `false`.
+    - **Greater than or equal to (`>=`)** `5 >= 3` results in `true`.
+    - **Less than or equal to (`<=`)** `5 <= 3` results in `false`.
 
-**Comparison Operators**
+  - **Logical Operators**
+    - **AND (`&&`)** `true && false` results in `false`.
+    - **OR (`||`)** `true || false` results in `true`.
+    - **NOT (`!`)** `!true` results in `false`.
 
-1. **Equality (`==`)** `5 == "5"` results in `true`.
-2. **Strict equality (`===`)** `5 === "5"` results in `false`.
-3. **Inequality (`!=`)** `5 != "5"` results in `false`.
-4. **Strict inequality (`!==`)** `5 !== "5"` results in `true`.
-5. **Greater than (`>`)** `5 > 3` results in `true`.
-6. **Less than (`<`)** `5 < 3` results in `false`.
-7. **Greater than or equal to (`>=`)** `5 >= 3` results in `true`.
-8. **Less than or equal to (`<=`)** `5 <= 3` results in `false`.
+  - **Assignment Operators**
+    - **Assignment (`=`)** `let x = 10;`.
+    - **Addition assignment (`+=`)** `x += 5; // x is now 15`.
+    - **Subtraction assignment (`-=`)** `x -= 5; // x is now 5`.
+    - **Multiplication assignment (`*=`)** `x *= 5; // x is now 50`.
+    - **Division assignment (`/=`)** `x /= 5; // x is now 2`.
 
-**Logical Operators**
+##### Key Takeaway
 
-1. **AND (`&&`)** `true && false` results in `false`.
-2. **OR (`||`)** `true || false` results in `true`.
-3. **NOT (`!`)** `!true` results in `false`.
+- Variables: `var`, `let`, `const`
 
-**Assignment Operators**
+- Data Types:
+  - Primitive Types: `number`, `string`, `boolean`, `undefined`, `null`, `symbol`, `bigint`
+  - Object Types: `object`, `array`, `function`
 
-1. **Assignment (`=`)** `let x = 10;`.
-2. **Addition assignment (`+=`)** `x += 5; // x is now 15`.
-3. **Subtraction assignment (`-=`)** `x -= 5; // x is now 5`.
-4. **Multiplication assignment (`*=`)** `x *= 5; // x is now 50`.
-5. **Division assignment (`/=`)** `x /= 5; // x is now 2`.
-
-**Key Takeaway**
-
-| Variables | Data Types | Operators |
-|-----------|------------|------------|
-| `var`, `let`, `const` | **Primitive Types:** `number`, `string`, `boolean`, `undefined`, `null`, `symbol`, `bigint`<br><br>**Object Types:** `object`, `array`, `function` | **Arithmetic:** `+`, `-`, `*`, `/`, `%`<br>**Comparison:** `==`, `===`, `!=`, `!==`, `>`, `<`, `>=`, `<=`<br>**Logical:** `&&` (AND), `\|\|` (OR), `!` (NOT)<br>**Assignment:** `=`, `+=`, `-=`, `*=`, `/=` |
+- Operators: 
+  - Arithmetic: `+`, `-`, `*`, `/`, `%`
+  - Comparison: `==`, `===`, `!=`, `!==`, `>`, `<`, `>=`, `<=`
+  - Logical: `&&` (AND), `||` (OR), `!` (NOT)
+  - Assignment: `=`, `+=`, `-=`, `*=`, `/=`
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -1022,7 +1026,7 @@ Closures are a powerful feature in JavaScript that allow functions to retain acc
 
 String manipulation is a common task in JavaScript, and there are various methods and techniques available to manipulate strings. Here are some of the most commonly used string manipulation techniques:
 
-##### 1. String Length
+1. **String Length**
 
 You can get the length of a string using the `.length` property.
 
@@ -1031,7 +1035,7 @@ const str = "Hello, world!";
 console.log(str.length); // 13
 ```
 
-##### 2. Accessing Characters
+2. **Accessing Characters**
 
 You can access characters in a string using bracket notation or the `.charAt()` method.
 
@@ -1041,7 +1045,7 @@ console.log(str[0]); // "H"
 console.log(str.charAt(1)); // "e"
 ```
 
-##### 3. Changing Case
+3. **Changing Case**
 
 Convert strings to upper or lower case.
 
@@ -1051,7 +1055,7 @@ console.log(str.toUpperCase()); // "HELLO, WORLD!"
 console.log(str.toLowerCase()); // "hello, world!"
 ```
 
-##### 4. Substring Extraction
+4. **Substring Extraction**
 
 Extract parts of a string using `.substring()`, `.substr()`, or `.slice()`.
 
@@ -1062,7 +1066,7 @@ console.log(str.substr(7, 5)); // "world"
 console.log(str.slice(7, 12)); // "world"
 ```
 
-##### 5. Searching within a String
+5. **Searching within a String**
 
 Find the position of a substring using `.indexOf()` and `.lastIndexOf()`.
 
@@ -1072,7 +1076,7 @@ console.log(str.indexOf("world")); // 7
 console.log(str.lastIndexOf("o")); // 8
 ```
 
-##### 6. Checking for Substring
+6. **Checking for Substring**
 
 Check if a string contains a substring using `.includes()`, `.startsWith()`, and `.endsWith()`.
 
@@ -1083,7 +1087,7 @@ console.log(str.startsWith("Hello")); // true
 console.log(str.endsWith("!")); // true
 ```
 
-##### 7. String Replacement
+7. **String Replacement**
 
 Replace parts of a string using `.replace()`.
 
@@ -1092,7 +1096,7 @@ const str = "Hello, world!";
 console.log(str.replace("world", "JavaScript")); // "Hello, JavaScript!"
 ```
 
-##### 8. Splitting and Joining Strings
+8. **Splitting and Joining Strings**
 
 Split a string into an array and join an array into a string.
 
@@ -1105,7 +1109,7 @@ const newStr = arr.join(" - ");
 console.log(newStr); // "Hello - world!"
 ```
 
-##### 9. Trimming Whitespace
+9. **Trimming Whitespace**
 
 Remove whitespace from both ends of a string using `.trim()`, `.trimStart()`, and `.trimEnd()`.
 
@@ -1116,7 +1120,7 @@ console.log(str.trimStart()); // "Hello, world!   "
 console.log(str.trimEnd()); // "   Hello, world!"
 ```
 
-##### 10. String Concatenation
+10. **String Concatenation**
 
 Concatenate strings using the `+` operator or `.concat()` method.
 
@@ -1127,7 +1131,7 @@ console.log(str1 + ", " + str2 + "!"); // "Hello, World!"
 console.log(str1.concat(", ", str2, "!")); // "Hello, World!"
 ```
 
-##### 11. Template Literals
+11. **Template Literals**
 
 Use template literals for string interpolation and multi-line strings.
 
@@ -1141,7 +1145,7 @@ multi-line string.`;
 console.log(multiLineString);
 ```
 
-##### 12. Repeating Strings
+12. **Repeating Strings**
 
 Repeat a string multiple times using `.repeat()`.
 
@@ -1150,7 +1154,7 @@ const str = "Hello!";
 console.log(str.repeat(3)); // "Hello!Hello!Hello!"
 ```
 
-##### 13. Character Codes
+13. **Character Codes**
 
 Get the character code using `.charCodeAt()` and convert codes to characters using `String.fromCharCode()`.
 
@@ -1168,10 +1172,6 @@ Convert a string into an array of characters using `split("")`.
 const str = "Hello";
 console.log(str.split("")); // ["H", "e", "l", "l", "o"]
 ```
-
-##### Summary
-
-These string manipulation techniques are essential for handling text data in JavaScript. They cover a wide range of operations, from basic tasks like changing case and concatenation to more advanced operations like template literals and working with character codes. Understanding these methods allows for efficient and effective string handling in JavaScript.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
