@@ -173,14 +173,14 @@ Data types are categorized into *primitive* and *object types*.
 - Variables: `var`, `let`, `const`
 
 - Data Types:
-  - Primitive Types: `number`, `string`, `boolean`, `undefined`, `null`, `symbol`, `bigint`
-  - Object Types: `object`, `array`, `function`
+  - Primitive Types: `number` `string` `boolean` `undefined` `null` `symbol` `bigint`
+  - Object Types: `object` `array` `function`
 
 - Operators: 
-  - Arithmetic: `+`, `-`, `*`, `/`, `%`
-  - Comparison: `==`, `===`, `!=`, `!==`, `>`, `<`, `>=`, `<=`
-  - Logical: `&&` (AND), `||` (OR), `!` (NOT)
-  - Assignment: `=`, `+=`, `-=`, `*=`, `/=`
+  - Arithmetic: `+` `-` `*` `/` `%`
+  - Comparison: `==` `===` `!=` `!==` `>` `<` `>=` `<=`
+  - Logical: `&&` (AND) `||` (OR) `!` (NOT)
+  - Assignment: `=` `+=` `-=` `*=` `/=`
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -189,15 +189,13 @@ Data types are categorized into *primitive* and *object types*.
 #### Q3
 ### Q3. Understanding Hoisting and its impact on variable and function declarations
 
-**Hoisting**
-
-**What is it?**
+##### Hoisting
 
 Hoisting is a JavaScript behavior where variable and function declarations are processed before code execution begins.
 
 This allows variables and functions to be referenced before their declaration appears in the code. However, **only declarations are hoisted, not initializations (assignments).**
 
-**How it Works**
+##### How it Works
 
 During the creation phase of execution:
 
@@ -206,13 +204,9 @@ During the creation phase of execution:
 * Function declarations are fully hoisted, including their implementation.
 * Function expressions are not fully hoisted; only the variable declaration is hoisted.
 
-**Variable Hoisting**
+##### Variable Hoisting
 
-**`var`**
-
-Variables declared with `var` are hoisted and initialized with `undefined`.
-
-**Example**
+1. Variables declared with `var` are hoisted and initialized with `undefined`.
 
 ```js
 console.log(a); // undefined
@@ -222,7 +216,7 @@ var a = 10;
 console.log(a); // 10
 ```
 
-**JavaScript Interprets It As**
+JavaScript Interprets It As
 
 ```js
 var a;
@@ -234,18 +228,11 @@ a = 10;
 console.log(a); // 10
 ```
 
-> **Note**
-> Only the declaration is hoisted. The assignment remains in its original position.
+Only the declaration is hoisted. The assignment remains in its original position.
 
----
-
-**`let` and `const`**
-
-Variables declared with `let` and `const` are hoisted but are not initialized immediately.
+2. Variables declared with `let` and `const` are hoisted but are not initialized immediately.
 
 They remain in the **Temporal Dead Zone (TDZ)** until execution reaches their declaration.
-
-**Example**
 
 ```js
 console.log(b); // ReferenceError
@@ -255,17 +242,11 @@ console.log(c); // ReferenceError
 const c = 30;
 ```
 
-**Why?**
+✅ Although the declarations are hoisted, JavaScript does not allow access to them before initialization.
 
-Although the declarations are hoisted, JavaScript does not allow access to them before initialization.
+##### Function Hoisting
 
-**Function Hoisting**
-
-1. **Function Declarations**
-
-Function declarations are fully hoisted, including the function body.
-
-**Example**
+1. **Function Declarations**: Function declarations are fully hoisted, including the function body.
 
 ```js
 greet();
@@ -275,7 +256,7 @@ function greet() {
 }
 ```
 
-**JavaScript Interprets It As**
+JavaScript Interprets It As
 
 ```js
 function greet() {
@@ -287,15 +268,7 @@ greet();
 
 ✅ The function can be called before its declaration.
 
----
-
-2. **Function Expressions**
-
-Function expressions are not fully hoisted.
-
-Only the variable declaration is hoisted.
-
-**Example**
+2. **Function Expressions**: Function expressions are not fully hoisted. Only the variable declaration is hoisted.
 
 ```js
 sayHello();
@@ -305,7 +278,7 @@ var sayHello = function () {
 };
 ```
 
-**JavaScript Interprets It As**
+JavaScript Interprets It As
 
 ```js
 var sayHello;
@@ -319,7 +292,7 @@ sayHello = function () {
 
 ❌ The function cannot be called before the assignment occurs.
 
-**Hoisting Summary**
+##### Hoisting Summary
 
 | Declaration Type     | Hoisted | Initialized   | Can Be Used Before Declaration? |
 | -------------------- | ------- | ------------- | ------------------------------- |
@@ -329,7 +302,7 @@ sayHello = function () {
 | Function Declaration | ✅ Yes   | ✅ Yes         | ✅ Yes                           |
 | Function Expression  | Partial | Variable only | ❌ No                            |
 
-**Key Takeaway**
+##### Key Takeaway
 
 * Hoisting happens during the creation phase of execution.
 * `var` is hoisted and initialized with `undefined`.
@@ -362,11 +335,9 @@ sayHello = function () {
 #### Q5
 ### Q5. Define functions, function declarations, function expressions IIFE, arrow functions
 
-**Function Declarations**
+##### Function Declarations
 
 Function declarations define a function with a specific name and can be invoked before they are defined in the code due to hoisting.
-
-Example:
 
 ```javascript
 function greet(name) {
@@ -377,15 +348,12 @@ console.log(greet("Alice")); // "Hello, Alice!"
 ```
 
 Key points:
+- Hoisted to the top of their scope.
+- Can be called before they are declared in the code.
 
-* Hoisted to the top of their scope.
-* Can be called before they are declared in the code.
-
-**Function Expressions**
+##### Function Expressions
 
 Function expressions define a function as part of an expression, typically assigned to a variable. They are not hoisted, meaning they cannot be called before they are defined.
-
-Example:
 
 ```javascript
 const greet = function(name) {
@@ -396,15 +364,12 @@ console.log(greet("Bob")); // "Hello, Bob!"
 ```
 
 Key points:
+- Not hoisted.
+- Can be anonymous or named.
 
-* Not hoisted.
-* Can be anonymous or named.
-
-**Immediately Invoked Function Expressions (IIFE)**
+##### Immediately Invoked Function Expressions (IIFE)
 
 IIFEs are functions that are defined and immediately executed. They create a new scope, which can be useful for avoiding global variable pollution.
-
-Example:
 
 ```javascript
 (function() {
@@ -418,16 +383,13 @@ Example:
 ```
 
 Key points:
+- Invoked immediately after they are defined.
+- Can be anonymous.
+- Useful for creating a new scope.
 
-* Invoked immediately after they are defined.
-* Can be anonymous.
-* Useful for creating a new scope.
-
-**Arrow Functions**
+##### Arrow Functions
 
 Arrow functions provide a shorter syntax for writing functions. They do not have their own `this` context, meaning `this` is lexically bound to the surrounding scope.
-
-Example:
 
 ```javascript
 const greet = (name) => `Hello, ${name}!`;
@@ -435,7 +397,7 @@ const greet = (name) => `Hello, ${name}!`;
 console.log(greet("Charlie")); // "Hello, Charlie!"
 ```
 
-##### Arrow Function with Lexical `this`
+**Arrow Function with Lexical `this`**
 
 ```javascript
 function Timer() {
@@ -452,13 +414,12 @@ const timer = new Timer();
 In this example, `this.seconds` correctly refers to the `Timer` instance because arrow functions do not have their own `this` context.
 
 Key points:
+- More concise syntax.
+- No `this`, `arguments`, `super`, or `new.target` binding.
+- Cannot be used as constructors.
+- Not suitable for methods that need their own `this`.
 
-* More concise syntax.
-* No `this`, `arguments`, `super`, or `new.target` binding.
-* Cannot be used as constructors.
-* Not suitable for methods that need their own `this`.
-
-**Comparison**
+##### Comparison
 
 | Feature                | Function Declaration | Function Expression           | IIFE                                  | Arrow Function                       |
 | ---------------------- | -------------------- | ----------------------------- | ------------------------------------- | ------------------------------------ |
@@ -479,12 +440,10 @@ Key points:
 
 In JavaScript, `==` and `===` are used for value comparison, but they work differently in terms of how they handle *type coercion*.
 
-**`==` (Equality Operator)**
+##### Equality Operator (`==`)
 
-* **Type Coercion**: The `==` operator performs type coercion, meaning it converts the operands to the same type before making the comparison.
-* **Usage**: Often used when the type of the operands is not known or irrelevant.
-
-Example:
+- **Type Coercion**: The `==` operator performs type coercion, meaning it converts the operands to the same type before making the comparison.
+- **Usage**: Often used when the type of the operands is not known or irrelevant.
 
 ```javascript
 console.log(5 == '5'); // true (number and string are converted to the same type)
@@ -493,12 +452,10 @@ console.log(true == 1); // true (boolean is converted to number)
 console.log([] == false); // true (array is converted to boolean and then to number)
 ```
 
-**`===` (Strict Equality Operator)**
+##### Strict Equality Operator (`===`)
 
-* **No Type Coercion**: The `===` operator does not perform type coercion. It compares both the value and the type of the operands.
-* **Usage**: Preferred for precise and predictable comparisons, especially when the types of the operands are known.
-
-Example:
+- **No Type Coercion**: The `===` operator does not perform type coercion. It compares both the value and the type of the operands.
+- **Usage**: Preferred for precise and predictable comparisons, especially when the types of the operands are known.
 
 ```javascript
 console.log(5 === '5'); // false (different types: number vs. string)
@@ -507,7 +464,7 @@ console.log(true === 1); // false (different types: boolean vs. number)
 console.log([] === false); // false (different types)
 ```
 
-**Comparison** 
+##### Comparison
 
 | Example                        | `==` Result | `===` Result |
 | ------------------------------ | ----------- | ------------ |
@@ -520,15 +477,17 @@ console.log([] === false); // false (different types)
 | `[1,2] == '1,2'`               | `true`      | `false`      |
 | `new String('test') == 'test'` | `true`      | `false`      |
 
-**Key Takeaway**
+##### Key Takeaway
 
-* **Use `===` for most comparisons**: It avoids unexpected results due to type coercion, leading to more predictable and reliable code.
-* **Use `==` when type coercion is desired**: There are specific cases where `==` might be useful, such as comparing `null` and `undefined`.
-```
+- **Use `===` for most comparisons**: It avoids unexpected results due to type coercion, leading to more predictable and reliable code.
+- **Use `==` when type coercion is desired**: There are specific cases where `==` might be useful, such as comparing `null` and `undefined`.
+
+```js
 value == null // checks null and undefined
 value == undefined // checks null and undefined
 ```
-* **Objects and Arrays**: Both operators compare references for *objects* and *arrays*, not values. Thus, two different objects with the same properties are not equal.
+
+- **Objects and Arrays**: Both operators compare references for *objects* and *arrays*, not values. Thus, two different objects with the same properties are not equal.
 ```javascript
   const obj1 = { a: 1 };
   const obj2 = { a: 1 };
@@ -555,7 +514,7 @@ In JavaScript, `null` and `undefined` are two distinct types representing the ab
 | **Equality (`==`)**         | `true` when compared with `undefined`   | `true` when compared with `null`                                  |
 | **Strict Equality (`===`)** | `false` when compared with `undefined`  | `false` when compared with `null`                                 |
 
-**Loose Equality (`==`)**
+##### Loose Equality (`==`)
 
 `null` and `undefined` are loosely equal, but not strictly equal to anything else.
 
@@ -567,7 +526,7 @@ console.log(null == false); // false
 console.log(undefined == false); // false
 ```
 
-**Strict Equality (`===`)**
+##### Strict Equality (`===`)
 
 `null` and `undefined` are not strictly equal to each other or any other value.
 
@@ -577,9 +536,9 @@ console.log(null === null); // true
 console.log(undefined === undefined); // true
 ```
 
-**Key Takeaway**
-> 1. Use `null` to explicitly set a variable to "no value" when you plan to assign an object later.
-> 2. Provide a default value if a function parameter is `undefined`.
+##### Key Takeaway
+1. Use `null` to explicitly set a variable to "no value" when you plan to assign an object later.
+2. Provide a default value if a function parameter is `undefined`.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -588,7 +547,7 @@ console.log(undefined === undefined); // true
 #### Q8
 ### Q8. Scope chain and Lexical Scoping: How JavaScript handles variable access
 
-**Scope Chain**
+##### Scope Chain
 
 The scope chain is a list of objects that JavaScript uses to manage variable resolution. It determines the order in which the JavaScript engine looks up variables.
 
@@ -598,11 +557,9 @@ The scope chain is a list of objects that JavaScript uses to manage variable res
 
 When JavaScript tries to access a variable, it starts from the current scope and goes up the scope chain until it finds the variable or reaches the global scope.
 
-**Lexical Scoping**
+##### Lexical Scoping
 
 Lexical scoping (or static scoping) means that the scope of a variable is determined by its position in the source code. Nested functions have access to variables declared in their outer scope.
-
-Example:
 
 ```javascript
 function outerFunction() {
@@ -620,10 +577,10 @@ function outerFunction() {
 outerFunction();
 ```
 
-> 1. `innerFunction` can access `outerVar` because of lexical scoping.
-> 2. `outerFunction` cannot access `innerVar` because `innerVar` is scoped to `innerFunction`.
+- `innerFunction` can access `outerVar` because of lexical scoping.
+- `outerFunction` cannot access `innerVar` because `innerVar` is scoped to `innerFunction`.
 
-**Scope Chain and Lexical Scoping in Action**
+##### Scope Chain and Lexical Scoping in Action
 
 Let's consider a more detailed example to see how the scope chain and lexical scoping work together:
 
@@ -646,14 +603,12 @@ function outerFunction() {
 outerFunction();
 ```
 
-> 1. `innerFunction` has access to `globalVar`, `outerVar`, and `innerVar` because of the scope chain.
-> 2. `outerFunction` can access `globalVar` but not `innerVar` because `innerVar` is only within the `innerFunction`.
+- `innerFunction` has access to `globalVar`, `outerVar`, and `innerVar` because of the scope chain.
+- `outerFunction` can access `globalVar` but not `innerVar` because `innerVar` is only within the `innerFunction`.
 
-**Shadowing**
+##### Shadowing
 
 Shadowing occurs when a variable declared within a certain scope has the same name as a variable declared in an outer scope. The inner variable "shadows" the outer variable.
-
-Example:
 
 ```javascript
 const name = 'Global';
@@ -673,15 +628,13 @@ outerFunction();
 console.log(name); // Global
 ```
 
-> 1. In `innerFunction`, `name` refers to the innermost declaration (`const name = 'Inner'`).
-> 2. In `outerFunction`, `name` refers to the middle declaration (`const name = 'Outer'`).
-> 3. In the global scope, `name` refers to the outermost declaration (`const name = 'Global'`).
+- In `innerFunction`, `name` refers to the innermost declaration (`const name = 'Inner'`).
+- In `outerFunction`, `name` refers to the middle declaration (`const name = 'Outer'`).
+- In the global scope, `name` refers to the outermost declaration (`const name = 'Global'`).
 
 ##### Practical Example with Closures
 
 Closures are functions that retain access to their lexical scope, even when the function is executed outside that scope.
-
-Example:
 
 ```javascript
 function makeCounter() {
@@ -699,15 +652,15 @@ console.log(counter()); // 2
 console.log(counter()); // 3
 ```
 
-> * The inner function returned by `makeCounter` forms a closure.
-> * It retains access to `count` even after `makeCounter` has finished executing.
+ - The inner function returned by `makeCounter` forms a closure.
+ - It retains access to `count` even after `makeCounter` has finished executing.
 
-**Key Takeaway**
+##### Key Takeaway
 
-* **Scope Chain**: Determines the order of variable lookup, starting from the innermost scope and moving outward.
-* **Lexical Scoping**: Variable scope is determined by the physical structure of the code.
-* **Shadowing**: Inner variables with the same name as outer variables override the outer ones within their scope.
-* **Closures**: Functions that retain access to their lexical scope even when executed outside of it.
+- **Scope Chain**: Determines the order of variable lookup, starting from the innermost scope and moving outward.
+- **Lexical Scoping**: Variable scope is determined by the physical structure of the code.
+- **Shadowing**: Inner variables with the same name as outer variables override the outer ones within their scope.
+- **Closures**: Functions that retain access to their lexical scope even when executed outside of it.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -718,7 +671,7 @@ console.log(counter()); // 3
 
 The `this` keyword in JavaScript can be challenging because its value is determined dynamically, based on how and where the function is called. `this` works in different contexts.
 
-**Global Context**
+##### Global Context
 
 In the global execution context (outside of any function), `this` refers to the global object. In a browser, the global object is `window`.
 
@@ -728,7 +681,7 @@ Example:
 console.log(this); // In a browser, this will log the `window` object
 ```
 
-**Function Context**
+##### Function Context
 
 In a regular function, `this` refers to the global object when not in strict mode. In strict mode, `this` is `undefined`.
 
@@ -751,11 +704,9 @@ function strictFunction() {
 strictFunction(); // Logs `undefined`
 ```
 
-**Method Context**
+##### Method Context
 
 When a function is called as a property of an object, `this` refers to the object that owns the method.
-
-Example:
 
 ```javascript
 const person = {
@@ -768,11 +719,9 @@ const person = {
 person.greet(); // Logs "Alice"
 ```
 
-**Constructor Context**
+##### Constructor Context
 
 When a function is used as a constructor (called with the `new` keyword), `this` refers to the newly created instance.
-
-Example:
 
 ```javascript
 function Person(name) {
@@ -783,11 +732,9 @@ const alice = new Person("Alice");
 console.log(alice.name); // Logs "Alice"
 ```
 
-**Arrow Functions**
+##### Arrow Functions
 
 Arrow functions do not have their own `this` context. Instead, `this` is lexically bound to the `this` value of the enclosing execution context.
-
-Example:
 
 ```javascript
 const person = {
@@ -803,11 +750,9 @@ const person = {
 person.greet(); // Logs "Bob"
 ```
 
-**Event Handlers**
+##### Event Handlers
 
 In event handlers, `this` refers to the element that received the event.
-
-Example:
 
 ```javascript
 document.getElementById("myButton").addEventListener("click", function() {
@@ -815,7 +760,7 @@ document.getElementById("myButton").addEventListener("click", function() {
 });
 ```
 
-**Explicit Binding**
+##### Explicit Binding
 
 JavaScript allows explicitly setting `this` using `call`, `apply`, or `bind`.
 
@@ -853,17 +798,17 @@ const boundGreet = greet.bind(person);
 boundGreet(); // Logs "David"
 ```
 
-**Key Takeaway**
+##### Key Takeaway
 
-The value of `this` depends on the context in which a function is called:
+The value of `this` depends on the context in which a function is called.
 
-* **Global Context**: `this` refers to the global object (`window` in browsers).
-* **Function Context**: In non-strict mode, `this` refers to the global object. In strict mode, `this` is `undefined`.
-* **Method Context**: `this` refers to the object that owns the method.
-* **Constructor Context**: `this` refers to the newly created instance.
-* **Arrow Functions**: `this` is lexically bound to the enclosing scope.
-* **Event Handlers**: `this` refers to the element that received the event.
-* **Explicit Binding**: `this` can be explicitly set using `call`, `apply`, or `bind`.
+- **Global Context**: `this` refers to the global object (`window` in browsers).
+- **Function Context**: In non-strict mode, `this` refers to the global object. In strict mode, `this` is `undefined`.
+- **Method Context**: `this` refers to the object that owns the method.
+- **Constructor Context**: `this` refers to the newly created instance.
+- **Arrow Functions**: `this` is lexically bound to the enclosing scope.
+- **Event Handlers**: `this` refers to the element that received the event.
+- **Explicit Binding**: `this` can be explicitly set using `call`, `apply`, or `bind`.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -872,15 +817,13 @@ The value of `this` depends on the context in which a function is called:
 #### Q10
 ### Q10. Define Closures and their practical applications in JavaScript
 
-**Closures in JavaScript**
+##### Closures in JavaScript
 
 A closure is a feature in JavaScript where an inner function has access to its outer enclosing function's variables. This includes access to the variables, parameters, and even the outer function's scope chain. Closures allow these inner functions to retain access to their outer function's scope even after the outer function has finished executing.
 
-**How Closures Work**
+##### How Closures Work
 
 Closures work by maintaining a reference to the variables in the outer scope. When a function is returned or passed as a value, it retains a link to the outer function's variables, enabling it to access those variables even after the outer function has exited.
-
-**Example:**
 
 ```javascript
 function outerFunction(outerVariable) {
@@ -898,12 +841,10 @@ closureExample('inside');
 // Inner variable: inside
 ```
 
-In this example:
+- `innerFunction` is a closure that captures the `outerVariable` from `outerFunction`.
+- Even after `outerFunction` has finished executing, `innerFunction` retains access to `outerVariable`.
 
-* `innerFunction` is a closure that captures the `outerVariable` from `outerFunction`.
-* Even after `outerFunction` has finished executing, `innerFunction` retains access to `outerVariable`.
-
-**Practical Applications of Closures**
+##### Practical Applications of Closures
 
 **1. Data Privacy and Encapsulation**
 
@@ -934,10 +875,7 @@ console.log(counter.increment()); // 2
 console.log(counter.decrement()); // 1
 console.log(counter.getCount());  // 1
 ```
-
-In this example:
-
-* The `count` variable is private and can only be accessed or modified through the methods `increment`, `decrement`, and `getCount`.
+The `count` variable is private and can only be accessed or modified through the methods `increment`, `decrement`, and `getCount`.
 
 **2. Function Factories**
 
@@ -955,10 +893,8 @@ console.log(addFive(2)); // 7
 console.log(addFive(10)); // 15
 ```
 
-In this example:
-
-* `createAdder` creates a new function that adds a specific number (`x`) to its argument (`y`).
-* The `addFive` function retains access to `x` (which is 5) and adds it to its argument.
+- `createAdder` creates a new function that adds a specific number (`x`) to its argument (`y`).
+- The `addFive` function retains access to `x` (which is 5) and adds it to its argument.
 
 **3. Maintaining State in Asynchronous Code**
 
@@ -974,9 +910,7 @@ function delayedGreeting(name) {
 delayedGreeting('Alice'); // After 1 second, logs "Hello, Alice"
 ```
 
-In this example:
-
-* The inner function within `setTimeout` retains access to the `name` variable even after `delayedGreeting` has finished executing.
+- The inner function within `setTimeout` retains access to the `name` variable even after `delayedGreeting` has finished executing.
 
 **4. Iterators and Generators**
 
@@ -1004,18 +938,16 @@ console.log(iterator.next()); // { value: 3, done: false }
 console.log(iterator.next()); // { value: undefined, done: true }
 ```
 
-In this example:
+- The `createIterator` function returns an object with a `next` method that maintains the current index of the iteration.
 
-* The `createIterator` function returns an object with a `next` method that maintains the current index of the iteration.
-
-##### **Key Takeaway**
+##### Key Takeaway
 
 Closures are a powerful feature in JavaScript that allow functions to retain access to their outer scope. They are used for:
 
-* Data privacy and encapsulation
-* Function factories
-* Maintaining state in asynchronous code
-* Implementing iterators and generators
+- Data privacy and encapsulation
+- Function factories
+- Maintaining state in asynchronous code
+- Implementing iterators and generators
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
