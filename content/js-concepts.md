@@ -121,7 +121,7 @@ var city = "New York";
 
 Data types are categorized into *primitive* and *object types*.
 
-1. **Primitive Data Types**
+**1. Primitive Data Types**
 
   - **Number**: Represents numeric values. Example: `42`, `3.14`.
   - **String**: Represents text. Example: `"Hello, world!"`.
@@ -131,13 +131,13 @@ Data types are categorized into *primitive* and *object types*.
   - **Symbol**: Represents a unique identifier. Example: `let sym = Symbol();`.
   - **BigInt**: Represents integers with arbitrary precision. Example: `let bigInt = 123n;`.
 
-2. **Object Types**
+**2. Object Types**
 
  - **Object**: A collection of key-value pairs. Example: `let person = { name: "Alice", age: 25 };`.
  - **Array**: An ordered list of values. Example: `let numbers = [1, 2, 3];`.
  - **Function**: A reusable block of code. Example: `function greet() { return "Hello"; }`.
 
-3. **Operators**
+**3. Operators**
 
   - **Arithmetic Operators**
     - **Addition (+)** `5 + 3` results in `8`.
@@ -246,7 +246,7 @@ const c = 30;
 
 ##### Function Hoisting
 
-1. **Function Declarations**: Function declarations are fully hoisted, including the function body.
+**1. Function Declarations**: Function declarations are fully hoisted, including the function body.
 
 ```js
 greet();
@@ -268,7 +268,7 @@ greet();
 
 ✅ The function can be called before its declaration.
 
-2. **Function Expressions**: Function expressions are not fully hoisted. Only the variable declaration is hoisted.
+**2. Function Expressions**: Function expressions are not fully hoisted. Only the variable declaration is hoisted.
 
 ```js
 sayHello();
@@ -958,7 +958,7 @@ Closures are a powerful feature in JavaScript that allow functions to retain acc
 
 String manipulation is a common task in JavaScript, and there are various methods and techniques available to manipulate strings. Here are some of the most commonly used string manipulation techniques:
 
-1. **String Length**
+**1. String Length**
 
 You can get the length of a string using the `.length` property.
 
@@ -967,7 +967,7 @@ const str = "Hello, world!";
 console.log(str.length); // 13
 ```
 
-2. **Accessing Characters**
+**2. Accessing Characters**
 
 You can access characters in a string using bracket notation or the `.charAt()` method.
 
@@ -977,7 +977,7 @@ console.log(str[0]); // "H"
 console.log(str.charAt(1)); // "e"
 ```
 
-3. **Changing Case**
+**3. Changing Case**
 
 Convert strings to upper or lower case.
 
@@ -987,7 +987,7 @@ console.log(str.toUpperCase()); // "HELLO, WORLD!"
 console.log(str.toLowerCase()); // "hello, world!"
 ```
 
-4. **Substring Extraction**
+**4. Substring Extraction**
 
 Extract parts of a string using `.substring()`, `.substr()`, or `.slice()`.
 
@@ -998,7 +998,7 @@ console.log(str.substr(7, 5)); // "world"
 console.log(str.slice(7, 12)); // "world"
 ```
 
-5. **Searching within a String**
+**5. Searching within a String**
 
 Find the position of a substring using `.indexOf()` and `.lastIndexOf()`.
 
@@ -1008,7 +1008,7 @@ console.log(str.indexOf("world")); // 7
 console.log(str.lastIndexOf("o")); // 8
 ```
 
-6. **Checking for Substring**
+**6. Checking for Substring**
 
 Check if a string contains a substring using `.includes()`, `.startsWith()`, and `.endsWith()`.
 
@@ -1019,7 +1019,7 @@ console.log(str.startsWith("Hello")); // true
 console.log(str.endsWith("!")); // true
 ```
 
-7. **String Replacement**
+**7. String Replacement**
 
 Replace parts of a string using `.replace()`.
 
@@ -1028,7 +1028,7 @@ const str = "Hello, world!";
 console.log(str.replace("world", "JavaScript")); // "Hello, JavaScript!"
 ```
 
-8. **Splitting and Joining Strings**
+**8. Splitting and Joining Strings**
 
 Split a string into an array and join an array into a string.
 
@@ -1041,7 +1041,7 @@ const newStr = arr.join(" - ");
 console.log(newStr); // "Hello - world!"
 ```
 
-9. **Trimming Whitespace**
+**9. Trimming Whitespace**
 
 Remove whitespace from both ends of a string using `.trim()`, `.trimStart()`, and `.trimEnd()`.
 
@@ -1052,7 +1052,7 @@ console.log(str.trimStart()); // "Hello, world!   "
 console.log(str.trimEnd()); // "   Hello, world!"
 ```
 
-10. **String Concatenation**
+**10. String Concatenation**
 
 Concatenate strings using the `+` operator or `.concat()` method.
 
@@ -1063,7 +1063,7 @@ console.log(str1 + ", " + str2 + "!"); // "Hello, World!"
 console.log(str1.concat(", ", str2, "!")); // "Hello, World!"
 ```
 
-11. **Template Literals**
+**11. Template Literals**
 
 Use template literals for string interpolation and multi-line strings.
 
@@ -1077,7 +1077,7 @@ multi-line string.`;
 console.log(multiLineString);
 ```
 
-12. **Repeating Strings**
+**12. Repeating Strings**
 
 Repeat a string multiple times using `.repeat()`.
 
@@ -1086,7 +1086,7 @@ const str = "Hello!";
 console.log(str.repeat(3)); // "Hello!Hello!Hello!"
 ```
 
-13. **Character Codes**
+**13. Character Codes**
 
 Get the character code using `.charCodeAt()` and convert codes to characters using `String.fromCharCode()`.
 
@@ -1096,7 +1096,7 @@ console.log(str.charCodeAt(0)); // 65
 console.log(String.fromCharCode(65, 66, 67)); // "ABC"
 ```
 
-##### 14. Splitting into Characters
+**14. Splitting into Characters**
 
 Convert a string into an array of characters using `split("")`.
 
@@ -1120,89 +1120,89 @@ DOM (Document Object Model) manipulation is the process of dynamically changing 
 
 The DOM is a tree-like structure where each node represents a part of the document:
 
-* **Document**: The root node, representing the entire HTML document.
-* **Element**: Represents HTML elements (e.g., `<div>`, `<p>`, `<a>`).
-* **Attributes**: Represent the attributes of HTML elements (e.g., `id`, `class`).
-* **Text**: Represents text content within elements.
+- **Document**: The root node, representing the entire HTML document.
+- **Element**: Represents HTML elements (e.g., `<div>`, `<p>`, `<a>`).
+- **Attributes**: Represent the attributes of HTML elements (e.g., `id`, `class`).
+- **Text**: Represents text content within elements.
 
 ##### Common DOM Manipulation Techniques
 
-##### 1. Accessing Elements
+**1. Accessing Elements**
 
 To manipulate the DOM, you first need to access the elements you want to change. Here are some common methods:
 
-* **`getElementById`**: Selects an element by its `id`.
+- **`getElementById`**: Selects an element by its `id`.
 
   ```javascript
   const element = document.getElementById('myElement');
   ```
 
-* **`getElementsByClassName`**: Selects elements by their `class` name.
+- **`getElementsByClassName`**: Selects elements by their `class` name.
 
   ```javascript
   const elements = document.getElementsByClassName('myClass');
   ```
 
-* **`getElementsByTagName`**: Selects elements by their tag name.
+- **`getElementsByTagName`**: Selects elements by their tag name.
 
   ```javascript
   const elements = document.getElementsByTagName('div');
   ```
 
-* **`querySelector`**: Selects the first element that matches a CSS selector.
+- **`querySelector`**: Selects the first element that matches a CSS selector.
 
   ```javascript
   const element = document.querySelector('.myClass');
   ```
 
-* **`querySelectorAll`**: Selects all elements that match a CSS selector.
+- **`querySelectorAll`**: Selects all elements that match a CSS selector.
 
   ```javascript
   const elements = document.querySelectorAll('.myClass');
   ```
 
-##### 2. Changing Content
+**2. Changing Content**
 
-* **`innerHTML`**: Gets or sets the HTML content of an element.
+- **`innerHTML`**: Gets or sets the HTML content of an element.
 
   ```javascript
   const element = document.getElementById('myElement');
   element.innerHTML = '<p>New content</p>';
   ```
 
-* **`textContent`**: Gets or sets the text content of an element.
+- **`textContent`**: Gets or sets the text content of an element.
 
   ```javascript
   const element = document.getElementById('myElement');
   element.textContent = 'New text content';
   ```
 
-##### 3. Modifying Attributes
+**3. Modifying Attributes**
 
-* **`getAttribute`**: Gets the value of an attribute.
+- **`getAttribute`**: Gets the value of an attribute.
 
   ```javascript
   const element = document.getElementById('myElement');
   const value = element.getAttribute('class');
   ```
 
-* **`setAttribute`**: Sets the value of an attribute.
+- **`setAttribute`**: Sets the value of an attribute.
 
   ```javascript
   const element = document.getElementById('myElement');
   element.setAttribute('class', 'newClass');
   ```
 
-* **`removeAttribute`**: Removes an attribute.
+- **`removeAttribute`**: Removes an attribute.
 
   ```javascript
   const element = document.getElementById('myElement');
   element.removeAttribute('class');
   ```
 
-##### 4. Changing Styles
+**4. Changing Styles**
 
-* **Inline Styles**: Directly set CSS properties on an element.
+- **Inline Styles**: Directly set CSS properties on an element.
 
   ```javascript
   const element = document.getElementById('myElement');
@@ -1210,7 +1210,7 @@ To manipulate the DOM, you first need to access the elements you want to change.
   element.style.fontSize = '20px';
   ```
 
-* **CSS Classes**: Add, remove, or toggle CSS classes.
+- **CSS Classes**: Add, remove, or toggle CSS classes.
 
   ```javascript
   const element = document.getElementById('myElement');
@@ -1219,22 +1219,22 @@ To manipulate the DOM, you first need to access the elements you want to change.
   element.classList.toggle('toggleClass');
   ```
 
-##### 5. Adding and Removing Elements
+**5. Adding and Removing Elements**
 
-* **`createElement`**: Creates a new element.
+- **`createElement`**: Creates a new element.
 
   ```javascript
   const newElement = document.createElement('div');
   ```
 
-* **`appendChild`**: Adds a new child element to a parent element.
+- **`appendChild`**: Adds a new child element to a parent element.
 
   ```javascript
   const parent = document.getElementById('parentElement');
   parent.appendChild(newElement);
   ```
 
-* **`removeChild`**: Removes a child element from a parent element.
+- **`removeChild`**: Removes a child element from a parent element.
 
   ```javascript
   const parent = document.getElementById('parentElement');
@@ -1242,7 +1242,7 @@ To manipulate the DOM, you first need to access the elements you want to change.
   parent.removeChild(child);
   ```
 
-* **`replaceChild`**: Replaces an existing child element with a new one.
+- **`replaceChild`**: Replaces an existing child element with a new one.
 
   ```javascript
   const parent = document.getElementById('parentElement');
@@ -1251,11 +1251,11 @@ To manipulate the DOM, you first need to access the elements you want to change.
   parent.replaceChild(newChild, oldChild);
   ```
 
-##### 6. Event Handling
+**6. Event Handling**
 
 Add event listeners to elements to respond to user interactions.
 
-* **`addEventListener`**: Attaches an event handler to an element.
+- **`addEventListener`**: Attaches an event handler to an element.
 
   ```javascript
   const button = document.getElementById('myButton');
@@ -1264,7 +1264,7 @@ Add event listeners to elements to respond to user interactions.
   });
   ```
 
-* **`removeEventListener`**: Removes an event handler from an element.
+- **`removeEventListener`**: Removes an event handler from an element.
 
   ```javascript
   const button = document.getElementById('myButton');
@@ -1310,8 +1310,8 @@ document.getElementById('changeTitle').addEventListener('click', function() {
 
 In this example:
 
-* The button with the id `changeTitle` has an event listener attached to it that listens for a `click` event.
-* When the button is clicked, the event handler changes the text content of the `title` element and changes its color to blue.
+- The button with the id `changeTitle` has an event listener attached to it that listens for a `click` event.
+- When the button is clicked, the event handler changes the text content of the `title` element and changes its color to blue.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -1320,15 +1320,13 @@ In this example:
 #### Q13
 ### Q13. What is Event Handling. Briefly explain about event listeners, event delegation, and the event object
 
-##### Event Handling in JavaScript
+##### Event Handling
 
 Event handling is a fundamental concept in JavaScript that allows developers to execute code in response to user actions or other events on a web page. It involves capturing, processing, and responding to events triggered by the user or the browser.
 
 ##### Event Listeners
 
 Event listeners are functions that are called when a specified event occurs on a particular element. You can attach an event listener to an element using the `addEventListener` method.
-
-##### Example:
 
 ```html
 <!DOCTYPE html>
@@ -1352,8 +1350,6 @@ Event listeners are functions that are called when a specified event occurs on a
 ##### Event Delegation
 
 Event delegation is a technique used to handle events efficiently. Instead of adding event listeners to multiple child elements, you add a single event listener to their common ancestor. The event then bubbles up to the ancestor, where it can be handled.
-
-##### Example:
 
 ```html
 <!DOCTYPE html>
@@ -1389,15 +1385,13 @@ In this example:
 
 When an event occurs, an event object is created and passed to the event handler. This object contains information about the event and provides methods to interact with it.
 
-##### Common Properties and Methods:
+**Common Properties and Methods**
 
-* **`type`**: The type of event (e.g., `click`, `mouseover`).
-* **`target`**: The element that triggered the event.
-* **`currentTarget`**: The element to which the event listener is attached.
-* **`preventDefault()`**: Prevents the default action associated with the event.
-* **`stopPropagation()`**: Stops the event from propagating (bubbling) up the DOM tree.
-
-##### Example:
+- **`type`**: The type of event (e.g., `click`, `mouseover`).
+- **`target`**: The element that triggered the event.
+- **`currentTarget`**: The element to which the event listener is attached.
+- **`preventDefault()`**: Prevents the default action associated with the event.
+- **`stopPropagation()`**: Stops the event from propagating (bubbling) up the DOM tree.
 
 ```html
 <!DOCTYPE html>
@@ -1425,15 +1419,15 @@ When an event occurs, an event object is created and passed to the event handler
 
 In this example:
 
-* The `submit` event on the form is captured.
-* `event.preventDefault()` is called to prevent the form from submitting.
-* The event object provides access to the input element's value.
+- The `submit` event on the form is captured.
+- `event.preventDefault()` is called to prevent the form from submitting.
+- The event object provides access to the input element's value.
 
-##### Summary
+##### Key Takeaway
 
-* **Event Listeners**: Functions that respond to specific events on elements, attached using `addEventListener`.
-* **Event Delegation**: Efficiently manage events by attaching a single event listener to a common ancestor of multiple elements.
-* **Event Object**: Contains details about the event, such as the event type, target element, and methods to control the event’s behavior.
+- **Event Listeners**: Functions that respond to specific events on elements, attached using `addEventListener`.
+- **Event Delegation**: Efficiently manage events by attaching a single event listener to a common ancestor of multiple elements.
+- **Event Object**: Contains details about the event, such as the event type, target element, and methods to control the event’s behavior.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -1442,19 +1436,17 @@ In this example:
 #### Q14
 ### Q14. Understanding the concept of Prototypes and how they relate to Objects
 
-##### Understanding Prototypes in JavaScript
-
-Prototypes are a fundamental concept in JavaScript, forming the basis for inheritance and the object system in the language. They allow objects to share properties and methods through a chain of linked objects, known as the prototype chain.
-
 ##### What is a Prototype?
 
 A prototype is an object from which other objects inherit properties and methods. Every JavaScript object has a prototype, which is used as a blueprint for creating new objects.
+
+Prototype allow objects to share properties and methods through a chain of linked objects, known as the prototype chain.
 
 ##### Prototype Chain
 
 When you access a property or method on an object, JavaScript will first look for that property on the object itself. If it doesn't find it, it will look at the object's prototype, and then the prototype's prototype, and so on, until it reaches the end of the prototype chain, which is `null`.
 
-##### Example of Prototype Chain
+**Example of Prototype Chain**
 
 ```javascript
 const person = {
@@ -1478,15 +1470,15 @@ student.study(); // Alice is studying
 
 In this example:
 
-* `student` inherits properties and methods from `person` via the prototype chain.
-* `student` has its own `name` property and `study` method.
-* When `student.greet()` is called, JavaScript looks up the prototype chain to find the `greet` method on `person`.
+- `student` inherits properties and methods from `person` via the prototype chain.
+- `student` has its own `name` property and `study` method.
+- When `student.greet()` is called, JavaScript looks up the prototype chain to find the `greet` method on `person`.
 
 ##### Creating Objects with Prototypes
 
 There are several ways to create objects with prototypes:
 
-##### Using Object.create
+**1. Using Object.create**
 
 The `Object.create` method creates a new object with the specified prototype.
 
@@ -1507,7 +1499,7 @@ student.greet(); // Hello, my name is Alice
 student.study(); // Alice is studying
 ```
 
-##### Using Constructor Functions
+**2. Using Constructor Functions**
 
 Constructor functions are a common way to create objects with shared prototypes. They are used with the `new` keyword.
 
@@ -1526,11 +1518,11 @@ alice.greet(); // Hello, my name is Alice
 
 In this example:
 
-* `Person` is a constructor function.
-* `Person.prototype` is used to define methods that should be shared among all instances of `Person`.
-* The `new` keyword creates a new object, sets its prototype to `Person.prototype`, and calls the constructor function with `this` bound to the new object.
+- `Person` is a constructor function.
+- `Person.prototype` is used to define methods that should be shared among all instances of `Person`.
+- The `new` keyword creates a new object, sets its prototype to `Person.prototype`, and calls the constructor function with `this` bound to the new object.
 
-##### ES6 Classes
+**3. ES6 Classes**
 
 ES6 introduced classes as syntactic sugar over the existing prototype-based inheritance.
 
@@ -1551,16 +1543,14 @@ alice.greet(); // Hello, my name is Alice
 
 In this example:
 
-* `Person` is a class with a constructor method.
-* Methods defined inside the class are added to `Person.prototype`.
-* `new Person('Alice')` creates a new instance of `Person`.
+- `Person` is a class with a constructor method.
+- Methods defined inside the class are added to `Person.prototype`.
+- `new Person('Alice')` creates a new instance of `Person`.
 
 ##### Prototype vs. proto
 
-* **Prototype**: The `prototype` property is used to set the prototype for objects created by constructor functions.
-* ****proto****: The `__proto__` property (now deprecated) is used to access the prototype of an existing object.
-
-##### Example
+- **Prototype**: The `prototype` property is used to set the prototype for objects created by constructor functions.
+- **proto**: The `__proto__` property (now deprecated) is used to access the prototype of an existing object.
 
 ```javascript
 function Person(name) {
@@ -1575,7 +1565,7 @@ const alice = new Person('Alice');
 console.log(alice.__proto__ === Person.prototype); // true
 ```
 
-##### Summary
+##### Key Takeaway
 
 * **Prototypes**: Objects from which other objects inherit properties and methods.
 * **Prototype Chain**: The chain of linked objects that JavaScript follows to find properties and methods.
@@ -1591,19 +1581,17 @@ console.log(alice.__proto__ === Person.prototype); // true
 #### Q15
 ### Q15. Prototypal Inheritance vs. Classical Inheritance: A comparison of object-oriented paradigms
 
-In JavaScript, inheritance can be implemented using the prototypal inheritance model. This contrasts with classical inheritance found in many other object-oriented languages like Java and C++. Here's a comparison of prototypal inheritance and classical inheritance, including their key characteristics, benefits, and drawbacks.
-
 ##### Prototypal Inheritance
 
 Prototypal inheritance is a feature of JavaScript where objects inherit properties and methods directly from other objects. This model is more flexible and dynamic compared to classical inheritance.
 
-##### Key Characteristics:
+Note: In JavaScript, inheritance can be implemented using the prototypal inheritance model. This contrasts with classical inheritance found in many other object-oriented languages like Java and C++.
+
+**Key Characteristics**
 
 1. **Prototype Chain**: Objects are linked through a chain of prototypes.
 2. **Dynamic Extension**: Objects can be extended at runtime.
 3. **Object-centric**: Emphasizes objects and their relationships.
-
-##### Example:
 
 ```javascript
 // Prototypal Inheritance Example
@@ -1623,13 +1611,13 @@ student.greet(); // Hello, my name is Alice
 student.study(); // Alice is studying
 ```
 
-##### Benefits:
+**Benefits**
 
 1. **Flexibility**: Objects can be easily extended and modified.
 2. **Simplicity**: Simpler inheritance model without the need for classes.
 3. **Dynamic**: New properties and methods can be added at runtime.
 
-##### Drawbacks:
+**Drawbacks**
 
 1. **Less Structure**: Can lead to less predictable code without a formal class structure.
 2. **Performance Overhead**: Prototype chain lookups can add overhead.
@@ -1638,13 +1626,11 @@ student.study(); // Alice is studying
 
 Classical inheritance is based on classes and typically involves creating class hierarchies. This is the model used in languages like Java, C++, and Python.
 
-##### Key Characteristics:
+**Key Characteristics**
 
 1. **Class-based**: Involves defining classes and creating objects from them.
 2. **Static**: Class structures are defined at compile-time.
 3. **Inheritance Hierarchies**: Classes inherit from other classes.
-
-##### Example:
 
 ```javascript
 // Classical Inheritance Example (using ES6 classes)
@@ -1669,13 +1655,13 @@ alice.greet(); // Hello, my name is Alice
 alice.study(); // Alice is studying
 ```
 
-##### Benefits:
+**Benefits**
 
 1. **Structure**: Clear and predictable class hierarchy.
 2. **Reusability**: Easy to reuse and extend code through inheritance.
 3. **Encapsulation**: Classes can encapsulate data and methods.
 
-##### Drawbacks:
+**Drawbacks**
 
 1. **Rigidity**: Less flexible than prototypal inheritance.
 2. **Complexity**: Can lead to complex and deep inheritance hierarchies.
@@ -1695,22 +1681,17 @@ alice.study(); // Alice is studying
 
 ##### When to Use Each Paradigm
 
-* **Prototypal Inheritance**:
+- **Prototypal Inheritance**:
 
-  * When you need dynamic behavior and flexibility.
-  * When dealing with simple, object-based design.
-  * Useful for scenarios requiring prototype-based delegation.
+  - When you need dynamic behavior and flexibility.
+  - When dealing with simple, object-based design.
+  - Useful for scenarios requiring prototype-based delegation.
 
-* **Classical Inheritance**:
+- **Classical Inheritance**:
 
-  * When working on large-scale applications requiring a clear and structured hierarchy.
-  * When using a more traditional object-oriented design.
-  * Beneficial for scenarios where encapsulation and reusability through inheritance are important.
-
-##### Summary
-
-* **Prototypal Inheritance**: Focuses on objects inheriting directly from other objects. It is dynamic and flexible but can lack structure.
-* **Classical Inheritance**: Uses class-based hierarchies. It is structured and encapsulated but can be rigid and complex.
+  - When working on large-scale applications requiring a clear and structured hierarchy.
+  - When using a more traditional object-oriented design.
+  - Beneficial for scenarios where encapsulation and reusability through inheritance are important.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -1721,11 +1702,9 @@ alice.study(); // Alice is studying
 
 Object-Oriented Programming (OOP) in JavaScript is a programming paradigm that uses objects and classes to structure and manage code in a modular and reusable manner. It includes key principles such as abstraction, encapsulation, polymorphism, and inheritance.
 
-##### 1. Abstraction
+##### Abstraction
 
 **Abstraction** involves hiding complex implementation details and showing only the necessary features of an object. This simplifies the interaction with the object and allows the developer to focus on high-level functionality.
-
-##### Example:
 
 ```javascript
 class Car {
@@ -1750,14 +1729,12 @@ myCar.drive(); // Driving the car: Toyota Corolla
 
 In this example:
 
-* The `Car` class abstracts the details of starting and driving a car.
-* The user interacts with simple methods (`start`, `drive`) without worrying about the underlying implementation.
+- The `Car` class abstracts the details of starting and driving a car.
+- The user interacts with simple methods (`start`, `drive`) without worrying about the underlying implementation.
 
-##### 2. Encapsulation
+##### Encapsulation
 
 **Encapsulation** involves bundling the data (attributes) and methods (functions) that operate on the data into a single unit or class, and restricting access to some of the object's components. This helps protect the internal state of the object from unintended interference.
-
-##### Example:
 
 ```javascript
 class Person {
@@ -1796,14 +1773,12 @@ person.age = -5; // Age must be positive
 
 In this example:
 
-* The properties `_name` and `_age` are encapsulated within the `Person` class.
-* Access to these properties is controlled through getters and setters.
+- The properties `_name` and `_age` are encapsulated within the `Person` class.
+- Access to these properties is controlled through getters and setters.
 
-##### 3. Polymorphism
+##### Polymorphism
 
 **Polymorphism** allows objects to be treated as instances of their parent class rather than their actual class. It enables a single interface to represent different underlying forms (data types).
-
-##### Example:
 
 ```javascript
 class Animal {
@@ -1837,15 +1812,13 @@ makeAnimalSpeak(cat); // Cat meows
 
 In this example:
 
-* The `Animal` class has a `speak` method.
-* The `Dog` and `Cat` classes override the `speak` method.
-* The `makeAnimalSpeak` function can take any object that is an instance of `Animal` and call its `speak` method, demonstrating polymorphism.
+- The `Animal` class has a `speak` method.
+- The `Dog` and `Cat` classes override the `speak` method.
+- The `makeAnimalSpeak` function can take any object that is an instance of `Animal` and call its `speak` method, demonstrating polymorphism.
 
-##### 4. Inheritance
+##### Inheritance
 
 **Inheritance** is a mechanism where one class (child class) inherits the properties and methods of another class (parent class). This promotes code reuse and establishes a natural hierarchy.
-
-##### Example:
 
 ```javascript
 class Vehicle {
@@ -1876,16 +1849,16 @@ myCar.drive(); // Toyota Corolla is driving
 
 In this example:
 
-* The `Vehicle` class is the parent class with a `start` method.
-* The `Car` class extends `Vehicle` and inherits its properties and methods.
-* The `Car` class adds additional properties (`model`) and methods (`drive`).
+- The `Vehicle` class is the parent class with a `start` method.
+- The `Car` class extends `Vehicle` and inherits its properties and methods.
+- The `Car` class adds additional properties (`model`) and methods (`drive`).
 
-##### Summary
+##### Key Takeaway
 
-* **Abstraction**: Simplifies complex systems by modeling classes appropriate to the problem, exposing only relevant details.
-* **Encapsulation**: Keeps data safe from outside interference and misuse by bundling the data and methods into a single unit and restricting access.
-* **Polymorphism**: Allows methods to do different things based on the object it is acting upon, enabling a single interface to control access to a general class of actions.
-* **Inheritance**: Enables new classes to inherit properties and methods from existing classes, promoting code reuse and a hierarchical class structure.
+- **Abstraction**: Simplifies complex systems by modeling classes appropriate to the problem, exposing only relevant details.
+- **Encapsulation**: Keeps data safe from outside interference and misuse by bundling the data and methods into a single unit and restricting access.
+- **Polymorphism**: Allows methods to do different things based on the object it is acting upon, enabling a single interface to control access to a general class of actions.
+- **Inheritance**: Enables new classes to inherit properties and methods from existing classes, promoting code reuse and a hierarchical class structure.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -1894,15 +1867,11 @@ In this example:
 #### Q17
 ### Q17. The concept of currying and partial application in functional programming
 
-Currying and partial application are two concepts in functional programming that transform functions to make them more versatile and reusable. Both techniques deal with the transformation of functions, but they have different purposes and implementations.
+Currying and partial application are two concepts in functional programming that transform functions to make them more versatile and reusable.
 
 ##### Currying
 
 **Currying** is the process of transforming a function that takes multiple arguments into a sequence of functions that each take a single argument. A curried function allows you to call a function with fewer arguments than it expects and returns a new function that takes the remaining arguments.
-
-##### Example:
-
-A regular function that adds two numbers:
 
 ```javascript
 function add(x, y) {
@@ -1928,7 +1897,7 @@ console.log(addOne(2)); // 3
 console.log(curriedAdd(1)(2)); // 3
 ```
 
-##### Currying with ES6 Arrow Functions:
+**Currying with ES6 Arrow Functions:**
 
 ```javascript
 const curriedAdd = x => y => x + y;
@@ -1941,10 +1910,6 @@ console.log(curriedAdd(1)(2)); // 3
 ##### Partial Application
 
 **Partial application** is the process of fixing a number of arguments to a function, producing another function of smaller arity (number of arguments). This means you create a new function by pre-filling some of the arguments to the original function.
-
-##### Example:
-
-A function that adds three numbers:
 
 ```javascript
 function add(x, y, z) {
@@ -1967,7 +1932,7 @@ const addFive = partialAdd(5);
 console.log(addFive(2, 3)); // 10
 ```
 
-##### Partial Application with ES6 Arrow Functions:
+**Partial Application with ES6 Arrow Functions:**
 
 ```javascript
 const add = (x, y, z) => x + y + z;
@@ -1978,7 +1943,7 @@ const addFive = partialAdd(5);
 console.log(addFive(2, 3)); // 10
 ```
 
-##### Differences Between Currying and Partial Application
+##### Differences
 
 | Aspect                 | Currying                                                                          | Partial Application                                                                        |
 | ---------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
@@ -1987,23 +1952,21 @@ console.log(addFive(2, 3)); // 10
 | **Example Function**   | `f(a, b, c) -> f(a)(b)(c)`                                                        | `f(a, b, c) -> g(b, c)` where `a` is fixed                                                 |
 | **Resulting Function** | Returns a series of nested functions until all arguments are provided             | Returns a new function with some arguments already applied                                 |
 
-##### Practical Applications
+**Practical Applications**
 
-* **Currying**:
+- **Currying**:
 
-  * Useful in functional programming for creating more reusable and composable functions.
-  * Allows for creating utility functions with preset operations.
-  * Helps in creating higher-order functions and function pipelines.
+  - Useful in functional programming for creating more reusable and composable functions.
+  - Allows for creating utility functions with preset operations.
+  - Helps in creating higher-order functions and function pipelines.
 
-* **Partial Application**:
+- **Partial Application**:
 
-  * Convenient for creating specialized functions from general ones.
-  * Useful in situations where certain arguments are frequently reused.
-  * Simplifies complex function calls by pre-filling some arguments.
+  - Convenient for creating specialized functions from general ones.
+  - Useful in situations where certain arguments are frequently reused.
+  - Simplifies complex function calls by pre-filling some arguments.
 
-##### Example of Currying and Partial Application Together
-
-Combining currying and partial application can be very powerful:
+**Example of Currying and Partial Application Together**
 
 ```javascript
 const multiply = x => y => z => x * y * z;
@@ -2019,9 +1982,9 @@ console.log(partiallyAppliedMultiply(4)); // 24
 
 In this example:
 
-* `multiply` is a curried function.
-* `curriedMultiply` fixes the first argument, leaving a function that takes the next two arguments.
-* `partiallyAppliedMultiply` fixes the first two arguments, leaving a function that takes the final argument.
+- `multiply` is a curried function.
+- `curriedMultiply` fixes the first argument, leaving a function that takes the next two arguments.
+- `partiallyAppliedMultiply` fixes the first two arguments, leaving a function that takes the final argument.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -2036,7 +1999,7 @@ ES6 (ECMAScript 2015) introduced several new features that enhance JavaScript's 
 
 Arrow functions provide a shorter syntax for writing functions. They also lexically bind the `this` value, which means they inherit `this` from the parent scope.
 
-##### Syntax:
+**Syntax:**
 
 ```javascript
 // Traditional function
@@ -2048,8 +2011,7 @@ function add(a, b) {
 const add = (a, b) => a + b;
 ```
 
-##### Example:
-
+**Example:**
 ```javascript
 const numbers = [1, 2, 3, 4, 5];
 
@@ -2068,14 +2030,14 @@ console.log(squares); // [1, 4, 9, 16, 25]
 
 Template literals provide an easier way to create strings with embedded expressions. They are enclosed by backticks (`` ` ``) instead of single or double quotes.
 
-##### Syntax:
+**Syntax:**
 
 ```javascript
 const name = 'Alice';
 const greeting = `Hello, ${name}!`;
 ```
 
-##### Example:
+**Example:**
 
 ```javascript
 const name = 'Alice';
@@ -2089,7 +2051,7 @@ console.log(message); // "My name is Alice and I am 25 years old."
 
 The spread operator (`...`) allows an iterable (like an array) to be expanded in places where zero or more arguments or elements are expected. The rest operator (`...`) allows you to represent an indefinite number of arguments as an array.
 
-##### Spread Syntax:
+**Spread Syntax:**
 
 ```javascript
 // Spread in arrays
@@ -2102,7 +2064,7 @@ const max = Math.max(...arr1);
 console.log(max); // 3
 ```
 
-##### Rest Syntax:
+**Rest Syntax:**
 
 ```javascript
 function sum(...numbers) {
@@ -2116,7 +2078,7 @@ console.log(sum(1, 2, 3, 4)); // 10
 
 Destructuring allows you to unpack values from arrays or properties from objects into distinct variables.
 
-##### Array Destructuring:
+**1. Array Destructuring**
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5];
@@ -2126,7 +2088,7 @@ console.log(second); // 2
 console.log(rest); // [3, 4, 5]
 ```
 
-##### Object Destructuring:
+**2. Object Destructuring**
 
 ```javascript
 const person = {
@@ -2141,7 +2103,7 @@ console.log(age); // 25
 console.log(city); // New York
 ```
 
-##### Nested Destructuring:
+**3. Nested Destructuring**
 
 ```javascript
 const person = {
@@ -2161,13 +2123,13 @@ console.log(city); // New York
 console.log(zip); // 10001
 ```
 
-##### Summary
+##### Key Takeaway
 
-* **Arrow Functions**: Provide a concise syntax for writing functions and lexically bind `this`.
-* **Template Literals**: Allow easier string creation with embedded expressions using backticks.
-* **Spread Operator (`...`)**: Expands iterables into individual elements.
-* **Rest Operator (`...`)**: Collects multiple elements into a single array.
-* **Destructuring**: Unpacks values from arrays or properties from objects into individual variables.
+- **Arrow Functions**: Provide a concise syntax for writing functions and lexically bind `this`.
+- **Template Literals**: Allow easier string creation with embedded expressions using backticks.
+- **Spread Operator (`...`)**: Expands iterables into individual elements.
+- **Rest Operator (`...`)**: Collects multiple elements into a single array.
+- **Destructuring**: Unpacks values from arrays or properties from objects into individual variables.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -2176,21 +2138,17 @@ console.log(zip); // 10001
 #### Q19
 ### Q19. Explain deeply about Array methods like `map`, `filter`, `reduce`, and `forEach` (ES6)
 
-##### Array Methods in ES6: `map`, `filter`, `reduce`, and `forEach`
-
-ES6 introduced several powerful array methods that allow for more functional programming approaches to handling arrays. These methods—`map`, `filter`, `reduce`, and `forEach`—are fundamental for performing transformations and computations on arrays. Let's dive deeply into each one.
-
-##### `map`
+##### map
 
 The `map` method creates a new array populated with the results of calling a provided function on every element in the calling array. It does not modify the original array.
 
-##### Syntax:
+**Syntax:**
 
 ```javascript
 const newArray = array.map(callback(currentValue[, index[, array]])[, thisArg]);
 ```
 
-##### Example:
+**Example:**
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5];
@@ -2201,17 +2159,17 @@ const squares = numbers.map(num => num * num);
 console.log(squares); // [1, 4, 9, 16, 25]
 ```
 
-##### `filter`
+##### filter
 
 The `filter` method creates a new array with all elements that pass the test implemented by the provided function. It does not modify the original array.
 
-##### Syntax:
+**Syntax:**
 
 ```javascript
 const newArray = array.filter(callback(element[, index[, array]])[, thisArg]);
 ```
 
-##### Example:
+**Example:**
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5];
@@ -2222,17 +2180,17 @@ const filtered = numbers.filter(num => num > 3);
 console.log(filtered); // [4, 5]
 ```
 
-##### `reduce`
+##### reduce
 
 The `reduce` method executes a reducer function (that you provide) on each element of the array, resulting in a single output value. It is useful for accumulating values (e.g., sum, product) from an array.
 
-##### Syntax:
+**Syntax:**
 
 ```javascript
 const result = array.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue]);
 ```
 
-##### Example:
+**Example:**
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5];
@@ -2243,17 +2201,17 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
 console.log(sum); // 15
 ```
 
-##### `forEach`
+`forEach`
 
 The `forEach` method executes a provided function once for each array element. It does not return a new array and does not modify the original array. It is primarily used for side effects such as logging or updating the UI.
 
-##### Syntax:
+**Syntax:**
 
 ```javascript
 array.forEach(callback(currentValue[, index[, array]])[, thisArg]);
 ```
 
-##### Example:
+**Example:**
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5];
@@ -2269,18 +2227,9 @@ numbers.forEach(num => console.log(num));
 // 5
 ```
 
-##### Detailed Comparison
-
-| Method    | Purpose                                    | Returns      | Use Case                                                                                     |
-| --------- | ------------------------------------------ | ------------ | -------------------------------------------------------------------------------------------- |
-| `map`     | Transforms each element of the array       | New array    | When you want to derive a new array from an existing array by transforming its elements.     |
-| `filter`  | Filters elements based on a condition      | New array    | When you want to derive a new array containing only elements that meet a certain condition.  |
-| `reduce`  | Reduces the array to a single value        | Single value | When you need to aggregate or accumulate values, such as summing or averaging numbers.       |
-| `forEach` | Executes a function for each array element | `undefined`  | When you need to perform side effects for each element, such as logging or updating the DOM. |
-
 ##### Use Cases and Examples
 
-##### `map` - Transforming Data
+**`map` - Transforming Data**
 
 You might use `map` when you need to apply a transformation to each element in an array, such as converting an array of strings to uppercase:
 
@@ -2291,7 +2240,7 @@ const uppercasedWords = words.map(word => word.toUpperCase());
 console.log(uppercasedWords); // ["HELLO", "WORLD", "JAVASCRIPT"]
 ```
 
-##### `filter` - Filtering Data
+**`filter` - Filtering Data**
 
 You might use `filter` when you need to extract a subset of elements that meet a certain condition, such as finding all even numbers in an array:
 
@@ -2302,7 +2251,7 @@ const evenNumbers = numbers.filter(num => num % 2 === 0);
 console.log(evenNumbers); // [2, 4, 6]
 ```
 
-##### `reduce` - Accumulating Data
+**`reduce` - Accumulating Data**
 
 You might use `reduce` when you need to calculate a cumulative result, such as finding the product of all numbers in an array:
 
@@ -2313,7 +2262,7 @@ const product = numbers.reduce((acc, num) => acc * num, 1);
 console.log(product); // 24
 ```
 
-##### `forEach` - Side Effects
+**`forEach` - Side Effects**
 
 You might use `forEach` when you need to execute a function for each element, such as printing each element to the console:
 
@@ -2327,12 +2276,14 @@ fruits.forEach(fruit => console.log(fruit));
 // cherry
 ```
 
-##### Summary
+##### Comparison
 
-* **`map`**: Creates a new array by applying a function to each element of the original array.
-* **`filter`**: Creates a new array with only elements that pass a test implemented by a provided function.
-* **`reduce`**: Executes a reducer function on each element of the array, resulting in a single output value.
-* **`forEach`**: Executes a provided function once for each array element, primarily used for side effects.
+| Method    | Purpose                                    | Returns      | Use Case                                                                                     |
+| --------- | ------------------------------------------ | ------------ | -------------------------------------------------------------------------------------------- |
+| `map`     | Transforms each element of the array       | New array    | When you want to derive a new array from an existing array by transforming its elements.     |
+| `filter`  | Filters elements based on a condition      | New array    | When you want to derive a new array containing only elements that meet a certain condition.  |
+| `reduce`  | Reduces the array to a single value        | Single value | When you need to aggregate or accumulate values, such as summing or averaging numbers.       |
+| `forEach` | Executes a function for each array element | `undefined`  | When you need to perform side effects for each element, such as logging or updating the DOM. |
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -2341,13 +2292,9 @@ fruits.forEach(fruit => console.log(fruit));
 #### Q20
 ### Q20. Elaborate Callbacks, Promises, and Async/Await: Managing asynchronous operations in JavaScript
 
-Managing asynchronous operations in JavaScript is crucial for developing responsive and performant applications. There are three primary techniques for handling asynchronous code: Callbacks, Promises, and Async/Await. Let's dive into each of these concepts.
-
 ##### Callbacks
 
 Callbacks are functions passed as arguments to other functions, which are then executed once an asynchronous operation completes. This was the traditional way of handling asynchronous operations in JavaScript.
-
-##### Example:
 
 ```javascript
 function fetchData(callback) {
@@ -2364,10 +2311,10 @@ function handleData(data) {
 fetchData(handleData); // After 1 second, logs: "Here is your data"
 ```
 
-##### Issues with Callbacks:
+**Issues with Callbacks:**
 
-* **Callback Hell**: Nested callbacks lead to deeply nested code, which is hard to read and maintain.
-* **Error Handling**: Managing errors in nested callbacks can be cumbersome.
+- **Callback Hell**: Nested callbacks lead to deeply nested code, which is hard to read and maintain.
+- **Error Handling**: Managing errors in nested callbacks can be cumbersome.
 
 ```javascript
 doSomething(function(result) {
@@ -2383,13 +2330,13 @@ doSomething(function(result) {
 
 Promises provide a more structured and cleaner way to handle asynchronous operations. A promise represents a value that may be available now, or in the future, or never.
 
-##### States of a Promise:
+**States of a Promise**
 
-* **Pending**: Initial state, neither fulfilled nor rejected.
-* **Fulfilled**: Operation completed successfully.
-* **Rejected**: Operation failed.
+- **Pending**: Initial state, neither fulfilled nor rejected.
+- **Fulfilled**: Operation completed successfully.
+- **Rejected**: Operation failed.
 
-##### Creating and Using Promises:
+**Creating and Using Promises**
 
 ```javascript
 function fetchData() {
@@ -2410,7 +2357,7 @@ fetchData()
     });
 ```
 
-##### Chaining Promises:
+**Chaining Promises**
 
 ```javascript
 doSomething()
@@ -2428,12 +2375,10 @@ doSomething()
 
 `async` and `await` provide a more synchronous way to write asynchronous code, built on top of promises. They make the code easier to read and write.
 
-##### Using Async/Await:
+**Using Async/Await**
 
-* **`async` function**: Declares an asynchronous function that returns a promise.
-* **`await` expression**: Pauses the execution of an `async` function and waits for the promise to resolve.
-
-##### Example:
+- **`async` function**: Declares an asynchronous function that returns a promise.
+- **`await` expression**: Pauses the execution of an `async` function and waits for the promise to resolve.
 
 ```javascript
 async function fetchData() {
@@ -2457,7 +2402,7 @@ async function handleData() {
 handleData();
 ```
 
-##### Chaining with Async/Await:
+**Chaining with Async/Await**
 
 ```javascript
 async function doTasks() {
@@ -2483,12 +2428,7 @@ doTasks();
 | **Error Handling** | Nested error handling         | `.catch` for promise chain         | `try`/`catch` blocks                   |
 | **Debugging**      | Harder to trace               | Easier than callbacks              | Easiest with stack trace support       |
 | **Control Flow**   | Difficult to manage           | Better than callbacks              | Straightforward, like synchronous code |
-
-##### Summary
-
-* **Callbacks**: The traditional method of handling asynchronous operations, which can lead to deeply nested code and harder error handling.
-* **Promises**: Provide a more structured approach with chainable `.then` and `.catch` methods, improving readability and error handling.
-* **Async/Await**: Built on promises, providing a more synchronous-like syntax, making asynchronous code easier to read and write.
+| **Summary**   | The traditional method of handling asynchronous operations. It can lead to deeply nested code and harder error handling.           | Provide a more structured approach with chainable `.then` and `.catch` methods. Improves readability and error handling.             | Built on promises, providing a more synchronous-like syntax, making asynchronous code easier to read and write. |
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -2501,8 +2441,8 @@ doTasks();
 
 Higher-order functions are a key concept in functional programming. They are functions that can either:
 
-* Take one or more functions as arguments, or
-* Return a function as their result.
+- Take one or more functions as arguments, or
+- Return a function as their result.
 
 This capability allows for greater abstraction and code reuse, leading to more expressive and modular code.
 
@@ -2513,11 +2453,11 @@ This capability allows for greater abstraction and code reuse, leading to more e
 
 ##### Examples and Use Cases
 
-##### 1. Functions as Arguments
+**1. Functions as Arguments**
 
 One common use of higher-order functions is to take other functions as arguments. This is often seen in array manipulation methods like `map`, `filter`, and `reduce`.
 
-###### `map`
+- `map`
 
 The `map` method takes a function as an argument and applies it to every element of an array, returning a new array with the transformed elements.
 
@@ -2528,7 +2468,7 @@ const squares = numbers.map(num => num * num);
 console.log(squares); // [1, 4, 9, 16, 25]
 ```
 
-###### `filter`
+- `filter`
 
 The `filter` method takes a function as an argument and returns a new array containing only the elements that pass a specified test.
 
@@ -2539,7 +2479,7 @@ const evenNumbers = numbers.filter(num => num % 2 === 0);
 console.log(evenNumbers); // [2, 4]
 ```
 
-###### `reduce`
+- `reduce`
 
 The `reduce` method takes a function as an argument and applies it against an accumulator and each element in the array (from left to right) to reduce it to a single value.
 
@@ -2550,11 +2490,11 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
 console.log(sum); // 15
 ```
 
-##### 2. Functions as Return Values
+**2. Functions as Return Values**
 
 Higher-order functions can also return new functions. This can be used for function factories, currying, and partial application.
 
-###### Function Factory
+- Function Factory
 
 A function factory creates functions dynamically, often customizing them based on parameters.
 
@@ -2572,7 +2512,7 @@ console.log(double(5)); // 10
 console.log(triple(5)); // 15
 ```
 
-###### Currying
+- Currying
 
 Currying transforms a function that takes multiple arguments into a sequence of functions, each taking a single argument.
 
@@ -2603,11 +2543,11 @@ console.log(addFive(3)); // 8
 
 Higher-order functions are fundamental in functional programming because they align with the core principles of this paradigm:
 
-* **First-class Functions**: Treating functions as first-class citizens, meaning they can be assigned to variables, passed as arguments, and returned from other functions.
-* **Pure Functions**: Emphasizing pure functions that do not cause side effects and return the same output given the same input.
-* **Immutability**: Promoting immutability, where data is not modified in place but rather new data structures are returned.
+- **First-class Functions**: Treating functions as first-class citizens, meaning they can be assigned to variables, passed as arguments, and returned from other functions.
+- **Pure Functions**: Emphasizing pure functions that do not cause side effects and return the same output given the same input.
+- **Immutability**: Promoting immutability, where data is not modified in place but rather new data structures are returned.
 
-##### Example: Composing Functions
+**Composing Functions**
 
 Function composition is a powerful technique enabled by higher-order functions, where you combine simple functions to build more complex ones.
 
@@ -2623,15 +2563,15 @@ console.log(add1ThenDouble(5)); // 12
 
 In this example:
 
-* `compose` is a higher-order function that takes two functions (`f` and `g`) and returns a new function.
-* `add1ThenDouble` is a composed function that first adds 1 to the input and then doubles the result.
+- `compose` is a higher-order function that takes two functions (`f` and `g`) and returns a new function.
+- `add1ThenDouble` is a composed function that first adds 1 to the input and then doubles the result.
 
-##### Summary
+##### Key Takeaway
 
-* **Higher-order Functions**: Functions that take other functions as arguments or return functions as results.
-* **Key Uses**: `map`, `filter`, `reduce`, function factories, currying, and function composition.
-* **Benefits**: Abstraction, declarative code, composability, and immutability.
-* **Role in Functional Programming**: Fundamental to achieving the principles of first-class functions, pure functions, and immutability.
+- **Higher-order Functions**: Functions that take other functions as arguments or return functions as results.
+- **Key Uses**: `map`, `filter`, `reduce`, function factories, currying, and function composition.
+- **Benefits**: Abstraction, declarative code, composability, and immutability.
+- **Role in Functional Programming**: Fundamental to achieving the principles of first-class functions, pure functions, and immutability.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
