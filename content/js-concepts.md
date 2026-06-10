@@ -2580,15 +2580,11 @@ In this example:
 #### Q22
 ### Q22. What are Polyfills. Write polyfills for array methods like `map`, `forEach`, `filter`, `reduce`.
 
-##### What are Polyfills?
+##### Polyfills
 
 A polyfill is a piece of code (usually JavaScript on the web) that provides functionality that is not built into a web browser or is missing from the JavaScript runtime environment. Polyfills enable you to use modern features in older browsers that do not natively support them.
 
-##### Writing Polyfills for Array Methods
-
-Let's write polyfills for the commonly used array methods `map`, `forEach`, `filter`, and `reduce`. These polyfills will ensure that the methods are available in environments where they are not natively supported.
-
-##### 1. Polyfill for `Array.prototype.map`
+##### Polyfill for `Array.prototype.map`
 
 The `map` method creates a new array populated with the results of calling a provided function on every element in the calling array.
 
@@ -2613,7 +2609,7 @@ if (!Array.prototype.map) {
 }
 ```
 
-##### 2. Polyfill for `Array.prototype.forEach`
+##### Polyfill for `Array.prototype.forEach`
 
 The `forEach` method executes a provided function once for each array element.
 
@@ -2636,7 +2632,7 @@ if (!Array.prototype.forEach) {
 }
 ```
 
-##### 3. Polyfill for `Array.prototype.filter`
+##### Polyfill for `Array.prototype.filter`
 
 The `filter` method creates a new array with all elements that pass the test implemented by the provided function.
 
@@ -2663,7 +2659,7 @@ if (!Array.prototype.filter) {
 }
 ```
 
-##### 4. Polyfill for `Array.prototype.reduce`
+##### Polyfill for `Array.prototype.reduce`
 
 The `reduce` method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
 
@@ -2725,7 +2721,7 @@ console.log(evenNumbers); // [2, 4]
 const sum = numbers.reduce((acc, num) => acc + num, 0);
 console.log(sum); // 15
 ```
-https://blog.siddhigate.com/i-wrote-polyfills-for-32-javascript-array-methods
+For more info: https://blog.siddhigate.com/i-wrote-polyfills-for-32-javascript-array-methods
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -2734,11 +2730,11 @@ https://blog.siddhigate.com/i-wrote-polyfills-for-32-javascript-array-methods
 #### Q23
 ### Q23. JavaScript's new features in ES7, ES8, and beyond
 
-JavaScript continues to evolve with new features and improvements in each version of ECMAScript (the standard for JavaScript). Here's an overview of some of the notable features introduced in ES7 (ES2016), ES8 (ES2017), ES9 (ES2018), ES10 (ES2019), ES11 (ES2020), ES12 (ES2021), and beyond.
+Here's an overview of some of the notable features introduced in ES7 (ES2016), ES8 (ES2017), ES9 (ES2018), ES10 (ES2019), ES11 (ES2020), ES12 (ES2021), and beyond.
 
 ##### ES7 (ES2016)
 
-##### 1. `Array.prototype.includes`
+**1. `Array.prototype.includes`**
 
 The `includes` method checks if an array contains a certain value, returning `true` or `false`.
 
@@ -2748,7 +2744,7 @@ console.log(numbers.includes(3)); // true
 console.log(numbers.includes(6)); // false
 ```
 
-##### 2. Exponentiation Operator (`**`)
+**2. Exponentiation Operator (`**`)**
 
 The exponentiation operator provides a more concise way to raise a number to a power.
 
@@ -2759,7 +2755,7 @@ console.log(10 ** 2); // 100
 
 ##### ES8 (ES2017)
 
-##### 1. `Object.values` and `Object.entries`
+**1. `Object.values` and `Object.entries`**
 
 * `Object.values` returns an array of a given object's values.
 * `Object.entries` returns an array of a given object's key-value pairs.
@@ -2771,7 +2767,7 @@ console.log(Object.values(obj)); // [1, 2, 3]
 console.log(Object.entries(obj)); // [['a', 1], ['b', 2], ['c', 3]]
 ```
 
-##### 2. String Padding
+**2. String Padding**
 
 * `padStart` pads the current string with another string until it reaches the given length from the start.
 * `padEnd` pads the current string with another string until it reaches the given length from the end.
@@ -2781,7 +2777,7 @@ console.log('5'.padStart(3, '0')); // "005"
 console.log('5'.padEnd(3, '0')); // "500"
 ```
 
-##### 3. Trailing Commas in Function Parameters
+**3. Trailing Commas in Function Parameters**
 
 Trailing commas are now allowed in function parameter lists and calls, improving the consistency of syntax and version control diffs.
 
@@ -2800,7 +2796,7 @@ foo(
 );
 ```
 
-##### 4. `async` and `await`
+**4. `async` and `await`**
 
 `async` functions and the `await` keyword provide a more readable and concise way to work with asynchronous operations, built on top of Promises.
 
@@ -2816,7 +2812,7 @@ fetchData();
 
 ##### ES9 (ES2018)
 
-##### 1. `Object.getOwnPropertyDescriptors`
+**1. `Object.getOwnPropertyDescriptors`**
 
 Returns all own property descriptors of a given object.
 
@@ -2836,7 +2832,7 @@ console.log(descriptors);
 */
 ```
 
-##### 2. `String.prototype.trimStart` and `String.prototype.trimEnd`
+**2. `String.prototype.trimStart` and `String.prototype.trimEnd`**
 
 These methods trim whitespace from the start or end of a string.
 
@@ -2846,7 +2842,7 @@ console.log(str.trimStart()); // "Hello, World!   "
 console.log(str.trimEnd()); // "   Hello, World!"
 ```
 
-##### 3. Asynchronous Iteration
+**3. Asynchronous Iteration**
 
 Allows for-loop to work with asynchronous iterators using `for await...of`.
 
@@ -2868,7 +2864,7 @@ async function* asyncGenerator() {
 // World
 ```
 
-##### 4. Rest/Spread Properties for Objects
+**4. Rest/Spread Properties for Objects**
 
 Rest properties collect the remaining own enumerable property keys that are not already picked off by the destructuring pattern. Spread properties spread out own enumerable properties of an object.
 
@@ -2885,7 +2881,7 @@ console.log(obj2); // { a: 1, b: 2, c: 3 }
 
 ##### ES10 (ES2019)
 
-##### 1. `Array.prototype.flat` and `Array.prototype.flatMap`
+**1. `Array.prototype.flat` and `Array.prototype.flatMap`**
 
 * `flat` creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
 * `flatMap` maps each element using a mapping function, then flattens the result into a new array.
@@ -2898,7 +2894,7 @@ const arr2 = [1, 2, 3];
 console.log(arr2.flatMap(x => [x, x * 2])); // [1, 2, 2, 4, 3, 6]
 ```
 
-##### 2. `Object.fromEntries`
+**2. `Object.fromEntries`**
 
 Transforms a list of key-value pairs into an object.
 
@@ -2908,13 +2904,13 @@ const obj = Object.fromEntries(entries);
 console.log(obj); // { a: 1, b: 2, c: 3 }
 ```
 
-##### 3. `String.prototype.trimStart` and `String.prototype.trimEnd`
+**3. `String.prototype.trimStart` and `String.prototype.trimEnd`**
 
 These methods are identical to `String.prototype.trimLeft` and `String.prototype.trimRight`.
 
 ##### ES11 (ES2020)
 
-##### 1. Dynamic `import`
+**1. Dynamic `import`**
 
 Allows importing modules dynamically.
 
@@ -2927,7 +2923,7 @@ async function loadModule() {
 loadModule();
 ```
 
-##### 2. BigInt
+**2. BigInt**
 
 A new primitive type to handle arbitrarily large integers.
 
@@ -2936,7 +2932,7 @@ const bigInt = 123456789012345678901234567890n;
 console.log(bigInt); // 123456789012345678901234567890n
 ```
 
-##### 3. `Promise.allSettled`
+**3. `Promise.allSettled`**
 
 Waits for all promises to settle (either fulfilled or rejected).
 
@@ -2959,7 +2955,7 @@ Promise.allSettled(promises).then(results => {
 });
 ```
 
-##### 4. Nullish Coalescing Operator (`??`)
+**4. Nullish Coalescing Operator (`??`)**
 
 Returns the right-hand operand when the left-hand operand is `null` or `undefined`, otherwise returns the left-hand operand.
 
@@ -2968,7 +2964,7 @@ const foo = null ?? 'default';
 console.log(foo); // "default"
 ```
 
-##### 5. Optional Chaining Operator (`?.`)
+**5. Optional Chaining Operator (`?.`)**
 
 Allows reading the value of a property deep within a chain of connected objects without having to explicitly check if each reference in the chain is null or undefined.
 
@@ -2980,7 +2976,7 @@ console.log(obj?.a?.b?.d); // undefined
 
 ##### ES12 (ES2021)
 
-##### 1. Logical Assignment Operators
+**1. Logical Assignment Operators**
 
 Combines logical operators (`&&`, `||`, `??`) with assignment.
 
@@ -2998,7 +2994,7 @@ a ??= b; // a = a ?? b;
 console.log(a); // 2
 ```
 
-##### 2. Numeric Separators
+**2. Numeric Separators**
 
 Improves readability of numeric literals by allowing underscores (`_`) as separators.
 
@@ -3007,7 +3003,7 @@ const largeNumber = 1_000_000_000;
 console.log(largeNumber); // 1000000000
 ```
 
-##### 3. `String.prototype.replaceAll`
+**3. `String.prototype.replaceAll`**
 
 Replaces all occurrences of a substring with a new substring.
 
@@ -3016,7 +3012,7 @@ const str = 'foo foo foo';
 console.log(str.replaceAll('foo', 'bar')); // "bar bar bar"
 ```
 
-##### 4. WeakRefs and FinalizationRegistry
+**4. WeakRefs and FinalizationRegistry**
 
 Provides a way to hold weak references to objects, and allows for cleanup operations when objects are garbage collected.
 
@@ -3033,7 +3029,7 @@ obj = null; // Dereference the object
 
 ##### ES13 (ES2022)
 
-##### 1. `Array.prototype.at`
+**1. `Array.prototype.at`**
 
 Allows accessing elements using relative indexing with support for negative indices.
 
@@ -3042,7 +3038,7 @@ const arr = [10, 20, 30, 40];
 console.log(arr.at(-1)); // 40
 ```
 
-##### 2. Top-level `await`
+**2. Top-level `await`**
 
 Allows using `await` at the top level of modules.
 
@@ -3057,14 +3053,14 @@ const response = await fetch
 #### Q24
 ### Q24. Elaborate JavaScript Design Patterns for writing efficient and maintainable code
 
-##### 🧠 JavaScript Design Patterns
+##### JavaScript Design Patterns
 
 **Design Patterns** are reusable solutions to common problems in software design.
 They help make your code **more efficient, maintainable, scalable, and readable** — ensuring consistency across projects.
 
 In JavaScript, design patterns are especially useful for managing complexity in large applications, improving code reuse, and ensuring separation of concerns.
 
-##### 🔹 Categories of Design Patterns
+**Categories of Design Patterns**
 
 Design patterns are generally divided into three main categories:
 
@@ -3072,9 +3068,9 @@ Design patterns are generally divided into three main categories:
 2. **Structural Patterns** → Composition of classes and objects
 3. **Behavioral Patterns** → Communication between objects
 
-##### 🧩 1. Creational Design Patterns
+##### Creational Design Patterns
 
-##### **a. Singleton Pattern**
+**1. Singleton Pattern**
 
 Ensures a class has only **one instance** and provides a global point of access to it.
 
@@ -3106,9 +3102,7 @@ instance1.add("Hello");
 console.log(instance2.getAll()); // ["Hello"] — same instance!
 ```
 
----
-
-##### **b. Factory Pattern**
+**2. Factory Pattern**
 
 Creates objects **without specifying the exact class** of the object that will be created.
 
@@ -3139,11 +3133,9 @@ const car = factory.createVehicle("car");
 console.log(car.type); // Car
 ```
 
----
+##### Structural Design Patterns
 
-##### 🏗️ 2. Structural Design Patterns
-
-##### **a. Module Pattern**
+**1. Module Pattern**
 
 Encapsulates code into self-contained modules using closures — helps organize code and **avoid polluting the global scope**.
 
@@ -3173,9 +3165,7 @@ CounterModule.increment(); // 2
 CounterModule.reset();
 ```
 
----
-
-##### **b. Observer Pattern**
+**2. Observer Pattern**
 
 Defines a **one-to-many** dependency — when one object (subject) changes, all dependents (observers) are notified automatically.
 
@@ -3217,7 +3207,7 @@ subject.notify("Hello Observers!");
 
 ---
 
-##### **c. Decorator Pattern**
+**3. Decorator Pattern**
 
 Adds new behavior to an object **without modifying its structure**.
 
@@ -3244,11 +3234,9 @@ const fancyCoffee = withSugar(withMilk(coffee));
 console.log(fancyCoffee()); // Coffee + Milk + Sugar
 ```
 
----
+##### Behavioral Design Patterns
 
-##### ⚙️ 3. Behavioral Design Patterns
-
-##### **a. Strategy Pattern**
+**1. Strategy Pattern**
 
 Defines a family of algorithms and makes them **interchangeable at runtime**.
 
@@ -3285,9 +3273,7 @@ payment.setStrategy(new CreditCardStrategy());
 payment.pay(250); // Paid $250 using Credit Card.
 ```
 
----
-
-##### **b. Command Pattern**
+**2. Command Pattern**
 
 Encapsulates a request as an object, allowing you to **queue, log, or undo** actions.
 
@@ -3335,9 +3321,7 @@ onCommand.execute(); // Light is ON
 offCommand.execute(); // Light is OFF
 ```
 
----
-
-##### 🧱 Summary Table
+##### Summary Table
 
 | **Category**   | **Pattern** | **Purpose**                | **Example Use Case**       |
 | -------------- | ----------- | -------------------------- | -------------------------- |
@@ -3349,22 +3333,13 @@ offCommand.execute(); // Light is OFF
 | **Behavioral** | Strategy    | Switch algorithms          | Payment methods            |
 |                | Command     | Encapsulate actions        | Undo/redo operations       |
 
----
-
-##### 🧩 Why Use Design Patterns in JavaScript
+##### Why Use Design Patterns in JavaScript
 
 ✅ Encourages **code reusability**
 ✅ Improves **maintainability and scalability**
 ✅ Promotes **separation of concerns**
 ✅ Helps teams **collaborate consistently**
 ✅ Makes code **easier to test and extend**
-
----
-
-##### 🚀 Takeaway
-
-Design patterns are not strict rules — they’re **best practices** for solving recurring problems in a structured, efficient way.
-By applying patterns like **Module**, **Factory**, **Observer**, **Strategy**, and **Singleton**, your JavaScript code becomes **cleaner, modular, and maintainable** — especially in large-scale applications.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -3375,9 +3350,7 @@ By applying patterns like **Module**, **Factory**, **Observer**, **Strategy**, a
 
 Handling errors and exceptions is a crucial part of writing robust and reliable JavaScript code. The `try...catch` statement provides a way to handle exceptions that occur during code execution. Here's a detailed explanation of how to use `try...catch` blocks effectively.
 
-##### Basic Syntax
-
-The basic syntax for a `try...catch` block is as follows:
+##### Syntax
 
 ```javascript
 try {
@@ -3388,8 +3361,6 @@ try {
 ```
 
 ##### Example
-
-Here's a simple example of using a `try...catch` block to handle an error:
 
 ```javascript
 try {
@@ -3402,8 +3373,8 @@ try {
 
 In this example:
 
-* The `try` block contains code that might throw an error.
-* The `catch` block contains code that will run if an error occurs in the `try` block.
+- The `try` block contains code that might throw an error.
+- The `catch` block contains code that will run if an error occurs in the `try` block.
 
 ##### Handling Specific Errors
 
@@ -3560,13 +3531,9 @@ execute();
 #### Q26
 ### Q26. How Throttling and Debouncing control the rate of function execution. Give examples
 
-Throttling and debouncing are two techniques used to control the rate of function execution in JavaScript, especially in the context of event handling. These techniques help to improve performance and ensure that functions are not called too frequently, which can lead to performance issues.
-
 ##### Throttling
 
 Throttling ensures that a function is called at most once in a specified time period. This is useful for scenarios where you want to limit the rate of function execution, such as resizing the window or scrolling.
-
-##### Example:
 
 ```javascript
 function throttle(func, limit) {
@@ -3608,8 +3575,6 @@ In this example:
 
 Debouncing ensures that a function is called only after a specified amount of time has passed since the last time it was invoked. This is useful for scenarios like search input where you want to wait until the user has finished typing before making an API call.
 
-##### Example:
-
 ```javascript
 function debounce(func, delay) {
     let timeoutId;
@@ -3646,69 +3611,10 @@ In this example:
 | **Execution** | Executes immediately, then once per time period | Executes after a specified delay without repeated calls |
 | **Example**   | Handling resize event                           | Handling input event                                    |
 
-##### Visual Example:
+##### Key Takeaway
 
-##### Throttling
-
-```javascript
-function throttle(func, limit) {
-    let lastFunc;
-    let lastRan;
-
-    return function() {
-        const context = this;
-        const args = arguments;
-        if (!lastRan) {
-            func.apply(context, args);
-            lastRan = Date.now();
-        } else {
-            clearTimeout(lastFunc);
-            lastFunc = setTimeout(function() {
-                if ((Date.now() - lastRan) >= limit) {
-                    func.apply(context, args);
-                    lastRan = Date.now();
-                }
-            }, limit - (Date.now() - lastRan));
-        }
-    };
-}
-
-// Example: Log the mouse position at most once every 500 milliseconds
-const logMousePosition = (event) => {
-    console.log(`Mouse Position: (${event.clientX}, ${event.clientY})`);
-};
-
-document.addEventListener('mousemove', throttle(logMousePosition, 500));
-```
-
-##### Debouncing
-
-```javascript
-function debounce(func, delay) {
-    let timeoutId;
-    return function() {
-        const context = this;
-        const args = arguments;
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => {
-            func.apply(context, args);
-        }, delay);
-    };
-}
-
-// Example: Log the search query after the user stops typing for 300 milliseconds
-const handleSearchInput = (event) => {
-    console.log('Search Query:', event.target.value);
-};
-
-const searchBox = document.getElementById('searchBox');
-searchBox.addEventListener('input', debounce(handleSearchInput, 300));
-```
-
-##### Summary
-
-* **Throttling**: Ensures a function is called at most once in a specified time period. Useful for controlling the rate of execution for frequently occurring events.
-* **Debouncing**: Ensures a function is called only after a specified delay has passed since the last call. Useful for handling events that occur in quick succession but should only be handled once the event stream stops.
+- **Throttling**: Ensures a function is called at most once in a specified time period. Useful for controlling the rate of execution for frequently occurring events.
+- **Debouncing**: Ensures a function is called only after a specified delay has passed since the last call. Useful for handling events that occur in quick succession but should only be handled once the event stream stops.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
@@ -3716,8 +3622,6 @@ searchBox.addEventListener('input', debounce(handleSearchInput, 300));
 
 #### Q27
 ### Q27. Local Storage vs. Session Storage vs. IndexedDB: Client-side storage options. Enlist difference in tabular form.
-
-Client-side storage options in web development allow you to store data directly in the user's browser. The most common options are Local Storage, Session Storage, and IndexedDB. Each of these has unique characteristics and use cases. Here is a detailed comparison in tabular form:
 
 ##### Comparison Table
 
@@ -3734,17 +3638,8 @@ Client-side storage options in web development allow you to store data directly 
 | **Performance**   | Fast for small amounts of data                                          | Fast for small amounts of data                                     | More complex, designed for larger datasets, better performance for bulk operations |
 | **APIs**          | `localStorage`                                                          | `sessionStorage`                                                   | `indexedDB`                                                                        |
 
-##### Detailed Overview
 
-##### Local Storage
-
-* **Capacity**: Typically around 5-10 MB.
-* **Persistence**: Data persists even after the browser is closed and reopened, until explicitly deleted.
-* **Scope**: Available across all tabs and windows for the same origin.
-* **Data Format**: Stores data as strings. You need to serialize objects to strings using `JSON.stringify()` and parse them using `JSON.parse()`.
-* **Accessibility**: Provides a synchronous API, which can block the main thread.
-* **Use Cases**: Suitable for storing user settings, themes, and other data that needs to persist across sessions.
-* **Example**:
+##### Example of localstorage:
 
   ```javascript
   // Save data to Local Storage
@@ -3760,15 +3655,7 @@ Client-side storage options in web development allow you to store data directly 
   localStorage.clear();
   ```
 
-##### Session Storage
-
-* **Capacity**: Typically around 5-10 MB.
-* **Persistence**: Data persists only for the duration of the page session. It is cleared when the tab or window is closed.
-* **Scope**: Available only within the current tab or window.
-* **Data Format**: Stores data as strings. Like Local Storage, objects need to be serialized and parsed.
-* **Accessibility**: Provides a synchronous API, similar to Local Storage.
-* **Use Cases**: Suitable for storing temporary data such as form inputs or session-specific settings that do not need to persist beyond the current session.
-* **Example**:
+##### Example of Session Storage:
 
   ```javascript
   // Save data to Session Storage
@@ -3784,15 +3671,7 @@ Client-side storage options in web development allow you to store data directly 
   sessionStorage.clear();
   ```
 
-##### IndexedDB
-
-* **Capacity**: Much larger storage limits, potentially hundreds of MB.
-* **Persistence**: Data persists until explicitly deleted.
-* **Scope**: Available across all tabs and windows for the same origin.
-* **Data Format**: Can store structured data, including objects, arrays, and more complex types.
-* **Accessibility**: Provides an asynchronous API using Promises, which does not block the main thread.
-* **Use Cases**: Suitable for storing large amounts of data, complex structured data, and offline web applications. It is ideal for applications that need to store more complex data and perform queries on the data.
-* **Example**:
+##### Example of IndexedDB:
 
   ```javascript
   // Open (or create) the database
@@ -3835,14 +3714,12 @@ Client-side storage options in web development allow you to store data directly 
 
 JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. JSON is a text format that is completely language-independent but uses conventions familiar to programmers of the C family of languages, including JavaScript, Python, and more.
 
-##### JSON Syntax
-
 JSON is built on two structures:
 
 * A collection of name/value pairs (often realized as an object, record, struct, dictionary, hash table, keyed list, or associative array).
 * An ordered list of values (often realized as an array, vector, list, or sequence).
 
-##### Example of JSON Data
+**Example:**
 
 ```json
 {
@@ -3862,7 +3739,7 @@ JSON is built on two structures:
 
 Parsing JSON means converting a JSON string into a JavaScript object. This is done using the `JSON.parse()` method.
 
-##### Example of JSON Parsing
+**Example:**
 
 ```javascript
 const jsonString = '{"name":"John Doe","age":30,"isStudent":false,"courses":["Mathematics","Physics"],"address":{"street":"123 Main St","city":"Anytown","country":"USA"}}';
@@ -3878,7 +3755,7 @@ console.log(jsonObj.courses); // ["Mathematics", "Physics"]
 
 Stringifying JSON means converting a JavaScript object into a JSON string. This is done using the `JSON.stringify()` method.
 
-##### Example of JSON Stringification
+**Example:**
 
 ```javascript
 const jsonObj = {
@@ -3903,7 +3780,7 @@ console.log(jsonString);
 
 The `JSON.stringify()` method can take two additional optional parameters: a replacer function and a space parameter.
 
-* **Replacer Function**: This function can be used to filter and transform the results.
+- **Replacer Function**: This function can be used to filter and transform the results.
 
 ```javascript
 const jsonObj = {
@@ -3924,7 +3801,7 @@ console.log(jsonString);
 // '{"name":"JOHN DOE","age":30,"isStudent":false,"courses":["MATHEMATICS","PHYSICS"]}'
 ```
 
-* **Space Parameter**: This parameter can be used to control spacing in the resulting JSON string for readability.
+- **Space Parameter**: This parameter can be used to control spacing in the resulting JSON string for readability.
 
 ```javascript
 const jsonString = JSON.stringify(jsonObj, null, 2);
@@ -3951,8 +3828,6 @@ console.log(jsonString);
 
 JSON does not support native date objects. Dates need to be converted to strings before stringifying and parsed back to dates when parsing.
 
-##### Example:
-
 ```javascript
 const jsonObj = {
   name: "John Doe",
@@ -3973,8 +3848,6 @@ console.log(parsedObj.birthDate);
 
 When parsing JSON, it’s important to handle potential errors due to invalid JSON strings.
 
-##### Example:
-
 ```javascript
 const jsonString = '{"name": "John Doe", "age": 30}';
 
@@ -3988,24 +3861,22 @@ try {
 
 ##### Use Cases for JSON
 
-* **Data Exchange**: JSON is commonly used for data exchange between a server and web application.
-* **Configuration Files**: JSON is often used to store configuration settings.
-* **APIs**: Many web APIs use JSON as the format for request and response payloads.
-* **Local Storage**: JSON is often used to store complex data structures in browser local storage.
+- **Data Exchange**: JSON is commonly used for data exchange between a server and web application.
+- **Configuration Files**: JSON is often used to store configuration settings.
+- **APIs**: Many web APIs use JSON as the format for request and response payloads.
+- **Local Storage**: JSON is often used to store complex data structures in browser local storage.
 
-##### Summary
+##### Key Takeaway
 
-* **JSON Parsing**: Converts a JSON string into a JavaScript object using `JSON.parse()`.
-* **JSON Stringification**: Converts a JavaScript object into a JSON string using `JSON.stringify()`.
-* **Customization**: `JSON.stringify()` can be customized with a replacer function and space parameter.
-* **Handling Dates**: Dates need to be handled explicitly when using JSON.
-* **Error Handling**: Always handle errors when parsing JSON to avoid runtime issues.
+- **JSON Parsing**: Converts a JSON string into a JavaScript object using `JSON.parse()`.
+- **JSON Stringification**: Converts a JavaScript object into a JSON string using `JSON.stringify()`.
+- **Customization**: `JSON.stringify()` can be customized with a replacer function and space parameter.
+- **Handling Dates**: Dates need to be handled explicitly when using JSON.
+- **Error Handling**: Always handle errors when parsing JSON to avoid runtime issues.
 
 <div align="left">
     <b><a href="#">↥ back to top</a></b>
 </div>
-
----
 
 #### Q29
 ### Q29. Caching and Memoization techniques for optimizing performance
